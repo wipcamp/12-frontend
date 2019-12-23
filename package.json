@@ -1,0 +1,12 @@
+{
+  "name": "12-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wipcamp/12-frontend.git",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.1.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
