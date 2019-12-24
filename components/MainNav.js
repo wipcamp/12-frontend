@@ -17,7 +17,6 @@ import Link from 'next/link'
 import { Button } from 'reactstrap'
 import styled from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
 const StyledNavItem = styled(NavItem)`
     margin : 0 15px 0 15px;
     `
@@ -66,6 +65,7 @@ const Example = (props) => {
           <Button className ="ml-auto" color ="warning"><NavbarText>Register</NavbarText></Button>
         </Collapse>
       </Navbar>
+      
     </div>
   );
 }
