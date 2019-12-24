@@ -18,8 +18,32 @@ import { Button } from 'reactstrap'
 import styled from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'
 const StyledNavItem = styled(NavItem)`
-    margin : 0 15px 0 15px;
+    margin : 0 10px 0 10px;
+    text-decoration: none;
+    color: white;
+    height: 100%;
+
+    /* :hover{
+    color : red;
+    background-color : black;
+  } */
     `
+
+const StyledNavLink = styled(NavLink)`
+  color : black;
+`
+
+const StyledNavbarBrand = styled(NavbarBrand)`
+`
+
+const ColorNav = styled(Navbar)`
+  padding-top : 0px;
+  padding-bottom : 0px;
+  /* background-color : #A9A9A9; */
+`
+const StyledImg = styled.img`
+    height : px;
+`
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,44 +52,45 @@ const Example = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/" className="mr-auto"><img src="/Logo2.png"/></NavbarBrand>
+      <ColorNav color = "light" light expand="md">
+        <StyledNavbarBrand href="/" className="mr-auto"><StyledImg src="/Logo2.png"/></StyledNavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <StyledNavItem>
               <Link href="/index">
-              <NavLink  href= "/" >HOME</NavLink>
+              <StyledNavLink href= "/" >HOME</StyledNavLink>
               </Link>
             </StyledNavItem>
             <StyledNavItem>
               <Link href="/test">
-              <NavLink href="/">WHAT</NavLink>
+              <StyledNavLink href="/">WHAT</StyledNavLink>
               </Link>
             </StyledNavItem>
             <StyledNavItem>
-              <NavLink href ="/">WHO</NavLink>
+              <StyledNavLink href ="/">WHO</StyledNavLink>
             </StyledNavItem>
             <StyledNavItem>
-              <NavLink href ="/">BRANCH</NavLink>
+              <StyledNavLink href ="/">BRANCH</StyledNavLink>
             </StyledNavItem>
             <StyledNavItem>
-              <NavLink href ="/">WHERE</NavLink>
+              <StyledNavLink href ="/">WHERE</StyledNavLink>
             </StyledNavItem>
             <StyledNavItem>
-              <NavLink href ="/">WHEN</NavLink>
+              <StyledNavLink href ="/">WHEN</StyledNavLink>
             </StyledNavItem>
             <StyledNavItem>
-              <NavLink href ="/">FAQS</NavLink>
+              <StyledNavLink href ="/">FAQS</StyledNavLink>
             </StyledNavItem>
             <StyledNavItem>
-              <NavLink href ="/">GAME</NavLink>
+              <StyledNavLink href ="/">GAME</StyledNavLink>
             </StyledNavItem>
           </Nav>
-          <Button className ="ml-auto" color ="warning"><NavbarText>Register</NavbarText></Button>
+          <Button className ="ml-auto" size ="sm" color ="warning"><NavbarText>Register</NavbarText></Button>
         </Collapse>
-      </Navbar>
-      
+
+      </ColorNav>
+
     </div>
   );
 }
