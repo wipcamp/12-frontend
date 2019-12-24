@@ -13,8 +13,14 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import Link from 'next/link'
 import { Button } from 'reactstrap'
+import styled from 'styled-components'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+const StyledNavItem = styled(NavItem)`
+    margin : 0 15px 0 15px;
+    `
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,36 +30,40 @@ const Example = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/"><img src="/Logo2.png"/></NavbarBrand>
+        <NavbarBrand href="/" className="mr-auto"><img src="/Logo2.png"/></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/">HOME</NavLink>
-            </NavItem>
-            <NavItem>
+          <Nav className="ml-auto" navbar>
+            <StyledNavItem>
+              <Link href="/index">
+              <NavLink  href= "/" >HOME</NavLink>
+              </Link>
+            </StyledNavItem>
+            <StyledNavItem>
+              <Link href="/test">
               <NavLink href="/">WHAT</NavLink>
-            </NavItem>
-            <NavItem>
+              </Link>
+            </StyledNavItem>
+            <StyledNavItem>
               <NavLink href ="/">WHO</NavLink>
-            </NavItem>
-            <NavItem>
+            </StyledNavItem>
+            <StyledNavItem>
               <NavLink href ="/">BRANCH</NavLink>
-            </NavItem>
-            <NavItem>
+            </StyledNavItem>
+            <StyledNavItem>
               <NavLink href ="/">WHERE</NavLink>
-            </NavItem>
-            <NavItem>
+            </StyledNavItem>
+            <StyledNavItem>
               <NavLink href ="/">WHEN</NavLink>
-            </NavItem>
-            <NavItem>
+            </StyledNavItem>
+            <StyledNavItem>
               <NavLink href ="/">FAQS</NavLink>
-            </NavItem>
-            <NavItem>
+            </StyledNavItem>
+            <StyledNavItem>
               <NavLink href ="/">GAME</NavLink>
-            </NavItem>
+            </StyledNavItem>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <Button className ="ml-auto" color ="warning"><NavbarText>Register</NavbarText></Button>
         </Collapse>
       </Navbar>
     </div>
