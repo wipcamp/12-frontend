@@ -5,11 +5,18 @@
   "repository": "https://github.com/wipcamp/12-frontend.git",
   "license": "MIT",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "babelrc": "^0.0.7",
+    "bootstrap": "^4.4.1",
     "next": "^9.1.6",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "reactstrap": "^8.2.0",
+    "styled-components": "^4.4.1"
   },
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   }
 }
