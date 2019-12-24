@@ -26,8 +26,8 @@ const StyledNavItem = styled(NavItem)`
 
     /* :hover{
     color : red;
-    background-color : black; */
-  }
+    background-color : black;
+  } */
     `
 
 const StyledNavLink = styled(NavLink)`
