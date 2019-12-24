@@ -5,6 +5,7 @@ font-size:auto;
 
 
 `
+const Image = styled.img`
 margin-right: 50px;
 margin-top: 50px;
 width: 30%;
