@@ -18,5 +18,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
   }
 }
