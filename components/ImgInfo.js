@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+
 const Text = styled.p`
 font-size:auto;
-
 
 `
 const Image = styled.img`
