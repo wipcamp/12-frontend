@@ -1,15 +1,8 @@
 import css from 'styled-jsx/css'
 
 export default css.global`
+@import url(https://fonts.googleapis.com/css?family=Prompt&display=swap);
   body {
-   color: red;
-  }
-  h1 {
- color:green;
-}
-  p {
-    color:blue;
+   font-family: 'Prompt';
   }
 `
-//this code use to test GlobalStyle
-//w8 design system
