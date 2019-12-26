@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import MainNav from '../components/MainNav'
 import ImageInfo from '../components/ImgInfo'
+import GlobalStyles from '../components/GlobalStyle'
 export default class index extends Component {
     render() {
         return (
             <div>
-                <style jsx global>{`
-                    @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
-                `}
+                <style jsx global>
+                    {GlobalStyles}
                 </style>
                 <MainNav />
 
