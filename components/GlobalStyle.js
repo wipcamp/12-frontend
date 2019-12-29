@@ -6,9 +6,7 @@ export default css.global`
    font-family: 'Prompt';
   }
 
-  ::-webkit-scrollbar {
-  width: 0px;
-}
+ 
   
   
 `

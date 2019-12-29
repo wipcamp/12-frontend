@@ -7,6 +7,9 @@ const Wrap = styled.div`
     width: 100%;
     position: relative;
     z-index: 1;
+    ::-webkit-scrollbar {
+         width: 0px;
+    }
 `
 
 const ArrowButton = styled.div`
