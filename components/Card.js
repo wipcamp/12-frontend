@@ -12,9 +12,10 @@ const TrackCardContainer = styled.div`
 
 const FaqsCardContainer = styled(TrackCardContainer)`
     width: 294px;
+    visibility: ${props => props.visible};
 `
 
-const CardBody = styled.div`
+const TrackCardBody = styled.div`
     width: 290px;
     height: 100%;
     transform-style: preserve-3d;
@@ -23,6 +24,11 @@ const CardBody = styled.div`
     :hover {
         transform: rotateY(180deg);
     }
+`
+
+const FaqsCardBody = styled(TrackCardBody)`
+    width: 294px;
+    margin-left: -60%;
 `
 
 const CardFront = styled.div`
@@ -62,7 +68,7 @@ export const TrackCard = (props) => {
 
     return (
         <TrackCardContainer>
-            <CardBody>
+            <TrackCardBody>
                 <CardSide>
                     <CardFront>
                         <TrackCardStyled src={props.srcFront} />
@@ -73,7 +79,7 @@ export const TrackCard = (props) => {
                         <TrackCardStyled src={props.srcBack} />
                     </CardBack>
                 </CardSide>
-            </CardBody>
+            </TrackCardBody>
         </TrackCardContainer>
     )
 
@@ -82,8 +88,8 @@ export const TrackCard = (props) => {
 export const FaqsCard = (props) => {
 
     return (
-        <FaqsCardContainer>
-            <CardBody>
+        <FaqsCardContainer visible={props.visible} className="slide" >
+            <FaqsCardBody >
                 <CardSide>
                     <CardFront>
                         <FaqsCardStyled src={props.srcFront} />
@@ -94,10 +100,14 @@ export const FaqsCard = (props) => {
                         <FaqsCardStyled src={props.srcBack} />
                     </CardBack>
                 </CardSide>
-            </CardBody>
+            </FaqsCardBody>
         </FaqsCardContainer>
     )
 
+}
+
+FaqsCard.defaultProps = {
+    visible: "visible"
 }
 
 TrackCardStyled.propsTypes = {
