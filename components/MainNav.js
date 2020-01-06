@@ -7,10 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText
 } from 'reactstrap';
 import Link from 'next/link'
@@ -18,28 +14,27 @@ import { Button } from 'reactstrap'
 import styled from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'
 const StyledNavItem = styled(NavItem)`
-    margin : 0 10px 0 10px;
+    padding : 0 10px 0 10px;
     text-decoration: none;
-    color: white;
     height: 100%;
-
-    /* :hover{
-    color : red;
-    background-color : black;
-  } */
-    `
+    
+`
 
 const StyledNavLink = styled(NavLink)`
-  color : black;
+  color : red;
+  :hover {
+    color: blue;
+    
+    
+  }
 `
 
 const StyledNavbarBrand = styled(NavbarBrand)`
 `
 
 const ColorNav = styled(Navbar)`
-  padding-top : 0px;
-  padding-bottom : 0px;
-  /* background-color : #A9A9A9; */
+  padding: 20px 94px 17px 100px;
+  background-color : transparent; 
 `
 const StyledImg = styled.img`
     height : px;
@@ -51,8 +46,8 @@ const Example = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <ColorNav color = "light" light expand="md">
+    
+      <ColorNav expand="md">
         <StyledNavbarBrand href="/" className="mr-auto"><StyledImg src="/Logo2.png"/></StyledNavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -85,13 +80,16 @@ const Example = (props) => {
             <StyledNavItem>
               <StyledNavLink href ="/">GAME</StyledNavLink>
             </StyledNavItem>
+            <StyledNavItem>
+              <StyledNavLink href ="/contact">Contact</StyledNavLink>
+            </StyledNavItem>
           </Nav>
-          <Button className ="ml-auto" size ="sm" color ="warning"><NavbarText>Register</NavbarText></Button>
+          <Button className ="ml-auto" color ="warning"><NavbarText>Register</NavbarText></Button>
         </Collapse>
 
       </ColorNav>
 
-    </div>
+   
   );
 }
 
