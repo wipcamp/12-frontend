@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Content } from './Text'
+import { Content } from '../Core/Text'
 
 const Image = styled.img`
 margin-right: 5%;

@@ -8,9 +8,9 @@ import {
   Input,
   Button
 } from 'reactstrap'
-import ImgInfo from '../components/ImgInfo'
-import { Header , SubHeader  } from '../components/Text'
-import ContactImage from '../components/ContactImage'
+import ImgInfo from '../components/Core/ImgInfo'
+import { Header , SubHeader  } from '../components/Core/Text'
+import ContactImage from '../components/Contact/ContactImage'
 export default class contact extends Component {
     render() {
         return (

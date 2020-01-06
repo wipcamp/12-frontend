@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { FaqsCard } from '../components/Card'
+import { FaqsCard } from '../Core/Card'
 import styled from 'styled-components'
 
 const Wrap = styled.div`
