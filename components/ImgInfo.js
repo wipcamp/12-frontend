@@ -10,9 +10,9 @@ export default class ImgInfo extends Component {
     render() {
         return (
             
-            <div className="media">
+            <div className="media mb-3 ml-5">
                 <Image src={this.props.src} />
-                <div className="media-body">
+                <div className="media-body mt-5">
                     <Content 
                         content={this.props.info || "Unknow"}
                         color={this.props.color}

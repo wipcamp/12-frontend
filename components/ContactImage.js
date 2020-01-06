@@ -12,7 +12,7 @@ height : ${props => props.height || "auto"} ;
         
         render() {
             return (
-                    <StyledContactImg src={this.props.src} width={this.props.width} height={this.props.height}/>
+                    <StyledContactImg className="mr-1" src={this.props.src} width={this.props.width} height={this.props.height}/>
             )
         }
     }
