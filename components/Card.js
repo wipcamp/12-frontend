@@ -5,18 +5,18 @@ import PropTypes from 'prop-types'
 const TrackCardContainer = styled.div`
     position: relative;
     z-index: 1;
-    width: 290px;
+    width: 190px;
     perspective: 1000px;
-    margin: 0 1%;
+    margin: 0 14.12px;
 `
 
 const FaqsCardContainer = styled(TrackCardContainer)`
-    width: 294px;
+    width: 170px;
     visibility: ${props => props.visible};
 `
 
 const TrackCardBody = styled.div`
-    width: 290px;
+    width: 190px;
     height: 100%;
     transform-style: preserve-3d;
     transition: all .7s linear;
@@ -27,7 +27,7 @@ const TrackCardBody = styled.div`
 `
 
 const FaqsCardBody = styled(TrackCardBody)`
-    width: 294px;
+    width: 170px;
     margin-left: -60%;
 `
 
@@ -55,13 +55,13 @@ const CardSide = styled.div`
 `
 
 const TrackCardStyled = styled.img`
-    width: 290px;
-    height: 521px;
+    width: 190px;
+    height: 323px;
 `
 
 const FaqsCardStyled = styled.img`
-    width: 294px;
-    height: 521px;
+    width: 170px;
+    height: 293px;
 `
 
 export const TrackCard = (props) => {
