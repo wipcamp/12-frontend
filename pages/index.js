@@ -1,14 +1,5 @@
 import React, { Component } from 'react'
 import MainNav from '../components/Core/MainNav'
-
-import ImageInfo from '../components/Core/ImgInfo'
-import {TrackCard , FaqsCard} from '../components/Core/Card'
-import SideScroll from '../components/Faqs/SideScroll'
-import GlobalStyles from '../components/Core/GlobalStyle'
-
-import { Header, SubHeader } from '../components/Core/Text'
-import {TrackCard , FaqsCard} from '../components/Core/Card'
-
 import GlobalStyles from '../components/Core/GlobalStyle'
 
 
