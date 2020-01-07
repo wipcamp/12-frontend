@@ -141,7 +141,7 @@ const Example = (props) => {
 							</Link>
 						</StyledNavItem>
 						<StyledNavItem>
-							<Link href="/">
+							<Link href="./App">
 								<StyledNavLink href="/">WHAT</StyledNavLink>
 							</Link>
 						</StyledNavItem>
