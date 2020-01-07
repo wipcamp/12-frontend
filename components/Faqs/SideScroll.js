@@ -22,6 +22,11 @@ const ArrowButton = styled.div`
   border-radius: 50%;
   cursor: pointer;
   color: white;
+  display: none;
+
+  @media (min-width: 1024px) {
+      display: block;
+  }
 `
 const prev = {
     position: 'absolute',
