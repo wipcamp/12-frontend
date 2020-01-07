@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const HeadLine = styled.h1`
     font-family: 'Prompt', sans-serif;
     font-size: 40px;
-    letter-spacing: 10%;
+    letter-spacing: 0.2em;
     font-weight: 500;
     text-align: center;
     -webkit-text-stroke-width: 3px;
