@@ -6,6 +6,7 @@ const HeadLine = styled.h1`
     font-size: 40px;
     letter-spacing: 10%;
     font-weight: 500;
+    text-align: center;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: ${props => props.strokeColor};
     color: transparent;
@@ -15,6 +16,7 @@ const SubHead = styled.h2`
     font-family: 'Prompt', sans-serif;
     font-size: 16px;
     font-weight: normal;
+    text-align: center;
     color: ${props => props.color};
 `
 
