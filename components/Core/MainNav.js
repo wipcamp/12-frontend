@@ -147,7 +147,7 @@ const Example = (props) => {
 							<StyledNavLink href="/">BRANCH</StyledNavLink>
 						</StyledNavItem>
 						<StyledNavItem>
-							<StyledNavLink href="/">WHERE</StyledNavLink>
+							<StyledNavLink href="/Where">WHERE</StyledNavLink>
 						</StyledNavItem>
 						<StyledNavItem>
 							<StyledNavLink href="/">WHEN</StyledNavLink>
