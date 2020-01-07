@@ -25,6 +25,10 @@ const ContentText = styled.p`
     font-size: 12px;
     font-weight: lighter;
     color: ${props => props.color};
+    text-align: ${props => props.textAlign};
+    text-indent: ${props => props.textIndent};
+    padding: ${props => props.padding};
+    line-height: ${props => props.lineHeight};
 `
 
 export const Header = (props) => {
@@ -45,7 +49,12 @@ export const SubHeader = (props) => {
 
 export const Content = (props) => {
     return (
-        <ContentText color = {props.color}>
+        <ContentText color = {props.color}
+         textAlign = {props.textAlign}
+          textIndent = {props.textIndent}
+           padding = {props.padding}
+           >
+               
             {props.content}
         </ContentText>
     )
