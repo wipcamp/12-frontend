@@ -22,11 +22,9 @@ const ArrowButton = styled.div`
   border-radius: 50%;
   cursor: pointer;
   color: white;
-  display: none;
+  
 
-  @media (min-width: 1024px) {
-      display: block;
-  }
+  
 `
 const prev = {
     position: 'absolute',
@@ -95,7 +93,7 @@ export default class SideScroll extends Component {
     }
 
     goToNextSlide = () => {
-        if (this.state.currentIndex === this.state.cards.length - 4) {
+        if (this.state.currentIndex === this.state.cards.length - 2) {
             return this.setState({
                 currentIndex: 0,
                 translateValue: 0
@@ -103,7 +101,7 @@ export default class SideScroll extends Component {
         }
         this.setState(prevState => ({
             currentIndex: prevState.currentIndex + 1,
-            translateValue: prevState.translateValue + -(this.slideWidth())
+            translateValue: prevState.translateValue + -(this.slideWidth()+25)
         }));
     }
 
@@ -114,7 +112,7 @@ export default class SideScroll extends Component {
     render() {
 
         return (
-            <Fragment>
+            <div style={{position: 'relative', zIndex: '2'}}>
 
                 <Wrap >
 
@@ -133,12 +131,12 @@ export default class SideScroll extends Component {
                             />
                         ))}
                     </div>
-                    <LeftArrow goToPrevSlide={this.goToPrevSlide} />
-                <RightArrow goToNextSlide={this.goToNextSlide} />
+                    
                 </Wrap>
-
+                <LeftArrow goToPrevSlide={this.goToPrevSlide} />
+                <RightArrow goToNextSlide={this.goToNextSlide} />
                 
-            </Fragment>
+            </div>
         )
     }
 }
