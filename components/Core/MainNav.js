@@ -45,32 +45,28 @@ const StyledNavLink = styled(NavLink)`
 `
 
 const StyledNavbarBrand = styled(NavbarBrand)`
-  position: fixed;
-  margin: auto;
-  margin-left: 40%;
+  
+	margin: auto;
+	margin-left: 30%;
+  
+  
 
   @media (min-width: 1024px) {
-	  position: static;
+	  
 	  margin: 20px 0 17px 0;
   }
 `
 
-const StyledNavbarText = styled(NavbarText)`
-	font-size: 10px;
-	font-family: 'Prompt', sans-serif;
-
-	@media (min-width: 1024px) {
-		font-size: 16px;
-	}
-`
 
 const StyledNavbarToggler = styled(NavbarToggler)`
- 	float: left ;
+ 	
  	margin-left: 17px;
  	margin-top: 15px;
  	margin-bottom: 15.38px;
- 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 ' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  
+ 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='20' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	@media (min-width: 1024px) {
+		display: none !important;
+	}
 `
 
 const ColorNav = styled(Navbar)`
@@ -84,7 +80,7 @@ const ColorNav = styled(Navbar)`
   
 `
 const StyledImg = styled.img`
-    margin: auto;
+    
 	width: 63px;
 	height: 32px;
 
@@ -100,15 +96,20 @@ const StyledImg = styled.img`
 `
 
 const StyledButton = styled(Button)`
-	margin-right: 16px;
+	margin-left: 25%;
 	border-radius: 5px;
 	border-color: black;
-	padding: 2px 5px;
+	margin-right: -30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 10px;
 	
 	@media (min-width: 1024px) {
 		margin: 24px 94px 24px 0;
 		padding: 10px 17px;
 		border-radius: 9px;
+		
+		
 
 		:hover {
 			background-color: black;
@@ -126,10 +127,14 @@ const Example = (props) => {
 	return (
 		<div className="sticky-top">
 			<ColorNav expand="md" className="fixed-top">
-				<StyledNavbarBrand href="/" ><StyledImg src="/Logo2.png" /></StyledNavbarBrand>
-				<StyledNavbarToggler onClick={toggle} />
+				<div className="d-flex justify-content-between">
+					
+					<StyledNavbarBrand href="/" className="order-2"><StyledImg src="/Logo2.png" /></StyledNavbarBrand>
+					<StyledNavbarToggler onClick={toggle} className="order-1"/>
+					<StyledButton color="tranparent" className="order-3"><Link>REGISTER</Link></StyledButton>
+				</div>
 				<Collapse isOpen={isOpen} navbar>
-					<Nav className="mx-auto" navbar>
+					<Nav className="" navbar>
 						<StyledNavItem>
 							<Link href="/index">
 								<StyledNavLink href="/" >HOME</StyledNavLink>
@@ -164,7 +169,7 @@ const Example = (props) => {
 					</Nav>
 
 				</Collapse>
-				<StyledButton color="tranparent" ><StyledNavbarText>REGISTER</StyledNavbarText></StyledButton>
+
 			</ColorNav>
 		</div>
 

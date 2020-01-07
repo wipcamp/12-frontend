@@ -51,7 +51,6 @@ export const Content = (props) => {
          textAlign = {props.textAlign}
           textIndent = {props.textIndent}
            padding = {props.padding}
-           lineHeight = {props.lineHeight}
            >
                
             {props.content}
