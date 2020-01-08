@@ -1,19 +1,19 @@
 import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'reactstrap'
+import {Container,Row,Col} from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Header, SubHeader } from '../Core/Text'
+import {Header , SubHeader} from '../Core/Text'
 import ImgInfo from '../Core/ImgInfo'
 
-export default class Who extends Component {
-    render() {
-        return (
+export default class When extends Component {
+    render () {
+        return(
             <Fragment>
                 <Container>
                     <Row>
                         <Col>
-                            <Header stroke="#1E1E1E" headerText="WHO" />
-                            <SubHeader color="#1E1E1E" subHeaderText="ค่ายนี้เหมาะกับใคร" />
+                        <Header stroke="#1E1E1E" headerText="WHEN" />
+                        <SubHeader color="#1E1E1E" subHeaderText="ค่ายจัดเมื่อไหร่" />
                         </Col>
                     </Row>
                     <Row>

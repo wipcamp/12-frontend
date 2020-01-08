@@ -7,7 +7,6 @@ import {
 	Nav,
 	NavItem,
 	NavLink,
-	NavbarText
 } from 'reactstrap';
 import Link from 'next/link'
 import { Button } from 'reactstrap'
@@ -34,9 +33,7 @@ const StyledNavItem = styled(NavItem)`
 
 const StyledNavLink = styled(NavLink)`
 	font-size: 14px;
-  	color : red;
-	
-
+  	color : red !important;
   	@media (min-width: 1024px) {
 	 	padding : 34px 24.5px 31px 24.5px;
 		font-size: 16px;
@@ -44,13 +41,21 @@ const StyledNavLink = styled(NavLink)`
   
 `
 
-const StyledNavbarBrand = styled(NavbarBrand)`
-  
-	margin: auto;
-	margin-left: 30%;
-  
-  
+const StyledNavLink2 = styled(StyledNavLink)`
+	font-size: 10px;
+	color: black !important;
+	padding: 2px 5px;
+	@media (min-width: 1024px) {
+		:hover{
+	 		color: white !important;
+		}
+  	}
+`
 
+const StyledNavbarBrand = styled(NavbarBrand)`
+	margin: 0;
+	margin-left: 85.96px;
+	
   @media (min-width: 1024px) {
 	  
 	  margin: 20px 0 17px 0;
@@ -59,14 +64,11 @@ const StyledNavbarBrand = styled(NavbarBrand)`
 
 
 const StyledNavbarToggler = styled(NavbarToggler)`
- 	
- 	margin-left: 17px;
- 	margin-top: 15px;
- 	margin-bottom: 15.38px;
- 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='20' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-	@media (min-width: 1024px) {
-		display: none !important;
-	}
+ 	border: none;
+ 	margin: 15px 0px 15px 17px;
+ 	padding: 0;
+ 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+	
 `
 
 const ColorNav = styled(Navbar)`
@@ -96,45 +98,49 @@ const StyledImg = styled.img`
 `
 
 const StyledButton = styled(Button)`
-	margin-left: 25%;
+	padding: 0;
 	border-radius: 5px;
 	border-color: black;
-	margin-right: -30px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-left: 54px;
 	font-size: 10px;
 	
 	@media (min-width: 1024px) {
 		margin: 24px 94px 24px 0;
-		padding: 10px 17px;
 		border-radius: 9px;
-		
-		
-
 		:hover {
 			background-color: black;
-			color: white;
 		}
 	}
   
 `
 
-const Example = (props) => {
+const Navbar1 = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggle = () => setIsOpen(!isOpen);
 
+	const changeIcon = () => {
+		var hamberger = document.getElementById("hamberger");
+		if (isOpen == true) {
+			hamberger.style.backgroundImage = "";
+			hamberger.style.content = "X";
+		}
+	}
+
 	return (
 		<div className="sticky-top">
-			<ColorNav expand="md" className="fixed-top">
-				<div className="d-flex justify-content-between">
-					
-					<StyledNavbarBrand href="/" className="order-2"><StyledImg src="/Logo2.png" /></StyledNavbarBrand>
-					<StyledNavbarToggler onClick={toggle} className="order-1"/>
-					<StyledButton color="tranparent" className="order-3"><Link href="/">REGISTER</Link></StyledButton>
+			<ColorNav expand="md" color="yellow" >
+				<div id="navbar-mobile">
+					<StyledNavbarToggler onClick={() => { toggle(); changeIcon();}} id="hamberger"/>
+					<StyledNavbarBrand href="/">
+						<StyledImg src="/Logo2.png" />
+					</StyledNavbarBrand>
+					<StyledButton color="tranparent">
+						<StyledNavLink2 href="/" >REGISTER</StyledNavLink2>
+					</StyledButton>
 				</div>
 				<Collapse isOpen={isOpen} navbar>
-					<Nav className="" navbar>
+					<Nav navbar>
 						<StyledNavItem>
 							<Link href="/index">
 								<StyledNavLink href="/" >HOME</StyledNavLink>
@@ -177,4 +183,6 @@ const Example = (props) => {
 	);
 }
 
-export default Example;
+
+
+export default Navbar1;

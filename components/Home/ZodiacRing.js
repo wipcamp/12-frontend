@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 const spin = keyframes`
@@ -20,7 +20,9 @@ const ZodiacRingImage = styled.img`
 export default class ZodiacRing extends Component {
     render() {
         return (
+            <Fragment>
             <ZodiacRingImage src="/zodiacRing.png" />
+            </Fragment>
         )
     }
 }

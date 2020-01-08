@@ -1,29 +1,33 @@
-import React, { Component } from 'react'
-import SideScroll from '../components/Faqs/SideScroll'
+import React, { Component, Fragment } from 'react'
 import GlobalStyles from '../components/Core/GlobalStyle'
-
-
+import Home from '../components/Home/Home'
+import MainNav from '../components/Core/MainNav'
+import When from '../components/When/When'
+import Who from '../components/Who/Who'
+import Game from '../components/Game/Game'
+import Where from './Where'
+import Faqs from '../components/Faqs/Faqs'
+import Sponsor from '../components/Sponsor/Sponsor'
 
 
 export default class index extends Component {
 
     render() {
         return (
-            <div>
+            <Fragment>
                 <style jsx global>
                     {GlobalStyles}
                 </style>
-                {/* <MainNav />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <ZodiacRing /> */}
-
-                <SideScroll />
+                <MainNav />
+                <Home />
+                <Who />
+                <Where />
+                <When />
+                <Faqs />
+                <Game />
+                <Sponsor />
                 
-            </div>
+            </Fragment>
         )
     }
 }
