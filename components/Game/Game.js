@@ -21,7 +21,7 @@ export default class Game extends Component {
                     <Row>
                     <Col>
                     <div style={{display:'flex',justifyContent:'Center'}}>
-                    <img src="./temp.jpg" style={{width:'100%',height:'400px'}}  />
+                    <img src="temp.jpg" style={{width:'100%',height:'400px'}}  />
                     </div>
                     </Col>
                     </Row>

@@ -19,8 +19,9 @@ export default class index extends Component {
                 <style jsx global>
                     {GlobalStyles}
                 </style>
-                <MainNav />
                 <Home />
+                <MainNav />
+                
                 <What />
                 <Who />
                 <Where />
