@@ -6,16 +6,21 @@ import SideScroll from './SideScroll'
 import {Header , SubHeader} from '../Core/Text'
 
 
+const FaqsContainer = styled.div`
+background-color : #1E1E1E;
+padding: 100px 0 100px 0;
+`
+
 
 export default class Faqs extends Component {
     render() {
         return (
-        <Fragment>
+        <FaqsContainer>
             <Container>
                 <Row>
                     <Col style={{marginTop:'50px'}}>
-                        <Header stroke="#1E1E1E" headerText="FAQS"/>
-                        <SubHeader  subHeaderText="คำถามที่พบบ่อย" color="#1E1E1E"/>                      
+                        <Header stroke="#ffffff" headerText="FAQS"/>
+                        <SubHeader  subHeaderText="คำถามที่พบบ่อย" color="#ffffff"/>                      
                     </Col>
                 </Row>
                 <Row>
@@ -24,7 +29,7 @@ export default class Faqs extends Component {
                     </Col>
                 </Row>
             </Container>
-        </Fragment>
+        </FaqsContainer>
         )
     }
 }

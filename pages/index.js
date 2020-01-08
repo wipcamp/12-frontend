@@ -5,9 +5,10 @@ import MainNav from '../components/Core/MainNav'
 import When from '../components/When/When'
 import Who from '../components/Who/Who'
 import Game from '../components/Game/Game'
-import Where from './Where'
+import Where from '../components/Where/Where'
 import Faqs from '../components/Faqs/Faqs'
 import Sponsor from '../components/Sponsor/Sponsor'
+import What from './What'
 
 
 export default class index extends Component {
@@ -20,6 +21,7 @@ export default class index extends Component {
                 </style>
                 <MainNav />
                 <Home />
+                <What />
                 <Who />
                 <Where />
                 <When />
