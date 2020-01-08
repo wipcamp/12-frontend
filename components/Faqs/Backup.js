@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { FaqsCard } from '../Core/Card'
 import styled from 'styled-components'
-import App from '../../pages/App'
 
 const Wrap = styled.div`
   overflow-x: scroll;
@@ -71,8 +70,12 @@ export default class SideScroll extends Component {
                 { srcFront: "", srcBack: "", visible: "hidden" },
                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                <App />,
-                <App />
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" }
             ],
             currentIndex: 0,
             translateValue: 0
@@ -116,12 +119,9 @@ export default class SideScroll extends Component {
                     <div style={{
                         transform: `translateX(${this.state.translateValue}px)`,
                         transition: 'transform ease-out 0.45s',
-                        display: 'flex',
-                        flex: '1 0 200px',
-                        justifyContent: 'space-around',
-                        
+                        display: 'flex'
                     }}>
-                        {/* {this.state.cards.map((data, key) => (
+                        {this.state.cards.map((data, key) => (
                             <FaqsCard
                                 key={key}
                                 srcFront={data.srcFront}
@@ -129,59 +129,13 @@ export default class SideScroll extends Component {
                                 visible={data.visible}
 
                             />
-                        ))} */}
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        
-                        
+                        ))}
                     </div>
                     
                 </Wrap>
                 <LeftArrow goToPrevSlide={this.goToPrevSlide} />
                 <RightArrow goToNextSlide={this.goToNextSlide} />
+                
             </div>
         )
     }
