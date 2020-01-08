@@ -21,7 +21,7 @@ export default class ZodiacRing extends Component {
     render() {
         return (
             <Fragment>
-            <ZodiacRingImage src="/zodiacRing.png" />
+            <ZodiacRingImage src="./zodiacRing.png" />
             </Fragment>
         )
     }

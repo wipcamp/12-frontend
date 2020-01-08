@@ -68,14 +68,14 @@ export default class SideScroll extends Component {
         this.state = {
             cards: [
                 { srcFront: "", srcBack: "", visible: "hidden" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" }
+                { srcFront: "./temp.jpg", srcBack: "./temp2.jpg" },
+                { srcFront: "./temp.jpg", srcBack: "./temp2.jpg" },
+                { srcFront: "./temp.jpg", srcBack: "./temp2.jpg" },
+                { srcFront: "./temp.jpg", srcBack: "./temp2.jpg" },
+                { srcFront: "./temp.jpg", srcBack: "./temp2.jpg" },
+                { srcFront: "./temp.jpg", srcBack: "./temp2.jpg" },
+                { srcFront: "./temp.jpg", srcBack: "./temp2.jpg" },
+                { srcFront: "./temp.jpg", srcBack: "./temp2.jpg" }
             ],
             currentIndex: 0,
             translateValue: 0
