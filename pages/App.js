@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Flippy, { FrontSide, BackSide } from './../lib';
 import './App.css';
 
+
 const FlippyStyle = {
   width: '200px',
   height: '300px',
@@ -24,10 +25,10 @@ const DefaultCardContents = ({ children }) => (
       }}
     >
       <img
-        src="/rick.png"
+        src="./rick.png"
         style={{ maxWidth: '100%', maxHeight: '100%' }}
       />
-      RICK
+      RUANG
       <span 
         style={{
           fontSize:'12px',
@@ -113,38 +114,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div style={{ display: 'flex', flex: '1 0 200px', justifyContent: 'space-around', 'flex-wrap': 'wrap' }}>
-            <Flippy
-              ref={(r) => this.flippyHorizontal = r}
-              flipOnClick={false}
-              style={FlippyStyle}
-            >
-            <DefaultCardContents>
-              I flip horizontally with an event<br />
-              <button type="button" onClick={() => this.flippyHorizontal.toggle()}>Toggle Me!</button>
-            </DefaultCardContents>
-          </Flippy>
-          <FlippyOnHover flipDirection="horizontal"/>
+      <div className="App slide" style ={{marginRight:'20px'}}>
           <FlippyOnClick flipDirection="horizontal"/>
-          <Flippy
-            ref={(r) => this.flippyVertical = r}
-            flipOnClick={false}
-            flipDirection="vertical"
-            style={FlippyStyle}
-          >
-            <DefaultCardContents>
-              I flip vertically with an event<br />
-              <button type="button" onClick={() => this.flippyVertical.toggle()}>Toggle Me!</button>
-            </DefaultCardContents>
-          </Flippy>
-          <FlippyOnHover />
-          <FlippyOnClick />
-          <ControlledFlippy
-            isFlipped={this.state.isFlipped}
-          /> 
         </div>
-      </div>
     );
   }
 }
