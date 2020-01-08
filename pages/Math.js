@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { FaqsCard } from '../Core/Card'
+import { FaqsCard } from '../components/Core/Card'
 import styled from 'styled-components'
-import App from '../../pages/App'
+import App from './App'
 
 const Wrap = styled.div`
   overflow-x: scroll;
@@ -130,42 +130,6 @@ export default class SideScroll extends Component {
 
                             />
                         ))} */}
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
                         <App />
                         <App />
                         <App />
