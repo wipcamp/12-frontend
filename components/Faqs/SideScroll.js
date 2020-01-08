@@ -71,8 +71,17 @@ export default class SideScroll extends Component {
                 { srcFront: "", srcBack: "", visible: "hidden" },
                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+<<<<<<< HEAD
                 <App />,
                 <App />
+=======
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" }
+>>>>>>> parent of 2d34fb2... [UPDATE] pathing of all images to linux syntax
             ],
             currentIndex: 0,
             translateValue: 0
