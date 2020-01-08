@@ -71,6 +71,12 @@ const StyledNavbarToggler = styled(NavbarToggler)`
 	
 `
 
+const StyledNavbarTogglerOpen = styled(StyledNavbarToggler)`
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M8 8 L24 24 M8 24 L24 8'/%3E%3C/svg%3E") !important;
+  display: none;
+	
+`
+
 const ColorNav = styled(Navbar)`
   margin: 0;
   padding: 0;
@@ -119,11 +125,21 @@ const Navbar1 = (props) => {
 
 	const toggle = () => setIsOpen(!isOpen);
 
-	const changeIcon = () => {
+	const changeIconToX = () => {
 		var hamberger = document.getElementById("hamberger");
+		var close = document.getElementById("close");
+		if (isOpen == false) {
+			hamberger.style.display = 'none';
+			close.style.display = 'inline';
+		} 
+	}
+
+	const changeIconToHamberg = () => {
+		var hamberger = document.getElementById("hamberger");
+		var close = document.getElementById("close");
 		if (isOpen == true) {
-			hamberger.style.backgroundImage = "";
-			hamberger.style.content = "X";
+			hamberger.style.display = 'inline';
+			close.style.display = 'none';
 		}
 	}
 
@@ -131,7 +147,8 @@ const Navbar1 = (props) => {
 		<div className="sticky-top">
 			<ColorNav expand="md" color="yellow" >
 				<div id="navbar-mobile">
-					<StyledNavbarToggler onClick={() => { toggle(); changeIcon();}} id="hamberger"/>
+					<StyledNavbarToggler onClick={() => { toggle(); changeIconToX();}} id="hamberger"/>
+					<StyledNavbarTogglerOpen  onClick={() => { toggle(); changeIconToHamberg();}} id="close" />
 					<StyledNavbarBrand href="/">
 						<StyledImg src="/Logo2.png" />
 					</StyledNavbarBrand>
