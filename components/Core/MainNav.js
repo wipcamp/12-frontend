@@ -131,7 +131,7 @@ const Example = (props) => {
 					
 					<StyledNavbarBrand href="/" className="order-2"><StyledImg src="/Logo2.png" /></StyledNavbarBrand>
 					<StyledNavbarToggler onClick={toggle} className="order-1"/>
-					<StyledButton color="tranparent" className="order-3"><Link>REGISTER</Link></StyledButton>
+					<StyledButton color="tranparent" className="order-3"><Link href="/">REGISTER</Link></StyledButton>
 				</div>
 				<Collapse isOpen={isOpen} navbar>
 					<Nav className="" navbar>
@@ -141,7 +141,7 @@ const Example = (props) => {
 							</Link>
 						</StyledNavItem>
 						<StyledNavItem>
-							<Link href="/">
+							<Link href="./App">
 								<StyledNavLink href="/">WHAT</StyledNavLink>
 							</Link>
 						</StyledNavItem>

@@ -27,8 +27,9 @@ const TrackCardBody = styled.div`
 `
 
 const FaqsCardBody = styled(TrackCardBody)`
+    
     width: 170px;
-    margin-left: -60%;
+    margin-left: -80%;
 `
 
 const CardFront = styled.div`

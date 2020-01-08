@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import MainNav from '../components/Core/MainNav'
+import SideScroll from '../components/Faqs/SideScroll'
 import GlobalStyles from '../components/Core/GlobalStyle'
+
+
 
 
 export default class index extends Component {
@@ -11,7 +13,16 @@ export default class index extends Component {
                 <style jsx global>
                     {GlobalStyles}
                 </style>
-                <MainNav />
+                {/* <MainNav />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <ZodiacRing /> */}
+
+                <SideScroll />
+                
             </div>
         )
     }
