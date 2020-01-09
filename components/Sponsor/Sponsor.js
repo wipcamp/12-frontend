@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'reactstrap'
 export default class Sponsor extends Component {
     render() {
         return (
-            <div style={{ marginTop: '75px' }}>
+            <div style={{ marginTop: '75px' , marginBottom: '108px'}}>
                 <Header stroke="black" headerText="SPONSOR" />
                 <SubHeader color="black" subHeaderText="ผู้สนับสนุน" />
                 <Container className="text-center" style={{ marginTop: '61px' }}>
