@@ -1,21 +1,19 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components';
+ 
+export const keyFrameGlow = keyframes`
+  0% { 
+      box-shadow: 0 0 10px #2ba805;
+      border-radius: 50%;
+     }
+50% { 
+    box-shadow: 0 0 50px #49e819;
+    border-radius: 50%;
+    
 
-const Glow = styled.img`
--moz-box-shadow: 0 0 30px #fe0;
--webkit-box-shadow: 0 0 30px #fe0;
-box-shadow: 0px 0px 30px #fe0;
-border-radius: 50%;
-width: 119px;
-height: 119px;
+    }
+100% { 
+       box-shadow: 0 0 0px #2ba805;
+       border-radius: 50%;
 
+    }
 `
-
-
-
-
-export const Glowing = (props) => {
-    return (
-     <Glow src="/zodiacRing.png" />
-    )
-}

@@ -19,7 +19,8 @@
   "scripts": {
     "dev": "next -p 3111",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prod": "next export"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

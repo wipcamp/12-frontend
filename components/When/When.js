@@ -4,11 +4,11 @@ import {Container,Row,Col} from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Header , SubHeader} from '../Core/Text'
 import ImgInfo from '../Core/ImgInfo'
-
 const WhenContainer = styled.div`
 background-color : #1E1E1E;
 padding: 100px 0 100px 0;
 `
+
 
 export default class When extends Component {
     render () {
@@ -23,7 +23,8 @@ export default class When extends Component {
                     </Row>
                     <Row>
                         <Col sm="6">
-                            <ImgInfo src="Who/tempcircle.png" info="น้อง ๆที่มีความสนใจด้านไอที หรือต้องการตามหาเส้นทาง เดินของตัวเอง" color='#ffffff' />
+                           <ImgInfo src="Who/tempcircle.png" />
+                          
                         </Col>
                         <Col sm="6">
                             <ImgInfo src="Who/tempcircle.png" info="น้อง ๆที่มีความสนใจด้านไอที หรือต้องการตามหาเส้นทาง เดินของตัวเอง" color='#ffffff' />
@@ -38,6 +39,7 @@ export default class When extends Component {
                         </Col>
                     </Row>
                 </Container>
+                
             </WhenContainer>
         )
     }
