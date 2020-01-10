@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
-import ImgInfo from '../Core/ImgInfo'
+import { ImageInfo , ImageInfoGlow } from '../Core/ImgInfo'
 
 const WhoContainer = styled.div`
 background-color : #1E1E1E;
@@ -23,18 +23,21 @@ export default class Who extends Component {
                     </Row>
                     <Row>
                         <Col sm="6">
-                            <ImgInfo src="Who/tempcircle.png" info="น้อง ๆที่มีความสนใจด้านไอที หรือต้องการตามหาเส้นทาง เดินของตัวเอง" color="#ffffff" />
+                        <ImageInfo src="/who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
                         </Col>
                         <Col sm="6">
-                            <ImgInfo src="Who/tempcircle.png" info="น้อง ๆที่มีความสนใจด้านไอที หรือต้องการตามหาเส้นทาง เดินของตัวเอง" color="#ffffff" />
+                        <ImageInfo src="/who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+
                         </Col>
                     </Row>
                     <Row>
                         <Col sm="6">
-                            <ImgInfo src="Who/tempcircle.png" info="น้อง ๆที่มีความสนใจด้านไอที หรือต้องการตามหาเส้นทาง เดินของตัวเอง" color="#ffffff" />
+                        <ImageInfo src="/who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+
                         </Col>
                         <Col sm="6">
-                            <ImgInfo src="Who/tempcircle.png" info="น้อง ๆที่มีความสนใจด้านไอที หรือต้องการตามหาเส้นทาง เดินของตัวเอง" color="#ffffff" />
+                        <ImageInfo src="/who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+
                         </Col>
                     </Row>
                 </Container>
