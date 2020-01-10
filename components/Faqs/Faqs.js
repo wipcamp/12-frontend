@@ -24,11 +24,9 @@ export default class Faqs extends Component {
                         </Col>
                     </Row>
                 </Container>
-                <Row>
-                    <Col style={{ marginTop: '36px' }}>
-                        <SideScroll />
-                    </Col>
-                </Row>
+                
+                    <SideScroll />
+                
             </FaqsContainer>
         )
     }
