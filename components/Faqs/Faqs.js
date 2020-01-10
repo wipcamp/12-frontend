@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
-import {Container,Row,Col} from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import SideScroll from './SideScroll'
-import {Header , SubHeader} from '../Core/Text'
+import { Header, SubHeader } from '../Core/Text'
 
 
 const FaqsContainer = styled.div`
@@ -15,21 +15,21 @@ padding: 100px 0 100px 0;
 export default class Faqs extends Component {
     render() {
         return (
-        <FaqsContainer>
-            <Container>
+            <FaqsContainer>
+                <Container>
+                    <Row>
+                        <Col style={{ marginTop: '50px' }}>
+                            <Header stroke="#ffffff" headerText="FAQS" />
+                            <SubHeader subHeaderText="คำถามที่พบบ่อย" color="#ffffff" />
+                        </Col>
+                    </Row>
+                </Container>
                 <Row>
-                    <Col style={{marginTop:'50px'}}>
-                        <Header stroke="#ffffff" headerText="FAQS"/>
-                        <SubHeader  subHeaderText="คำถามที่พบบ่อย" color="#ffffff"/>                      
+                    <Col style={{ marginTop: '36px' }}>
+                        <SideScroll />
                     </Col>
                 </Row>
-                <Row>
-                    <Col style={{marginTop:'36px'}}>
-                        <SideScroll/>
-                    </Col>
-                </Row>
-            </Container>
-        </FaqsContainer>
+            </FaqsContainer>
         )
     }
 }

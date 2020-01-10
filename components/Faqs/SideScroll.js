@@ -8,6 +8,7 @@ const Wrap = styled.div`
     width: 100%;
     position: relative;
     z-index: 1;
+    scroll-snap-type: x mandatory;
     ::-webkit-scrollbar {
          width: 0px;
     }
@@ -71,8 +72,13 @@ export default class SideScroll extends Component {
                 { srcFront: "", srcBack: "", visible: "hidden" },
                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                <App />,
-                <App />
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" }
+
             ],
             currentIndex: 0,
             translateValue: 0
@@ -90,7 +96,7 @@ export default class SideScroll extends Component {
     }
 
     goToNextSlide = () => {
-        if (this.state.currentIndex === this.state.cards.length - 2) {
+        if (this.state.currentIndex === this.state.cards.length - 4) {
             return this.setState({
                 currentIndex: 0,
                 translateValue: 0
@@ -98,7 +104,7 @@ export default class SideScroll extends Component {
         }
         this.setState(prevState => ({
             currentIndex: prevState.currentIndex + 1,
-            translateValue: prevState.translateValue + -(this.slideWidth()+25)
+            translateValue: prevState.translateValue + -(this.slideWidth())
         }));
     }
 
@@ -117,9 +123,9 @@ export default class SideScroll extends Component {
                         transform: `translateX(${this.state.translateValue}px)`,
                         transition: 'transform ease-out 0.45s',
                         display: 'flex',
-                        flex: '1 0 200px',
-                        justifyContent: 'space-around',
                         
+                        
+                        scrollSnapAlign: 'center;'
                     }}>
                         {/* {this.state.cards.map((data, key) => (
                             <FaqsCard
