@@ -97,7 +97,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App slide" style ={{marginRight:'20px'}}>
+      <div className="App slide" style ={{marginRight:'20px', scrollSnapAlign: 'end'}}>
           <FlippyOnClick flipDirection="horizontal" srcFront={this.props.srcFront} srcBack={this.props.srcBack}/>
       
         </div>

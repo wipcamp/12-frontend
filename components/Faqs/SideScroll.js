@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import { FaqsCard } from '../Core/Card'
 import styled from 'styled-components'
 import App from '../../pages/App'
 
@@ -64,96 +63,125 @@ const RightArrow = (props) => {
 
 
 
-export default class SideScroll extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            cards: [
-                { srcFront: "", srcBack: "", visible: "hidden" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
-                { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" }
+// export default class SideScroll extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             cards: [
+//                 { srcFront: "", srcBack: "", visible: "hidden" },
+//                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+//                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+//                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+//                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+//                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+//                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+//                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" },
+//                 { srcFront: "/temp.jpg", srcBack: "/temp2.jpg" }
 
-            ],
-            currentIndex: 0,
-            translateValue: 0
-        };
-    }
+//             ],
+//             currentIndex: 0,
+//             translateValue: 0
+//         };
+//     }
 
-    goToPrevSlide = () => {
-        if (this.state.currentIndex === 0)
-            return;
+//     goToPrevSlide = () => {
+//         if (this.state.currentIndex === 0)
+//             return;
 
-        this.setState(prevState => ({
-            currentIndex: prevState.currentIndex - 1,
-            translateValue: prevState.translateValue + (this.slideWidth())
-        }))
-    }
+//         this.setState(prevState => ({
+//             currentIndex: prevState.currentIndex - 1,
+//             translateValue: prevState.translateValue + (this.slideWidth())
+//         }))
+//     }
 
-    goToNextSlide = () => {
-        if (this.state.currentIndex === this.state.cards.length - 4) {
-            return this.setState({
-                currentIndex: 0,
-                translateValue: 0
-            })
-        }
-        this.setState(prevState => ({
-            currentIndex: prevState.currentIndex + 1,
-            translateValue: prevState.translateValue + -(this.slideWidth())
-        }));
-    }
+//     goToNextSlide = () => {
+//         if (this.state.currentIndex === this.state.cards.length - 4) {
+//             return this.setState({
+//                 currentIndex: 0,
+//                 translateValue: 0
+//             })
+//         }
+//         this.setState(prevState => ({
+//             currentIndex: prevState.currentIndex + 1,
+//             translateValue: prevState.translateValue + -(this.slideWidth())
+//         }));
+//     }
 
-    slideWidth = () => {
-        return document.querySelector('.slide').clientWidth
-    }
+//     slideWidth = () => {
+//         return document.querySelector('.slide').clientWidth
+//     }
 
-    render() {
+//     render() {
 
-        return (
-            <div style={{position: 'relative', zIndex: '2'}}>
+//         return (
+//             <div style={{position: 'relative', zIndex: '2'}}>
 
-                <Wrap >
+//                 <Wrap >
 
-                    <div style={{
-                        transform: `translateX(${this.state.translateValue}px)`,
-                        transition: 'transform ease-out 0.45s',
-                        display: 'flex',
-                        
-                        
-                        scrollSnapAlign: 'center;'
-                    }}>
-                        {/* {this.state.cards.map((data, key) => (
-                            <FaqsCard
-                                key={key}
-                                srcFront={data.srcFront}
-                                srcBack={data.srcBack}
-                                visible={data.visible}
+//                     <div style={{
+//                         transform: `translateX(${this.state.translateValue}px)`,
+//                         transition: 'transform ease-out 0.45s',
+//                         display: 'flex',
 
-                            />
-                        ))} */}
-                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
-                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
-                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
-                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
-                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
-                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
-                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
-                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
-                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
-                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
-                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />>
-                    </div>
+
+//                         scrollSnapAlign: 'center;'
+//                     }}>
+
+//                         <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+//                         <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+//                         <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+//                         <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+//                         <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+//                         <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+//                         <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+//                         <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+//                         <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+//                         <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+//                         <App srcFront ="/backcard.png" srcBack ="/backcard.png" />>
+//                     </div>
+
+//                 </Wrap>
+//                 <LeftArrow goToPrevSlide={this.goToPrevSlide} />
+//                 <RightArrow goToNextSlide={this.goToNextSlide} />
+//             </div>
+//         )
+//     }
+// }
+
+const SideScroll = () => {
+
+
+    return (
+        <div style={{ position: 'relative', zIndex: '2' }}>
+
+            <Wrap >
+
+                <div style={{
                     
-                </Wrap>
-                <LeftArrow goToPrevSlide={this.goToPrevSlide} />
-                <RightArrow goToNextSlide={this.goToNextSlide} />
-            </div>
-        )
-    }
+                    display: 'flex',
+                    scrollSnapAlign: 'end'
+
+                    
+                }}>
+
+                    <App srcFront="/backcard.png" srcBack="/backcard.png" />
+                    <App srcFront="/backcard.png" srcBack="/backcard.png" />
+                    <App srcFront="/backcard.png" srcBack="/backcard.png" />
+                    <App srcFront="/backcard.png" srcBack="/backcard.png" />
+                    <App srcFront="/backcard.png" srcBack="/backcard.png" />
+                    <App srcFront="/backcard.png" srcBack="/backcard.png" />
+                    <App srcFront="/backcard.png" srcBack="/backcard.png" />
+                    <App srcFront="/backcard.png" srcBack="/backcard.png" />
+                    <App srcFront="/backcard.png" srcBack="/backcard.png" />
+                    <App srcFront="/backcard.png" srcBack="/backcard.png" />
+                    <App srcFront="/backcard.png" srcBack="/backcard.png" />>
+                    </div>
+
+            </Wrap>
+            <LeftArrow />
+            <RightArrow  />
+        </div>
+    )
 }
 
+export default SideScroll;
