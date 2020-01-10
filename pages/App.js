@@ -4,8 +4,8 @@ import './App.css';
 
 
 const FlippyStyle = {
-  width: '200px',
-  height: '300px',
+  width: '290px',
+  height: '540px',
   textAlign: 'center',
   color: '#FFF',
   fontFamily: 'sans-serif',
@@ -36,7 +36,7 @@ const DefaultCardContents = ({ children }) => (
           bottom: '10px',
           width: '100%'
         }}>
-        {children}<br />
+        {children}<br />  
         (FRONT SIDE)
       </span>
     </FrontSide>
