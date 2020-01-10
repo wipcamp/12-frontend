@@ -130,53 +130,17 @@ export default class SideScroll extends Component {
 
                             />
                         ))} */}
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        <App />
-                        
-                        
+                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />
+                        <App srcFront ="/backcard.png" srcBack ="/backcard.png" />>
                     </div>
                     
                 </Wrap>

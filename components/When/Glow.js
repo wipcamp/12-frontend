@@ -12,7 +12,7 @@ export const keyFrameGlow = keyframes`
 
     }
 100% { 
-       box-shadow: 0 0 0px #2ba805;
+       box-shadow: 0 0 30px #2ba805;
        border-radius: 50%;
 
     }

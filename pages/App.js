@@ -10,55 +10,39 @@ const FlippyStyle = {
   color: '#FFF',
   fontFamily: 'sans-serif',
   fontSize: '30px',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  padding: '0px'
 }
 
 
-const DefaultCardContents = ({ children }) => (
+const DefaultCardContents = ({ children , srcFront = props.srcFront , srcBack = props.srcBack }) => (
   <React.Fragment>
     <FrontSide
       style={{
-        backgroundColor: '#F29381',
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        padding: '0px'
       }}
     >
       <img
-        src="./rick.png"
+        src={srcFront}
         style={{ maxWidth: '100%', maxHeight: '100%' }}
       />
-      RUANG
-      <span 
-        style={{
-          fontSize:'12px',
-          position: 'absolute',
-          bottom: '10px',
-          width: '100%'
-        }}>
-        {children}<br />  
-        (FRONT SIDE)
-      </span>
+      
     </FrontSide>
     <BackSide
       style={{
-        backgroundColor: '#907070',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        flexDirection: 'column'
-      }}>
-      ROCKS
-      <span 
-        style={{
-          fontSize:'12px',
-          position: 'absolute',
-          bottom: '10px',
-          width: '100%'
-        }}>
-        {children}<br />
-        (BACK SIDE)
-      </span>
+        flexDirection: 'column',
+        padding: '0px'
+      }}> 
+      <img
+        src={srcFront}
+        style={{ maxWidth: '100%', maxHeight: '100%' }}
+      />
     </BackSide>
   </React.Fragment>);
 
@@ -68,20 +52,20 @@ const FlippyOnHover = ({ flipDirection = 'vertical' }) => (
     flipDirection={flipDirection}
     style={FlippyStyle}
   >
-    <DefaultCardContents>
+    <DefaultCardContents >
     I flip {flipDirection}ly kb on hover
     </DefaultCardContents>
   </Flippy>
 );
 
-const FlippyOnClick = ({ flipDirection = 'vertical' }) => (
+const FlippyOnClick = ({ flipDirection = 'vertical', srcFront = props.srcFront , srcBack = props.srcBack}) => (
   <Flippy
     flipOnClick={true}
     flipDirection={flipDirection}
     style={FlippyStyle}
   >
-    <DefaultCardContents>
-      I flip {flipDirection}ly on click
+    <DefaultCardContents srcFront={srcFront} srcBack={srcBack}>
+    I flip {flipDirection}ly on click {srcFront}
     </DefaultCardContents>
   </Flippy>
 );
@@ -102,7 +86,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isFlipped: false
+      isFlipped: false,
     };
 
     setInterval(() => {
@@ -111,11 +95,11 @@ class App extends Component {
       });
     }, 3000);
   }
-
   render() {
     return (
       <div className="App slide" style ={{marginRight:'20px'}}>
-          <FlippyOnClick flipDirection="horizontal"/>
+          <FlippyOnClick flipDirection="horizontal" srcFront={this.props.srcFront} srcBack={this.props.srcBack}/>
+      
         </div>
     );
   }
