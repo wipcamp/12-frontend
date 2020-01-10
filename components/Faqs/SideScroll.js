@@ -19,14 +19,18 @@ const Wrap = styled.div`
 const ArrowButton = styled.div`
     height: 50px;
   width: 50px;
-  display: flex;
+  
   align-items: center;
   justify-content: center;
   background: black;
   border-radius: 50%;
   cursor: pointer;
   color: white;
-  
+  display: none;
+
+  @media (min-width: 1024px) {
+      display: flex;
+  }
 
   
 `
