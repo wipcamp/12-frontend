@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import Flippy, { FrontSide, BackSide } from './../lib';
+import styled from 'styled-components'
 import './App.css';
 
+const Card = styled.div`
+  scroll-snap-align: center;
+
+  @media (min-width: 1024px) {
+    scroll-snap-align: start;
+  }
+`
 
 const FlippyStyle = {
   width: '290px',
@@ -11,7 +19,8 @@ const FlippyStyle = {
   fontFamily: 'sans-serif',
   fontSize: '30px',
   justifyContent: 'center',
-  padding: '0px'
+  padding: '0px',
+  margin: '0px 14px'
 }
 
 
@@ -97,10 +106,10 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App slide" style ={{marginRight:'20px', scrollSnapAlign: 'end'}}>
+      <Card className="App slide">
           <FlippyOnClick flipDirection="horizontal" srcFront={this.props.srcFront} srcBack={this.props.srcBack}/>
       
-        </div>
+        </Card>
     );
   }
 }
