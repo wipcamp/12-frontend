@@ -23,21 +23,21 @@ export default class When extends Component {
                     </Row>
                     <Row>
                         <Col sm="6">
-                        <ImageInfoGlow src="/who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+                        <ImageInfoGlow src="/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
 
                         </Col>
                         <Col sm="6">
-                        <ImageInfo src="/who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+                        <ImageInfo src="/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
 
                         </Col>
                     </Row>
                     <Row>
                         <Col sm="6">
-                        <ImageInfo src="/who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+                        <ImageInfo src="/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
                         
                         </Col>
                         <Col sm="6">
-                        <ImageInfo src="/who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+                        <ImageInfo src="/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
                         
                         </Col>
                     </Row>
