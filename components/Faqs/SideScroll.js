@@ -83,6 +83,8 @@ export default class SideScroll extends Component {
                 { srcFront:"/backcard.png", srcBack:"/backcard.png" },
                 { srcFront:"/backcard.png", srcBack:"/backcard.png" },
                 { srcFront:"/backcard.png", srcBack:"/backcard.png" },
+                { srcFront:"/backcard.png", srcBack:"/backcard.png" },
+                { srcFront:"/backcard.png", srcBack:"/backcard.png" },
                 { srcFront:"/backcard.png", srcBack:"/backcard.png" }
 
             ],
@@ -121,8 +123,8 @@ export default class SideScroll extends Component {
     render() {
 
         return (
-            <div style={{ position: 'relative', zIndex: '2', marginTop: '36px', marginLeft: '-105px'}} className="scroll-container">
-
+            <div style={{ position: 'relative', zIndex: '2', marginTop: '36px'}} className="scroll-container">
+                <div style={{marginLeft: '-105px'}}>
                 <Wrap >
 
                     <div
@@ -141,8 +143,9 @@ export default class SideScroll extends Component {
                             />
                         ))}
                     </div>
-
+                    
                 </Wrap>
+                </div>
                 <LeftArrow goToPrevSlide={this.goToPrevSlide} />
                 <RightArrow goToNextSlide={this.goToNextSlide} />
             </div>

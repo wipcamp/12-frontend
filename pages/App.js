@@ -9,14 +9,10 @@ const Card = styled.div`
 `
 
 
+
 const FlippyStyle = {
   width: '170px',
   height: '293px',
-  textAlign: 'center',
-  color: '#FFF',
-  fontFamily: 'sans-serif',
-  fontSize: '30px',
-  justifyContent: 'center',
   padding: '0px',
   margin: '0px 14px 0px 0px',
   
