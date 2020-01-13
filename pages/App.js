@@ -4,23 +4,22 @@ import styled from 'styled-components'
 import './App.css';
 
 const Card = styled.div`
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 
-  @media (min-width: 1024px) {
-    scroll-snap-align: start;
-  }
 `
 
+
 const FlippyStyle = {
-  width: '290px',
-  height: '540px',
+  width: '170px',
+  height: '293px',
   textAlign: 'center',
   color: '#FFF',
   fontFamily: 'sans-serif',
   fontSize: '30px',
   justifyContent: 'center',
   padding: '0px',
-  margin: '0px 14px'
+  margin: '0px 14px 0px 0px',
+  
 }
 
 
@@ -36,7 +35,7 @@ const DefaultCardContents = ({ children , srcFront = props.srcFront , srcBack = 
     >
       <img
         src={srcFront}
-        style={{ maxWidth: '100%', maxHeight: '100%' }}
+        style={{ maxWidth: '100%', maxHeight: '100%' ,padding: '0px'}}
       />
       
     </FrontSide>
@@ -50,7 +49,7 @@ const DefaultCardContents = ({ children , srcFront = props.srcFront , srcBack = 
       }}> 
       <img
         src={srcFront}
-        style={{ maxWidth: '100%', maxHeight: '100%' }}
+        style={{ maxWidth: '100%', maxHeight: '100%' ,padding: '0px'}}
       />
     </BackSide>
   </React.Fragment>);

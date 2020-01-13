@@ -75,7 +75,7 @@ export default class SideScroll extends Component {
         super(props);
         this.state = {
             cards: [
-                
+                { srcFront:"", srcBack:"" },
                 { srcFront:"/backcard.png", srcBack:"/backcard.png" },
                 { srcFront:"/backcard.png", srcBack:"/backcard.png" },
                 { srcFront:"/backcard.png", srcBack:"/backcard.png" },
@@ -121,7 +121,7 @@ export default class SideScroll extends Component {
     render() {
 
         return (
-            <div style={{ position: 'relative', zIndex: '2', marginTop: '36px' }} className="scroll-container">
+            <div style={{ position: 'relative', zIndex: '2', marginTop: '36px', marginLeft: '-105px'}} className="scroll-container">
 
                 <Wrap >
 
@@ -130,13 +130,14 @@ export default class SideScroll extends Component {
                             display: 'flex',
                             transform: `translateX(${this.state.translateValue}px)`,
                             transition: 'transform ease-out 0.45s',
+                            padding: '0px',
+                            margin: '0px'
                         }} id="item">
                         {this.state.cards.map((data, key) => (
                             <App 
                                 key={key}
                                 srcFront={data.srcFront}
                                 srcBack={data.srcBack}
-                                visible={data.visible}
                             />
                         ))}
                     </div>

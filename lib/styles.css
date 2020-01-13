@@ -48,7 +48,7 @@
             transform: rotateY(0deg);
 
     background: transparent;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+   
 
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
