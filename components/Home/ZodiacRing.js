@@ -14,10 +14,11 @@ const Zodiacglow = keyframes`
 const ZodiacRingImage = styled.img`
     width: 276px;
     height: 274px;
+    position: absolute;
 
     @media (min-width: 1024px) {
-        width: 666px;
-        height: 664px;
+        width: 766px;
+        height: 764px;
         animation: ${spin} 60s linear infinite,${Zodiacglow} 2s ease-in-out alternate infinite;
     }
 `
@@ -26,7 +27,7 @@ export default class ZodiacRing extends Component {
     render() {
         return (
             <Fragment>
-            <ZodiacRingImage src="./img/ZodiacRing.png" />
+            <ZodiacRingImage src="./img/Home/ZodiacRing.png" />
             </Fragment>
         )
     }

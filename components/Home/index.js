@@ -11,7 +11,12 @@ const HomeContainer = styled.div`
 const ZodiacContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 100px;
+`
+const LogoImg = styled.img`
+    width: 467px;
+    height: 175px;
+    margin-top:300px;
 `
 
 export default class Home extends Component {
@@ -24,6 +29,7 @@ export default class Home extends Component {
                         <Col>
                         <ZodiacContainer>
                             <ZodiacRing/>
+                            <LogoImg src='/img/Home/wiplogo.png' />
                         </ZodiacContainer>
                         </Col>
                     </Row>
