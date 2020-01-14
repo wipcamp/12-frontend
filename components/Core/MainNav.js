@@ -69,7 +69,7 @@ const Line = styled.div`
 
 const StyledNavLink2 = styled(NavLink)`
 	font-size: 10px;
-	color: white;
+	color: black;
 	padding: 2px 5px;
 	@media (min-width: 1024px) {
 		font-size: 16px;
@@ -147,9 +147,10 @@ const RegisterButton = styled(Button)`
 	padding: 0.2em;
 	border-radius: 5px;
 	border-color: #505050;
-	background-color: #505050;
+	background-color: none;
 	font-size: 10px;
 	margin-right:16px;
+
 
 	
 	@media (min-width: 1024px) {
@@ -159,7 +160,7 @@ const RegisterButton = styled(Button)`
 		right: 18px;
 		top: 24px;
 		:hover {
-			background-color: black;
+			background-color: #505050;
 		}
 	}
   
