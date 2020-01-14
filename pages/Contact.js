@@ -8,7 +8,6 @@ import {
   Input,
   Button
 } from 'reactstrap'
-import ImgInfo from '../components/Core/ImgInfo'
 import { Header , SubHeader  } from '../components/Core/Text'
 import ContactImage from '../components/Contact/ContactImage'
 export default class contact extends Component {

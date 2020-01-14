@@ -7,7 +7,7 @@ const Image = styled.img`
 `
 
 const Glowing = styled.div`
-animation: ${ keyFrameGlow } 2s ease infinite ;
+animation: ${ keyFrameGlow } 2s ease-in-out infinite alternate ;
 `
 class ImageInfo extends Component {
  render() {
