@@ -29,14 +29,21 @@ const StyledNavItem = styled(NavItem)`
 
 const StyledNavLink = styled(NavLink)`
 	font-size: 14px;
-  	color : black;
+  	color : white;
+	
+	:hover {
+		color: white;
+	}
   	@media (min-width: 1024px) {
 	 	/* padding : 34px 24.5px 31px 24.5px; */
 		width:110px !important;
 		height: 86px !important;
 		font-size: 16px;
 		line-height: 70px;
-		border: 1px solid blue;
+		:hover {
+		background-color: darkgrey;
+		}
+
 		
 
   	}
@@ -54,6 +61,9 @@ const Line = styled.div`
 
 	${StyledNavLink}:hover & {
 		background-color: black;
+	}
+	@media (min-width: 1024px) {
+		
 	}
 `
 
@@ -133,7 +143,7 @@ const StyledImg = styled.img`
   
 `
 
-const StyledButton = styled(Button)`
+const RegisterButton = styled(Button)`
 	padding: 0.2em;
 	border-radius: 5px;
 	border-color: #505050;
@@ -147,6 +157,7 @@ const StyledButton = styled(Button)`
 		border-radius: 9px;
 		position: absolute;
 		right: 18px;
+		top: 24px;
 		:hover {
 			background-color: black;
 		}
@@ -158,7 +169,6 @@ const StyledNav = styled(Nav)`
 	@media (min-width: 1024px) {
 		width: 100%;
 		height: 86px;
-		border: 1px solid red;
 		display: flex;
 		justify-content: center ; 
 
@@ -169,7 +179,7 @@ const PlaceHolder = styled.div`
 @media (min-width: 1024px) {
 	display: block;
 	width: 15%;
-	border:1px solid red;
+	
 }
 `
 
@@ -181,7 +191,6 @@ padding: 9px 0 8px 0;
 
 @media (min-width: 1024px) {
 		/* margin: 24px 94px 24px 0; */
-		border: 1px solid red;
 		max-width: 100px;
 		padding: 0px;
 		margin-left:5%;
@@ -225,11 +234,11 @@ const Navbar1 = (props) => {
 					<StyledNavbarToggler onClick={() => { toggle(); changeIconToX();}} id="hamberger"/>
 					<StyledNavbarTogglerOpen  onClick={() => { toggle(); changeIconToHamberg();}} id="close" />
 					<StyledNavbarBrand href="/">
-						<StyledImg src="./img/Logo2.png" />
+						<StyledImg src="/img/Logo2.png" />
 					</StyledNavbarBrand>
-					<StyledButton color="tranparent">
+					<RegisterButton color="tranparent">
 						<StyledNavLink2 href="/" >REGISTER</StyledNavLink2>
-					</StyledButton>
+					</RegisterButton>
 				</NavMobile>
 				<Collapse isOpen={isOpen} navbar>
 					<div style={{width:'100%',display:'flex',justifyContent:'center'}}>
