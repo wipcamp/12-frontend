@@ -225,7 +225,7 @@ const Navbar1 = (props) => {
 					<StyledNavbarToggler onClick={() => { toggle(); changeIconToX();}} id="hamberger"/>
 					<StyledNavbarTogglerOpen  onClick={() => { toggle(); changeIconToHamberg();}} id="close" />
 					<StyledNavbarBrand href="/">
-						<StyledImg src="/Logo2.png" />
+						<StyledImg src="./img/Logo2.png" />
 					</StyledNavbarBrand>
 					<StyledButton color="tranparent">
 						<StyledNavLink2 href="/" >REGISTER</StyledNavLink2>

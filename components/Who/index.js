@@ -23,20 +23,20 @@ export default class Who extends Component {
                     </Row>
                     <Row>
                         <Col sm="6">
-                        <ImageInfo src="/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+                        <ImageInfo src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
                         </Col>
                         <Col sm="6">
-                        <ImageInfo src="/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+                        <ImageInfo src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
 
                         </Col>
                     </Row>
                     <Row>
                         <Col sm="6">
-                        <ImageInfo src="/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+                        <ImageInfo src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
 
                         </Col>
                         <Col sm="6">
-                        <ImageInfo src="/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+                        <ImageInfo src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
 
                         </Col>
                     </Row>

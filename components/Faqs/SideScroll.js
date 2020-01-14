@@ -75,16 +75,16 @@ export default class SideScroll extends Component {
         super(props);
         this.state = {
             cards: [
-                { srcFront:"/backcard.png", srcBack:"/backcard.png" },
-                { srcFront:"/backcard.png", srcBack:"/backcard.png" },
-                { srcFront:"/backcard.png", srcBack:"/backcard.png" },
-                { srcFront:"/backcard.png", srcBack:"/backcard.png" },
-                { srcFront:"/backcard.png", srcBack:"/backcard.png" },
-                { srcFront:"/backcard.png", srcBack:"/backcard.png" },
-                { srcFront:"/backcard.png", srcBack:"/backcard.png" },
-                { srcFront:"/backcard.png", srcBack:"/backcard.png" },
-                { srcFront:"/backcard.png", srcBack:"/backcard.png" },
-                { srcFront:"/backcard.png", srcBack:"/backcard.png" }
+                { srcFront:"img/backcard.png", srcBack:"img/backcard.png" },
+                { srcFront:"img/backcard.png", srcBack:"img/backcard.png" },
+                { srcFront:"img/backcard.png", srcBack:"img/backcard.png" },
+                { srcFront:"img/backcard.png", srcBack:"img/backcard.png" },
+                { srcFront:"img/backcard.png", srcBack:"img/backcard.png" },
+                { srcFront:"img/backcard.png", srcBack:"img/backcard.png" },
+                { srcFront:"img/backcard.png", srcBack:"img/backcard.png" },
+                { srcFront:"img/backcard.png", srcBack:"img/backcard.png" },
+                { srcFront:"img/backcard.png", srcBack:"img/backcard.png" },
+                { srcFront:"img/backcard.png", srcBack:"img/backcard.png" }
 
             ],
             currentIndex: 0,
