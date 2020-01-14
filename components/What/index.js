@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Col, Row } from 'reactstrap'
 import styled from 'styled-components'
-import { Header, SubHeader, Content } from '../components/Core/Text'
-import WhatCarousel from '../components/Core/WhatCarousel'
+import { Header, SubHeader, Content } from '../Core/Text'
+import WhatCarousel from '../Core/WhatCarousel'
 
 export default class What extends Component {
     render() {

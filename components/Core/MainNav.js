@@ -45,11 +45,12 @@ const StyledNavLink = styled(NavLink)`
 	  
 `
 const Line = styled.div`
-	width:110px;
-	height:10px;
+	width: 110px;
+	height: 10px;
 	background-color: white;
-	position:absolute;
-	bottom:0;
+	position: absolute;
+	bottom: 0;
+	display: none;
 
 	${StyledNavLink}:hover & {
 		background-color: black;
