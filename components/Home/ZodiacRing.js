@@ -17,8 +17,8 @@ const ZodiacRingImage = styled.img`
     position: absolute;
 
     @media (min-width: 1024px) {
-        width: 766px;
-        height: 764px;
+        width: 942px;
+        height: 898px;
         animation: ${spin} 60s linear infinite,${Zodiacglow} 2s ease-in-out alternate infinite;
     }
 `

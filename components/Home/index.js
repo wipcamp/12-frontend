@@ -16,7 +16,7 @@ const ZodiacContainer = styled.div`
 const LogoImg = styled.img`
     width: 467px;
     height: 175px;
-    margin-top:300px;
+    margin-top:350px;
 `
 
 export default class Home extends Component {
