@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import App from '../../pages/App'
+import App from '../Core/FlippyCard'
 
 
 const Wrap = styled.div`

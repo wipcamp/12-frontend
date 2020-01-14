@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Flippy, { FrontSide, BackSide } from './../lib';
+import Flippy, { FrontSide, BackSide } from '../../lib';
 import styled from 'styled-components'
-import './App.css';
+import './FlippyCSS.css';
 
 const Card = styled.div`
   scroll-snap-align: start;
