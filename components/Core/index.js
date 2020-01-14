@@ -8,6 +8,7 @@ import When from '../When'
 import Faqs from '../Faqs'
 import Game from '../Game'
 import Sponsor from '../Sponsor'
+import Star from './Star'
 
 
 

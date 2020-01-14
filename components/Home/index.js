@@ -2,11 +2,11 @@ import React, { Component, Fragment } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import ZodiacRing from './ZodiacRing'
 import styled from 'styled-components'
+import Star from '../Core/Star'
 
 const HomeContainer = styled.div`
     width : 100%;
-    background-color : #1E1E1E;
-    padding : 0 0 100px 0;
+    height: 1000px;
 `
 const ZodiacContainer = styled.div`
     display: flex;
@@ -17,7 +17,8 @@ const ZodiacContainer = styled.div`
 export default class Home extends Component {
     render() {
         return (
-            <HomeContainer>
+        <HomeContainer>
+            <Star>
                 <Container>
                     <Row>
                         <Col>
@@ -27,7 +28,8 @@ export default class Home extends Component {
                         </Col>
                     </Row>
                 </Container>
-            </HomeContainer>
+            </Star>
+        </HomeContainer>
 
         )
     }
