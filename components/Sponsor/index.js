@@ -2,9 +2,17 @@ import React, { Component } from 'react'
 import { Header, SubHeader } from '../Core/Text'
 import SponsorImage from './SponsorImage'
 import { Container, Row, Col } from 'reactstrap'
+import styled from 'styled-components'
+
+const SponsorBg = styled.div`
+background-color : #D2D2D2;
+padding: 100px 0 100px 0;
+`
+
 export default class Sponsor extends Component {
     render() {
         return (
+            <SponsorBg>
             <div style={{ marginTop: '75px' , marginBottom: '108px'}}>
                 <Header stroke="black" headerText="SPONSOR" />
                 <SubHeader color="black" subHeaderText="ผู้สนับสนุน" />
@@ -67,6 +75,7 @@ export default class Sponsor extends Component {
                     </Row>
                 </Container>
             </div>
+            </SponsorBg>
         )
     }
 }

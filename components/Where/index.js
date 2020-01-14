@@ -9,6 +9,11 @@ import {
 import styled from 'styled-components'
 
 import { Header, SubHeader, Content } from '../Core/Text'
+
+const WhereBg = styled.div`
+background-color : #D2D2D2;
+`
+
 const Map = styled.div`
 background-color: black;
 height: 200px;
@@ -22,7 +27,7 @@ line-height: ${props => props.LineHeight};
 export default class Where extends Component {
     render() {
         return (
-            <React.Fragment>
+            <WhereBg>
                 <Container>
                     <Row>
                         <Col sm="2" />
@@ -42,7 +47,7 @@ export default class Where extends Component {
 
                     </Row>
                 </Container>
-            </React.Fragment>
+            </WhereBg>
         )
     }
 }
