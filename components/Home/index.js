@@ -7,7 +7,7 @@ import Star from '../Core/Star'
 
 
 const HomeContainer = styled.div`
-    background: url(/img/Home/Home-nav1.png) no-repeat center center;
+    background: #121933;
     display: table;
     height: 80vh;
     position: relative;
