@@ -1,23 +1,21 @@
-import React, { Component, Fragment } from 'react'
-import { Container, Row, Col } from 'reactstrap'
-import ZodiacRing from './ZodiacRing'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Button } from 'reactstrap'
 import Star from '../Core/Star'
 
 
 const HomeContainer = styled.div`
-    background: #121933;
+    
     display: table;
-    height: 80vh;
     position: relative;
+    height: 100vh;
     width: 100%;
-    background-size: cover;
+    
 `
 
 const HomeContent = styled.div`
-    display: table-cell;
     text-align: center;
+    display: table-cell;
     vertical-align: middle;
 `
 
@@ -58,8 +56,11 @@ export default class Home extends Component {
         //         </Container>
         //     </Star>
         // </HomeContainer>
+        <Star>
             <HomeContainer>
+                
                 <HomeContent>
+                
                     <WipLogoImg src='/img/Home/wiplogo.png' />
                     <br />
                     <LogoImg src='/img/Home/logo-sit1.png'  width="76.59px" height="67.91px" />
@@ -67,9 +68,11 @@ export default class Home extends Component {
                     <LogoImg src='/img/Home/LogoCana.png'   width="142.46px" height="73.95px" />
                     <br />
                     <StyledButton>REGISTER</StyledButton>
+                    
                 </HomeContent>
+                
             </HomeContainer>
-
+            </Star>
         )
     }
 }
