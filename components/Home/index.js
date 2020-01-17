@@ -40,38 +40,84 @@ const StyledButton = styled(Button)`
 
 
 export default class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            color: 'darkgrey',
+            width: 0,
+            height: 0,
+            isMobile: false
+        };
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+
+
+
+
+    listenScrollEvent = e => {
+        if (!this.state.isMobile) {
+            if (window.scrollY > 200) {
+                this.setState({ color: 'black' })
+                document.getElementById('navcolor').style.backgroundColor = this.state.color
+            } else {
+                this.setState({ color: 'rgba(255, 255, 255, 0.0)' })
+                document.getElementById('navcolor').style.backgroundColor = this.state.color
+            }
+        }else{
+            this.setState({ color: 'darkgrey' })
+            document.getElementById('navcolor').style.backgroundColor = this.state.color
+        }
+    }
+
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.listenScrollEvent)
+        window.addEventListener('resize', this.updateWindowDimensions)
+    }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions)
+    }
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+        if (window.innerWidth < 1080) {
+            this.setState({ isMobile: true})
+        }else if (window.innerWidth >= 1080) {
+            this.setState({ isMobile: false})
+        } 
+    }
+
     render() {
         return (
-        // <HomeContainer>
-        //     <Star>
-        //         <Container>
-        //             <Row>
-        //                 <Col>
-        //                 <ZodiacContainer>
-        //                     <ZodiacRing/>
-        //                     <LogoImg src='/img/Home/wiplogo.png' />
-        //                 </ZodiacContainer>
-        //                 </Col>
-        //             </Row>
-        //         </Container>
-        //     </Star>
-        // </HomeContainer>
-        <Star>
-            <HomeContainer>
-                
-                <HomeContent>
-                
-                    <WipLogoImg src='/img/Home/wiplogo.png' />
-                    <br />
-                    <LogoImg src='/img/Home/logo-sit1.png'  width="76.59px" height="67.91px" />
-                    <LogoImg src='/img/Home/logo-sit2.png'  width="148.58px" height="69.42px" />
-                    <LogoImg src='/img/Home/LogoCana.png'   width="142.46px" height="73.95px" />
-                    <br />
-                    <StyledButton>REGISTER</StyledButton>
-                    
-                </HomeContent>
-                
-            </HomeContainer>
+            // <HomeContainer>
+            //     <Star>
+            //         <Container>
+            //             <Row>
+            //                 <Col>
+            //                 <ZodiacContainer>
+            //                     <ZodiacRing/>
+            //                     <LogoImg src='/img/Home/wiplogo.png' />
+            //                 </ZodiacContainer>
+            //                 </Col>
+            //             </Row>
+            //         </Container>
+            //     </Star>
+            // </HomeContainer>
+            <Star>
+                <HomeContainer>
+
+                    <HomeContent>
+
+                        <WipLogoImg src='/img/Home/wiplogo.png' />
+                        <br />
+                        <LogoImg src='/img/Home/logo-sit1.png' width="76.59px" height="67.91px" />
+                        <LogoImg src='/img/Home/logo-sit2.png' width="148.58px" height="69.42px" />
+                        <LogoImg src='/img/Home/LogoCana.png' width="142.46px" height="73.95px" />
+                        <br />
+                        <StyledButton>REGISTER</StyledButton>
+
+                    </HomeContent>
+
+                </HomeContainer>
             </Star>
         )
     }
