@@ -104,13 +104,14 @@ const StyledNavbarTogglerOpen = styled(StyledNavbarToggler)`
 const ColorNav = styled(Navbar)`
   margin: 0;
   padding: 0;
-  background-color : rgba(196, 196, 196, 0.0);
+  background-color : darkgray;
   transition : 0.5s ease-in-out;
-  -webkit-transition : 0.5s ease-in-out;
+  -webkit-transition : 0.45s ease-in-out;
   
 
   @media (min-width: 1024px) {
 	height: 86px;
+	background-color : rgba(196, 196, 196, 0.0);
   }
   
 `
@@ -200,7 +201,7 @@ const Navbar1 = (props) => {
 		if (isOpen == false) {
 			hamberger.style.display = 'none';
 			close.style.display = 'inline';
-			bgcolor.style.backgroundColor = '#918686';
+			// bgcolor.style.backgroundColor = '#918686';
 		} 
 	}
 
@@ -211,14 +212,14 @@ const Navbar1 = (props) => {
 		if (isOpen == true) {
 			hamberger.style.display = 'inline';
 			close.style.display = 'none';
-			bgcolor.style.backgroundColor = '#c4c4c4'
+			// bgcolor.style.backgroundColor = '#c4c4c4'
 		}
 	}
 
 
 	return (
-		<div style={{position:"fixed", top:'0',left:'0',width:'100%',zIndex:'2'}}>
-			<ColorNav expand="lg" id="bgcolor">
+		<div className='fixed-top'>
+			<ColorNav expand="lg" id="navcolor">
 				<NavMobile>
 					<StyledNavbarToggler onClick={() => { toggle(); changeIconToX();}} id="hamberger"/>
 					<StyledNavbarTogglerOpen  onClick={() => { toggle(); changeIconToHamberg();}} id="close" />
