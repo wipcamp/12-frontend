@@ -17,8 +17,8 @@ export default class App extends Component {
     render() {
         return (
             <Fragment>
-                <Home/>
                 <MainNav />
+                <Home/>
                 <What />
                 <Who />
                 <Where />
