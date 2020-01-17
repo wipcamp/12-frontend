@@ -4,6 +4,8 @@ import {Container,Row,Col} from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Header , SubHeader} from '../Core/Text'
 import { ImageInfo , ImageInfoGlow} from '../Core/ImgInfo'
+import WhenTimer from './WhenTimer'
+
 const WhenContainer = styled.div`
 background-color : #1E1E1E;
 padding: 100px 0 100px 0;
@@ -22,24 +24,7 @@ export default class When extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col sm="6">
-                        <ImageInfoGlow src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
-
-                        </Col>
-                        <Col sm="6">
-                        <ImageInfoGlow src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
-
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col sm="6">
-                        <ImageInfoGlow src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
-                        
-                        </Col>
-                        <Col sm="6">
-                        <ImageInfoGlow src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
-                        
-                        </Col>
+                        <WhenTimer/>
                     </Row>
                 </Container>
                 

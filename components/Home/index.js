@@ -37,13 +37,20 @@ const StyledButton = styled(Button)`
     border-radius: 50px;
     padding: 15px 53px;
 `
+const Wippo = styled.img`
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+`
 
 
 export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            color: 'darkgrey',
+            noBg: 'rgba(255, 255, 255, 0.0)',
+            defaultMobile: 'darkgrey',
+            defaultDesktop: 'black',
             width: 0,
             height: 0,
             isMobile: false
@@ -57,15 +64,10 @@ export default class Home extends Component {
     listenScrollEvent = e => {
         if (!this.state.isMobile) {
             if (window.scrollY > 200) {
-                this.setState({ color: 'black' })
-                document.getElementById('navcolor').style.backgroundColor = this.state.color
+                document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
             } else {
-                this.setState({ color: 'rgba(255, 255, 255, 0.0)' })
-                document.getElementById('navcolor').style.backgroundColor = this.state.color
+                document.getElementById('navcolor').style.backgroundColor = this.state.noBg
             }
-        }else{
-            this.setState({ color: 'darkgrey' })
-            document.getElementById('navcolor').style.backgroundColor = this.state.color
         }
     }
 
@@ -81,8 +83,10 @@ export default class Home extends Component {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
         if (window.innerWidth < 1080) {
             this.setState({ isMobile: true})
+            document.getElementById('navcolor').style.backgroundColor = this.state.defaultMobile
         }else if (window.innerWidth >= 1080) {
             this.setState({ isMobile: false})
+            document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
         } 
     }
 
@@ -114,10 +118,9 @@ export default class Home extends Component {
                         <LogoImg src='/img/Home/LogoCana.png' width="142.46px" height="73.95px" />
                         <br />
                         <StyledButton>REGISTER</StyledButton>
-
                     </HomeContent>
-
                 </HomeContainer>
+                <Wippo src="/img/Who/Wippo.png" />
             </Star>
         )
     }
