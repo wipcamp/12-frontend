@@ -37,7 +37,7 @@ const StyledNavLink = styled(NavLink)`
   	@media (min-width: 1024px) {
 	 	/* padding : 34px 24.5px 31px 24.5px; */
 		width:110px !important;
-		height: 86px !important;
+		height: inherit !important;
 		font-size: 16px;
 		line-height: 70px;
 		:hover {
@@ -156,19 +156,11 @@ const StyledNav = styled(Nav)`
 
 	@media (min-width: 1024px) {
 		width: 100%;
-		height: 86px;
+		height: inherit;
 		display: flex;
 		justify-content: center ; 
 
 	}
-`
-const PlaceHolder = styled.div`
-	display: none;
-@media (min-width: 1024px) {
-	display: block;
-	width: 15%;
-	
-}
 `
 
 const NavMobile = styled.div`

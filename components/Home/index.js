@@ -41,6 +41,10 @@ const Wippo = styled.img`
     position: absolute;
     bottom: -100px;
     right: 0;
+    display:none;
+    @media (min-width: 1024px) {
+	  display: block;
+  }
 `
 
 
@@ -53,7 +57,7 @@ export default class Home extends Component {
             defaultDesktop: 'black',
             width: 0,
             height: 0,
-            isMobile: false
+            isDesktop: true
         };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
@@ -62,31 +66,35 @@ export default class Home extends Component {
 
 
     listenScrollEvent = e => {
-        if (!this.state.isMobile) {
+        if (window.innerWidth >= 1080 && this.state.isDesktop) {
             if (window.scrollY > 200) {
                 document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
+                document.getElementById('navcolor').style.height = '50px'
+                document.getElementById('navcolor').style.lineHeight = '50px'
             } else {
                 document.getElementById('navcolor').style.backgroundColor = this.state.noBg
+                document.getElementById('navcolor').style.height = '89px'
+                document.getElementById('navcolor').style.lineHeight = '70px'
             }
         }
     }
 
 
     componentDidMount() {
-        window.addEventListener('scroll', this.listenScrollEvent)
         window.addEventListener('resize', this.updateWindowDimensions)
+        window.addEventListener('scroll', this.listenScrollEvent)
     }
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions)
-    }
+
     updateWindowDimensions() {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
         if (window.innerWidth < 1080) {
-            this.setState({ isMobile: true})
+            this.setState({ isDesktop: false})
             document.getElementById('navcolor').style.backgroundColor = this.state.defaultMobile
+            document.getElementById('navcolor').style.height = ''
         }else if (window.innerWidth >= 1080) {
-            this.setState({ isMobile: false})
+            this.setState({ isDesktop: true})
             document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
+            document.getElementById('navcolor').style.height = '89px'
         } 
     }
 
