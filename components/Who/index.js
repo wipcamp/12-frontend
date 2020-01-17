@@ -34,7 +34,7 @@ export default class Who extends Component {
                         
                         </Col>
                         <Col sm="">
-                       <Image src="/img/Who/Wippo.png" />
+                       <Image src="/img/who/Wippo.png" />
                         </Col>
                         <Col sm="4">
                         <ImageInfo src="img/Who/circle.png" content="Culpa occaecat esse culpa enim. Lorem ut et amet ea excepteur occaecat id esse. Sunt Lorem veniam dolore labore laboris laborum culpa dolor." color="#fff" />2

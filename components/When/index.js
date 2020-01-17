@@ -27,17 +27,17 @@ export default class When extends Component {
 
                         </Col>
                         <Col sm="6">
-                        <ImageInfo src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+                        <ImageInfoGlow src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
 
                         </Col>
                     </Row>
                     <Row>
                         <Col sm="6">
-                        <ImageInfo src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+                        <ImageInfoGlow src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
                         
                         </Col>
                         <Col sm="6">
-                        <ImageInfo src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
+                        <ImageInfoGlow src="img/Who/tempcircle.png" content="Pariatur esse adipisicing ut culpa ea commodo dolore ea amet qui aliqua tempor nulla Lorem." color="#fff" />2
                         
                         </Col>
                     </Row>
