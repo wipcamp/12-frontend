@@ -1,30 +1,60 @@
 import React, { Component, Fragment } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Container, Col, Row } from 'reactstrap'
+
 import styled from 'styled-components'
 import { Header, SubHeader, Content } from '../Core/Text'
 import WhatCarousel from './WhatCarousel'
+import WhatSideScroll from './WhatSideScroll'
 
 const WhatBg = styled.div`
-background-color : #D2D2D2;
-padding: 100px 0 100px 0;
+background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+padding-top: 162px;
 `
-const CarouselLayout = styled.div`
-  margin:15px 65px 18px 65px;
+
+const Row = styled.div`
+    margin-top: 81px;
+    ::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+`
+
+const Column = styled.div`
+    float: left;
+    width: 50%;
+`
+
+const WrapContent = styled.div`
+    padding-left: 133px;
+    padding-right: 18px;
 `
 
 export default class What extends Component {
     render() {
         return (
             <WhatBg>
-                <Container>
+
+
+                <div>
+                    <Header stroke="white" headerText="WHAT" />
+                    <SubHeader color="white" subHeaderText="ค่ายนี้คืออะไร" />
+                </div>
                 <Row>
-                    <Col style={{marginTop:'16px'}}>
-                    <Header stroke="black" headerText="WHAT" />
-                    <SubHeader color="black" subHeaderText="ค่ายนี้คืออะไร" />                     
-                    </Col>
+                    <Column>
+                    <WrapContent>
+                        <Content
+                            textIndent="50px"
+                            color="white"
+                            content="ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับ น้อง ๆ ผู้ที่มีความสนใจทางด้าน ไอที โดยน้อง ๆ จะได้รับ บทบาทเป็นนินจาที่กำลังค้นหาเส้นทางชีวิตของ ตนเอง ณ คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยี พระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน"
+                        />
+                        </WrapContent>
+                    </Column>
+                    <Column>
+                        <WhatSideScroll />
+                    </Column>
                 </Row>
-                <Row>
+                {/* <Row>
                     <Col>
                     <Content color="black" textAlign="center" content="ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้อง ๆ ผู้ที่มีความสนใจทางด้าน 
                                 โดยน้องๆ จะได้รับบทบาทเป็นนินจาที่กำลังค้นหาเส้นทางชีวิตของตนเอง ณ คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน
@@ -37,9 +67,9 @@ export default class What extends Component {
                     <Col>
                         <WhatCarousel/>
                     </Col>
-                </Row>
-                </Container>
-            </WhatBg>
-                )
-            }
-        }
+                </Row> */}
+
+            </WhatBg >
+        )
+    }
+}

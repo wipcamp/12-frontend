@@ -22,7 +22,7 @@ const SubHead = styled.h2`
 
 const ContentText = styled.p`
     font-family: 'Prompt', sans-serif;
-    font-size: 12px;
+    font-size: 24px;
     font-weight: lighter;
     color: ${props => props.color};
     text-align: ${props => props.textAlign};
