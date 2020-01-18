@@ -14,7 +14,6 @@ position: relative;
 
 const WrapHeader = styled.div`
     position: absolute;
-    top: -42px;
     width: 100%;
 `
 
