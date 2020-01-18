@@ -37,10 +37,11 @@ const ArrowButton = styled.div`
 `
 const prev = {
     position: 'absolute',
-    top: '50%',
+    top: '181px',
     left: '25px',
     zIndex: '3',
-    visibility: 'hidden'
+    transform: 'rotate(180deg)',
+    fill: 'white'
 }
 
 const next = {
@@ -58,7 +59,7 @@ const next = {
 const LeftArrow = (props) => {
     return (
         <ArrowButton onClick={props.goToPrevSlide} style={prev}>
-            &lt;
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="24.93" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z" /></svg>
       </ArrowButton>
     );
 }
@@ -81,7 +82,7 @@ export default class SideScroll extends Component {
         super(props);
         this.state = {
             images: [
-                { src: "img/temp.jpg" ,visible: 'hidden'},
+                { src: "img/temp.jpg"},
                 { src: "img/temp.jpg" },
                 { src: "img/temp.jpg" },
                 { src: "img/temp.jpg" },
@@ -106,7 +107,7 @@ export default class SideScroll extends Component {
     }
 
     goToNextSlide = () => {
-        if (this.state.currentIndex === this.state.images.length - 2) {
+        if (this.state.currentIndex === this.state.images.length - 1) {
             return this.setState({
                 currentIndex: 0,
                 translateValue: 0
@@ -119,7 +120,7 @@ export default class SideScroll extends Component {
     }
 
     slideWidth = () => {
-        return (document.querySelector('.slide').clientWidth +20)
+        return (document.querySelector('.slide').clientWidth+20)
     }
 
     render() {
@@ -128,7 +129,7 @@ export default class SideScroll extends Component {
             <div style={{ position: 'relative', zIndex: '2'}} className="scroll-container">
                 
                 <Wrap >
-<div style={{marginLeft: '-400px'}}>
+
                     <div
                         style={{
                             display: 'flex',
@@ -146,7 +147,7 @@ export default class SideScroll extends Component {
                             />
                         ))}
                     </div>
-</div>
+
                 </Wrap>
 
                 <LeftArrow goToPrevSlide={this.goToPrevSlide} />

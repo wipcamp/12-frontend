@@ -7,7 +7,6 @@ const Image = styled.img`
     height: 397px;
     margin: 0px 10px 0px 10px;
     visibility: ${props => props.visible};
-    
 `
 
 export const WhatImage = (props) => {
