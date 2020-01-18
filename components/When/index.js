@@ -24,8 +24,10 @@ export default class When extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <WhenTimer/>
-                    </Row>
+                        <Col>
+                            <WhenTimer />
+                        </Col>
+                    </Row>   
                 </Container>
                 
             </WhenContainer>
