@@ -7,10 +7,11 @@ import { Header, SubHeader } from '../Core/Text'
 
 
 const FaqsContainer = styled.div`
-    background-color : #1E1E1E;
-    padding: 100px 0 100px 0;
-    min-height: 80vh;
+    background-color : black;
+    /* padding: 100px 0 100px 0; */
+    min-height: 100vh;
 `
+
 const FaqsBox = styled.div`
     text-align: center;
     background: #C4C4C4;
@@ -28,7 +29,7 @@ const FaqsAnswer = styled.div`
     background: #6EB2B7;
     width: 100%;
     position: relative;
-    bottom: -70vh;
+    bottom: -55vh;
     height: 15vh;
     line-height: 15vh;
     color: white;
@@ -53,9 +54,9 @@ export default class Faqs extends Component {
     render() {
         return (
             <FaqsContainer>
-                <Container>
+                <Container style={{padding:''}}> 
                     <Row>
-                        <Col style={{ marginTop: '50px' }}>
+                        <Col style={{ marginTop: '0px' }}>
                             <Header stroke="#ffffff" headerText="FAQS" />
                             <SubHeader subHeaderText="คำถามที่พบบ่อย" color="#ffffff" />
                         </Col>
@@ -85,7 +86,7 @@ export default class Faqs extends Component {
                         <Col xl='12'>
                             <div>
                                 <FaqsImg src="/img/Faqs/test.jpg" />
-                                <FaqsImg style={{top:'10vh'}} src="/img/Faqs/book.png" />
+                                <FaqsImg style={{top:'0vh'}} src="/img/Faqs/book.png" />
                             </div>
                         </Col>
                     </Row>
