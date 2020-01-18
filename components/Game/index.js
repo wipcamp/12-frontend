@@ -14,7 +14,7 @@ position: relative;
 
 const WrapHeader = styled.div`
     position: absolute;
-    top: -50px;
+    top: -42px;
     width: 100%;
 `
 
@@ -23,12 +23,12 @@ const Wrap = styled.div`
     position: relative;
     display: table;
     width: 100%;
-    height: 584px;
+    height: 500px;
     background-size: cover;
 `
 
 const Content = styled.div`
-    padding-top: 152px;
+    padding-top: 192px;
 `
 
 const StyledButton = styled(Button)`
