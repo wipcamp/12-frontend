@@ -22,6 +22,7 @@ width: 956px;
 margin-top: 20%;
 margin-left:50%;
 border-radius: 50%;
+display:none ;
 `
 const LineHeight = styled.div`
 line-height: ${props => props.LineHeight};
