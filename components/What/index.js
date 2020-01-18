@@ -9,7 +9,7 @@ import WhatSideScroll from './WhatSideScroll'
 const WhatBg = styled.div`
 background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 padding-top: 65px;
-max-height: 80vh;
+
 `
 
 const Row = styled.div`

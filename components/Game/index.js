@@ -1,13 +1,21 @@
 import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
-import { Row, Col, Button } from 'reactstrap'
+import { Row, Col, Button, Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header } from '../Core/Text'
+import Link from 'next/link'
 
 const GameContainer = styled.div`
 background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+position: relative;
 /* max-height: 80vh; */
 
+`
+
+const WrapHeader = styled.div`
+    position: absolute;
+    top: -50px;
+    width: 100%;
 `
 
 const Wrap = styled.div`
@@ -17,13 +25,16 @@ const Wrap = styled.div`
     width: 100%;
     height: 584px;
     background-size: cover;
-    margin-top: 138px;
+`
+
+const Content = styled.div`
+    padding-top: 152px;
 `
 
 const StyledButton = styled(Button)`
     font-family: Chakra Petch;
     font-size: 48px;
-    color: black;
+    color: black !important;
     padding: 28px 44px;
     background-color: white;
     border-color: white;
@@ -34,19 +45,23 @@ export default class Game extends Component {
     render() {
         return (
             <GameContainer>
-
-                <Header stroke="#ffffff" headerText="GAME" />
-                <Row>
-                    <Col xl="1"></Col>
-                    <Col xl="10">
+                <WrapHeader>
+                    <Container>
+                    
+                            <Header stroke="#ffffff" headerText="GAME" />
+                        
+                    </Container>
+                </WrapHeader>
+                <Content>
+                <Container>
                         <Wrap>
                             <div style={{ display: 'table-cell', textAlign: 'center', verticalAlign: 'middle' }}>
-                                <StyledButton>Go To Game</StyledButton>
+                                <StyledButton><Link href="/">Go To Game</Link></StyledButton>
                             </div>
                         </Wrap>
-                    </Col>
-                    <Col xl="1"></Col>
-                </Row>
+                        </Container>  
+                </Content>
+                
             </GameContainer>
         )
     }
