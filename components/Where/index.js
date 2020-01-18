@@ -28,6 +28,9 @@ width: 200px;
     
     border-bottom: 0;
     float: right; /* Change this to left to float it to left */
+margin-left:50%;
+border-radius: 50%;
+display:none ;
 `
 const LineHeight = styled.div`
 line-height: ${props => props.LineHeight};

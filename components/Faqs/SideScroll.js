@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import App from '../Core/FlippyCard'
+import Flippycardnaja from '../Core/FlippyCard'
 
 
 const Wrap = styled.div`
@@ -135,7 +135,7 @@ export default class SideScroll extends Component {
                             margin: '0px'
                         }} id="item">
                         {this.state.cards.map((data, key) => (
-                            <App 
+                            <Flippycardnaja 
                                 key={key}
                                 srcFront={data.srcFront}
                                 srcBack={data.srcBack}

@@ -32,16 +32,16 @@ const StyledNavLink = styled(NavLink)`
   	color : white;
 	
 	:hover {
-		color: white;
+		color: black;
 	}
   	@media (min-width: 1024px) {
 	 	/* padding : 34px 24.5px 31px 24.5px; */
 		width:110px !important;
 		height: inherit !important;
 		font-size: 16px;
-		line-height: 70px;
+		line-height: 50px;
 		:hover {
-		background-color: rgba(196, 196, 196, 0.5);
+		background-color: whitesmoke;
 		transition: background 0.5s ease-in-out;
 		}
 

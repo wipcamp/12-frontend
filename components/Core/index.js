@@ -9,6 +9,7 @@ import Faqs from '../Faqs'
 import Game from '../Game'
 import Sponsor from '../Sponsor'
 import Star from './Star'
+import Track from '../Track'
 
 
 export default class App extends Component {
@@ -20,6 +21,7 @@ export default class App extends Component {
                 <Home/>
                 <What />
                 <Who />
+                <Track />
                 <Where />
                 <When />
                 <Faqs />

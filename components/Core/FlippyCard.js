@@ -5,7 +5,8 @@ import './FlippyCSS.css';
 
 const Card = styled.div`
   scroll-snap-align: start;
-
+  display: flex;
+  justify-content: center;
 `
 
 
@@ -14,7 +15,7 @@ const FlippyStyle = {
   width: '170px',
   height: '293px',
   padding: '0px',
-  margin: '0px 14px 0px 0px',
+  margin: '0px 0px 0px 0px',
   
 }
 
@@ -25,6 +26,7 @@ const DefaultCardContents = ({ children , srcFront = props.srcFront , srcBack = 
       style={{
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         flexDirection: 'column',
         padding: '0px'
       }}
@@ -86,7 +88,7 @@ const ControlledFlippy = ({ isFlipped })  => (
   </Flippy>
 );
 
-class App extends Component {
+class Flippycardnaja extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -103,10 +105,9 @@ class App extends Component {
     return (
       <Card className="App slide">
           <FlippyOnClick flipDirection="horizontal" srcFront={this.props.srcFront} srcBack={this.props.srcBack}/>
-      
         </Card>
     );
   }
 }
 
-export default App;
+export default Flippycardnaja;

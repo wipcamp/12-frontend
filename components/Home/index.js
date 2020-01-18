@@ -69,7 +69,7 @@ export default class Home extends Component {
         if (window.innerWidth >= 1080 && this.state.isDesktop) {
             if (window.scrollY > 200) {
                 document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
-                document.getElementById('navcolor').style.height = '50px'
+                document.getElementById('navcolor').style.height = '65px'
                 document.getElementById('navcolor').style.lineHeight = '50px'
             } else {
                 document.getElementById('navcolor').style.backgroundColor = this.state.noBg
