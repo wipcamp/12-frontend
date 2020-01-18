@@ -34,11 +34,16 @@ const Content = styled.div`
 const StyledButton = styled(Button)`
     font-family: Chakra Petch;
     font-size: 48px;
-    color: black !important;
     padding: 28px 44px;
     background-color: white;
     border-color: white;
     border-radius: 50px;
+    text-decoration: none !important;
+`
+
+const StyledLink = styled.a`
+    color: black !important;
+    text-decoration: none;
 `
 
 export default class Game extends Component {
@@ -56,7 +61,7 @@ export default class Game extends Component {
                 <Container>
                         <Wrap>
                             <div style={{ display: 'table-cell', textAlign: 'center', verticalAlign: 'middle' }}>
-                                <StyledButton><Link href="/">Go To Game</Link></StyledButton>
+                                <StyledButton><Link><StyledLink href="/">Go To Game</StyledLink></Link></StyledButton>
                             </div>
                         </Wrap>
                         </Container>  
