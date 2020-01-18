@@ -11,7 +11,6 @@ import Sponsor from '../Sponsor'
 import Star from './Star'
 
 
-
 export default class App extends Component {
 
     render() {

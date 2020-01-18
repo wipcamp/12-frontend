@@ -17,11 +17,17 @@ background-color : #D2D2D2;
 
 const SIT = styled.div`
 background-color: black;
-height: 956px;
-width: 956px;
+
 margin-top: 20%;
-margin-left:50%;
-border-radius: 50%;
+width: 200px;
+    height: 100px; 
+
+    border-top-right-radius: 110px;  
+    border-top-left-radius: 110px;
+
+    
+    border-bottom: 0;
+    float: right; /* Change this to left to float it to left */
 `
 const LineHeight = styled.div`
 line-height: ${props => props.LineHeight};
