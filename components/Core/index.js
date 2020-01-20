@@ -12,7 +12,6 @@ import Star from './Star'
 import Track from '../Track'
 
 
-
 export default class App extends Component {
 
     render() {

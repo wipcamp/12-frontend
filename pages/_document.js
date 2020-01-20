@@ -13,6 +13,7 @@ export default class MyDocument extends Document {
           <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
           <script src="sketch.js"></script>
           <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+         
         </Head>
         <body>
           <Main />
@@ -22,6 +23,8 @@ export default class MyDocument extends Document {
         </script>
         <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        
+        
       </html>
     )
   }
