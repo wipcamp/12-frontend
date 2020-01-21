@@ -22,13 +22,13 @@ const SubHead = styled.h2`
     text-align: center;
     color: ${props => props.color};
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         font-size: 35px;
     }
 `
 
 const ContentText = styled.p`
-    font-family: 'Prompt-regular', sans-serif;
+    font-family: "ChakraPetch-Regular", sans-serif;
     font-size: 12px;
     color: ${props => props.color};
     text-align: ${props => props.textAlign};
