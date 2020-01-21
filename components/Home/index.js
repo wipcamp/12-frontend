@@ -49,18 +49,15 @@ const Wippo = styled.img`
 
 
 export default class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+    state = {
             noBg: 'rgba(255, 255, 255, 0.0)',
             defaultMobile: 'darkgrey',
             defaultDesktop: 'black',
             width: 0,
             height: 0,
             isDesktop: true
-        };
-        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    }
+        }
+  
 
 
 
@@ -85,7 +82,7 @@ export default class Home extends Component {
         window.addEventListener('scroll', this.listenScrollEvent)
     }
 
-    updateWindowDimensions() {
+    updateWindowDimensions = () => {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
         if (window.innerWidth < 1080) {
             this.setState({ isDesktop: false})
