@@ -35,11 +35,10 @@ const ContentText = styled.p`
     text-indent: ${props => props.textIndent};
     padding: ${props => props.padding};
     line-height: 18px;
-    margin-left: 10px;
-    margin-right: 10px;
 
     @media (min-width: 1024px) {
         font-size: 20px;
+        line-height: 26px;
     }
 
     @media (min-width: 1440px) {
