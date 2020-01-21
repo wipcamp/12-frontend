@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
+import styled from 'styled-components'
 import Home from '../Home'
 import MainNav from '../Core/MainNav'
 import What from '../What'
@@ -11,12 +12,14 @@ import Sponsor from '../Sponsor'
 import Star from './Star'
 import Track from '../Track'
 
-
+const Wrap = styled.div`
+    overflow: hidden;
+`
 export default class App extends Component {
 
     render() {
         return (
-            <Fragment>
+            <Wrap>
                 <MainNav />
                 <Home/>
                 <What />
@@ -27,7 +30,7 @@ export default class App extends Component {
                 <Faqs />
                 <Game />
                 <Sponsor />                
-            </Fragment>
+            </Wrap>
         )
     }
 }
