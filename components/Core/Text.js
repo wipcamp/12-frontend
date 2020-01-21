@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const HeadLine = styled.h1`
     font-family: 'Prompt-medium', sans-serif;
     font-size: 40px;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     color: ${props => props.color};
 
     @media (min-width: 1024px) {
@@ -34,7 +34,9 @@ const ContentText = styled.p`
     text-align: ${props => props.textAlign};
     text-indent: ${props => props.textIndent};
     padding: ${props => props.padding};
-    line-height: ${props => props.lineHeight};
+    line-height: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
 
     @media (min-width: 1024px) {
         font-size: 20px;
@@ -42,6 +44,7 @@ const ContentText = styled.p`
 
     @media (min-width: 1440px) {
         font-size: 24px;
+        line-height: 30px;
     }
 `
 
