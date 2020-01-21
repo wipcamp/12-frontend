@@ -22,7 +22,7 @@ const SubHead = styled.h2`
     text-align: center;
     color: ${props => props.color};
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         font-size: 35px;
     }
 `
