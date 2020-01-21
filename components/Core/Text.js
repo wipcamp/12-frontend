@@ -28,7 +28,7 @@ const SubHead = styled.h2`
 `
 
 const ContentText = styled.p`
-    font-family: 'Prompt-regular', sans-serif;
+    font-family: "ChakraPetch-Regular", sans-serif;
     font-size: 12px;
     color: ${props => props.color};
     text-align: ${props => props.textAlign};
