@@ -60,7 +60,7 @@ export default class Game extends Component {
                 <Container>
                         <Wrap>
                             <div style={{ display: 'table-cell', textAlign: 'center', verticalAlign: 'middle' }}>
-                                <StyledButton><Link><StyledLink href="/">Go To Game</StyledLink></Link></StyledButton>
+                                <StyledButton><Link href="/"><StyledLink href="/">Go To Game</StyledLink></Link></StyledButton>
                             </div>
                         </Wrap>
                         </Container>  
