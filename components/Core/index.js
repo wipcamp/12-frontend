@@ -32,7 +32,7 @@ export default class App extends Component {
                 <Game />
                 <Sponsor />    
                 <Contact />            
-            </Fragment>
+            </Wrap>
         )
     }
 }
