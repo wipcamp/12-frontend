@@ -28,8 +28,8 @@ const FaqsBox = styled.div`
 const FaqsAnswer = styled.div`
     background: #6EB2B7;
     width: 100%;
-    position: relative;
-    bottom: -55vh;
+    /* position: relative;
+    bottom: -55vh; */
     height: 15vh;
     line-height: 15vh;
     color: white;
@@ -50,11 +50,15 @@ const FaqsImg = styled.img`
     z-index: 0;
 `
 
+const AnswerContainer = styled.div`
+    height: 100%;
+`
+
 export default class Faqs extends Component {
     render() {
         return (
             <FaqsContainer>
-                <Container style={{padding:''}}> 
+                <Container style={{minHeight: '100vh'}}> 
                     <Row>
                         <Col style={{ marginTop: '0px' }}>
                             <Header stroke="#ffffff" headerText="FAQS" />
@@ -63,16 +67,16 @@ export default class Faqs extends Component {
                     </Row>
                     <Row className="mt-5"> 
                         <Col xl='4'>
-                            <div className="d-flex flex-column align-items-centerr">
+                            <div className="d-flex flex-column align-items-center">
                                 <FaqsBox>อยากมาเข้าร่วมค่ายนี้มากๆ ต้องทำอย่างไร ?</FaqsBox>
                                 <FaqsBox>อยากมาเข้าร่วมค่ายนี้มากๆ ต้องทำอย่างไร ?</FaqsBox>
                                 <FaqsBox>อยากมาเข้าร่วมค่ายนี้มากๆ ต้องทำอย่างไร ?</FaqsBox>
                             </div>
                         </Col>
                         <Col xl='4' style={{}}>
-                            <div className="d-flex flex-column align-items-centerr">
+                            <AnswerContainer className="d-flex align-items-center">
                                 <FaqsAnswer className="align-self-end" >คำตอบ</FaqsAnswer>
-                            </div>
+                            </AnswerContainer>
                         </Col>
                         <Col xl='4'>
                             <div className="d-flex flex-column align-items-center">
