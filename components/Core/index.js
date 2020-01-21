@@ -11,6 +11,7 @@ import Game from '../Game'
 import Sponsor from '../Sponsor'
 import Star from './Star'
 import Track from '../Track'
+import Contact from '../Contact'
 
 const Wrap = styled.div`
     overflow: hidden;
@@ -29,8 +30,9 @@ export default class App extends Component {
                 <When />
                 <Faqs />
                 <Game />
-                <Sponsor />                
-            </Wrap>
+                <Sponsor />    
+                <Contact />            
+            </Fragment>
         )
     }
 }
