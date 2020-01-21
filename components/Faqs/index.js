@@ -61,7 +61,7 @@ export default class Faqs extends Component {
                 <Container style={{minHeight: '100vh'}}> 
                     <Row>
                         <Col style={{ marginTop: '0px' }}>
-                            <Header stroke="#ffffff" headerText="FAQS" />
+                            <Header color="#ffffff" headerText="FAQS" />
                             <SubHeader subHeaderText="คำถามที่พบบ่อย" color="#ffffff" />
                         </Col>
                     </Row>

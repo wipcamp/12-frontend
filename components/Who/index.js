@@ -23,7 +23,7 @@ export default class Who extends Component {
                 <Container>
                     <Row>
                         <Col>
-                            <Header stroke="#ffffff" headerText="WHO" />
+                            <Header color="#ffffff" headerText="WHO" />
                             <SubHeader color="#ffffff" subHeaderText="ค่ายนี้เหมาะกับใคร" />
                         </Col>
                     </Row>

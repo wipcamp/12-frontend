@@ -38,7 +38,7 @@ export default class What extends Component {
 
 
                 <div>
-                    <Header stroke="white" headerText="WHAT" />
+                    <Header color="white" headerText="WHAT" />
                     <SubHeader color="white" subHeaderText="ค่ายนี้คืออะไร" />
                 </div>
                 <Row>
