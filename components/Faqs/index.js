@@ -76,12 +76,15 @@ export default class Faqs extends Component {
 
     state = {
         answer: "Default",
-        answerArray: ["answer1", "answer2", "answer3", "answer4", "answer5", "answer6"]
+        answerArray: ["answer1", "answer2", "answer3", "answer4", "answer5", "answer6"],
+        currentAnswerIndex: 0,
     }
 
     changeAnswer = e => {
         
-        this.setState({ answer: this.state.answerArray[e] })
+        this.setState({ answer: this.state.answerArray[e],
+                        currentAnswerIndex: e                
+                    })
         console.log(e)
     }
 
@@ -98,11 +101,13 @@ export default class Faqs extends Component {
                     <DropRow>
                         <Col>
                             <div className="d-flex justify-content-center">
-                            <select onChange={() => this.changeAnswer(event.target.value)}>
+                            <select value={this.state.currentAnswerIndex} onChange={() => this.changeAnswer(event.target.value)}>
                                 <option value="0">กรุณาเลือกคำถาม</option>
                                 <option value="1">Question2</option>
                                 <option value="2">Question3</option>
                                 <option value="3">Question4</option>
+                                <option value="4">Question5</option>
+                                <option value="5">Question6</option>
                             </select>
                             </div>
                         </Col>
