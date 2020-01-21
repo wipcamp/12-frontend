@@ -7,11 +7,11 @@ const HeadLine = styled.h1`
     letter-spacing: 0.1em;
     color: ${props => props.color};
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         font-size: 120px;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1024px) {
         font-size: 140px;
     }
 `
@@ -36,12 +36,12 @@ const ContentText = styled.p`
     padding: ${props => props.padding};
     line-height: 18px;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         font-size: 20px;
         line-height: 26px;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1024px) {
         font-size: 24px;
         line-height: 30px;
     }
