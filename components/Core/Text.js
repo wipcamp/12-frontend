@@ -42,7 +42,6 @@ const ContentText = styled.p`
     }
 
     @media (min-width: 1024px) {
-        font-size: 24px;
         line-height: 30px;
     }
 `

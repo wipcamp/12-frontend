@@ -24,8 +24,8 @@ const WrapGrid = styled.div`
 `
 
 const WrapContent = styled.div`
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 36px;
+    margin-right: 36px;
 
     @media (min-width: 768px) {
         margin-left: 116px;
@@ -59,8 +59,8 @@ export default class What extends Component {
                     <SubHeader color="white" subHeaderText="ค่ายนี้คืออะไร" />  
                     <WrapGrid>
                     <Row>
-                        <Col xl="1" xs="12"></Col>
-                        <Col xl="5" xs="12">
+                        <Col xl="1" lg="1" md="12" sm="12" xs="12"></Col>
+                        <Col xl="5" lg="5" md="12" sm="12" xs="12">
                         <WrapContent>
                             <Content
                                 textIndent="50px"
@@ -79,7 +79,7 @@ export default class What extends Component {
                             />
                             </WrapContent>
                         </Col>
-                    <Col xl="6" xs="12">
+                    <Col xl="6" lg="6" md="12" sm="12" xs="12">
                         <WrapSideScroll>
                             <WhatSideScroll />
                         </WrapSideScroll>
