@@ -8,7 +8,6 @@ import { Header, SubHeader } from '../Core/Text'
 const FaqsContainer = styled.div`
     background-color : black;
     /* padding: 100px 0 100px 0; */
-    min-height: 100vh;
 `
 
 const FaqsBox = styled.div`
@@ -43,22 +42,27 @@ const FaqsAnswer = styled.div`
 `
 
 const FaqsImg = styled.img`
-    width: 50%;
+    width : 80%;
     margin-left: auto;
     margin-right: auto;
-    position: absolute;
+    position: initial;
     left: 0;
     right: 0;
+
     top: ${props => props.vertical};
     z-index: 0;
+    @media (min-width: 500px) {
+        width: auto;
+    }
     @media (min-width: 1024px) {
-        
+        height: 60vh;
+        width: auto;
+        position: absolute;
     }
 `
 
 const AnswerContainer = styled.div`
     
-    height: 60vh;
     @media (min-width: 1024px) {
         height: 100%;
     }
@@ -68,6 +72,12 @@ const DropRow = styled(Row)`
         @media (min-width: 1024px) {
         display:none
     }
+`
+
+const StyledContainer = styled(Container)`
+    @media (min-width: 1024px) {
+        height: 100vh;
+    }        
 `
 
 export default class Faqs extends Component {
@@ -89,14 +99,14 @@ export default class Faqs extends Component {
     render() {
         return (
             <FaqsContainer>
-                <Container style={{ minHeight: '100vh' }}>
-                    <Row>
+                <StyledContainer>
+                    <Row className="order-1">
                         <Col style={{ marginTop: '0px' }}>
                             <Header color="#ffffff" headerText="FAQS" />
                             <SubHeader subHeaderText="คำถามที่พบบ่อย" color="#ffffff" />
                         </Col>
                     </Row>
-                    <DropRow>
+                    <DropRow className="order-2">
                         <Col>
                             <div className="d-flex justify-content-center">
                             <select value={this.state.currentAnswerIndex} onChange={() => this.changeAnswer(event.target.value)}>
@@ -110,28 +120,28 @@ export default class Faqs extends Component {
                             </div>
                         </Col>
                     </DropRow>
-                    <Row className="mt-5">
-                        <Col lg='4' md='5' sm="auto">
-                            <div className="d-flex flex-wrap align-items-center">
+                    <Row className="mt-5 order-4">
+                        <Col lg='4' md='3' sm="3" xs="2">
+                            <div className="d-flex flex-column align-items-center">
                                 <FaqsBox onClick={() => this.changeAnswer(0)} >อยากมาเข้าร่วมค่ายนี้มากๆ ต้องทำอย่างไร test 1 ?</FaqsBox>
                                 <FaqsBox onClick={() => this.changeAnswer(1)}>อยากมาเข้าร่วมค่ายนี้มากๆ ต้องทำอย่างไร ?</FaqsBox>
                                 <FaqsBox onClick={() => this.changeAnswer(2)}>อยากมาเข้าร่วมค่ายนี้มากๆ ต้องทำอย่างไร ?</FaqsBox>
                             </div>
                         </Col>
-                        <Col lg='4' md='2' sm="4">
+                        <Col lg='4' md='6' sm="6" xs="8">
                             <AnswerContainer className="d-flex align-items-center">
                                 <FaqsAnswer className="align-self-end" >{this.state.answer}</FaqsAnswer>
                             </AnswerContainer>
                         </Col>
-                        <Col lg='4' md='5' sm="auto">
-                            <div className="d-flex flex-wrap align-items-center">
+                        <Col lg='4' md='3' sm="3" xs="2">
+                            <div className="d-flex flex-column align-items-center">
                                 <FaqsBox onClick={() => this.changeAnswer(3)}>อยากมาเข้าร่วมค่ายนี้มากๆ ต้องทำอย่างไร ?</FaqsBox>
                                 <FaqsBox onClick={() => this.changeAnswer(4)}>อยากมาเข้าร่วมค่ายนี้มากๆ ต้องทำอย่างไร ?</FaqsBox>
                                 <FaqsBox onClick={() => this.changeAnswer(5)}>อยากมาเข้าร่วมค่ายนี้มากๆ ต้องทำอย่างไร ?</FaqsBox>
                             </div>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row className="order-3">
                         <Col lg='12'>
                             <div>
                                 <FaqsImg vertical="-64vh" src="/img/lungtu.png" />
@@ -140,7 +150,7 @@ export default class Faqs extends Component {
                         </Col>
                     </Row>
 
-                </Container>
+                </StyledContainer>
             </FaqsContainer>
         )
     }

@@ -34,7 +34,7 @@ export default class When extends Component {
     render () {
         return(
             <WhenContainer>
-                <Container>
+                <Container fluid={true} >
                     <Row>
                         <Col>
                         <Header color="#ffffff" headerText="WHEN" />
@@ -42,44 +42,38 @@ export default class When extends Component {
                         </Col>
                     </Row>
                     <Row className="mt-5">
-                        <Col lg=''></Col>
-                        <Col lg=''>
+                        <Col lg='1'></Col>
+                        <Col lg='2'>
                         <div className="d-flex flex-column align-items-center">
                         <WhenImg src='/img/Who/tempcircle.png' />
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </div>
                         </Col>
-                        <Col lg=''>
+                        <Col lg='2'>
                         <div className="d-flex flex-column align-items-center">
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
                         <WhenImg src='/img/Who/tempcircle.png' />
                         </div>
                         </Col>
-                        <Col lg=''>
+                        <Col lg='2'>
                         <div className="d-flex flex-column align-items-center">
                         <WhenImg src='/img/Who/tempcircle.png' />
-                        <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563 นี้ ที่ หี้ </TimerText>
+                        <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 256</TimerText>
                             </div>
                         </Col>
-                        <Col lg=''>
+                        <Col lg='2'>
                         <div className="d-flex flex-column align-items-center">
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
                         <WhenImg src='/img/Who/tempcircle.png' />
                         </div>
                         </Col>
-                        <Col lg=''>
+                        <Col lg='2'>
                         <div className="d-flex flex-column align-items-center">
                         <WhenImg src='/img/Who/tempcircle.png' />
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </div>
                         </Col>
-                        <Col lg=''>
-                        <div className="d-flex flex-column align-items-center">
-                        <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
-                        <WhenImg src='/img/Who/tempcircle.png' />
-                        </div>
-                        </Col>
-                        <Col lg=''></Col>
+                        <Col lg='1'></Col>
                     </Row>   
                 </Container>
                 
