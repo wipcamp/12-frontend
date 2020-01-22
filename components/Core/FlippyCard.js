@@ -4,9 +4,7 @@ import styled from 'styled-components'
 import './FlippyCSS.css';
 
 const Card = styled.div`
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
+  /* scroll-snap-align: start; */
 `
 
 
@@ -103,11 +101,13 @@ class Flippycardnaja extends Component {
   }
   render() {
     return (
-      <Card className="App slide">
           <FlippyOnClick flipDirection="horizontal" srcFront={this.props.srcFront} srcBack={this.props.srcBack}/>
-        </Card>
     );
   }
 }
 
 export default Flippycardnaja;
+
+{/* <Card className="App slide">
+<FlippyOnClick flipDirection="horizontal" srcFront={this.props.srcFront} srcBack={this.props.srcBack}/>
+</Card> */}
