@@ -6,8 +6,7 @@ import {
   Row,
 } from 'reactstrap'
 import styled from 'styled-components'
-import {Contact,FollowUs} from './ContactInfo'
-
+import { Contact, FollowUs } from './ContactInfo'
 
 
 const ContactContainer = styled.div`
@@ -19,7 +18,7 @@ const ContactContainer = styled.div`
     background-size: cover;
 `
 const ImgObject = styled.img`
-  width: 580px;
+  width: auto;
   height: 356px;
   margin: 20px 20px 20px 20px;
 `
@@ -27,21 +26,30 @@ export default class contact extends Component {
   render() {
     return (
       <ContactContainer>
-        <Row>
-          <Col sm={{ size: 'auto', offset: 1 }}>
-            <Contact />
-          </Col>
-          <Col sm={{ size: 'auto', offset: 2 }}>
-            <ImgObject src="img/Rectangle_7.png" />
-          </Col>
-        </Row>
+        <Container>
+          <Row>
+            <Col xl="6" lg="6" md="6" sm="6" >
+              {/* <Col sm={{ size: 'auto', offset: 1 }}> */}
+              <Contact />
+            </Col>
 
-        <Row>
-          <Col sm={{ size: 'auto', offset: 5}}>
-            <FollowUs />
-          </Col>
-        </Row>
+            <Col xl="6" lg="6" md="6" sm="6">
+              <ImgObject src="img/Rectangle_7.png" />
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xl="6" lg="6" md="6" sm="6" >
+            </Col>
+
+            <Col xl="6" lg="6" md="6" sm="6" >
+              {/* <Col sm={{ size: 'auto', offset: 5}}> */}
+              <FollowUs />
+            </Col>
+          </Row>
+        </Container>
       </ContactContainer>
+
     )
   }
 }

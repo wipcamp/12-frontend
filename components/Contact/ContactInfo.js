@@ -10,14 +10,19 @@ margin-top: 16px;
 const ContactImg = styled.img`
 width:83px;
 height:83px;
-margin-right:10%;
+margin-right:7%;
 `
 const TextBox = styled.div`
 color: white;
 margin: 20px 35px 20px 0px;
 flex-wrap: wrap;
 font-family: 'Chakra Petch', sans-serif;
-width: 100%;
+width: auto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 31px;
+
 `
 const StyledLink = styled.a`
 color: black !important;
@@ -25,11 +30,13 @@ text-decoration: none;
 `
 const HeaderStyled = styled.div`
 font-family: 'Prompt-light', sans-serif;
-font-size: 35px;
 color:white;
-text-transform: capitalize;
-font-weight: bold;
 display:block;
+font-style: normal;
+font-weight: normal;
+font-size: 72px;
+line-height: 109px;
+
 `
 
 class Contact extends Component {
@@ -47,7 +54,7 @@ class Contact extends Component {
                 <Row>
                     <Col>
                         <TextBox>
-                            <ContactImg src="img/Contact/Messenger.png" />
+                        <Link href="/"><StyledLink href="/"><ContactImg src="img/Contact/Messenger.png" /></StyledLink></Link>
                             MESSENGER
                         </TextBox>
                     </Col>
@@ -96,7 +103,7 @@ class FollowUs extends Component {
                 <Row>
                     <Col>
                         <TextBox>
-                        <Link href="/"><StyledLink href="/"><ContactImg src="img/Contact/youtube.png" /></StyledLink></Link>
+                        <ContactImg src="img/Contact/youtube.png" />
                             wip camp
                         </TextBox></Col>
                 </Row>
