@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Header, SubHeader, Content } from '../Core/Text'
 import Trackpage from './Track'
 import { Container,Row,Col } from 'reactstrap'
-import Flip from '../Core/FlippyCard'
+import CarouselTrack from './Carousel'
 
 const TrackBg = styled.div`
 background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
@@ -32,7 +32,8 @@ export default class Track extends Component {
                 
                 <Col className='justify-contents-center' xl ='3' lg='3' xs='6'><Trackpage /></Col>
                 <Col className='justify-contents-center' xl ='3' lg='3' xs='6'><Trackpage /></Col>
-            </Row>        
+            </Row>
+            <CarouselTrack />
             </Container>
             </TrackBg>
         )
