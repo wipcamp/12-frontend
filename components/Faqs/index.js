@@ -6,8 +6,10 @@ import { Header, SubHeader } from '../Core/Text'
 
 
 const FaqsContainer = styled.div`
-    background-color : black;
-    /* padding: 100px 0 100px 0; */
+    background: #0F2027;  
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+
 `
 
 const FaqsBox = styled.div`
@@ -100,13 +102,13 @@ export default class Faqs extends Component {
         return (
             <FaqsContainer>
                 <StyledContainer>
-                    <Row className="order-1">
+                    <Row>
                         <Col style={{ marginTop: '0px' }}>
                             <Header color="#ffffff" headerText="FAQS" />
                             <SubHeader subHeaderText="คำถามที่พบบ่อย" color="#ffffff" />
                         </Col>
                     </Row>
-                    <DropRow className="order-2">
+                    <DropRow>
                         <Col>
                             <div className="d-flex justify-content-center">
                             <select value={this.state.currentAnswerIndex} onChange={() => this.changeAnswer(event.target.value)}>
@@ -120,7 +122,7 @@ export default class Faqs extends Component {
                             </div>
                         </Col>
                     </DropRow>
-                    <Row className="mt-5 order-4">
+                    <Row className="mt-5 order-2">
                         <Col lg='4' md='3' sm="3" xs="2">
                             <div className="d-flex flex-column align-items-center">
                                 <FaqsBox onClick={() => this.changeAnswer(0)} >อยากมาเข้าร่วมค่ายนี้มากๆ ต้องทำอย่างไร test 1 ?</FaqsBox>
@@ -141,7 +143,7 @@ export default class Faqs extends Component {
                             </div>
                         </Col>
                     </Row>
-                    <Row className="order-3">
+                    <Row className="">
                         <Col lg='12'>
                             <div>
                                 <FaqsImg vertical="-64vh" src="/img/lungtu.png" />
