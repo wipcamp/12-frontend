@@ -64,13 +64,18 @@ const WrapLogoCana = styled.div`
 `
 
 const StyledButton = styled(Button)`
-    background-color: #22c1cc;
+    background-color: #F4693D;
     border: none;
     font-family: "Prompt-regular";
     font-size: 12px;
-    color: black !important;
+    color: white !important;
     border-radius: 50px;
     padding: 5px 10px;
+
+    :hover {
+        background-color: white;
+        color: #F4693D !important;
+    }
 
     @media (min-width: 768px) {
         font-size: 24px;
@@ -78,7 +83,7 @@ const StyledButton = styled(Button)`
     }
 
     @media (min-width: 1024px) {
-        padding: 15px 53px;
+        padding: 15px 38px;
     }
 `
 

@@ -6,15 +6,7 @@ import { Header } from '../Core/Text'
 import Link from 'next/link'
 
 const GameContainer = styled.div`
-background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-position: relative;
-/* max-height: 80vh; */
-
-`
-
-const WrapHeader = styled.div`
-    position: absolute;
-    width: 100%;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 `
 
 const Wrap = styled.div`
@@ -22,54 +14,83 @@ const Wrap = styled.div`
     position: relative;
     display: table;
     width: 100%;
-    height: 500px;
+    height: 354px;
     background-size: cover;
+
+    @media (min-width: 768px) {
+        height: 771px;
+    }
+
+    @media (min-width: 1024px) {
+        height: 500px;
+    }
+`
+
+const VerticalAlign = styled.div`
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 `
 
 const Content = styled.div`
-    padding-top: 192px;
+    margin-top: 41px;
+
+    @media (min-width: 768px) {
+        margin-top: 69px;
+    }
+
+    @media (min-width: 1024px) {
+        margin-top: 124px;
+    }
 `
 
 const StyledButton = styled(Button)`
-    font-family: Chakra Petch;
+    font-family: "ChakraPetch-Regular";
     font-size: 18px;
-    padding: 28px 44px;
+    padding: 15px 27px;
     background-color: white;
     border-color: white;
     border-radius: 50px;
     text-decoration: none !important;
 
-    @media (min-width: 320px) {
+    @media (min-width: 768px) {
         font-size: 48px;
+        padding: 30px 47px;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 38px 46px;
     }
 `
 
 const StyledLink = styled.a`
     color: black !important;
-    text-decoration: none;
+    text-decoration: none !important;
 `
 
 export default class Game extends Component {
     render() {
         return (
             <GameContainer>
-                <WrapHeader>
-                    <Container>
-                    
-                            <Header color="#ffffff" headerText="GAME" />
-                        
-                    </Container>
-                </WrapHeader>
+                <Container className="text-center">
+                    <Header color="#ffffff" headerText="GAME" />
+                </Container>
                 <Content>
-                <Container>
-                        <Wrap>
-                            <div style={{ display: 'table-cell', textAlign: 'center', verticalAlign: 'middle' }}>
-                                <StyledButton><Link href="/"><StyledLink href="/">Go To Game</StyledLink></Link></StyledButton>
-                            </div>
-                        </Wrap>
-                        </Container>  
+                    <Row>
+                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
+                        <Col xl="10" lg="10" md="10" sm="10" xs="10">
+                            <Wrap>
+                                <VerticalAlign>
+                                    <StyledButton><Link href="/"><StyledLink href="/">Go To Game</StyledLink></Link></StyledButton>
+                                </VerticalAlign>
+                            </Wrap>
+                        </Col>
+                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
+                    </Row>
+
+
                 </Content>
-                
+
             </GameContainer>
         )
     }
