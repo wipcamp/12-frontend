@@ -13,7 +13,7 @@ const Wrap = styled.div`
     }
 `
 
-const ArrowButton = styled.div`
+const LeftArrowButton = styled.div`
     height: 62.68px;
     width: 63.5px;
     align-items: center;
@@ -23,26 +23,56 @@ const ArrowButton = styled.div`
     cursor: pointer;
     color: white;
     display: none;
-  
+    visibility: hidden;
+
     @media (min-width: 1024px) {
         display: flex;
     }
 `
+
+const RightArrowButton = styled(LeftArrowButton)`
+    visibility: visible;
+`
+
+const prev = {
+    position: 'absolute',
+    fill: 'white',
+    top: '133px',
+    left: '25px',
+    zIndex: '3',
+    transform: 'rotate(180deg)'
+}
 
 const next = {
     position: 'absolute',
     fill: 'white',
     top: '133px',
     right: '17.95px',
-    zIndex: '3',
+    zIndex: '3'
+}
+
+const LeftArrow = (props) => {
+    return (
+        <LeftArrowButton onClick={props.goToPrevSlide} style={prev} id="prevButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="24.93" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z" /></svg>
+      </LeftArrowButton>
+    );
 }
 
 const RightArrow = (props) => {
     return (
-        <ArrowButton onClick={props.goToNextSlide} style={next}>
+        <RightArrowButton onClick={props.goToNextSlide} style={next} >
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="24.93" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z" /></svg>
-        </ArrowButton>
+        </RightArrowButton>
     );
+}
+
+const showPrevButton = () => {
+    document.getElementById("prevButton").style.visibility = 'visible';
+}
+
+const hidePrevButton = () => {
+    document.getElementById("prevButton").style.visibility = 'hidden';
 }
 
 export default class SideScroll extends Component {
@@ -61,8 +91,21 @@ export default class SideScroll extends Component {
         translateValue: 0
     };
 
+    
+
+    goToPrevSlide = () => {
+        if (this.state.currentIndex === 0)
+            return;
+
+        this.setState(prevState => ({
+            currentIndex: prevState.currentIndex - 1,
+            translateValue: prevState.translateValue + (this.slideWidth())
+        }))
+    }
+
     goToNextSlide = () => {
         if (this.state.currentIndex === this.state.images.length - 1) {
+            hidePrevButton();
             return this.setState({
                 currentIndex: 0,
                 translateValue: 0
@@ -72,6 +115,7 @@ export default class SideScroll extends Component {
             currentIndex: prevState.currentIndex + 1,
             translateValue: prevState.translateValue + -(this.slideWidth())
         }));
+        showPrevButton();
     }
 
     slideWidth = () => {
@@ -99,6 +143,7 @@ export default class SideScroll extends Component {
                         ))}
                     </div>
                 </Wrap>
+                <LeftArrow goToPrevSlide={this.goToPrevSlide} />
                 <RightArrow goToNextSlide={this.goToNextSlide} />
             </div>
         )
