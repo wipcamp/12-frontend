@@ -65,7 +65,7 @@ const StyledButton = styled(Button)`
 
 const StyledLink = styled.a`
     color: black !important;
-    text-decoration: none;
+    text-decoration: none !important;
 `
 
 export default class Game extends Component {
