@@ -3,26 +3,16 @@ import styled from 'styled-components'
 
 
 const Image = styled.img`
-    width: 168px;
-    height: 116px;
-    scroll-snap-align: center;
+    width: 528.51px;
+    height: 397px;
     margin: 0px 10px 0px 10px;
-    
-    @media (min-width: 768px) {
-        width: 393px;
-        height: 284px;
-    }
-
-    @media (min-width: 1024px) {
-        width: 566px;
-        height: 328px;
-    }
+    visibility: ${props => props.visible};
 `
 
 export const WhatImage = (props) => {
 
     return (
-        <Image src={props.src} className="slide"/>
+        <Image src={props.src} className="slide" visible={props.visible} />
     )
 }
 Image.defaultProps = {

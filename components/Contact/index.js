@@ -1,48 +1,54 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {
+import { 
   Container,
   Col,
   Row,
+  FormGroup,
+  Input,
+  Button
 } from 'reactstrap'
-import { Header, SubHeader } from '../Core/Text'
-import styled from 'styled-components'
-import ContactImage from './ContactImage'
-import Contact from './ContactInfo'
-
-
-const ContactContainer = styled.div`
-    background: #121933;
-    display: table;
-    height: 80vh;
-    position: relative;
-    width: 100%;
-    background-size: cover;
-`
-const ImgObject = styled.img`
-  width: 580px;
-  height: 356px;
-  margin: 20px 20px 20px 20px;
-`
+import ImgInfo from '../components/Core/ImgInfo'
+import { Header , SubHeader  } from '../components/Core/Text'
+import ContactImage from '../components/Contact/ContactImage'
 export default class contact extends Component {
-  render() {
-    return (
-      <ContactContainer>
-        <Row>
-          <Col sm={{ size: 'auto', offset: 1 }}>
-            <Contact />
-          </Col>
-          <Col sm={{ size: 'auto', offset: 2 }}>
-            <ImgObject src="img/Rectangle_7.png" />
-          </Col>
-        </Row>
+    render() {
+        return (
+            <div>
+              <Container>
+                <Row>
+                <Col sm="4" />
+                  <Col sm="4" className="text-center"><Header stroke="black" headerText="Contact" /></Col>
+                  <Col sm="4" />
+                </Row>
+            <Row>
+        <Col sm="4"/>
+        <Col sm="4" className="text-center" >
+        <FormGroup>
+        <Input type="email" name="email" id="formEmail" placeholder="Email" />
+      </FormGroup>
+      <FormGroup>
+        <Input type="text" name="name" id="formName" placeholder="Name" />
+      </FormGroup>
+      <FormGroup>
+        <Input type="textarea" name="Message" id="formMessage" placeholder="your Message" />
+      </FormGroup>
+      <div className="text-right">
+      <Button color="secondary" size="sm">Send</Button>
+      </div>
+      <ImgInfo src="temp.jpg" content="095-581-2385 ( พี่ทีเจ )" />
+      <ImgInfo src="temp.jpg" content="wippo@wipcamp.com" />
 
-        <Row>
-          <Col sm={{ size: 'auto', offset: 5}}>
-            <ContactImage />
-          </Col>
-        </Row>
-      </ContactContainer>
-    )
-  }
+      <SubHeader color="black" subHeaderText="FOLLOW US" />
+      <ContactImage src="temp.jpg" width="88px" height="88px" />
+      <ContactImage src="temp.jpg" width="88px" height="88px" />
+      <ContactImage src="temp.jpg" width="88px" height="88px" />
+      <ContactImage src="temp.jpg" width="88px" height="88px" />
+        </Col>
+        <Col sm="4" />
+              </Row>
+              </Container>
+            </div>
+        )
+    }
 }

@@ -21,14 +21,14 @@ export default css.global`
 @font-face {
     font-family: 'Prompt-light' ;
     src: url('/font-family/Prompt/Prompt-Light.woff2') , url('/font-family/Prompt/Prompt-Light.woff');
-    font-weight: lighter;
+    font-weight: medium;
     font-style: normal;
     font-display: swap; 
 }
 @font-face {
     font-family: 'Prompt-regular';
     src:  url('/font-family/Prompt/Prompt-Regular.woff2') , url('/font-family/Prompt/Prompt-Regular.woff');
-    font-weight: normal;
+    font-weight: medium;
     font-style: normal;
     font-display: swap; 
   }
@@ -42,14 +42,14 @@ export default css.global`
   @font-face {
     font-family: 'ChakraPetch-Bold';
     src: url('/font-family/Chakra/ChakraPetch-Bold.woff2') , url('/font-family/Chakra/ChakraPetch-Bold.woff');
-    font-weight: bold;
+    font-weight: medium;
     font-style: normal;
     font-display: swap; 
   }
   @font-face {
     font-family: 'ChakraPetch-Regular';
     src: url('/font-family/Chakra/ChakraPetch-Regular.woff2') , url('/font-family/Chakra/ChakraPetch-Regular.woff');
-    font-weight: normal;
+    font-weight: medium;
     font-style: normal;
     font-display: swap; 
   }

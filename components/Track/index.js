@@ -22,7 +22,7 @@ export default class Track extends Component {
                 <Container>
             <Row>
                 <Col>
-                <Header color="white" headerText="TRACK" />
+                <Header stroke="white" headerText="TRACK" />
                 <SubHeader color="white" subHeaderText="สาขาอาชีพในค่าย" />
                 </Col>
             </Row>

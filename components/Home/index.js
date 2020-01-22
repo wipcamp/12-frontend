@@ -5,6 +5,7 @@ import Star from '../Core/Star'
 
 
 const HomeContainer = styled.div`
+    
     display: table;
     position: relative;
     height: 100vh;
@@ -19,69 +20,23 @@ const HomeContent = styled.div`
 `
 
 const WipLogoImg = styled.img`
-    width: 288px;
-    height: 93.28px;
+    width: 467px;
+    height: 175px;
     
-    @media (min-width: 768px) {
-        width: 598px;
-        height: 194px;
-    }
-
-    @media (min-width: 1024px) {
-        width: 867px;
-        height: 281px;
-    }
 `
 
 const LogoImg = styled.img`
-    width: 138.77px;
-    height: 30.94px;
-
-    @media (min-width: 768px) {
-        width: 314.99px;
-        height: 70.24px;
-    }
-
-    @media (min-width: 1024px) {
-        width: 372.22px;
-        height: 83px;
-    }
-`
-
-const WrapLogoCana = styled.div`
-    margin-top: 9.02px;
-    margin-bottom: 17.52px;
-
-    @media (min-width: 768px) {
-        margin-top: 21px;
-        margin-bottom: 44.76px;
-    }
-
-    @media (min-width: 1024px) {
-        margin-top: 12px;
-        margin-bottom: 47px;
-    }
+    width: ${props => props.width};
+    height: ${props => props.height};
+    margin: 1%;
 `
 
 const StyledButton = styled(Button)`
-    background-color: #22c1cc;
-    border: none;
-    font-family: "Prompt-regular";
-    font-size: 12px;
+    background-color: white;
     color: black !important;
     border-radius: 50px;
-    padding: 5px 10px;
-
-    @media (min-width: 768px) {
-        font-size: 24px;
-        padding: 14px 35px;
-    }
-
-    @media (min-width: 1024px) {
-        padding: 15px 53px;
-    }
+    padding: 15px 53px;
 `
-
 const Wippo = styled.img`
     position: absolute;
     bottom: -100px;
@@ -102,6 +57,10 @@ export default class Home extends Component {
             height: 0,
             isDesktop: true
         }
+  
+
+
+
 
     listenScrollEvent = e => {
         if (window.innerWidth >= 1080 && this.state.isDesktop) {
@@ -138,14 +97,31 @@ export default class Home extends Component {
 
     render() {
         return (
+            // <HomeContainer>
+            //     <Star>
+            //         <Container>
+            //             <Row>
+            //                 <Col>
+            //                 <ZodiacContainer>
+            //                     <ZodiacRing/>
+            //                     <LogoImg src='/img/Home/wiplogo.png' />
+            //                 </ZodiacContainer>
+            //                 </Col>
+            //             </Row>
+            //         </Container>
+            //     </Star>
+            // </HomeContainer>
             <Star>
                 <HomeContainer>
 
                     <HomeContent>
-                        <WipLogoImg src='/img/Home/logo.png' />
-                        <WrapLogoCana>
-                            <LogoImg src='/img/Home/LogoCana.png' />
-                        </WrapLogoCana>
+
+                        <WipLogoImg src='/img/Home/wiplogo.png' />
+                        <br />
+                        <LogoImg src='/img/Home/logo-sit1.png' width="76.59px" height="67.91px" />
+                        <LogoImg src='/img/Home/logo-sit2.png' width="148.58px" height="69.42px" />
+                        <LogoImg src='/img/Home/LogoCana.png' width="142.46px" height="73.95px" />
+                        <br />
                         <StyledButton>REGISTER</StyledButton>
                     </HomeContent>
                 </HomeContainer>

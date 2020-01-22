@@ -14,7 +14,7 @@ export default class Sponsor extends Component {
         return (
             <SponsorBg>
             <div style={{ marginTop: '75px' , marginBottom: '108px'}}>
-                <Header color="black" headerText="SPONSOR" />
+                <Header stroke="black" headerText="SPONSOR" />
                 <SubHeader color="black" subHeaderText="ผู้สนับสนุน" />
                 <Container className="text-center" style={{ marginTop: '61px' }}>
                     <Row>

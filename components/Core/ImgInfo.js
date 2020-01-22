@@ -19,14 +19,6 @@ border: 3px solid white;
 border-radius: 10px;
 padding: 20% 10% 10% 10%;
 margin-bottom: 20%;
-@media (max-width: 320px) {
-    border: none;
-        
-}
-@media (min-with: 320){
-    border: 3px solid white;
-border-radius: 10px;
-}
 `
 
 class ImageInfo extends Component {

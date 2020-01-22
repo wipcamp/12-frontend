@@ -123,7 +123,7 @@ export default class SideScroll extends Component {
 
         return (
             <div style={{ position: 'relative', zIndex: '2', marginTop: '36px'}} className="scroll-container">
-                <div style={{marginLeft: '100px'}}>
+                <div style={{marginLeft: '-105px'}}>
                 <Wrap >
 
                     <div

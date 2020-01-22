@@ -19,7 +19,7 @@ export default class When extends Component {
                 <Container>
                     <Row>
                         <Col>
-                        <Header color="#ffffff" headerText="WHEN" />
+                        <Header stroke="#ffffff" headerText="WHEN" />
                         <SubHeader color="#ffffff" subHeaderText="ค่ายจัดเมื่อไหร่" />
                         </Col>
                     </Row>
