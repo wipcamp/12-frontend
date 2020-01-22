@@ -222,6 +222,11 @@ const Navbar1 = (props) => {
 				<Collapse isOpen={isOpen} navbar>
 					<div style={{width:'100%',display:'flex',justifyContent:'center'}}>
 					<StyledNav navbar>
+					<StyledNavItem>
+							<Link href="./App">
+								<StyledNavLink href="/">HOME</StyledNavLink>
+							</Link>
+						</StyledNavItem>
 						<StyledNavItem>
 							<Link href="./App">
 								<StyledNavLink href="/">WHAT</StyledNavLink>
