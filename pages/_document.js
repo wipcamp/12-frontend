@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <meta name="og:title" content="WIP Camp 12" />
           <meta name="og:description" content="Nulla officia id adipisicing do ipsum laborum tempor labore proident." />
-          <meta name="og:image" content="../public/img/Home/logo.png" />
+          <meta name="og:image" content="http://35.240.193.76/img/temp.jpg" />
           <meta property="og:site_name" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
 
           <link rel="stylesheet" href="\node_modules\bootstrap\dist\css\bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
