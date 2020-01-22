@@ -5,10 +5,9 @@ import {
   Col,
   Row,
 } from 'reactstrap'
-import { Header, SubHeader } from '../Core/Text'
 import styled from 'styled-components'
-import ContactImage from './ContactImage'
-import Contact from './ContactInfo'
+import {Contact,FollowUs} from './ContactInfo'
+
 
 
 const ContactContainer = styled.div`
@@ -39,7 +38,7 @@ export default class contact extends Component {
 
         <Row>
           <Col sm={{ size: 'auto', offset: 5}}>
-            <ContactImage />
+            <FollowUs />
           </Col>
         </Row>
       </ContactContainer>
