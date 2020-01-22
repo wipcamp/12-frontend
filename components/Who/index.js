@@ -8,12 +8,18 @@ import { ImageInfo , ImageInfoGlow } from '../Core/ImgInfo'
 const WhoContainer = styled.div`
 background-color : #1E1E1E;
 padding: 100px 0 100px 0;
+
 `
 const Image = styled.img`
-margin-left: 10%;
-margin-top: 30%;
+left: 430px;
+bottom: -250px;
 width: 275.44px;
 height: 526.98px;
+position: absolute;
+@media (max-width: 320px) {
+position: absolute;
+   
+}
 `
 
 export default class Who extends Component {
@@ -22,26 +28,36 @@ export default class Who extends Component {
             <WhoContainer>
                 <Container>
                     <Row>
-                        <Col>
-                            <Header stroke="#ffffff" headerText="WHO" />
-                            <SubHeader color="#ffffff" subHeaderText="ค่ายนี้เหมาะกับใคร" />
+                    <Col sm="4">
+                        </Col>
+                        <Col sm="4">
+                        <Header color="white" headerText="WHO" />
+                        </Col>
+                        <Col sm="4">
                         </Col>
                     </Row>
                     <Row>
-                        <Col sm="4">Lorem
-                        <ImageInfo className="" src="img/Who/circle.png" content=" น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง " color="#fff" />2
-                        <ImageInfo src="img/Who/circle.png" content="น้อง ๆ ที่สามารถอยู่ร่วมค่าย ค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน" color="#fff" />2
-                        
-                        </Col>
-                        <Col sm="">
-                       <Image src="/img/who/Wippo.png" />
+                        <Col sm="4">
+                            <ImageInfo src="/Img/Who/Circle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
                         </Col>
                         <Col sm="4">
-                        <ImageInfo src="img/Who/circle.png" content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน" color="#fff" />2
-                        <ImageInfo src="img/Who/circle.png" content="น้อง ๆ ที่ได้รับการอนุญาต จากผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์อักษรที่ถูกต้อง" color="#fff" />2
-                        
                         </Col>
-                
+                        <Col sm="4">
+                            <ImageInfo src="/Img/Who/Circle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col><Image src="/Img/Who/Wippo.png"/></Col>
+                    </Row>
+                    <Row>
+                        <Col sm="4">
+                            <ImageInfo src="/Img/Who/Circle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
+                        </Col>
+                        <Col sm="4">
+                        </Col>
+                        <Col sm="4">
+                            <ImageInfo src="/Img/Who/Circle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
+                        </Col>
                     </Row>
                 </Container>
             </WhoContainer>

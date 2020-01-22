@@ -2,38 +2,53 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeadLine = styled.h1`
-    font-family: 'Prompt-Medium', sans-serif;
+    font-family: 'Prompt-medium', sans-serif;
     font-size: 40px;
-    letter-spacing: 0.2em;
-    font-weight: 500;
-    text-align: center;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: ${props => props.strokeColor};
-    color: transparent;
+    letter-spacing: 0.1em;
+    color: ${props => props.color};
+
+    @media (min-width: 768px) {
+        font-size: 120px;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 140px;
+    }
 `
 
 const SubHead = styled.h2`
-    font-family: 'Prompt-Medium', sans-serif;
-    font-size: 16px;
-    font-weight: normal;
+    font-family: 'Prompt-light', sans-serif;
+    font-size: 14px;
     text-align: center;
     color: ${props => props.color};
+
+    @media (min-width: 768px) {
+        font-size: 35px;
+    }
 `
 
 const ContentText = styled.p`
-    font-family: 'Prompt-Medium', sans-serif;
-    font-size: 24px;
-    font-weight: lighter;
+    font-family: "ChakraPetch-Regular", sans-serif;
+    font-size: 12px;
     color: ${props => props.color};
     text-align: ${props => props.textAlign};
     text-indent: ${props => props.textIndent};
     padding: ${props => props.padding};
-    line-height: ${props => props.lineHeight};
+    line-height: 18px;
+
+    @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    @media (min-width: 1024px) {
+        line-height: 30px;
+    }
 `
 
 export const Header = (props) => {
     return (
-    <HeadLine strokeColor = {props.stroke}>
+    <HeadLine color = {props.color}>
         {props.headerText}
     </HeadLine>
     )

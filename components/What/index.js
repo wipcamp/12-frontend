@@ -1,75 +1,91 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import { Row, Col} from 'reactstrap'
 import styled from 'styled-components'
 import { Header, SubHeader, Content } from '../Core/Text'
-import WhatCarousel from './WhatCarousel'
 import WhatSideScroll from './WhatSideScroll'
 
 const WhatBg = styled.div`
 background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 padding-top: 65px;
-
 `
 
-const Row = styled.div`
-    margin-top: 81px;
-    ::after {
-        content: "";
-        display: table;
-        clear: both;
+const WrapGrid = styled.div`
+    margin-top: 24.72px;
+    
+
+    @media (min-width: 768px) {
+        margin-top: 55.79px
+    }
+
+    @media (min-width: 1024px) {
+        margin-top: 96px;
     }
 `
 
-const Column = styled.div`
-    float: left;
-    width: 50%;
-`
-
 const WrapContent = styled.div`
-    padding-left: 133px;
-    padding-right: 18px;
+    margin-left: 36px;
+    margin-right: 36px;
+
+    @media (min-width: 768px) {
+        margin-left: 116px;
+        margin-right: 116px;
+    }
+
+    @media (min-width: 1024px) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 `
 
+const WrapSideScroll = styled.div`
+    margin-top: 31px;
+
+    @media (min-width: 768px) {
+        margin-top: 62px;
+    }
+
+    @media (min-width: 1024px) {
+        margin-top: 0px;
+    }
+`
 export default class What extends Component {
     render() {
         return (
             <WhatBg>
-
-
-                <div>
-                    <Header stroke="white" headerText="WHAT" />
-                    <SubHeader color="white" subHeaderText="ค่ายนี้คืออะไร" />
+                <div className="text-center">
+                    <Header color="white" headerText="WHAT" />
                 </div>
-                <Row>
-                    <Column>
-                    <WrapContent>
-                        <Content
-                            textIndent="50px"
-                            color="white"
-                            content="ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับ น้อง ๆ ผู้ที่มีความสนใจทางด้าน ไอที โดยน้อง ๆ จะได้รับ บทบาทเป็นนินจาที่กำลังค้นหาเส้นทางชีวิตของ ตนเอง ณ คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยี พระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน"
-                        />
-                        </WrapContent>
-                    </Column>
-                    <Column>
-                        <WhatSideScroll />
-                    </Column>
-                </Row>
-                {/* <Row>
-                    <Col>
-                    <Content color="black" textAlign="center" content="ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้อง ๆ ผู้ที่มีความสนใจทางด้าน 
-                                โดยน้องๆ จะได้รับบทบาทเป็นนินจาที่กำลังค้นหาเส้นทางชีวิตของตนเอง ณ คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน
-                                เหล่านินจาที่เข้ามาในสำนักแห่งนี้ จะได้เรียนรู้ และฝึกฝนวิชาทางด้านวิชาการ รวมไปถึงได้รับความสนุกสนานจากกิจกรรมของเหล่าศิษย์พี่ในสำนัก !!
-                                สำนัก WIP Camp นี้ก่อตั้งมาแล้วจนถึงปีที่ 11 เพื่อรอนินจาผู้เหมาะสมสำหรับคัมภีร์ลับในตำนาน ที่สามารถดลบันดาลสิ่งที่หวัง แล้วน้อง ๆ ล่ะ คือคนที่เหมาะสม
-                                    คนนั้นหรือเปล่า" />
+                    <SubHeader color="white" subHeaderText="ค่ายนี้คืออะไร" />  
+                    <WrapGrid>
+                    <Row>
+                        <Col xl="1" lg="1" md="12" sm="12" xs="12"></Col>
+                        <Col xl="5" lg="5" md="12" sm="12" xs="12">
+                        <WrapContent>
+                            <Content
+                                textIndent="50px"
+                                color="white"
+                                content="น้อง ๆ พร้อมแล้วหรือยังกับการผจญภัย ครั้งใหม่ที่กำลังจะเริ่มต้นขึ้น 
+                                    เมื่อแสงสว่างของกลุ่ม ดาวราศีต่าง ๆ หายไปอย่างลึกลับ เหล่าผู้พิทักษ์จึง 
+                                    ปรากฎกายขึ้น เพื่อตามหาเหล่านักดูดาวที่มีความ สนใจทางด้านไอที 
+                                    หรือกำลังตามหาเส้นทางของ ตัวเองมาค้นหาและแก้ไขปริศนาของแสงดาวที่ 
+                                    หายไปร่วมกัน ภารกิจในครั้งนี้มีเวลาเพียงแค่ 5 วัน 4 คืนเท่านั้น 
+                                    ซึ่งหนึ่งในภารกิจที่เหล่านักดูดาวต้องทำ คือการเลือกสายอาชีพที่ตนเองสนใจ 
+                                    โดยแบ่งออก เป็น 4 สาย ได้แก่ Programming, Web Developer, UX/UI 
+                                    และ Network รวม ไปถึง Workshop ของ IT Management อีกด้วย 
+                                    นอกจากนั้นเหล่านักดูดาว ทั้งหลายยังต้องร่วมกิจกรรมต่าง ๆ อีกมากมายที่ 
+                                    เต็มไปด้วยความสนุกสนาน และการผจญภัย มาร่วมเป็นส่วนหนึ่งของการพิทักษ์
+                                    แสงดาวไปพร้อมกัน ในค่ายเส้นทางสู่ฝันนักไอที ครั้งที่ 12"
+                            />
+                            </WrapContent>
+                        </Col>
+                    <Col xl="6" lg="6" md="12" sm="12" xs="12">
+                        <WrapSideScroll>
+                            <WhatSideScroll />
+                        </WrapSideScroll>
                     </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <WhatCarousel/>
-                    </Col>
-                </Row> */}
-
+                    </Row>
+                    </WrapGrid>  
             </WhatBg >
         )
     }
