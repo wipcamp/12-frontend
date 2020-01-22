@@ -6,6 +6,7 @@ const HeadLine = styled.h1`
     font-size: 40px;
     letter-spacing: 0.1em;
     color: ${props => props.color};
+    text-align: ${props => props.textAlign || "center"};
 
     @media (min-width: 768px) {
         font-size: 120px;
@@ -48,7 +49,9 @@ const ContentText = styled.p`
 
 export const Header = (props) => {
     return (
-    <HeadLine color = {props.color}>
+    <HeadLine color = {props.color}
+    textAlign = {props.textAlign}
+    >
         {props.headerText}
     </HeadLine>
     )
