@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
-import { device } from '../Core/device'
-import { number } from 'prop-types'
 
 
 const FaqsContainer = styled.div`
