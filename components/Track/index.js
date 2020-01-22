@@ -26,11 +26,12 @@ export default class Track extends Component {
                 <SubHeader color="white" subHeaderText="สาขาอาชีพในค่าย" />
                 </Col>
             </Row>
-            <Row className='no-gutters'>
-                <Col className='justify-contents-center' xl ='3' lg='3'><Trackpage /></Col>
-                <Col className='justify-contents-center' xl ='3' lg='3'><Trackpage /></Col>
-                <Col className='justify-contents-center' xl ='3' lg='3'><Trackpage /></Col>
-                <Col className='justify-contents-center' xl ='3' lg='3'><Trackpage /></Col>
+            <Row className=''>
+                <Col className='justify-contents-center' xl ='3' lg='3' xs='6'><Trackpage /></Col>
+                <Col className='justify-contents-center' xl ='3' lg='3' xs='6'><Trackpage /></Col>
+                
+                <Col className='justify-contents-center' xl ='3' lg='3' xs='6'><Trackpage /></Col>
+                <Col className='justify-contents-center' xl ='3' lg='3' xs='6'><Trackpage /></Col>
             </Row>        
             </Container>
             </TrackBg>
