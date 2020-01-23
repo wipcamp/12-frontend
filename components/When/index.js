@@ -4,7 +4,7 @@ import {Container,Row,Col} from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Header , SubHeader} from '../Core/Text'
 import { ImageInfo , ImageInfoGlow} from '../Core/ImgInfo'
-import WhenTimer from './WhenTimer'
+
 
 const WhenContainer = styled.div`
 background-color : #1E1E1E;
@@ -13,14 +13,18 @@ background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
 `
 const WhenImg = styled.img`
-    width:100%;
+    width:20vw;
     margin: 20px 0 20px 0;
+    @media (min-width: 1024px) {
+    width: 50%;
+    }
 `
 const TimerText = styled.h4`
     font-size: 18px;
     text-align:center ;
     color: white;
     font-family:'ChakraPetch-Regular', sans-serif;
+    
 `
 const SmallContainer = styled.div`
     display: flex;
