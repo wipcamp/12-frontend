@@ -48,22 +48,22 @@ export default class Who extends Component {
                         <Col lg="3" md='5'>
                             <ImageInfo src="/Img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
                         </Col>
-                        <Col lg="4">
+                        <Col lg="4" md="auto">
                         </Col>
-                        <Col lg="3">
+                        <Col lg="3" md='5'>
                             <ImageInfo src="/Img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
                         </Col>
-                        <Col lg="1"></Col>
+                        <Col lg="1" md='1'></Col>
                     </Row>
                     <Row>
                         <Col><Image src="/Img/Who/Wippo.png"/></Col>
                     </Row>
                     <Row>
-                        <Col lg="1"></Col>
-                        <Col lg="3">
+                        <Col lg="1" md='1'></Col>
+                        <Col lg="3" md='5'>
                             <ImageInfo src="/Img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
                         </Col>
-                        <Col lg="4" md='5' >
+                        <Col lg="4" md='auto' >
                         </Col>
                         <Col lg="3" md='5'>
                             <ImageInfo src="/Img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
