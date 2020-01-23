@@ -16,10 +16,16 @@ left: 430px;
 bottom: -250px;
 width: 275.44px;
 height: 526.98px;
+display: none;
+
+
+@media (min-width: 1000px) {
 position: absolute;
-@media (max-width: 320px) {
-position: absolute;
-   
+display: block;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
 }
 `
 
@@ -29,7 +35,7 @@ export default class Who extends Component {
             <WhoContainer>
                 <Container>
                     <Row>
-                    <Col sm="4">
+                        <Col sm="4">
                         </Col>
                         <Col sm="4">
                         <Header color="white" headerText="WHO" />
@@ -38,27 +44,31 @@ export default class Who extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col sm="4">
-                            <ImageInfo src="/Img/Who/Circle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
+                        <Col lg="1" md='1'></Col>
+                        <Col lg="3" md='5'>
+                            <ImageInfo src="/Img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
                         </Col>
-                        <Col sm="4">
+                        <Col lg="4">
                         </Col>
-                        <Col sm="4">
-                            <ImageInfo src="/Img/Who/Circle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
+                        <Col lg="3">
+                            <ImageInfo src="/Img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
                         </Col>
+                        <Col lg="1"></Col>
                     </Row>
                     <Row>
                         <Col><Image src="/Img/Who/Wippo.png"/></Col>
                     </Row>
                     <Row>
-                        <Col sm="4">
-                            <ImageInfo src="/Img/Who/Circle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
+                        <Col lg="1"></Col>
+                        <Col lg="3">
+                            <ImageInfo src="/Img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
                         </Col>
-                        <Col sm="4">
+                        <Col lg="4" md='5' >
                         </Col>
-                        <Col sm="4">
-                            <ImageInfo src="/Img/Who/Circle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
+                        <Col lg="3" md='5'>
+                            <ImageInfo src="/Img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
                         </Col>
+                        <Col lg="1" md='1'></Col>
                     </Row>
                 </Container>
             </WhoContainer>
