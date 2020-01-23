@@ -26,8 +26,7 @@ const DefaultCardContents = ({ children , srcFront = props.srcFront , srcBack = 
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        padding: '0px',
-        border:'1px solid red'
+        padding: '0px'
       }}
     >
       <img
@@ -45,7 +44,7 @@ const DefaultCardContents = ({ children , srcFront = props.srcFront , srcBack = 
         padding: '0px'
       }}> 
       <img
-        src={srcFront}
+        src={srcBack}
         style={{ maxWidth: '100%', maxHeight: '100%' ,padding: '0px'}}
       />
     </BackSide>
