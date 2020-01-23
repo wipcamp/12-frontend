@@ -8,19 +8,18 @@ import WhatSideScroll from './WhatSideScroll'
 const WhatBg = styled.div`
     background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
-padding-top: 65px;
 `
 
 const WrapGrid = styled.div`
-    margin-top: 24.72px;
+    margin-top: 1em;
     
 
     @media (min-width: 768px) {
-        margin-top: 55.79px
+        margin-top: 1.5em;
     }
 
     @media (min-width: 1024px) {
-        margin-top: 96px;
+        margin-top: 2em;
     }
 `
 
@@ -40,10 +39,10 @@ const WrapContent = styled.div`
 `
 
 const WrapSideScroll = styled.div`
-    margin-top: 31px;
+    margin-top: 1em;
 
     @media (min-width: 768px) {
-        margin-top: 62px;
+        margin-top: 1.5em;
     }
 
     @media (min-width: 1024px) {
@@ -57,7 +56,7 @@ export default class What extends Component {
                 <div className="text-center">
                     <Header color="white" headerText="WHAT" />
                 </div>
-                    <SubHeader color="white" subHeaderText="ค่ายนี้คืออะไร" />  
+                    <SubHeader color="white" subHeaderText="ค่ายนี้คืออะไร ?" />  
                     <WrapGrid>
                     <Row>
                         <Col xl="1" lg="1" md="12" sm="12" xs="12"></Col>
@@ -66,17 +65,15 @@ export default class What extends Component {
                             <Content
                                 textIndent="50px"
                                 color="white"
-                                content="น้อง ๆ พร้อมแล้วหรือยังกับการผจญภัย ครั้งใหม่ที่กำลังจะเริ่มต้นขึ้น 
-                                    เมื่อแสงสว่างของกลุ่ม ดาวราศีต่าง ๆ หายไปอย่างลึกลับ เหล่าผู้พิทักษ์จึง 
-                                    ปรากฎกายขึ้น เพื่อตามหาเหล่านักดูดาวที่มีความ สนใจทางด้านไอที 
-                                    หรือกำลังตามหาเส้นทางของ ตัวเองมาค้นหาและแก้ไขปริศนาของแสงดาวที่ 
-                                    หายไปร่วมกัน ภารกิจในครั้งนี้มีเวลาเพียงแค่ 5 วัน 4 คืนเท่านั้น 
-                                    ซึ่งหนึ่งในภารกิจที่เหล่านักดูดาวต้องทำ คือการเลือกสายอาชีพที่ตนเองสนใจ 
-                                    โดยแบ่งออก เป็น 4 สาย ได้แก่ Programming, Web Developer, UX/UI 
-                                    และ Network รวม ไปถึง Workshop ของ IT Management อีกด้วย 
-                                    นอกจากนั้นเหล่านักดูดาว ทั้งหลายยังต้องร่วมกิจกรรมต่าง ๆ อีกมากมายที่ 
-                                    เต็มไปด้วยความสนุกสนาน และการผจญภัย มาร่วมเป็นส่วนหนึ่งของการพิทักษ์
-                                    แสงดาวไปพร้อมกัน ในค่ายเส้นทางสู่ฝันนักไอที ครั้งที่ 12"
+                                content="กลับมาอีกครั้งพร้อมกับภารกิจอันยิ่งใหญ่ ซึ่งเปิดโอกาสให้น้อง ๆ 
+                                ที่มีความสนใจทางด้านไอที หรือกำลังตามหาเส้นทางของตัวเอง 
+                                มาร่วมกันเดินทางไปพร้อมกัน โดยน้อง ๆ เปรียบเสมือนนักดูดาว 
+                                ผู้ถูกเลือกเพื่อออกตามหาแสงสว่างที่หายไปจากดาวราศีต่าง ๆ ที่มีเวลาเพียงแค่ 
+                                5 วัน 4 คืนเท่านั้น ในการเดินทางครั้งนี้เหล่านักดูดาว ทั้งหลาย จะมีผู้พิทักษ์ดวงดาวเป็นผู้ชี้นำทาง 
+                                หนึ่งในภารกิจสำคัญ คือ การตัดสินใจเลือกเส้นทางเดินของตัวเองจากทั้งหมด 4 เส้นทาง ได้แก่ 
+                                Programming, Web Developer, UX/UI และ Network นอกจากนั้น ยังมีกิจกรรมต่าง ๆ รวมไปถึง 
+                                IT Management ซึ่งเป็น Workshop พิเศษสำหรับเหล่านักดูดาวทั้งหลาย สุดท้ายแล้ว เรื่องราวครั้งนี้ 
+                                จะเป็นอย่างไร พวกเขาจะทำภารกิจสำเร็จหรือไม่ ติดตามได้ใน ค่ายเส้นทางสู่ฝันนักไอที ครั้งที่ 12 (WIP Camp #12)"
                             />
                             </WrapContent>
                         </Col>
