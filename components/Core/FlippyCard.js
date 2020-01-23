@@ -26,7 +26,8 @@ const DefaultCardContents = ({ children , srcFront = props.srcFront , srcBack = 
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        padding: '0px'
+        padding: '0px',
+        border:'1px solid red'
       }}
     >
       <img
