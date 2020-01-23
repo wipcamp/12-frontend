@@ -9,8 +9,8 @@ const Image = styled.img`
     margin: 0px 10px 0px 10px;
     
     @media (min-width: 768px) {
-        width: 393px;
-        height: 284px;
+        width: 300px;
+        height: 217px;
     }
 
     @media (min-width: 1024px) {
