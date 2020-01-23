@@ -6,7 +6,8 @@ import { Header, SubHeader } from '../Core/Text'
 import { ImageInfo , ImageInfoGlow } from '../Core/ImgInfo'
 
 const WhoContainer = styled.div`
-background-color : #1E1E1E;
+    background: rgb(9,10,15);
+    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
 padding: 100px 0 100px 0;
 
 `

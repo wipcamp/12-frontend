@@ -12,7 +12,8 @@ import { Header, SubHeader, Content } from '../Core/Text'
 import Iframe from 'react-iframe'
 
 const WhereBg = styled.div`
-background-color : #D2D2D2;
+    background: rgb(9,10,15);
+    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
 `
 
 const SIT = styled.div`

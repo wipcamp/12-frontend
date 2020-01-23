@@ -9,6 +9,8 @@ const HomeContainer = styled.div`
     position: relative;
     height: 100vh;
     width: 100%;
+    background: rgb(9,10,15);
+    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
     
 `
 
@@ -28,8 +30,8 @@ const WipLogoImg = styled.img`
     }
 
     @media (min-width: 1024px) {
-        width: 867px;
-        height: 281px;
+        width: 36em;
+        height: auto;
     }
 `
 
@@ -89,9 +91,10 @@ const StyledButton = styled(Button)`
 
 const Wippo = styled.img`
     position: absolute;
-    bottom: -100px;
+    bottom: -5rem;
     right: 0;
     display:none;
+    width: 20vw;
     @media (min-width: 1024px) {
 	  display: block;
   }
@@ -143,9 +146,7 @@ export default class Home extends Component {
 
     render() {
         return (
-            <Star>
                 <HomeContainer>
-
                     <HomeContent>
                         <WipLogoImg src='/img/Home/logo.png' />
                         <WrapLogoCana>
@@ -153,9 +154,8 @@ export default class Home extends Component {
                         </WrapLogoCana>
                         <StyledButton>REGISTER</StyledButton>
                     </HomeContent>
+                    <Wippo src="/img/Who/Wippo.png" />
                 </HomeContainer>
-                <Wippo src="/img/Who/Wippo.png" />
-            </Star>
         )
     }
 }
