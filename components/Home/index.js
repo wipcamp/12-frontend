@@ -21,10 +21,9 @@ const HomeContent = styled.div`
 `
 
 const WipLogoImg = styled.img`
-    width: 288px;
-    height: 93.28px;
+    width: 45em;
     
-    @media (min-width: 768px) {
+    /* @media (min-width: 768px) {
         width: 598px;
         height: 194px;
     }
