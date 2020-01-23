@@ -8,6 +8,15 @@ import Link from 'next/link'
 const GameContainer = styled.div`
     background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
+    padding-top: 3em;
+
+    @media (min-width: 768px) {
+        padding-top: 5em;
+    }
+
+    @media (min-width: 1024px) {
+        padding-top: 8em;
+    }
 `
 
 const Wrap = styled.div`
@@ -17,13 +26,13 @@ const Wrap = styled.div`
     width: 100%;
     height: 354px;
     background-size: cover;
-
+    
     @media (min-width: 768px) {
-        height: 771px;
+        height: 771px;   
     }
 
     @media (min-width: 1024px) {
-        height: 500px;
+        height: 500px;    
     }
 `
 
@@ -35,32 +44,34 @@ const VerticalAlign = styled.div`
 
 const Content = styled.div`
     margin-top: 41px;
+    margin: 2em 2.25em 0; 
 
     @media (min-width: 768px) {
-        margin-top: 69px;
+        margin: 2em 3em 0;
     }
 
     @media (min-width: 1024px) {
-        margin-top: 124px;
+        margin: 3em 0 0;
     }
 `
 
 const StyledButton = styled(Button)`
     font-family: "ChakraPetch-Regular";
     font-size: 18px;
-    padding: 15px 27px;
+    padding: 0.5em 1.5em;
     background-color: white;
     border-color: white;
     border-radius: 50px;
     text-decoration: none !important;
 
     @media (min-width: 768px) {
-        font-size: 48px;
-        padding: 30px 47px;
+        font-size: 40px;
+        padding: 1em 2em;
+        border-radius: 100px;
     }
 
     @media (min-width: 1024px) {
-        padding: 38px 46px;
+        padding: 0.5em 1.75em;
     }
 `
 
@@ -75,23 +86,14 @@ export default class Game extends Component {
             <GameContainer>
                 <Container className="text-center">
                     <Header color="#ffffff" headerText="GAME" />
+                    <Content>
+                        <Wrap>
+                            <VerticalAlign>
+                                <StyledButton><Link href="/"><StyledLink href="/">Go To Game</StyledLink></Link></StyledButton>
+                            </VerticalAlign>
+                        </Wrap>
+                    </Content>
                 </Container>
-                <Content>
-                    <Row>
-                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
-                        <Col xl="10" lg="10" md="10" sm="10" xs="10">
-                            <Wrap>
-                                <VerticalAlign>
-                                    <StyledButton><Link href="/"><StyledLink href="/">Go To Game</StyledLink></Link></StyledButton>
-                                </VerticalAlign>
-                            </Wrap>
-                        </Col>
-                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
-                    </Row>
-
-
-                </Content>
-
             </GameContainer>
         )
     }

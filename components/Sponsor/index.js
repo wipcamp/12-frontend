@@ -58,17 +58,14 @@ export default class Sponsor extends Component {
                     <SubHeader color="white" subHeaderText="ผู้สนับสนุน" />
                 </div>
                 
-                    <Row>
-                        <Col xl="1" lg="1" md="1" sm="12"></Col>
-                        <Col xl="10" lg="10" md="10" sm="12">
+                    <Container>
                             <WrapLogo>
                                 {this.state.images.map((data, key) => (
                                     <SponsorImage key={key} src={data.src} width={data.width} height={data.height} />
                                 ))}
                             </WrapLogo>
-                        </Col>
-                        <Col xl="1" lg="1" md="1" sm="12"></Col>
-                    </Row>
+                            </Container>
+                        
 
                 
             </SponsorBg>
