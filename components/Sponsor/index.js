@@ -1,80 +1,63 @@
 import React, { Component } from 'react'
 import { Header, SubHeader } from '../Core/Text'
 import SponsorImage from './SponsorImage'
-import { Container, Row, Col } from 'reactstrap'
 import styled from 'styled-components'
+import { Container } from 'reactstrap'
 
 const SponsorBg = styled.div`
-background-color : #D2D2D2;
-padding: 100px 0 100px 0;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    padding-top: 53px;
 `
 
+const WrapLogo = styled.div`
+    background-color: #c4c4c4;
+    text-align: center;
+    padding: 10px;
+    margin-top: 94px;
+
+    @media (min-width: 768px) {
+        margin-top: 82px;
+        padding: 40px 20px;
+    }
+    
+    @media (min-width: 1024px) {
+        margin-top: 124px;
+        padding: 103px 68px;
+    }
+`
 export default class Sponsor extends Component {
+    state= {
+        images: [
+            { src: "/img/Sponsor/alibaba.png" },
+            { src: "/img/Sponsor/thaibev.png" },
+            { src: "/img/Sponsor/kohkae.png" },
+            { src: "/img/Sponsor/stream.png" },
+            { src: "/img/Sponsor/kfc.png" },
+            { src: "/img/Sponsor/bangmod.png" },
+            { src: "/img/Sponsor/pandt.png" },
+            { src: "/img/Sponsor/Lnw.png" },
+            { src: "/img/Sponsor/yip.png"  },
+            { src: "/img/Sponsor/dekd.png" },
+            { src: "/img/Sponsor/Lactasoy.png"  },
+            { src: "/img/Sponsor/CPALL.png"  },
+            { src: "/img/Sponsor/pantip.png" },
+            { src: "/img/Sponsor/central.png"  }
+        ]
+    };
     render() {
         return (
             <SponsorBg>
-            <div style={{ marginTop: '75px' , marginBottom: '108px'}}>
-                <Header color="black" headerText="SPONSOR" />
-                <SubHeader color="black" subHeaderText="ผู้สนับสนุน" />
-                <Container className="text-center" style={{ marginTop: '61px' }}>
-                    <Row>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/Lactasoy.png" width="73px" height="42px" />
-                        </Col>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/yip.png" width="53px" height="42px" />
-                        </Col>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/thaibev.png" width="77px" height="42px" />
-                        </Col>
-                    </Row>
-                    <br />
-                    <Row>
-                        <Col xs="6">
-                            <SponsorImage src="img/Sponsor/CPALL.png" width="61px" height="40px" />
-                        </Col>
-                        <Col xs="6">
-                            <SponsorImage src="img/Sponsor/kohkae.png" width="103px" height="40px" />
-                        </Col>
-                    </Row>
-                    <br />
-                    <Row>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/Lnw.png" width="80px" height="17px" />
-                        </Col>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/pandt.png" width="72px" height="17px" />
-                        </Col>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/bangmod.png" width="89px" height="17px" />
-                        </Col>
-                    </Row>
-                    <br />
-                    <Row>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/stream.png" width="56px" height="23px" />
-                        </Col>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/pantip.png" width="43px" height="21px" />
-                        </Col>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/dekd.png" width="64px" height="18px" />
-                        </Col>
-                    </Row>
-                    <br />
-                    <Row>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/kfc.png" width="55px" height="25px" />
-                        </Col>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/alibaba.png" width="57px" height="21px" />
-                        </Col>
-                        <Col xs="4">
-                            <SponsorImage src="img/Sponsor/central.png" width="38px" height="38px" />
-                        </Col>
-                    </Row>
-                </Container>
+            <div className="text-center">
+                <Header color="white" headerText="SPONSOR" />
+                <SubHeader color="white" subHeaderText="ผู้สนับสนุน" />
             </div>
+            <Container>
+            <WrapLogo>
+                {this.state.images.map((data, key) => (
+                    <SponsorImage key={key} src={data.src} width={data.width} height={data.height} />
+                ))}
+            </WrapLogo>
+            </Container>
             </SponsorBg>
         )
     }

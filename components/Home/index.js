@@ -21,17 +21,15 @@ const HomeContent = styled.div`
 `
 
 const WipLogoImg = styled.img`
-    width: 288px;
-    height: 93.28px;
+    width: 16em;
     
     @media (min-width: 768px) {
-        width: 598px;
-        height: 194px;
+        width: 30em;
     }
 
     @media (min-width: 1024px) {
-        width: 36em;
-        height: auto;
+        width: 45em;
+        
     }
 `
 
@@ -72,7 +70,7 @@ const StyledButton = styled(Button)`
     font-size: 12px;
     color: white !important;
     border-radius: 50px;
-    padding: 5px 10px;
+    padding: 0.5em 1em;
 
     :hover {
         background-color: white;
@@ -81,11 +79,11 @@ const StyledButton = styled(Button)`
 
     @media (min-width: 768px) {
         font-size: 24px;
-        padding: 14px 35px;
+        padding: 1.375em 2.625em;
     }
 
     @media (min-width: 1024px) {
-        padding: 15px 38px;
+        padding: 0.75em 2.5em;
     }
 `
 

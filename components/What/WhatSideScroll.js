@@ -17,6 +17,7 @@ const LeftArrowButton = styled.div`
     height: 62.68px;
     width: 63.5px;
     align-items: center;
+    text-align: center;
     justify-content: center;
     background: rgba(134, 134, 134, 0.68);
     border-radius: 50%;
@@ -94,9 +95,13 @@ export default class SideScroll extends Component {
     
 
     goToPrevSlide = () => {
-        if (this.state.currentIndex === 0)
+        if (this.state.currentIndex === 0) {
             return;
+        }
 
+        if (this.state.currentIndex === 1) {
+            hidePrevButton();
+        }
         this.setState(prevState => ({
             currentIndex: prevState.currentIndex - 1,
             translateValue: prevState.translateValue + (this.slideWidth())
