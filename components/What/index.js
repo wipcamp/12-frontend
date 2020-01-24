@@ -77,7 +77,7 @@ export default class What extends Component {
                             />
                             </WrapContent>
                         </Col>
-                    <Col xl="6" lg="6" md="12" sm="12" xs="12">
+                    <Col xl="6" lg="6" md="12" sm="12" xs="12" className="my-auto">
                         <WrapSideScroll>
                             <WhatSideScroll />
                         </WrapSideScroll>

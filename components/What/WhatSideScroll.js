@@ -138,7 +138,8 @@ export default class SideScroll extends Component {
                             transform: `translateX(${this.state.translateValue}px)`,
                             transition: 'transform ease-out 0.45s',
                             padding: '0px',
-                            margin: '0px',
+                            margin: '0px'
+                            
                         }}>
                         {this.state.images.map((data, key) => (
                             <WhatImage
