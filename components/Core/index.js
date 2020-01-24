@@ -13,18 +13,22 @@ import Star from './Star'
 import Track from '../Track'
 import Contact from '../Contact'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
-
+import SideBar,{SideBarBG} from "./sidebar"
+import './styles.css'
 
 const Wrap = styled.div`
     overflow: hidden;
 `
 export default class App extends Component {
-    componentDidMount() {
-        configureAnchors({offset: -60, scrollDuration: 1000})
+    componentWillMount(){
+        configureAnchors({offset: -60, scrollDuration: 600}) 
     }
+
     render() {
         return (
-            <Wrap>
+            <Wrap id="App">
+                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
+                <div id="page-wrap" style={{overflow:'hidden'}}>
                 <MainNav />
                 <ScrollableAnchor id="home"><Home/></ScrollableAnchor>
                 <ScrollableAnchor id="what"><What /></ScrollableAnchor>
@@ -35,7 +39,8 @@ export default class App extends Component {
                 <ScrollableAnchor id="faqs"><Faqs /></ScrollableAnchor>
                 <Game />
                 <Sponsor />    
-                <Contact />            
+                <Contact />
+                </div>       
             </Wrap>
         )
     }

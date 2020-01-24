@@ -41,8 +41,9 @@ const FaqsBox = styled.div`
     }
 `
 const FaqsAnswer = styled.div`
-    border: 2px solid grey;
-    background-color: darkgray;
+    box-shadow: 0 0 0.5rem white;
+    background-color: rgb(255,255,255,0.8);
+    padding: 0.2rem;
     width: 80%;
     color: black;
     text-align: center;
