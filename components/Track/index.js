@@ -6,8 +6,8 @@ import { Container,Row,Col } from 'reactstrap'
 import CarouselTrack from './Carousel'
 
 const TrackBg = styled.div`
-background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-padding-top: 100px;
+    background: rgb(9,10,15);
+    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
 `
 
 const Trackcontainer = styled.div`

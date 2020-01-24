@@ -9,6 +9,8 @@ const HomeContainer = styled.div`
     position: relative;
     height: 100vh;
     width: 100%;
+    background: rgb(9,10,15);
+    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
     
 `
 
@@ -19,17 +21,15 @@ const HomeContent = styled.div`
 `
 
 const WipLogoImg = styled.img`
-    width: 288px;
-    height: 93.28px;
+    width: 16em;
     
     @media (min-width: 768px) {
-        width: 598px;
-        height: 194px;
+        width: 30em;
     }
 
     @media (min-width: 1024px) {
-        width: 867px;
-        height: 281px;
+        width: 38.5em;
+        
     }
 `
 
@@ -43,8 +43,7 @@ const LogoImg = styled.img`
     }
 
     @media (min-width: 1024px) {
-        width: 372.22px;
-        height: 83px;
+        width: 18.3125em;
     }
 `
 
@@ -70,7 +69,7 @@ const StyledButton = styled(Button)`
     font-size: 12px;
     color: white !important;
     border-radius: 50px;
-    padding: 5px 10px;
+    padding: 0.5em 1em;
 
     :hover {
         background-color: white;
@@ -79,19 +78,20 @@ const StyledButton = styled(Button)`
 
     @media (min-width: 768px) {
         font-size: 24px;
-        padding: 14px 35px;
+        padding: 1.375em 2.625em;
     }
 
     @media (min-width: 1024px) {
-        padding: 15px 38px;
+        padding: 0.75em 2.5em;
     }
 `
 
 const Wippo = styled.img`
     position: absolute;
-    bottom: -100px;
+    bottom: -5rem;
     right: 0;
     display:none;
+    width: 20vw;
     @media (min-width: 1024px) {
 	  display: block;
   }
@@ -109,7 +109,7 @@ export default class Home extends Component {
         }
 
     listenScrollEvent = e => {
-        if (window.innerWidth >= 1080 && this.state.isDesktop) {
+        if (window.innerWidth >= 1024 && this.state.isDesktop) {
             if (window.scrollY > 200) {
                 document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
                 document.getElementById('navcolor').style.height = '65px'
@@ -130,11 +130,11 @@ export default class Home extends Component {
 
     updateWindowDimensions = () => {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
-        if (window.innerWidth < 1080) {
+        if (window.innerWidth < 1024) {
             this.setState({ isDesktop: false})
             document.getElementById('navcolor').style.backgroundColor = this.state.defaultMobile
             document.getElementById('navcolor').style.height = ''
-        }else if (window.innerWidth >= 1080) {
+        }else if (window.innerWidth >= 1024) {
             this.setState({ isDesktop: true})
             document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
             document.getElementById('navcolor').style.height = '89px'
@@ -143,9 +143,7 @@ export default class Home extends Component {
 
     render() {
         return (
-            <Star>
                 <HomeContainer>
-
                     <HomeContent>
                         <WipLogoImg src='/img/Home/logo.png' />
                         <WrapLogoCana>
@@ -153,9 +151,8 @@ export default class Home extends Component {
                         </WrapLogoCana>
                         <StyledButton>REGISTER</StyledButton>
                     </HomeContent>
+                    <Wippo src="/img/Who/Wippo.png" />
                 </HomeContainer>
-                <Wippo src="/img/Who/Wippo.png" />
-            </Star>
         )
     }
 }

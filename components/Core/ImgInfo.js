@@ -30,27 +30,7 @@ border-radius: 10px;
 `
 
 class ImageInfo extends Component {
-    state = {
-        dayOpenRegis: 'none',
-        dayCloseRegis: 'none',
-        dayAnnouce: 'none',
-        dayConfirm: 'none',
-        dayNow: 'none',
-        dayWip: 'none',
-    }
-    
-    isDue = () => {
-        
-        if(dayOpenRegis.isBefore(dayNow)){
-        this.setState({
-            dayOpenRegis: 'block'
-        })}
-        
-    }
 
-    componentDidMount() {
-       console.log(isDayNow)
-    }
 
 
 

@@ -13,7 +13,7 @@ const HeadLine = styled.h1`
     }
 
     @media (min-width: 1024px) {
-        font-size: 140px;
+        font-size: 110px;
     }
 `
 
@@ -43,7 +43,7 @@ const ContentText = styled.p`
     }
 
     @media (min-width: 1024px) {
-        line-height: 30px;
+        line-height: 35px;
     }
 `
 

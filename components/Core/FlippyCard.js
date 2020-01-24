@@ -44,7 +44,7 @@ const DefaultCardContents = ({ children , srcFront = props.srcFront , srcBack = 
         padding: '0px'
       }}> 
       <img
-        src={srcFront}
+        src={srcBack}
         style={{ maxWidth: '100%', maxHeight: '100%' ,padding: '0px'}}
       />
     </BackSide>

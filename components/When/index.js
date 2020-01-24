@@ -4,21 +4,27 @@ import {Container,Row,Col} from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Header , SubHeader} from '../Core/Text'
 import { ImageInfo , ImageInfoGlow} from '../Core/ImgInfo'
-import WhenTimer from './WhenTimer'
+
 
 const WhenContainer = styled.div`
 background-color : #1E1E1E;
 padding: 100px 0 100px 0;
+background: rgb(9,10,15);
+    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
 `
 const WhenImg = styled.img`
-    width:100%;
+    width:20vw;
     margin: 20px 0 20px 0;
+    @media (min-width: 1024px) {
+    width: 50%;
+    }
 `
 const TimerText = styled.h4`
     font-size: 18px;
     text-align:center ;
     color: white;
     font-family:'ChakraPetch-Regular', sans-serif;
+    
 `
 const SmallContainer = styled.div`
     display: flex;
@@ -44,31 +50,31 @@ export default class When extends Component {
                     <Row className="mt-5">
                         <Col lg='1'></Col>
                         <Col lg='2'>
-                        <div className="d-flex flex-column align-items-center">
+                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
                         <WhenImg src='/img/When/date.png' />
-                        <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
+                        <TimerText >เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </div>
                         </Col>
                         <Col lg='2'>
-                        <div className="d-flex flex-column align-items-center">
-                        <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
+                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
                         <WhenImg src='/img/When/date.png' />
+                        <TimerText >เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </div>
                         </Col>
                         <Col lg='2'>
-                        <div className="d-flex flex-column align-items-center">
+                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
                         <WhenImg src='/img/When/date.png' />
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 256</TimerText>
                             </div>
                         </Col>
                         <Col lg='2'>
-                        <div className="d-flex flex-column align-items-center">
+                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
+                        <WhenImg src='/img/When/date.png' />    
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
-                        <WhenImg src='/img/When/date.png' />
                         </div>
                         </Col>
                         <Col lg='2'>
-                        <div className="d-flex flex-column align-items-center">
+                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
                         <WhenImg src='/img/When/date.png' />
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </div>
