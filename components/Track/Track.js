@@ -7,8 +7,8 @@ export default class Trackpage extends Component {
         return (
  
                     <Flippycardnaja
-                                srcFront='img/temp.jpg'
-                                srcBack='img/lungtu.png'
+                                srcFront='img/Card_BG.png'
+                                srcBack='img/Card_BG.png'
                             />
         )
     }
