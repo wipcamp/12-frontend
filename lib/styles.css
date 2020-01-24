@@ -11,11 +11,6 @@
     width: 100%;
 }
 
-@keyframes glownaja {
-   from { filter:drop-shadow(0px 0px 5px rgba(255,255,255,0.7));}
-    to {filter:drop-shadow(0px 0px 10px rgba(255,255,255,1));}
-}
-
 .flippy-cardContainer
 {
     height: 100%;
@@ -37,11 +32,35 @@
             transform-style: preserve-3d;
 }
 
-.flippy-cardContainer:hover{
-   transform:translateY(-10px);
+ .yakhaimunmefaiahmae{
+   -webkit-transition: 0.6s;
+   -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+     -o-transition: 0.6s;
+        transition: 0.6s;
+ }
+ .yakhaimunmefaiahmae:hover{
+   /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19); */
+   transform:translateY(-5px) scale(1);
    filter: drop-shadow(0px 0px 10px rgba(255,255,255,1));
-   /* animation: glownaja 1s ease-in-out infinite alternate; */
+   -webkit-transition: .6s;
+   -moz-transition: .6s;
+    -ms-transition: .6s;
+     -o-transition: .6s;
+        transition: .6s;
 }
+ 
+ .element:hover {
+    animation: rotate 1s ease-in-out infinite alternate;
+  }
+  .element :hover:after {
+   animation-play-state: paused !important;
+ }
+ 
+ @keyframes rotate {
+   from {transform: translateY(0px);}
+   to {transform: translateY(-10px);}
+ }
 
 .flippy-front,
 .flippy-back
