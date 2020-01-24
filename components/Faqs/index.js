@@ -20,7 +20,8 @@ const FaqsBox = styled.div`
     color: black;
     padding: 0.7em;
     font-size: 2vh;
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
+    margin-bottom: 10vh;
     z-index:1;
     display: none;
 
@@ -44,21 +45,26 @@ const FaqsAnswer = styled.div`
 
 const FaqsImg = styled.img`
     width : 80%;
-    margin-left: auto;
-    margin-right: auto;
     position: initial;
-    left: 0;
-    right: 0;
-
+    display: block;
     top: ${props => props.vertical};
     z-index: 0;
     @media (min-width: 500px) {
         width: auto;
     }
+    @media (min-width: 800px) {
+        display:block;
+        width: 60%;
+        height:auto;
+    }
     @media (min-width: 1024px) {
-        height: 60vh;
+        height: 80vh;
         width: auto;
         position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
     }
 `
 
@@ -76,9 +82,9 @@ const DropRow = styled(Row)`
 `
 
 const StyledContainer = styled(Container)`
-    @media (min-width: 1024px) {
-        height: 100vh;
-    }        
+        border:1px solid red; 
+        min-height: 100vh;
+        padding-bottom: 10vh;
 `
 
 export default class Faqs extends Component {
@@ -102,7 +108,7 @@ export default class Faqs extends Component {
             <FaqsContainer>
                 <StyledContainer>
                     <Row>
-                        <Col style={{ marginTop: '0px' }}>
+                        <Col style={{ margin: '0px' }}>
                             <Header color="#ffffff" headerText="FAQS" />
                             <SubHeader subHeaderText="คำถามที่พบบ่อย" color="#ffffff" />
                         </Col>
@@ -144,8 +150,8 @@ export default class Faqs extends Component {
                     </Row>
                     <Row className="">
                         <Col lg='12'>
-                            <div>
-                                <FaqsImg vertical="-64vh" src="/img/lungtu.png" />
+                            <div className="align-items-center">
+                                <FaqsImg vertical="-64vh" src="/img/Faqs/wipfaq.jpg" />
                                 {/* <FaqsImg vertical="-20vh" src="/img/Faqs/book.png" /> */}
                             </div>
                         </Col>
