@@ -110,7 +110,7 @@ export default class Home extends Component {
         }
 
     listenScrollEvent = e => {
-        if (window.innerWidth >= 1080 && this.state.isDesktop) {
+        if (window.innerWidth >= 1024 && this.state.isDesktop) {
             if (window.scrollY > 200) {
                 document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
                 document.getElementById('navcolor').style.height = '65px'
@@ -131,11 +131,11 @@ export default class Home extends Component {
 
     updateWindowDimensions = () => {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
-        if (window.innerWidth < 1080) {
+        if (window.innerWidth < 1024) {
             this.setState({ isDesktop: false})
             document.getElementById('navcolor').style.backgroundColor = this.state.defaultMobile
             document.getElementById('navcolor').style.height = ''
-        }else if (window.innerWidth >= 1080) {
+        }else if (window.innerWidth >= 1024) {
             this.setState({ isDesktop: true})
             document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
             document.getElementById('navcolor').style.height = '89px'
