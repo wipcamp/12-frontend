@@ -92,8 +92,6 @@ export default class SideScroll extends Component {
         translateValue: 0
     };
 
-    
-
     goToPrevSlide = () => {
         if (this.state.currentIndex === 0) {
             return;
@@ -130,7 +128,7 @@ export default class SideScroll extends Component {
     render() {
 
         return (
-            <div style={{ position: 'relative', zIndex: '2' }} className="scroll-container">
+            <div style={{ position: 'relative', zIndex: '2' }} id="container" >
                 <Wrap >
                     <div
                         style={{
@@ -140,7 +138,7 @@ export default class SideScroll extends Component {
                             padding: '0px',
                             margin: '0px'
                             
-                        }}>
+                        }} >
                         {this.state.images.map((data, key) => (
                             <WhatImage
                                 key={key}
