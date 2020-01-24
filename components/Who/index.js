@@ -28,6 +28,17 @@ left: 0;
 right: 0;
 }
 `
+const Image2 = styled.img`
+@media (max-width: 320px) {
+    display: flex;
+}
+display:none;
+position: absolute;
+margin-top: -180px;
+left: 30%;
+width: 135px;
+height: 255px;   
+`
 
 export default class Who extends Component {
     render() {
@@ -55,9 +66,8 @@ export default class Who extends Component {
                         </Col>
                         <Col lg="1" md='1'></Col>
                     </Row>
-                    <Row>
-                        <Col><Image src="/Img/Who/Wippo.png"/></Col>
-                    </Row>
+                    
+                        <Col><Image src="/img/Who/Wippo.png"/></Col>
                     <Row>
                         <Col lg="1" md='1'></Col>
                         <Col lg="3" md='5'>
@@ -69,6 +79,9 @@ export default class Who extends Component {
                             <ImageInfo src="/Img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
                         </Col>
                         <Col lg="1" md='1'></Col>
+                    </Row>
+                    <Row>
+                        <Image2 src="/img/Who/Wippo.png" />
                     </Row>
                 </Container>
             </WhoContainer>

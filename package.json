@@ -8,6 +8,7 @@
     "@zeit/next-css": "^1.0.1",
     "babelrc": "^0.0.7",
     "bootstrap": "^4.4.1",
+    "dayjs": "^1.8.19",
     "jquery": "^3.4.1",
     "next": "^9.1.6",
     "prop-types": "^15.7.2",
