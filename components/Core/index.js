@@ -13,7 +13,7 @@ import Star from './Star'
 import Track from '../Track'
 import Contact from '../Contact'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
-import SideBar,{SideBarBG} from "./Sidebar"
+import SideBar from "./SideBar"
 import './styles.css'
 
 const Wrap = styled.div`
