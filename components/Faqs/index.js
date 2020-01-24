@@ -127,7 +127,7 @@ const Qtag = styled.p`
     }
 `
 const StyledSelect = styled.select`
-    width: 100%;
+    width: 80%;
 `
 
 export default class Faqs extends Component {

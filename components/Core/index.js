@@ -12,23 +12,27 @@ import Sponsor from '../Sponsor'
 import Star from './Star'
 import Track from '../Track'
 import Contact from '../Contact'
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
+
 
 const Wrap = styled.div`
     overflow: hidden;
 `
 export default class App extends Component {
-
+    componentDidMount() {
+        configureAnchors({offset: -60, scrollDuration: 1000})
+    }
     render() {
         return (
             <Wrap>
                 <MainNav />
-                <Home/>
-                <What />
-                <Who />
-                <Track />
+                <ScrollableAnchor id="home"><Home/></ScrollableAnchor>
+                <ScrollableAnchor id="what"><What /></ScrollableAnchor>
+                <ScrollableAnchor id="who"><Who /></ScrollableAnchor>
+                <ScrollableAnchor id="track"><Track /></ScrollableAnchor>
                 <Where />
-                <When />
-                <Faqs />
+                <ScrollableAnchor id="when"><When /></ScrollableAnchor>
+                <ScrollableAnchor id="faqs"><Faqs /></ScrollableAnchor>
                 <Game />
                 <Sponsor />    
                 <Contact />            

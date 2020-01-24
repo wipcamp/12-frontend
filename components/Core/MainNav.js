@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const StyledNavItem = styled(NavItem)`
     text-align:center;
-
+	font-weight:400;
 
 	@media (min-width:1024px) {
     	text-decoration: none;
@@ -222,24 +222,20 @@ const Navbar1 = (props) => {
 				<Collapse isOpen={isOpen} navbar>
 					<div style={{width:'100%',display:'flex',justifyContent:'center'}}>
 					<StyledNav navbar>
-					<StyledNavItem>
-							<Link href="./App">
-								<StyledNavLink href="/">HOME</StyledNavLink>
-							</Link>
+						<StyledNavItem>
+								<StyledNavLink href="#home">HOME</StyledNavLink>
 						</StyledNavItem>
 						<StyledNavItem>
-							<Link href="./App">
-								<StyledNavLink href="/">WHAT</StyledNavLink>
-							</Link>
+								<StyledNavLink href="#what">WHAT</StyledNavLink>
 						</StyledNavItem>
 						<StyledNavItem>
-							<StyledNavLink href="/">BRANCH</StyledNavLink>
+							<StyledNavLink href="#track">TRACK</StyledNavLink>
 						</StyledNavItem>
 						<StyledNavItem>
-							<StyledNavLink href="/When">WHEN</StyledNavLink>
+							<StyledNavLink href="#when">WHEN</StyledNavLink>
 						</StyledNavItem>
 						<StyledNavItem>
-							<StyledNavLink href="/">FAQS</StyledNavLink>
+							<StyledNavLink href="#faqs">FAQS</StyledNavLink>
 						</StyledNavItem>
 					</StyledNav>
 					</div>
