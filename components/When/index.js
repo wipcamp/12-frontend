@@ -50,31 +50,31 @@ export default class When extends Component {
                     <Row className="mt-5">
                         <Col lg='1'></Col>
                         <Col lg='2'>
-                        <div className="d-flex flex-column align-items-center">
+                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
                         <WhenImg src='/img/When/date.png' />
                         <TimerText >เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </div>
                         </Col>
                         <Col lg='2'>
                         <div className="d-flex flex-lg-column align-items-center justify-content-center">
-                        <TimerText className="order-lg-1 order-md-2" >เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
-                        <WhenImg className="order-lg-2 order-md-1" src='/img/When/date.png' />
+                        <WhenImg src='/img/When/date.png' />
+                        <TimerText >เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </div>
                         </Col>
                         <Col lg='2'>
-                        <div className="d-flex flex-column align-items-center">
+                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
                         <WhenImg src='/img/When/date.png' />
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 256</TimerText>
                             </div>
                         </Col>
                         <Col lg='2'>
-                        <div className="d-flex flex-column align-items-center">
+                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
+                        <WhenImg src='/img/When/date.png' />    
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
-                        <WhenImg src='/img/When/date.png' />
                         </div>
                         </Col>
                         <Col lg='2'>
-                        <div className="d-flex flex-column align-items-center">
+                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
                         <WhenImg src='/img/When/date.png' />
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </div>
