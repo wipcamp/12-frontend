@@ -28,7 +28,7 @@ const WipLogoImg = styled.img`
     }
 
     @media (min-width: 1024px) {
-        width: 45em;
+        width: 38.5em;
         
     }
 `
@@ -43,8 +43,7 @@ const LogoImg = styled.img`
     }
 
     @media (min-width: 1024px) {
-        width: 372.22px;
-        height: 83px;
+        width: 18.3125em;
     }
 `
 
