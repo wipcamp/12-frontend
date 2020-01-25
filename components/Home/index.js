@@ -89,9 +89,9 @@ const StyledButton = styled(Button)`
 const Wippo = styled.img`
     position: absolute;
     bottom: -5rem;
-    right: 0;
+    right: 2rem;
     display:none;
-    width: 20vw;
+    width: 15vw;
     @media (min-width: 1024px) {
 	  display: block;
   }
