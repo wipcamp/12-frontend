@@ -64,6 +64,7 @@ export default class What extends Component {
                         <WrapContent>
                             <Content
                                 textIndent="50px"
+                                textAlign="left"
                                 color="white"
                                 content="กลับมาอีกครั้งพร้อมกับภารกิจอันยิ่งใหญ่ ซึ่งเปิดโอกาสให้น้อง ๆ 
                                 ที่มีความสนใจทางด้านไอที หรือกำลังตามหาเส้นทางของตัวเอง 
