@@ -7,9 +7,10 @@ export default class Trackpage extends Component {
         return (
  
                     <Flippycardnaja 
-                                srcFront='img/Card_BG.png'
-                                srcBack='img/Card_BG.png'
+                                srcFront={this.props.srcFront}
+                                srcBack={this.props.srcBack}
                             />
+                            
         )
     }
 }
