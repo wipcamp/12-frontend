@@ -75,7 +75,6 @@ const ImageInfo = (props) => {
 
 const WhoMobileContainer = styled.div`
         display: flex;
-        border: 1px solid red;
         justify-content: center;
         margin-top: 1.5em;
         @media (min-width: 1080px){

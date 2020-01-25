@@ -13,7 +13,6 @@ const WhoContainer = styled.div`
 const ContentContainer = styled(Container)`
     max-height: 80vh;
     padding-bottom:4vh;
-    border: 1px solid green;
     @media (min-width: 1080px) {
         padding-bottom:10vh;
     }
