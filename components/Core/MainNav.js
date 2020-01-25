@@ -30,10 +30,11 @@ const StyledNavLink = styled(NavLink)`
 	}
   	@media (min-width: 1024px) {
 	 	/* padding : 34px 24.5px 31px 24.5px; */
-		width:110px !important;
+		width:160px !important;
 		height: inherit !important;
 		font-size: 16px;
-		line-height: 50px;
+		line-height: 48px;
+		font-family: 'Prompt-medium', sans-serif;
 		:hover {
 		background-color: whitesmoke;
 		transition: background 0.5s ease-in-out;
@@ -44,7 +45,7 @@ const StyledNavLink = styled(NavLink)`
 const ColorNav = styled(Navbar)`
   margin: 0;
   padding: 0;
-  background-color : darkgray;
+  background-color : #14B0BF;
   transition : 0.5s ease-in-out;
   -webkit-transition : 0.45s ease-in-out;
   
@@ -77,7 +78,7 @@ export default class MainNav extends Component {
 	state = {
 		noBg: 'rgba(255, 255, 255, 0.0)',
 		defaultMobile: 'darkgrey',
-		defaultDesktop: 'rgb(20,20,20)',
+		defaultDesktop: '#14B0BF',
 		isDesktop: true
 	}
 

@@ -1,31 +1,37 @@
 import React, { Component } from 'react'
 import { slide as Menu } from 'react-burger-menu'
-import './styles.css'
+import './sidebar.css'
 import styled from 'styled-components'
 
+const CustomLink = styled.a`
+ text-decoration: none !important;
+ font-family: 'Prompt-medium', sans-serif;
+ font-size: 2em;
+ border-bottom: 2px solid grey;
+` 
   
 export default class SideBar extends Component {
     render() {
         return (
-            <Menu customBurgerIcon={ <img src="img/menu.svg" /> } customCrossIcon={false} disableAutoFocus width={ '60%' }>
-            <a className="menu-item" href="#home">
+            <Menu customBurgerIcon={ <img src="img/menu.svg" /> } disableAutoFocus width={ '60%' }>
+            <CustomLink className="menu-item" href="#home">
               HOME
-            </a>
+            </CustomLink>
       
-            <a className="menu-item" href="#what">
+            <CustomLink className="menu-item" href="#what">
               WHAT
-            </a>
+            </CustomLink>
       
-            <a className="menu-item" href="#who">
+            <CustomLink className="menu-item" href="#who">
               WHO
-            </a>
+            </CustomLink>
       
-            <a className="menu-item" href="#when">
+            <CustomLink className="menu-item" href="#when">
               WHEN
-            </a>
-            <a className="menu-item" href="#faqs">
+            </CustomLink>
+            <CustomLink className="menu-item" href="#faqs">
               FAQS
-            </a>
+            </CustomLink>
           </Menu>
         )
     }

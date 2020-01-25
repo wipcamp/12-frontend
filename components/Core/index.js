@@ -14,7 +14,7 @@ import Track from '../Track'
 import Contact from '../Contact'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 import SideBar from "./SideBar"
-import './styles.css'
+import './sidebar.css'
 
 const Wrap = styled.div`
     overflow: hidden;
