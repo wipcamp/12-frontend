@@ -40,6 +40,7 @@ const Fieldset = styled.fieldset`
     -moz-border-radius:8px;
     -webkit-border-radius:8px;	
     border-radius:8px;
+    margin-bottom: 30px;
     @media (min-width: 1080px){
         width: 80%;
 }
