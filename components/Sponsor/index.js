@@ -5,8 +5,10 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 
 const SponsorBg = styled.div`
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background: rgb(9,10,15);
+    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%); 
     padding-top: 3em;
+    padding-bottom: 3em;
 
     @media (min-width: 768px) {
         padding-top: 5em;

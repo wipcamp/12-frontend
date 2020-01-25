@@ -58,9 +58,12 @@ text-align:center;
 `
 
 const ContactBg = styled.div`
-    background: #121933;
+        background: rgb(9,10,15);
+    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%); 
     display: table;
     height: 80vh;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     position: relative;
     width: 100%;
     background-size: cover;
