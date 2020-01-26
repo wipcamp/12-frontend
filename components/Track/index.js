@@ -17,7 +17,25 @@ const TrackBg = styled.div`
 
 const Trackcontainer = styled.div`
         display:block;
+        margin-top:32px 0px 23px 0px;
 
+        @media (min-width: 768px) {
+            margin-top:50.36px 0px 50px 0px;
+        }
+    
+        @media (min-width: 1024px) {
+            margin-top:120px 0px 75px 0px;
+        }
+`
+const buttomContainer = styled.div`
+
+ @media (min-width: 768px) {
+    margin-top:50px;
+ }
+
+ @media (min-width: 1024px) {
+    margin-top:75px
+ }
 `
 
 const showCardGrid = () => {
@@ -81,6 +99,20 @@ export default class Track extends Component {
                             <SubHeader color="white" subHeaderText="สาขาอาชีพในค่าย" />
                         </Col>
                     </Row>
+
+                    <Row>
+                        <Col>
+                        <Trackcontainer>
+                        <Content
+                         textIndent="50px"
+                         textAlign="left"
+                         color="white"
+                         content="แทร็ก (Track) หมายถึง สายอาชีพไอทีที่เปิดโอกาสให้น้อง ๆ ได้เข้ามาสัมผัสและเรียนรู้ตามความสนใจ น้อง ๆ จะได้เลือก Track ตามที่ตนเองสนใจ     
+                         2 Track จากทั้งหมด 4 Track โดย เลือก Track ที่น้องสนใจ ลำดับที่ 1 สำหรับการเลือกเข้าร่วม Track ลำดับที่ 2 จะได้เลือกในวันค่าย" />
+                        </Trackcontainer>
+                        </Col>
+                    </Row>
+
                     <Row id="cards-grid" >
                         <Col xl='3' lg='3' xs='6'>
                             <div className="yakhaimunmefaiahmae d-flex justify-content-lg-center justify-content-md-end">
@@ -101,6 +133,17 @@ export default class Track extends Component {
                             <div className="yakhaimunmefaiahmae d-flex justify-content-lg-center justify-content-md-start">
                                 <Flippycardnaja srcFront="/img/Card_BG.png" srcBack="/img/Card_BG.png" />
                             </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                        <buttomContainer>
+                        <Content
+                        textIndent="50px"
+                        textAlign="center"
+                        color="white"
+                        content="สำหรับการเลือกเข้าร่วม Track ลำดับที่ 2 จะได้เลือกภายในวันค่าย WIP Camp #12" />   
+                        </buttomContainer>
                         </Col>
                     </Row>
                 </Container>
