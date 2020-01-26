@@ -67,6 +67,7 @@ const ImageInfo = (props) => {
                     <Content
                         content={props.content || "Unknow"}
                         color={props.color}
+                        textAlign = {props.textAlign || "Unknow"}
                     />
                 </TextBox>
             </Fieldset>
@@ -109,6 +110,7 @@ class ImageInfoGlow extends Component {
                 <div className="mt-1 ml-4"><Content
                     content={this.props.content || "Unknow"}
                     color={this.props.color}
+                   
                 />
                 </div>
             </div>
