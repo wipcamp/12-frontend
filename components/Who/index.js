@@ -41,14 +41,12 @@ right: 0;
 `
 const Image2 = styled.img`
     display: none;
-    height: auto;
 @media (min-width: 768px) {
     display: block;
-    width: 8rem;
+    width: 8em;
 }
 @media (min-width: 1024px) {
-    display: block;
-    width: 12rem;
+    width: 12em;
 } 
 @media (min-width: 1080px) {
     display: none;
@@ -133,7 +131,7 @@ export default class Who extends Component {
                         <Col lg="2" md='1' sm="auto"></Col>
                     </Row>
                     <Row>
-                        <Col className="d-flex justify-content-center">
+                        <Col md="12" className="d-flex justify-content-center">
                             <Image2 src="/img/Who/Wippo.png" />
                         </Col>
                     </Row>
