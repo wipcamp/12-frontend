@@ -19,21 +19,21 @@ export default css.global`
   }
  
 @font-face {
-    font-family: 'Prompt-light' ;
+    font-family: 'Prompt-Light' ;
     src: url('/font-family/Prompt/Prompt-Light.woff2') , url('/font-family/Prompt/Prompt-Light.woff');
     font-weight: lighter;
     font-style: normal;
     font-display: swap; 
 }
 @font-face {
-    font-family: 'Prompt-regular';
+    font-family: 'Prompt-Regular';
     src:  url('/font-family/Prompt/Prompt-Regular.woff2') , url('/font-family/Prompt/Prompt-Regular.woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap; 
   }
 @font-face {
-    font-family: 'Prompt-medium';
+    font-family: 'Prompt-Medium';
     src: url('/font-family/Prompt/Prompt-Medium.woff2') ,  url('/font-family/Prompt/Prompt-Medium.woff'); 
     font-weight: medium;
     font-style: normal;
@@ -53,5 +53,41 @@ export default css.global`
     font-style: normal;
     font-display: swap; 
   }
+  @font-face {
+    font-family: 'NotoSans-Light';
+    src: url('/font-family/NotoSans/NotoSans-Light.woff2') , url('/font-family/NotoSans/NotoSans-Light.woff');
+    font-weight: lighter;
+    font-style: normal;
+    font-display: swap; 
+  }
+  @font-face {
+    font-family: 'NotoSans-Medium';
+    src: url('/font-family/NotoSans/NotoSans-Medium.woff2') , url('/font-family/NotoSans/NotoSans-Medium.woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+  }
+  @font-face {
+    font-family: 'NotoSans-Regular';
+    src: url('/font-family/NotoSans/NotoSans-Regular.woff2') , url('/font-family/NotoSans/NotoSans-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+  }
+  @font-face {
+    font-family: 'Sarabun-Bold';
+    src: url('/font-family/Sarabun/Sarabun-Bold.woff2') , url('/font-family/Sarabun/Sarabun-Bold.woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap; 
+  }
+  @font-face {
+    font-family: 'Sarabun-Regular';
+    src: url('/font-family/Sarabun/Sarabun-Regular.woff2') , url('/font-family/Sarabun/Sarabun-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+  }
+  
  
 `

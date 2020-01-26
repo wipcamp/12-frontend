@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeadLine = styled.h1`
-    font-family: 'Prompt-medium', sans-serif;
+    font-family: 'Prompt-Medium', sans-serif;
     font-size: 40px;
     letter-spacing: 0.1em;
     color: ${props => props.color};
@@ -18,7 +18,7 @@ const HeadLine = styled.h1`
 `
 
 const SubHead = styled.h2`
-    font-family: 'Prompt-light', sans-serif;
+    font-family: 'Prompt-Light', sans-serif;
     font-size: 14px;
     text-align: center;
     color: ${props => props.color};
