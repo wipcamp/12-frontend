@@ -28,8 +28,8 @@ export default class Carousel extends Component {
         ]
     }
     render() {
-        const elements = this.state.cards.map(c => {
-            return (<Card> <Flippycardnaja key={c.id} srcFront={c.srcFront} srcBack={c.srcBack} /> </Card>);
+        const elements = this.state.cards.map((data, key) => {
+            return (<Card key={key}> <Flippycardnaja srcFront={data.srcFront} srcBack={data.srcBack} /> </Card>);
         })
         return (
             <Row>

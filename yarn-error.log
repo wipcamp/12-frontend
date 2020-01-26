@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add type-responsive-react
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-berger-menu
 
 PATH: 
-  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Dell\bin;C:\Users\Dell\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Dell\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Users\Dell\AppData\Local\Microsoft\WindowsApps;C:\Users\Dell\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dell\AppData\Local\Yarn\bin;C:\Users\Dell\AppData\Roaming\npm;C:\Users\Dell\AppData\Local\GitHubDesktop\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Users\Saraf\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Saraf\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Users\Saraf\AppData\Local\Microsoft\WindowsApps;C:\Users\Saraf\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Saraf\AppData\Roaming\npm;C:\Users\Saraf\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   1.21.1
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/type-responsive-react: Not found
+  Error: https://registry.yarnpkg.com/react-berger-menu: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66056:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140665:22)
       at Request.emit (events.js:210:5)
@@ -37,14 +37,20 @@ npm manifest:
       "@zeit/next-css": "^1.0.1",
       "babelrc": "^0.0.7",
       "bootstrap": "^4.4.1",
+      "dayjs": "^1.8.19",
       "jquery": "^3.4.1",
       "next": "^9.1.6",
       "prop-types": "^15.7.2",
       "react": "^16.12.0",
+      "react-burger-menu": "^2.6.13",
       "react-dom": "^16.12.0",
+      "react-iframe": "^1.8.0",
       "react-markdown": "^4.2.2",
+      "react-scrollable-anchor": "^0.6.1",
       "reactstrap": "^8.2.0",
-      "styled-components": "^4.4.1"
+      "responsive-react": "^3.0.2",
+      "styled-components": "^4.4.1",
+      "typed-responsive-react": "^1.0.2"
     },
     "scripts": {
       "dev": "next -p 3111",
@@ -1239,6 +1245,11 @@ Lockfile:
       json-schema-traverse "^0.4.1"
       uri-js "^4.2.2"
   
+  amdefine@>=0.0.4:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+    integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
+  
   amphtml-validator@1.0.23:
     version "1.0.23"
     resolved "https://registry.yarnpkg.com/amphtml-validator/-/amphtml-validator-1.0.23.tgz#dba0c3854289563c0adaac292cd4d6096ee4d7c8"
@@ -1366,6 +1377,20 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
     integrity sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
+  
+  ast-transform@0.0.0:
+    version "0.0.0"
+    resolved "https://registry.yarnpkg.com/ast-transform/-/ast-transform-0.0.0.tgz#74944058887d8283e189d954600947bc98fe0062"
+    integrity sha1-dJRAWIh9goPhidlUYAlHvJj+AGI=
+    dependencies:
+      escodegen "~1.2.0"
+      esprima "~1.0.4"
+      through "~2.3.4"
+  
+  ast-types@^0.7.0:
+    version "0.7.8"
+    resolved "https://registry.yarnpkg.com/ast-types/-/ast-types-0.7.8.tgz#902d2e0d60d071bdcd46dc115e1809ed11c138a9"
+    integrity sha1-kC0uDWDQcb3NRtwRXhgJ7RHBOKk=
   
   async-each@^1.0.1:
     version "1.0.3"
@@ -1606,6 +1631,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
     integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
   
+  browser-resolve@^1.8.1:
+    version "1.11.3"
+    resolved "https://registry.yarnpkg.com/browser-resolve/-/browser-resolve-1.11.3.tgz#9b7cbb3d0f510e4cb86bdbd796124d28b5890af6"
+    integrity sha512-exDi1BYWB/6raKHmDTCicQfTkqwN5fioMFV4j8BsfMU4R2DK/QfZfK7kOVkmWCNANf0snkBzqGqAJBao9gZMdQ==
+    dependencies:
+      resolve "1.1.7"
+  
   browserify-aes@^1.0.0, browserify-aes@^1.0.4:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/browserify-aes/-/browserify-aes-1.2.0.tgz#326734642f403dabc3003209853bb70ad428ef48"
@@ -1636,6 +1668,15 @@ Lockfile:
       des.js "^1.0.0"
       inherits "^2.0.1"
       safe-buffer "^5.1.2"
+  
+  browserify-optional@^1.0.0:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/browserify-optional/-/browserify-optional-1.0.1.tgz#1e13722cfde0d85f121676c2a72ced533a018869"
+    integrity sha1-HhNyLP3g2F8SFnbCpyztUzoBiGk=
+    dependencies:
+      ast-transform "0.0.0"
+      ast-types "^0.7.0"
+      browser-resolve "^1.8.1"
   
   browserify-rsa@^4.0.0:
     version "4.0.1"
@@ -1882,7 +1923,7 @@ Lockfile:
       isobject "^3.0.0"
       static-extend "^0.1.1"
   
-  classnames@^2.2.3:
+  classnames@^2.2.3, classnames@^2.2.6:
     version "2.2.6"
     resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
     integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
@@ -2263,6 +2304,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
     integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
   
+  dayjs@^1.8.19:
+    version "1.8.19"
+    resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.19.tgz#5117dc390d8f8e586d53891dbff3fa308f51abfe"
+    integrity sha512-7kqOoj3oQSmqbvtvGFLU5iYqies+SqUiEGNT0UtUPPxcPYgY1BrkXR0Cq2R9HYSimBXN+xHkEN4Hi399W+Ovlg==
+  
   debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
     version "2.6.9"
     resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -2546,6 +2592,17 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
     integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
   
+  escodegen@~1.2.0:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/escodegen/-/escodegen-1.2.0.tgz#09de7967791cc958b7f89a2ddb6d23451af327e1"
+    integrity sha1-Cd55Z3kcyVi3+Jot220jRRrzJ+E=
+    dependencies:
+      esprima "~1.0.4"
+      estraverse "~1.5.0"
+      esutils "~1.0.0"
+    optionalDependencies:
+      source-map "~0.1.30"
+  
   eslint-scope@^4.0.3:
     version "4.0.3"
     resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.3.tgz#ca03833310f6889a3264781aa82e63eb9cfe7848"
@@ -2559,6 +2616,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
     integrity sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
   
+  esprima@~1.0.4:
+    version "1.0.4"
+    resolved "https://registry.yarnpkg.com/esprima/-/esprima-1.0.4.tgz#9f557e08fc3b4d26ece9dd34f8fbf476b62585ad"
+    integrity sha1-n1V+CPw7TSbs6d00+Pv0drYlha0=
+  
   esrecurse@^4.1.0:
     version "4.2.1"
     resolved "https://registry.yarnpkg.com/esrecurse/-/esrecurse-4.2.1.tgz#007a3b9fdbc2b3bb87e4879ea19c92fdbd3942cf"
@@ -2571,15 +2633,30 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.3.0.tgz#398ad3f3c5a24948be7725e83d11a7de28cdbd1d"
     integrity sha512-39nnKffWz8xN1BU/2c79n9nB9HDzo0niYUqx6xyqUnyoAnQyyWpOTdZEeiCch8BBu515t4wp9ZmgVfVhn9EBpw==
   
+  estraverse@~1.5.0:
+    version "1.5.1"
+    resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-1.5.1.tgz#867a3e8e58a9f84618afb6c2ddbcd916b7cbaf71"
+    integrity sha1-hno+jlip+EYYr7bC3bzZFrfLr3E=
+  
   esutils@^2.0.0, esutils@^2.0.2:
     version "2.0.3"
     resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
     integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
   
+  esutils@~1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/esutils/-/esutils-1.0.0.tgz#8151d358e20c8acc7fb745e7472c0025fe496570"
+    integrity sha1-gVHTWOIMisx/t0XnRywAJf5JZXA=
+  
   etag@1.8.1, etag@~1.8.1:
     version "1.8.1"
     resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
     integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+  
+  eve@~0.5.1:
+    version "0.5.4"
+    resolved "https://registry.yarnpkg.com/eve/-/eve-0.5.4.tgz#67d080b9725291d7e389e34c26860dd97f1debaa"
+    integrity sha1-Z9CAuXJSkdfjieNMJoYN2X8d66o=
   
   events@^3.0.0:
     version "3.0.0"
@@ -3478,6 +3555,11 @@ Lockfile:
     integrity sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==
     dependencies:
       minimist "^1.2.0"
+  
+  jump.js@1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/jump.js/-/jump.js-1.0.1.tgz#0de2b1631ba9a1c2c6b8572ad277d877e8503600"
+    integrity sha1-DeKxYxupocLGuFcq0nfYd+hQNgA=
   
   kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
     version "3.2.2"
@@ -4880,7 +4962,7 @@ Lockfile:
       object.assign "^4.1.0"
       reflect.ownkeys "^0.2.0"
   
-  prop-types@15.7.2, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+  prop-types@15.7.2, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
     version "15.7.2"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
     integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -4999,6 +5081,17 @@ Lockfile:
       iconv-lite "0.4.24"
       unpipe "1.0.0"
   
+  react-burger-menu@^2.6.13:
+    version "2.6.13"
+    resolved "https://registry.yarnpkg.com/react-burger-menu/-/react-burger-menu-2.6.13.tgz#51b86eb35076c5fbe80027e2ce4c58bd6708f724"
+    integrity sha512-tloQs8F2+YHR/FYfQpu4z+OQzgGHzUZYZXBxGmb6/6eckjQ1GvzeNpHp4IZigpe0ovamg1HgDRK3qNlOPezjlA==
+    dependencies:
+      browserify-optional "^1.0.0"
+      classnames "^2.2.6"
+      eve "~0.5.1"
+      prop-types "^15.7.2"
+      snapsvg-cjs "0.0.6"
+  
   react-dom@^16.12.0:
     version "16.12.0"
     resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.12.0.tgz#0da4b714b8d13c2038c9396b54a92baea633fe11"
@@ -5013,6 +5106,13 @@ Lockfile:
     version "5.1.6"
     resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
     integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
+  
+  react-iframe@^1.8.0:
+    version "1.8.0"
+    resolved "https://registry.yarnpkg.com/react-iframe/-/react-iframe-1.8.0.tgz#8c78f2c59b894ca5605fa7e45e61e27e57e96091"
+    integrity sha512-NYi89+rEqREwQxW9sDf+akh6/dtwWd3bOjByoVEIQ7SicOxVawRMer3pLdWjFaHXpuxTB9NqobPf/Ohj2iAKkg==
+    dependencies:
+      object-assign "^4.1.1"
   
   react-is@16.8.6:
     version "16.8.6"
@@ -5055,6 +5155,14 @@ Lockfile:
       prop-types "^15.6.1"
       typed-styles "^0.0.7"
       warning "^4.0.2"
+  
+  react-scrollable-anchor@^0.6.1:
+    version "0.6.1"
+    resolved "https://registry.yarnpkg.com/react-scrollable-anchor/-/react-scrollable-anchor-0.6.1.tgz#fd6e78026c744f76414053d06903b82adccb54d9"
+    integrity sha1-/W54Amx0T3ZBQFPQaQO4KtzLVNk=
+    dependencies:
+      jump.js "1.0.1"
+      prop-types "^15.5.10"
   
   react-transition-group@^2.3.1:
     version "2.9.0"
@@ -5271,12 +5379,22 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
     integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
   
+  resolve@1.1.7:
+    version "1.1.7"
+    resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
+    integrity sha1-IDEU2CrSxe2ejgQRs5ModeiJ6Xs=
+  
   resolve@^1.10.0, resolve@^1.3.2, resolve@^1.8.1:
     version "1.14.1"
     resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.14.1.tgz#9e018c540fcf0c427d678b9931cbf45e984bcaff"
     integrity sha512-fn5Wobh4cxbLzuHaE+nphztHy43/b++4M6SsGFC2gB8uYwf0C8LcarfCz1un7UTW8OFQg9iNjZ4xpcFVGebDPg==
     dependencies:
       path-parse "^1.0.6"
+  
+  responsive-react@^3.0.2:
+    version "3.0.2"
+    resolved "https://registry.yarnpkg.com/responsive-react/-/responsive-react-3.0.2.tgz#8a3cc15a7b2bf548c7e3c95d173ae7c49a16f51e"
+    integrity sha512-Q8cngyNSZgzhsecW/iBiDKU4ldu7Puy8GQe6TZdqDF9groNMzedoYTY9ugsMi5JBPjhSY+yCcYIAgJcsE3SviQ==
   
   restore-cursor@^2.0.0:
     version "2.0.0"
@@ -5472,6 +5590,20 @@ Lockfile:
       source-map-resolve "^0.5.0"
       use "^3.1.0"
   
+  snapsvg-cjs@0.0.6:
+    version "0.0.6"
+    resolved "https://registry.yarnpkg.com/snapsvg-cjs/-/snapsvg-cjs-0.0.6.tgz#3b2f56af2573d3d364c3ed5bf8885745f4d2dde1"
+    integrity sha1-Oy9WryVz09Nkw+1b+IhXRfTS3eE=
+    dependencies:
+      snapsvg "0.5.1"
+  
+  snapsvg@0.5.1:
+    version "0.5.1"
+    resolved "https://registry.yarnpkg.com/snapsvg/-/snapsvg-0.5.1.tgz#0caf52c79189a290746fc446cc5e863f6bdddfe3"
+    integrity sha1-DK9Sx5GJopB0b8RGzF6GP2vd3+M=
+    dependencies:
+      eve "~0.5.1"
+  
   sort-keys@^1.0.0:
     version "1.1.2"
     resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-1.1.2.tgz#441b6d4d346798f1b4e49e8920adfba0e543f9ad"
@@ -5522,6 +5654,13 @@ Lockfile:
     version "0.5.7"
     resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
     integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
+  
+  source-map@~0.1.30:
+    version "0.1.43"
+    resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
+    integrity sha1-wkvBRspRfBRx9drL4lcbK3+eM0Y=
+    dependencies:
+      amdefine ">=0.0.4"
   
   spdx-correct@^3.0.0:
     version "3.1.0"
@@ -5793,6 +5932,11 @@ Lockfile:
       readable-stream "~2.3.6"
       xtend "~4.0.1"
   
+  through@~2.3.4:
+    version "2.3.8"
+    resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+    integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
+  
   timers-browserify@^2.0.4:
     version "2.0.11"
     resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.11.tgz#800b1f3eee272e5bc53ee465a04d0e804c31211f"
@@ -5886,6 +6030,11 @@ Lockfile:
     version "0.0.0"
     resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
     integrity sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=
+  
+  typed-responsive-react@^1.0.2:
+    version "1.0.2"
+    resolved "https://registry.yarnpkg.com/typed-responsive-react/-/typed-responsive-react-1.0.2.tgz#8f810dfcd0a0be72ba4a02609658a9b7d0699e53"
+    integrity sha512-69zHPtOcT9Azl8nWj9AsYfycZvgfgq/aIWQa1b7jllP3kLzvrA1bfWH+8xNfeZfaDJvm94vkHw4zKQCJ/95GLw==
   
   typed-styles@^0.0.7:
     version "0.0.7"
