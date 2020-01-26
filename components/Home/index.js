@@ -88,13 +88,25 @@ const StyledButton = styled(Button)`
 const Wippo = styled.img`
     position: absolute;
     bottom: -20rem;
-    right: 2rem;
+    right: 5rem;
     display:none;
     width: 15vw;
     z-index: 3;
+    animation: float 5s infinite;
     @media (min-width: 1024px) {
 	  display: block;
   }
+  @keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
 `
 
 
