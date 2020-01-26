@@ -47,8 +47,8 @@ export default class StarParticle extends Component {
         if (this.state.move){
         return (
 
-            <ParticleContainer key="move">
-            <Particles height={this.state.WindowHeight} style={ParticleStyle}
+            <ParticleContainer>
+            <Particles key="move" height={this.state.WindowHeight} style={ParticleStyle}
         params={{
             "particles": {
                 "number": {
@@ -101,8 +101,8 @@ export default class StarParticle extends Component {
     }else {
         return (
 
-            <ParticleContainer key="don't move">
-            <Particles height={this.state.WindowHeight} style={ParticleStyle}
+            <ParticleContainer>
+            <Particles key="don't move" height={this.state.WindowHeight} style={ParticleStyle}
         params={{
             "particles": {
                 "number": {
