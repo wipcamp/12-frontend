@@ -20,7 +20,7 @@ const Wrap = styled.div`
     overflow: hidden;
 `
 export default class App extends Component {
-    componentWillMount(){
+    componentDidMount(){
         configureAnchors({offset: -60, scrollDuration: 600}) 
     }
 

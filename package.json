@@ -17,6 +17,7 @@
     "react-dom": "^16.12.0",
     "react-iframe": "^1.8.0",
     "react-markdown": "^4.2.2",
+    "react-scroll-parallax": "^2.3.1",
     "react-scrollable-anchor": "^0.6.1",
     "reactstrap": "^8.2.0",
     "responsive-react": "^3.0.2",
