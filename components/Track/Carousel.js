@@ -21,10 +21,10 @@ const Card = styled.div`
 export default class Carousel extends Component {
     state = {
         cards: [
-            { srcFront: "/img/Card_BG.png", srcBack: "/img/Card_BG.png" },
-            { srcFront: "/img/Card_BG.png", srcBack: "/img/Card_BG.png" },
-            { srcFront: "/img/Card_BG.png", srcBack: "/img/Card_BG.png" },
-            { srcFront: "/img/Card_BG.png", srcBack: "/img/Card_BG.png" }
+            { srcFront: "/img/FrontCard.png", srcBack: "/img/BackCard.png" },
+            { srcFront: "/img/FrontCard.png", srcBack: "/img/BackCard.png" },
+            { srcFront: "/img/FrontCard.png", srcBack: "/img/BackCard.png" },
+            { srcFront: "/img/FrontCard.png", srcBack: "/img/BackCard.png" }
         ]
     }
     render() {
