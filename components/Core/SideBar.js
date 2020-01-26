@@ -6,8 +6,11 @@ import styled from 'styled-components'
 const CustomLink = styled.a`
  text-decoration: none !important;
  font-family: 'Prompt-medium', sans-serif;
- font-size: 2em;
- border-bottom: 2px solid grey;
+ font-size: 16px;
+ border-bottom: 1px solid white;
+ @media (min-width: 768px) {
+  font-size: 24px; 
+ }
 ` 
   
 export default class SideBar extends Component {
@@ -22,12 +25,12 @@ export default class SideBar extends Component {
               WHAT
             </CustomLink>
       
-            <CustomLink className="menu-item" href="#who">
-              WHO
+            <CustomLink className="menu-item" href="#when">
+              WHEN
             </CustomLink>
       
             <CustomLink className="menu-item" href="#when">
-              WHEN
+              TRACK
             </CustomLink>
             <CustomLink className="menu-item" href="#faqs">
               FAQS
