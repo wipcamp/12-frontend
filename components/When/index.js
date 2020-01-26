@@ -48,6 +48,10 @@ const BoxContainer = styled.div`
         flex-direction:column;
     }
 `
+const Span = styled.span`
+    font-weight: bold;
+    font-size: 1.5em;
+`
 
 export default class When extends Component {
     state={
@@ -85,31 +89,31 @@ export default class When extends Component {
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                         <BoxContainer>
                         <WhenImg src='/img/When/date.png' />
-                        <TimerText >เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
+                        <TimerText ><Span>เปิดรับสมัคร</Span><br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                         <BoxContainer>
                         <WhenImg src='/img/When/date.png' />
-                        <TimerText >เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
+                        <TimerText ><Span>เปิดรับสมัคร</Span><br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                         <BoxContainer>
                         <WhenImg src='/img/When/date.png' />
-                        <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 256</TimerText>
+                        <TimerText><Span>เปิดรับสมัคร</Span><br/> 12 กุมภาพันธ์ 256</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                         <BoxContainer>
                         <WhenImg src='/img/When/date.png' />    
-                        <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
+                        <TimerText><Span>เปิดรับสมัคร</Span><br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md={this.state.contentColumn} sm="12">
                         <BoxContainer>
                         <WhenImg src='/img/When/date.png' />
-                        <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
+                        <TimerText><Span>เปิดค่าย</Span><br/>27 พฤษภาคม 2563<br/> ถึง 31 พฤษภาคม 2563</TimerText>
                         </BoxContainer>
                         </Col>
                         <Col lg='1' md="auto" sm="auto"></Col>
