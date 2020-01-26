@@ -116,22 +116,22 @@ export default class Track extends Component {
                     <Row id="cards-grid" >
                         <Col xl='3' lg='3' xs='6'>
                             <div className="yakhaimunmefaiahmae d-flex justify-content-lg-center justify-content-md-end">
-                                <Flippycardnaja srcFront="/img/Card_BG.png" srcBack="/img/Card_BG.png" />
+                                <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
                             </div>
                         </Col>
                         <Col xl='3' lg='3' xs='6'>
                             <div className="yakhaimunmefaiahmae d-flex justify-content-lg-center justify-content-md-start">
-                                <Flippycardnaja srcFront="/img/Card_BG.png" srcBack="/img/Card_BG.png" />
+                                <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
                             </div>
                         </Col>
                         <Col xl='3' lg='3' xs='6'>
                             <div className="yakhaimunmefaiahmae d-flex justify-content-lg-center justify-content-md-end">
-                                <Flippycardnaja srcFront="/img/Card_BG.png" srcBack="/img/Card_BG.png" />
+                                <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
                             </div>
                         </Col>
                         <Col xl='3' lg='3' xs='6'>
                             <div className="yakhaimunmefaiahmae d-flex justify-content-lg-center justify-content-md-start">
-                                <Flippycardnaja srcFront="/img/Card_BG.png" srcBack="/img/Card_BG.png" />
+                                <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
                             </div>
                         </Col>
                     </Row>
