@@ -25,7 +25,7 @@ text-align:left;
 width:40px;
 height:40px; 
 margin-right:17px;
-
+}
 @media (min-width: 992px) {
 width:60px;
 height:60px; 
@@ -63,7 +63,7 @@ const StyledLink = styled.a`
 color: black !important;
 `
 const HeaderStyled = styled.div`
-font-family: 'Prompt-light', sans-serif;
+font-family: 'Prompt-Light', sans-serif;
 color:white;
 display:block;
 font-style: normal;

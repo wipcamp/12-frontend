@@ -64,7 +64,7 @@ const WrapLogoCana = styled.div`
 const StyledButton = styled(Button)`
     background-color: #F4693D;
     border: none;
-    font-family: "Prompt-regular";
+    font-family: "Prompt-Regular";
     font-size: 12px;
     color: white !important;
     border-radius: 50px;

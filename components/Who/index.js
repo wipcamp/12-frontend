@@ -11,7 +11,7 @@ const WhoContainer = styled.div`
 `
 
 const ContentContainer = styled(Container)`
-    max-height: 130vh;
+    /* max-height: 130vh; */
     padding-bottom:4vh;
     @media (min-width: 1080px) {
         padding-bottom:10vh;
@@ -41,14 +41,12 @@ right: 0;
 `
 const Image2 = styled.img`
     display: none;
-    height: auto;
 @media (min-width: 768px) {
     display: block;
-    width: 8rem;
+    width: 8em;
 }
 @media (min-width: 1024px) {
-    display: block;
-    width: 12rem;
+    width: 12em;
 } 
 @media (min-width: 1080px) {
     display: none;
@@ -102,16 +100,14 @@ export default class Who extends Component {
                     <WhoRow>
                         <Col lg="1" md='1'></Col>
                         <Col lg={this.state.contentColumn} md='5'>
-                            <WhoMobile  src="/img/Who/tempcircle.png" color="white" content="น้องๆ ที่มีความสนใจด้านไอทีหรือ 
-                            ต้องการตามหาเส้นทางเดินของตัวเอง"/>
-                            <ImageInfo src="/img/Who/tempcircle.png" color="white" textAlign="center"  content="น้องๆ ที่มีความสนใจด้านไอทีหรือ 
-                            ต้องการตามหาเส้นทางเดินของตัวเอง"/>
+                            <WhoMobile  src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
+                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
                         </Col>
                         <Col lg={this.state.midColumn} md="auto">
                         </Col>
                         <Col lg={this.state.contentColumn} md='5'>
-                        <WhoMobile  src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่ได้รับการอนุญาตจากผู้ปกครอง โดยมีเอกสารเป็นลายลักษณ์อักษรที่ถูกต้อง"/>
-                        <ImageInfo src="/img/Who/tempcircle.png" color="white" textAlign="center"  content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”"/>
+                        <WhoMobile  src="/img/Who/tempcircle.png" color="white" content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”"/>
+                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”"/>
                         </Col>
                         <Col lg="1" md='1'></Col>
                     </WhoRow>
@@ -121,19 +117,19 @@ export default class Who extends Component {
                     <Row>
                         <Col lg="1" md='1' sm="auto"></Col>
                         <Col lg={this.state.contentColumn} md='5' sm="12">
-                        <WhoMobile src="/img/Who/tempcircle.png" color="white" content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน” " />
-                            <ImageInfo src="/img/Who/tempcircle.png" color="white" textAlign="center"  content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน"/>
+                        <WhoMobile src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน"/>
+                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน"/>
                         </Col>
                         <Col lg={this.state.midColumn} md='auto' >
                         </Col>
                         <Col lg={this.state.contentColumn} md='5' sm="12">
-                        <WhoMobile src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน"/>
-                            <ImageInfo src="/img/Who/tempcircle.png" color="white"  textAlign="center" content="น้อง ๆ ที่ได้รับการอนุญาตจากผู้ปกครอง โดยมีเอกสารเป็นลายลักษณ์อักษรที่ถูกต้อง"/>
+                        <WhoMobile src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง"/>
+                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง"/>
                         </Col>
                         <Col lg="2" md='1' sm="auto"></Col>
                     </Row>
                     <Row>
-                        <Col className="d-flex justify-content-center">
+                        <Col md="12" className="d-flex justify-content-center">
                             <Image2 src="/img/Who/Wippo.png" />
                         </Col>
                     </Row>
