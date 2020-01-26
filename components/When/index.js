@@ -8,7 +8,7 @@ import { ImageInfo , ImageInfoGlow} from '../Core/ImgInfo'
 
 const WhenContainer = styled.div`
 background-color : #1E1E1E;
-padding: 100px 0 100px 0;
+padding: 0rem 0 3rem 0;
 background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
 `
@@ -16,7 +16,10 @@ const WhenImg = styled.img`
     width:20vw;
     margin: 20px 0 20px 0;
     @media (min-width: 1024px) {
-    width: 50%;
+    width: 12em;
+    }
+    @media (min-width: 1080px) {
+    width: 80%;
     }
 `
 const TimerText = styled.h4`
@@ -26,62 +29,92 @@ const TimerText = styled.h4`
     font-family:'ChakraPetch-Regular', sans-serif;
     
 `
-const SmallContainer = styled.div`
-    display: flex;
+const BigContainer = styled(Container)`
+    
+`
+const WhenRow = styled(Row)`
+    height: auto;
+    @media (min-width: 1080px) {
+        height: 50vh;
+    }
+`
+const BoxContainer = styled.div`
     width: 100%;
+    display: flex;
     justify-content: center;
-    color: white;
-    flex-wrap: wrap;
-    font-family: 'Chakra Petch', sans-serif;
+    align-items: center;
+    @media (min-width: 1080px) {
+        align-self: center;
+        flex-direction:column;
+    }
 `
 
-
 export default class When extends Component {
+    state={
+        contentColumn: 2
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.updateWindowDimensions)
+        this.updateWindowDimensions()
+    }
+
+    updateWindowDimensions = () => {
+        if(window.innerWidth < 1080) {
+            this.setState({
+                contentColumn: 12
+            })
+        }else {
+            this.setState({
+                contentColumn: 2
+            })
+        }
+    }
     render () {
         return(
             <WhenContainer>
-                <Container fluid={true} >
+                <BigContainer fluid={true} >
                     <Row>
                         <Col>
                         <Header color="#ffffff" headerText="WHEN" />
                         <SubHeader color="#ffffff" subHeaderText="ค่ายจัดเมื่อไหร่" />
                         </Col>
                     </Row>
-                    <Row className="mt-5">
-                        <Col lg='1'></Col>
-                        <Col lg='2'>
-                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
+                    <WhenRow>
+                        <Col lg='1' md="auto" sm="auto"></Col>
+                        <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
+                        <BoxContainer>
                         <WhenImg src='/img/When/date.png' />
                         <TimerText >เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
-                        </div>
+                        </BoxContainer>
                         </Col>
-                        <Col lg='2'>
-                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
+                        <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
+                        <BoxContainer>
                         <WhenImg src='/img/When/date.png' />
                         <TimerText >เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
-                        </div>
+                        </BoxContainer>
                         </Col>
-                        <Col lg='2'>
-                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
+                        <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
+                        <BoxContainer>
                         <WhenImg src='/img/When/date.png' />
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 256</TimerText>
-                            </div>
+                            </BoxContainer>
                         </Col>
-                        <Col lg='2'>
-                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
+                        <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
+                        <BoxContainer>
                         <WhenImg src='/img/When/date.png' />    
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
-                        </div>
+                        </BoxContainer>
                         </Col>
-                        <Col lg='2'>
-                        <div className="d-flex flex-lg-column align-items-center justify-content-center">
+                        <Col className="d-flex" lg={this.state.contentColumn} md={this.state.contentColumn} sm="12">
+                        <BoxContainer>
                         <WhenImg src='/img/When/date.png' />
                         <TimerText>เปิดรับสมัคร<br/> 12 กุมภาพันธ์ 2563</TimerText>
-                        </div>
+                        </BoxContainer>
                         </Col>
-                        <Col lg='1'></Col>
-                    </Row>   
-                </Container>
+                        <Col lg='1' md="auto" sm="auto"></Col>
+                    </WhenRow>   
+                </BigContainer>
                 
             </WhenContainer>
         )

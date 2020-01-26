@@ -7,7 +7,7 @@ const glow = keyframes`
 `
 const Image = styled.img`
     width: 5em;
-    height: 5em;
+    height: auto;
     align-self: center;
     @media (min-width: 1080px){
         width: 90%;
