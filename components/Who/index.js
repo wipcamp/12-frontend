@@ -11,7 +11,7 @@ const WhoContainer = styled.div`
 `
 
 const ContentContainer = styled(Container)`
-    max-height: 130vh;
+    /* max-height: 130vh; */
     padding-bottom:4vh;
     @media (min-width: 1080px) {
         padding-bottom:10vh;
@@ -101,17 +101,14 @@ export default class Who extends Component {
                     <WhoRow>
                         <Col lg="1" md='1'></Col>
                         <Col lg={this.state.contentColumn} md='5'>
-                            <WhoMobile  src="/img/Who/tempcircle.png" color="white" content="น้องๆ ที่มีความสนใจด้านไอทีหรือ 
-                            ต้องการตามหาเส้นทางเดินของตัวเอง"/>
-                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้องๆ ที่มีความสนใจด้านไอทีหรือ ต้องการตามหาเส้นทางเดินของตัวเอง"/>
+                            <WhoMobile  src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
+                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
                         </Col>
                         <Col lg={this.state.midColumn} md="auto">
                         </Col>
                         <Col lg={this.state.contentColumn} md='5'>
-                        <WhoMobile  src="/img/Who/tempcircle.png" color="white" content="น้องๆ ที่มีความสนใจด้านไอทีหรือ 
-                        ต้องการตามหาเส้นทางเดินของตัวเอง"/>
-                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน
-                            ได้ตลอดระยะเวลา 5 วัน 4 คืน"/>
+                        <WhoMobile  src="/img/Who/tempcircle.png" color="white" content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”"/>
+                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”"/>
                         </Col>
                         <Col lg="1" md='1'></Col>
                     </WhoRow>
@@ -121,18 +118,14 @@ export default class Who extends Component {
                     <Row>
                         <Col lg="1" md='1' sm="auto"></Col>
                         <Col lg={this.state.contentColumn} md='5' sm="12">
-                        <WhoMobile src="/img/Who/tempcircle.png" color="white" content="น้องๆ ที่มีความสนใจด้านไอทีหรือ 
-                        ต้องการตามหาเส้นทางเดินของตัวเอง"/>
-                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้องๆ มัธยมศึกษาตอนปลาย 
-                            'ทุกแผนการเรียน' สามารถสมัครค่ายได้"/>
+                        <WhoMobile src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน"/>
+                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน"/>
                         </Col>
                         <Col lg={this.state.midColumn} md='auto' >
                         </Col>
                         <Col lg={this.state.contentColumn} md='5' sm="12">
-                        <WhoMobile src="/img/Who/tempcircle.png" color="white" content="น้องๆ ที่มีความสนใจด้านไอทีหรือ 
-                        ต้องการตามหาเส้นทางเดินของตัวเอง"/>
-                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่ได้รับอนุญาตจากผู้
-                            ปกครองโดยมีเอกสารเป็นลายลักษณ์ อักษรที่ถูกต้อง"/>
+                        <WhoMobile src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง"/>
+                            <ImageInfo src="/img/Who/tempcircle.png" color="white" content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง"/>
                         </Col>
                         <Col lg="2" md='1' sm="auto"></Col>
                     </Row>
