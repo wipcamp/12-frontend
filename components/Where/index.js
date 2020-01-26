@@ -40,12 +40,50 @@ display:none ;
 const LineHeight = styled.div`
 line-height: ${props => props.LineHeight};
 `
+const WIPMap = styled(Iframe)`
+width: 80%;
+border: none;
+height: 18em;
+margin-top: 5vh;
+@media (min-width: 760px) {
+        height: 40vh;
+    }
+@media (min-width: 1024px) {
+        height: 40vh;
+    }
+@media (min-width: 1080px) {
+        height: 50vh;
+}
+`
 
 export default class Where extends Component {
+    state={
+        sideColumn: 3,
+        contentColumn: 6
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.updateWindowDimensions)
+        this.updateWindowDimensions()
+    }
+
+    updateWindowDimensions = () => {
+        if(window.innerWidth < 1080) {
+            this.setState({
+                sideColumn: 2,
+                contentColumn: 8
+            })
+        }else {
+            this.setState({
+                sideColumn: 3,
+                contentColumn: 6
+            })
+        }
+    }
     render() {
         return (
             <WhereBg>
-                <Container>
+                <Container fluid={true}>
                     <Row>
                         <Col>
                             <Header color="#ffffff" headerText="WHERE" />
@@ -53,20 +91,19 @@ export default class Where extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
-                            <div style={{ float: 'left' }}>
-                                <Iframe url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.085040985499!2d100.49142161378397!3d13.652590703265513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a251a57396f5%3A0x5e0d31f39f400b1e!2sWIP%20Camp!5e0!3m2!1sen!2sth!4v1579260821493!5m2!1sen!2sth"
-                                    width= "566px"
-                                    height= "415px"
-                                    className="mt-5" />
-
+                        <Col lg={this.state.sideColumn} md="1"></Col>
+                        <Col lg={this.state.contentColumn} md="10">
+                            <div className="d-flex justify-content-center">
+                                <WIPMap url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.085040985499!2d100.49142161378397!3d13.652590703265513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a251a57396f5%3A0x5e0d31f39f400b1e!2sWIP%20Camp!5e0!3m2!1sen!2sth!4v1579260821493!5m2!1sen!2sth" />
                             </div>
                             <SIT />
                         </Col>
+                        <Col lg={this.state.sideColumn} md="1"></Col>
                     </Row>
                     <Row>
-                        <Col>
-                   
+                        <Col className="mt-5">
+                            <Content color="white" content="คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี">
+                            </Content>
                         </Col>
                     </Row>
                 </Container>

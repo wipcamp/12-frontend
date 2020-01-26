@@ -41,6 +41,7 @@ right: 0;
 `
 const Image2 = styled.img`
     display: none;
+    height: auto;
 @media (min-width: 768px) {
     display: block;
     width: 8rem;
