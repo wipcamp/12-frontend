@@ -22,10 +22,22 @@ const WhenImg = styled.img`
     }
 `
 const TimerText = styled.h4`
-    font-size: 18px;
+    font-size: 15px;
     text-align:center ;
     color: white;
     font-family:'ChakraPetch-Regular', sans-serif;
+    margin-left: 2em;
+    text-align: left;
+    width: 8.5em; 
+    @media (min-width: 1080px) {
+        text-align:  center;
+        
+        
+    }
+    @media (min-width: 768px){
+        width:auto;
+        font-size: 18px;
+    }
     
 `
 const BigContainer = styled(Container)`
@@ -46,6 +58,7 @@ const BoxContainer = styled.div`
         align-self: center;
         flex-direction:column;
     }
+  
 `
 const Span = styled.span`
     font-weight: bold;
@@ -87,31 +100,31 @@ export default class When extends Component {
                         <Col lg='1' md="auto" sm="auto"></Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                         <BoxContainer>
-                        <WhenImg src='/img/When/date.png' />
+                        <WhenImg src='/img/When/OpenRegis.png' />
                         <TimerText ><Span>เปิดรับสมัคร</Span><br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                         <BoxContainer>
-                        <WhenImg src='/img/When/date.png' />
+                        <WhenImg src='/img/When/CloseRegis.png' />
                         <TimerText ><Span>เปิดรับสมัคร</Span><br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                         <BoxContainer>
-                        <WhenImg src='/img/When/date.png' />
+                        <WhenImg src='/img/When/Annouce.png' />
                         <TimerText><Span>เปิดรับสมัคร</Span><br/> 12 กุมภาพันธ์ 256</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                         <BoxContainer>
-                        <WhenImg src='/img/When/date.png' />    
+                        <WhenImg src='/img/When/Confirm.png' />    
                         <TimerText><Span>เปิดรับสมัคร</Span><br/> 12 กุมภาพันธ์ 2563</TimerText>
                         </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md={this.state.contentColumn} sm="12">
                         <BoxContainer>
-                        <WhenImg src='/img/When/date.png' />
+                        <WhenImg src='/img/When/WipDay.png' />
                         <TimerText><Span>เปิดค่าย</Span><br/>27 พฤษภาคม 2563<br/> ถึง 31 พฤษภาคม 2563</TimerText>
                         </BoxContainer>
                         </Col>

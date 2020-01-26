@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const CustomLink = styled.a`
  text-decoration: none !important;
- font-family: 'Prompt-medium', sans-serif;
+ font-family: 'Prompt-Medium', sans-serif;
  font-size: 16px;
  border-bottom: 1px solid white;
  @media (min-width: 768px) {
