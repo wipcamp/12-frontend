@@ -7,8 +7,8 @@ import { Container, Row, Col } from 'reactstrap'
 import CarouselTrack from './Carousel'
 
 const TrackBg = styled.div`
-    background: rgb(9,10,15);
-    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
+    /* background: rgb(9,10,15);
+    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%); */
     padding-bottom: 4rem;
     @media (min-width: 1024px) {
         padding-bottom: 10vh;

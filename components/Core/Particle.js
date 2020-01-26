@@ -4,9 +4,8 @@ import styled from 'styled-components';
 
 
 const ParticleContainer = styled.div`
-    /* background: rgb(9,10,15);
-    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%); */
-    /* overflow: hidden; */
+    background: rgb(9,10,15);
+    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
     background-color: black;
 `
 const ParticleStyle = {
@@ -51,13 +50,15 @@ export default class StarParticle extends Component {
                     "speed": 0.05
                 },
                 "size": {
-                    "value": 1
+                    "value": 2,
+                    "random": true
                 },
                 "opacity": {
+                    'value': 1,
                     "anim": {
                         "enable": true,
                         "speed": 1,
-                        "opacity_min": 0.05
+                        "opacity_min": 0
                     }
                 }
             },

@@ -7,10 +7,9 @@ import { ImageInfo , ImageInfoGlow} from '../Core/ImgInfo'
 
 
 const WhenContainer = styled.div`
-background-color : #1E1E1E;
 padding: 0rem 0 3rem 0;
-background: rgb(9,10,15);
-    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
+/* background: rgb(9,10,15);
+    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%); */
 `
 const WhenImg = styled.img`
     width:20vw;
