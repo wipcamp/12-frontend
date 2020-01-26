@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
         <title>WIP Camp #12 : Ways to IT Professionals Camp</title>
         <Head>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no maximum-scale=1.0, user-scalable=0" />
           <meta name="og:title" content="WIP Camp 12" />
           <meta name="og:description" content="Nulla officia id adipisicing do ipsum laborum tempor labore proident." />
           <meta name="og:image" content="http://35.240.193.76/img/temp.jpg" />
