@@ -15,6 +15,7 @@ import Contact from '../Contact'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 import SideBar from "./SideBar"
 import './sidebar.css'
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const Wrap = styled.div`
     overflow: hidden;
@@ -26,6 +27,7 @@ export default class App extends Component {
 
     render() {
         return (
+            <ParallaxProvider>
             <Wrap id="App">
                 <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
                 <div id="page-wrap" style={{overflow:'hidden'}}>
@@ -42,6 +44,7 @@ export default class App extends Component {
                 <Contact />
                 </div>       
             </Wrap>
+            </ParallaxProvider>
         )
     }
 }

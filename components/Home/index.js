@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Button } from 'reactstrap'
 import Star from '../Core/Star'
+import { Parallax } from 'react-scroll-parallax';
 
 
 const HomeContainer = styled.div`
@@ -11,7 +12,7 @@ const HomeContainer = styled.div`
     width: 100%;
     background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
-    
+    z-index: 1;
 `
 
 const HomeContent = styled.div`
@@ -88,10 +89,11 @@ const StyledButton = styled(Button)`
 
 const Wippo = styled.img`
     position: absolute;
-    bottom: -5rem;
+    bottom: -20rem;
     right: 2rem;
     display:none;
     width: 15vw;
+    z-index: 3;
     @media (min-width: 1024px) {
 	  display: block;
   }
@@ -104,13 +106,18 @@ export default class Home extends Component {
         return (
                 <HomeContainer>
                     <HomeContent>
+                    <Parallax y={[50, -50]}>
+                        <Parallax y={[-50,50]}>
                         <WipLogoImg src='/img/Home/logo.png' />
                         <WrapLogoCana>
                             <LogoImg src='/img/Home/LogoCana.png' />
                         </WrapLogoCana>
                         <StyledButton>REGISTER</StyledButton>
+                        </Parallax>
+                            <Wippo src="/img/Who/Wippo.png" />
+                        
+                    </Parallax>
                     </HomeContent>
-                    <Wippo src="/img/Who/Wippo.png" />
                 </HomeContainer>
         )
     }
