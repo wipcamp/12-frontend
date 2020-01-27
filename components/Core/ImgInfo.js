@@ -43,6 +43,7 @@ const Fieldset = styled.fieldset`
     -webkit-border-radius:8px;	
     border-radius:8px;
     margin-bottom: 30px;
+    text-align: center;
     @media (min-width: 1080px){
         width: 80%;
 }
