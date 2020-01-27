@@ -77,7 +77,7 @@ const StyledButton = styled.button`
 
     @media (min-width: 768px) {
         font-size: 24px;
-        padding: 1.375em 2.625em;
+        padding: 0.725em 2em;
     }
 
     @media (min-width: 1024px) {
