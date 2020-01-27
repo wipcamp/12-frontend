@@ -135,7 +135,11 @@ export default class Track extends Component {
                             </div>
                         </Col>
                     </Row>
-                    <Row>
+                </Container>
+                <div id="cards-scroll" style={{display: 'none'}}>
+                    <CarouselTrack />
+                </div>
+                <Row>
                         <Col>
                         <ButtomContainer>
                         <Content
@@ -146,10 +150,6 @@ export default class Track extends Component {
                         </ButtomContainer>
                         </Col>
                     </Row>
-                </Container>
-                <div id="cards-scroll" style={{display: 'none'}}>
-                    <CarouselTrack />
-                </div>
             </TrackBg>
         )
     }
