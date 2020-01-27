@@ -27,7 +27,7 @@ const Trackcontainer = styled.div`
             margin-top:120px 0px 75px 0px;
         }
 `
-const buttomContainer = styled.div`
+const ButtomContainer = styled.div`
 
  @media (min-width: 768px) {
     margin-top:50px;
@@ -137,13 +137,13 @@ export default class Track extends Component {
                     </Row>
                     <Row>
                         <Col>
-                        <buttomContainer>
+                        <ButtomContainer>
                         <Content
                         textIndent="50px"
                         textAlign="center"
                         color="white"
                         content="สำหรับการเลือกเข้าร่วม Track ลำดับที่ 2 จะได้เลือกภายในวันค่าย WIP Camp #12" />   
-                        </buttomContainer>
+                        </ButtomContainer>
                         </Col>
                     </Row>
                 </Container>
