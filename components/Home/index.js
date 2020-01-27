@@ -61,7 +61,7 @@ const WrapLogoCana = styled.div`
     }
 `
 
-const StyledButton = styled(Button)`
+const StyledButton = styled.button`
     background-color: #F4693D;
     border: none;
     font-family: "Prompt-Regular";
@@ -88,7 +88,7 @@ const StyledButton = styled(Button)`
 const Wippo = styled.img`
     position: absolute;
     bottom: -20rem;
-    right: 5rem;
+    right: -20em;
     display:none;
     width: 15vw;
     z-index: 3;
@@ -116,8 +116,8 @@ export default class Home extends Component {
         return (
                 <HomeContainer>
                     <HomeContent>
-                    <Parallax y={[50, -50]}>
-                        <Parallax y={[-50,50]}>
+                    <Parallax x={[40, -40]}>
+                        <Parallax x={[-40,40]}>
                         <WipLogoImg src='/img/Home/logo.png' />
                         <WrapLogoCana>
                             <LogoImg src='/img/Home/LogoCana.png' />
