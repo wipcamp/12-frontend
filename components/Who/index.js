@@ -43,10 +43,12 @@ const Image2 = styled.img`
     display: none;
 @media (min-width: 768px) {
     display: block;
-    width: 8em;
+    width: 192px;
+    height: 366px;
 }
 @media (min-width: 1024px) {
-    width: 12em;
+    width: 192px;
+    height: 366px;
 } 
 @media (min-width: 1080px) {
     display: none;
