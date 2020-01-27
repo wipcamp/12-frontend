@@ -43,9 +43,9 @@ const BoxImage = styled.img`
     z-index: 0;
     display:none;
     margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     ${FaqsBox}:hover &{
         filter: drop-shadow(0 0 0.5rem #2C898B);
     }
@@ -81,8 +81,9 @@ const FaqsAnswer = styled.div`
     }
 
 `
-const AnswerContent = styled.div`
-    z-index: 5;
+const AnswerContent = styled.p`
+    z-index: 2;
+    position: relative;
 `
 
 const FaqsImg = styled.img`
