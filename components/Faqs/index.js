@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader ,Content } from '../Core/Text'
 import './fade.css'
 
-
 const FaqsContainer = styled.div`
     /* background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%); */
@@ -14,16 +13,16 @@ const FaqsContainer = styled.div`
 
 const FaqsBox = styled.div`
     text-align: center;
-    background-color: #cecece;
+    /* background-color: #cecece; */
     border-radius: 6px;
     width: 80%;
     height: 5.3em;
-    color: black;
+    color: white;
     padding: 0.7em;
     font-size: 16px;
     /* margin-top: 10vh; */
     margin-bottom: 10vh;
-    z-index:1;
+    z-index:2;
     display: none;
     cursor: pointer;
     -moz-user-select: none; /* Firefox */
@@ -32,31 +31,58 @@ const FaqsBox = styled.div`
     -webkit-user-select: none; /* Chrome, Safari, and Opera */
     -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
     transition: filter 0.25s ease-in-out;
-    filter: ${props => props.active || "none"};
-    :hover {
-        filter: drop-shadow(0 0 0.5rem white);
-    }
+    /* filter: ${props => props.active || "none"}; */
     @media (min-width: 1024px) {
     display: flex;
     }
 `
+const BoxImage = styled.img`
+    position: absolute;
+    width: 22em;
+    transform: translate(0, -20px);
+    z-index: 0;
+    display:none;
+    margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    ${FaqsBox}:hover &{
+        filter: drop-shadow(0 0 0.5rem #2C898B);
+    }
+        @media (min-width: 1024px) {
+        display: block;
+    }
+`
+const AnswerBoxImage = styled.img`
+    position: absolute;
+    width: 22em;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+`
 const FaqsAnswer = styled.div`
-    box-shadow: 0 0 0.5rem white;
-    background-color: rgb(255,255,255,0.8);
+    /* box-shadow: 0 0 0.5rem white; */
+    /* background-color: rgb(255,255,255,0.8); */
     padding: 0.2rem;
     width: 80%;
-    color: black;
+    color: white;
     text-align: center;
-    z-index:1;
     position:absolute;
     bottom: -60vw;
     opacity: ${props => props.opacity || '0'};
+    z-index: 2;
 
     @media (min-width: 1024px) {
         width: 100%;
         position:initial;
     }
 
+`
+const AnswerContent = styled.div`
+    z-index: 5;
 `
 
 const FaqsImg = styled.img`
@@ -123,8 +149,9 @@ const Qtag = styled.p`
     text-align: inherit;
     line-height: ${props => props.lineHeight || "unset"};
     padding-bottom: 5px;
-    @media (max-width: 1200px) {
-        line-height: unset;
+    z-index:1;
+    @media (min-width: 1024px) {
+        margin-top: 1em;
     }
 `
 const StyledSelect = styled.select`
@@ -207,23 +234,42 @@ export default class Faqs extends Component {
                     <Row className="mt-5 order-2">
                         <Col lg='4' md='3' sm="3" xs="2">
                             <div className="d-flex flex-column align-items-center">
-                                <FaqsBox onClick={() => this.changeAnswer(0)} active={this.state.activeQuestion_0}><Qtag lineHeight="3em">รับสมัครคนเข้าค่ายกี่คน ?</Qtag></FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(1)} active={this.state.activeQuestion_1}><Qtag lineHeight="3em">พักค้างคืนที่ไหน ?</Qtag></FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(2)} active={this.state.activeQuestion_2}><Qtag lineHeight="3em">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</Qtag></FaqsBox>
+                                <FaqsBox onClick={() => this.changeAnswer(0)} active={this.state.activeQuestion_0}>
+                                    <Qtag lineHeight="3em">รับสมัครคนเข้าค่ายกี่คน ?</Qtag>
+                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                </FaqsBox>
+                                <FaqsBox onClick={() => this.changeAnswer(1)} active={this.state.activeQuestion_1}>
+                                    <Qtag lineHeight="3em">พักค้างคืนที่ไหน ?</Qtag>
+                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                    </FaqsBox>
+                                <FaqsBox onClick={() => this.changeAnswer(2)} active={this.state.activeQuestion_2}>
+                                    <Qtag lineHeight="3em">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</Qtag>
+                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                    </FaqsBox>
                             </div>
                         </Col>
                         <Col lg='4' md='6' sm="6" xs="8">
                             <AnswerContainer className="d-flex align-items-center">
                                 <FaqsAnswer className={"align-self-end "+this.state.faqClass} opacity={this.state.answerOpacity}>
-                                    {this.state.answer}
+                                    <AnswerContent>{this.state.answer}</AnswerContent>
+                                    <AnswerBoxImage src='img/Faqs/answerbox.png'/>
                                 </FaqsAnswer>
                             </AnswerContainer>
                         </Col>
                         <Col lg='4' md='3' sm="3" xs="2">
                             <div className="d-flex flex-column align-items-center">
-                                <FaqsBox onClick={() => this.changeAnswer(3)} active={this.state.activeQuestion_3}><Qtag>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</Qtag></FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(4)} active={this.state.activeQuestion_4}><Qtag>หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</Qtag></FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(5)} active={this.state.activeQuestion_5}><Qtag>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</Qtag></FaqsBox>
+                                <FaqsBox onClick={() => this.changeAnswer(3)} active={this.state.activeQuestion_3}>
+                                    <Qtag>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</Qtag>
+                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                    </FaqsBox>
+                                <FaqsBox onClick={() => this.changeAnswer(4)} active={this.state.activeQuestion_4}>
+                                    <Qtag>หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</Qtag>
+                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                    </FaqsBox>
+                                <FaqsBox onClick={() => this.changeAnswer(5)} active={this.state.activeQuestion_5}>
+                                    <Qtag>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</Qtag>
+                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                    </FaqsBox>
                             </div>
                         </Col>
                     </Row>
