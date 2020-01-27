@@ -43,8 +43,11 @@ export default class StarParticle extends Component {
             })  
         }
     }
+    getMove = () => {
+        return this.state.move
+    }
     render() {
-        if (this.state.move){
+        if (this.getMove()){
         return (
 
             <ParticleContainer>
