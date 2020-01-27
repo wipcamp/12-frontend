@@ -11,7 +11,7 @@ body {
 }
 
 #page-wrap {
-  text-align: center;
+  /* text-align: center; */
 
   /* Prevent sidebar from showing a scrollbar on page */
   overflow: auto;
@@ -20,7 +20,9 @@ body {
 /* Individual item */
 .bm-item {
   display: inline-block;
-
+  text-align: center;
+  line-height: 10vh;
+  height: 10vh;
   /* Our sidebar item styling */
   margin-bottom: 10px;
   color: #d1d1d1;
