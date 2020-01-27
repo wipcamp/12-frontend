@@ -42,6 +42,7 @@ const Fieldset = styled.fieldset`
     -moz-border-radius:8px;
     -webkit-border-radius:8px;	
     border-radius:8px;
+    border-image: linear-gradient(#FF66ED,#64A4FF )1;
     margin-bottom: 30px;
     @media (min-width: 1080px){
         width: 80%;
@@ -49,6 +50,7 @@ const Fieldset = styled.fieldset`
 `
 const Legend = styled.legend`
     width: 5em;
+    
 `
 
 const WhoDesktop = styled.div`
