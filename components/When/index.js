@@ -36,6 +36,7 @@ const TimerText = styled.h4`
     }
     @media (min-width: 768px){
         width:auto;
+        margin: 0;
         font-size: 18px;
     }
     
@@ -57,6 +58,7 @@ const BoxContainer = styled.div`
     @media (min-width: 1080px) {
         align-self: center;
         flex-direction:column;
+        justify-content: center;
     }
   
 `
