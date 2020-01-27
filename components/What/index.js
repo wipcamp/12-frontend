@@ -65,7 +65,9 @@ export default class What extends Component {
                         <Col xl="5" lg="5" md="12" sm="12" xs="12">
                         <WrapContent>
                             <Content
-                                textIndent="50px"
+                                textIndent="24px"
+                                textIndentIpad="50px"
+                                textIndentDesktop="0px"                                
                                 textAlign="left"
                                 color="white"
                                 content="กลับมาอีกครั้งพร้อมกับภารกิจอันยิ่งใหญ่ ซึ่งเปิดโอกาสให้น้อง ๆ 
