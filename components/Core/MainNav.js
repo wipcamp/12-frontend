@@ -102,8 +102,10 @@ updateWindowDimensions = () => {
 		this.setState({ isDesktop: false})
 	}else if (window.innerWidth >= 1024) {
 		this.setState({ isDesktop: true})
+		if(window.scrollY > 100){
 		document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
 		document.getElementById('navcolor').style.height = '89px'
+		}
 	} 
 }
 
