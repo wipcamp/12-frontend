@@ -15,7 +15,7 @@ const WhenImg = styled.img`
     width:20vw;
     margin: 20px 0 20px 0;
     transition: filter 0.5s ease-in;
-    filter: ${ props => props.glow ? 'drop-shadow(0 0 1rem #2C898B)' : 'unset' };    
+    filter: ${ props => props.glow ? 'drop-shadow(0 0 1rem #2C898B)' : 'grayscale(90%)' };    
     @media (min-width: 768px) {
     width: 8em;
     margin: 20px 20px 20px 20px;    
