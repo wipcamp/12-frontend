@@ -63,7 +63,7 @@ export default css.global`
   @font-face {
     font-family: 'NotoSans-Medium';
     src: url('/font-family/NotoSans/NotoSans-Medium.woff2') , url('/font-family/NotoSans/NotoSans-Medium.woff');
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
     font-display: swap; 
   }
