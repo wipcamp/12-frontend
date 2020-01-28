@@ -61,8 +61,22 @@ export default css.global`
     font-display: swap; 
   }
   @font-face {
+    font-family: 'NotoSansThai-Light';
+    src: url('/font-family/NotoSans/NotoSansThai-Light.woff2') , url('/font-family/NotoSans/NotoSansThai-Light.woff');
+    font-weight: lighter;
+    font-style: normal;
+    font-display: swap; 
+  }
+  @font-face {
     font-family: 'NotoSans-Medium';
     src: url('/font-family/NotoSans/NotoSans-Medium.woff2') , url('/font-family/NotoSans/NotoSans-Medium.woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap; 
+  }
+  @font-face {
+    font-family: 'NotoSansThai-Medium';
+    src: url('/font-family/NotoSans/NotoSansThai-Medium.woff2') , url('/font-family/NotoSans/NotoSansThai-Medium.woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap; 
@@ -74,6 +88,16 @@ export default css.global`
     font-style: normal;
     font-display: swap; 
   }
+  @font-face {
+    font-family: 'NotoSansThai-Regular';
+    src: url('/font-family/NotoSans/NotoSansThai-Regular.woff2') , url('/font-family/NotoSans/NotoSansThai-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+  }
+
+
+
   @font-face {
     font-family: 'Sarabun-Bold';
     src: url('/font-family/Sarabun/Sarabun-Bold.woff2') , url('/font-family/Sarabun/Sarabun-Bold.woff');
@@ -88,6 +112,7 @@ export default css.global`
     font-style: normal;
     font-display: swap; 
   }
+ 
   
  
 `
