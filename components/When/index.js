@@ -13,7 +13,11 @@ padding: 0rem 0 3rem 0;
 `
 const WhenImg = styled.img`
     width:20vw;
-    margin: 20px 0 20px 0;
+    margin: 20px 0 20px 0;    
+    @media (min-width: 768px) {
+    width: 8em;
+    margin: 20px 20px 20px 20px;    
+    }
     @media (min-width: 1024px) {
     width: 12em;
     }
