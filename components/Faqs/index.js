@@ -201,7 +201,8 @@ export default class Faqs extends Component {
         activeQuestion_3: "none",
         activeQuestion_4: "none",
         activeQuestion_5: "none",
-        activeStyle: "drop-shadow(0 0 0.5rem #2C898B)"
+        activeStyle: "drop-shadow(0 0 0.5rem #2C898B)",
+        isMobile: true
     }
 
     changeAnswer = e => {
@@ -234,91 +235,114 @@ export default class Faqs extends Component {
         }
     }
 
-
-
-    render() {
-        return (
-            <FaqsContainer>
-                <StyledContainer>
-                    <Row>
-                        <Col style={{ margin: '0px' }}>
-                            <Header color="#ffffff" headerText="FAQS" />
-                            <SubHeader subHeaderText="คำถามที่พบบ่อย" color="#ffffff" />
-                        </Col>
-                    </Row>
-                    <DropRow>
-                        <Col>
-                            <div className="d-flex justify-content-center">
-                                <StyledSelect value={this.state.currentAnswerIndex} onChange={() => this.changeAnswer(event.target.value)}>
-                                    <option value="99">กรุณาเลือกคำถาม</option>
-                                    <option value="0">รับสมัครคนเข้าค่ายกี่คน ?</option>
-                                    <option value="1">พักค้างคืนที่ไหน ?</option>
-                                    <option value="2">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</option>
-                                    <option style={{ overflow: "warp" }} value="3">มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</option>
-                                    <option value="4">หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</option>
-                                    <option value="5">จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</option>
-                                </StyledSelect>
-                            </div>
-                        </Col>
-                    </DropRow>
-                    <Row className="mt-5 order-2">
-                        <Col lg='4' md='3' sm="3" xs="2">
-                            <div className="d-flex flex-column align-items-center">
-                                <FaqsBox onClick={() => this.changeAnswer(0)}>
-                                    <Qtag lineHeight="3em">รับสมัครคนเข้าค่ายกี่คน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_0} />
-                                </FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(1)}>
-                                    <Qtag lineHeight="3em">พักค้างคืนที่ไหน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_1} />
-                                </FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(2)}>
-                                    <Qtag lineHeight="3em">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_2} />
-                                </FaqsBox>
-                            </div>
-                        </Col>
-                        <Col lg='4' md='6' sm="6" xs="8">
-                        </Col>
-                        <Col lg='4' md='3' sm="3" xs="2">
-                            <div className="d-flex flex-column align-items-center">
-                                <FaqsBox onClick={() => this.changeAnswer(3)}>
-                                    <Qtag>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_3} />
-                                </FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(4)} >
-                                    <Qtag>หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_4} />
-                                </FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(5)} active={this.state.activeQuestion_5}>
-                                    <Qtag>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_5} />
-                                </FaqsBox>
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row className="">
-                        <Col lg='12'>
-                            <FaqsImgContainer>
-                                <FaqsImg src="/img/Faqs/wipfaq.png" />
-                            </FaqsImgContainer>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg="3" md="auto" sm="auto" ></Col>
-                        <Col lg="6" md="12" sm="12" >
-                            <AnswerContainer className="d-flex align-items-center">
-                                <FaqsAnswer className={this.state.faqClass} opacity={this.state.answerOpacity}>
-                                    <AnswerContent>{this.state.answer}</AnswerContent>
-                                    <AnswerBoxImage src='img/Faqs/answerbox.png' />
-                                </FaqsAnswer>
-                            </AnswerContainer>
-                        </Col>
-                        <Col lg="3" md="12" sm="auto" ></Col>
-                    </Row>
-
-                </StyledContainer>
-            </FaqsContainer>
-        )
+    componentDidMount() {
+        window.addEventListener('resize', this.updateWindowDimensions)
+        this.updateWindowDimensions()
     }
+
+    updateWindowDimensions = () => {
+        if (window.innerWidth < 1024){
+            this.setState({
+                isMobile: true
+            })
+    } else {
+        this.setState({
+            isMobile: false
+        })
+    }
+}
+
+getType = () => {
+    return this.state.isMobile
+}
+
+
+
+render() {
+    return (
+        <FaqsContainer>
+            <StyledContainer>
+                <Row>
+                    <Col style={{ margin: '0px' }}>
+                        <Header color="#ffffff" headerText="FAQS" />
+                        <SubHeader subHeaderText="คำถามที่พบบ่อย" color="#ffffff" />
+                    </Col>
+                </Row>
+                { (this.getType())?
+                     <DropRow>
+                     <Col>
+                         <div className="d-flex justify-content-center">
+                             <StyledSelect value={this.state.currentAnswerIndex} onChange={() => this.changeAnswer(event.target.value)}>
+                                 <option value="99">กรุณาเลือกคำถาม</option>
+                                 <option value="0">รับสมัครคนเข้าค่ายกี่คน ?</option>
+                                 <option value="1">พักค้างคืนที่ไหน ?</option>
+                                 <option value="2">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</option>
+                                 <option style={{ overflow: "warp" }} value="3">มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</option>
+                                 <option value="4">หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</option>
+                                 <option value="5">จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</option>
+                             </StyledSelect>
+                         </div>
+                     </Col>
+                 </DropRow> :
+                                 <Row className="mt-5 order-2">
+                                 <Col lg='4' md='3' sm="3" xs="2">
+                                     <div className="d-flex flex-column align-items-center">
+                                         <FaqsBox onClick={() => this.changeAnswer(0)}>
+                                             <Qtag lineHeight="3em">รับสมัครคนเข้าค่ายกี่คน ?</Qtag>
+                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_0} />
+                                         </FaqsBox>
+                                         <FaqsBox onClick={() => this.changeAnswer(1)}>
+                                             <Qtag lineHeight="3em">พักค้างคืนที่ไหน ?</Qtag>
+                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_1} />
+                                         </FaqsBox>
+                                         <FaqsBox onClick={() => this.changeAnswer(2)}>
+                                             <Qtag lineHeight="3em">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</Qtag>
+                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_2} />
+                                         </FaqsBox>
+                                     </div>
+                                 </Col>
+                                 <Col lg='4' md='6' sm="6" xs="8">
+                                 </Col>
+                                 <Col lg='4' md='3' sm="3" xs="2">
+                                     <div className="d-flex flex-column align-items-center">
+                                         <FaqsBox onClick={() => this.changeAnswer(3)}>
+                                             <Qtag>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</Qtag>
+                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_3} />
+                                         </FaqsBox>
+                                         <FaqsBox onClick={() => this.changeAnswer(4)} >
+                                             <Qtag>หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</Qtag>
+                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_4} />
+                                         </FaqsBox>
+                                         <FaqsBox onClick={() => this.changeAnswer(5)} active={this.state.activeQuestion_5}>
+                                             <Qtag>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</Qtag>
+                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_5} />
+                                         </FaqsBox>
+                                     </div>
+                                 </Col>
+                             </Row>
+                }
+                <Row className="">
+                    <Col lg='12'>
+                        <FaqsImgContainer>
+                            <FaqsImg src="/img/Faqs/wipfaq.png" />
+                        </FaqsImgContainer>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg="3" md="auto" sm="auto" ></Col>
+                    <Col lg="6" md="12" sm="12" >
+                        <AnswerContainer className="d-flex align-items-center">
+                            <FaqsAnswer className={this.state.faqClass} opacity={this.state.answerOpacity}>
+                                <AnswerContent>{this.state.answer}</AnswerContent>
+                                <AnswerBoxImage src='img/Faqs/answerbox.png' />
+                            </FaqsAnswer>
+                        </AnswerContainer>
+                    </Col>
+                    <Col lg="3" md="12" sm="auto" ></Col>
+                </Row>
+
+            </StyledContainer>
+        </FaqsContainer>
+    )
+}
 }
