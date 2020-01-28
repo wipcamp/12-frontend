@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeadLine = styled.h1`
-    font-family: 'NotoSans-Regular', sans-serif;
+    font-family: 'NotoSansThai-Regular', sans-serif;
     font-size: 40px;
     letter-spacing: 0.1em;
     color: ${props => props.color};
@@ -18,7 +18,7 @@ const HeadLine = styled.h1`
 `
 
 const SubHead = styled.h2`
-    font-family: 'NotoSans-Light', sans-serif;
+    font-family: 'NotoSansThai-Light', sans-serif;
     font-size: 14px;
     text-align: center;
     color: ${props => props.color};
