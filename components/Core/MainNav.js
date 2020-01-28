@@ -104,7 +104,7 @@ updateWindowDimensions = () => {
 		this.setState({ isDesktop: true})
 		if(window.scrollY > 100){
 		document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
-		document.getElementById('navcolor').style.height = '89px'
+		document.getElementById('navcolor').style.height = '65px'
 		}
 	} 
 }
