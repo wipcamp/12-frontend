@@ -73,6 +73,9 @@ export const Content = (props) => {
         <ContentText color = {props.color}
          textAlign = {props.textAlign}
           textIndent = {props.textIndent}
+          textIndentIpad = {props.textIndentIpad}
+          textIndentDesktop = {props.textIndentDesktop}
+          textAlignResponsive = {props.textAlignResponsive}
            padding = {props.padding}
            >
                
