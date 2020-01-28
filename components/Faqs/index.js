@@ -46,6 +46,7 @@ const BoxImage = styled.img`
     margin-right: auto;
     left: 0;
     right: 0;
+    filter : ${props => props.active};
     ${FaqsBox}:hover &{
         filter: drop-shadow(0 0 0.5rem #2C898B);
     }
@@ -66,9 +67,10 @@ const AnswerBoxImage = styled.img`
     right: 0;
     @media (min-width: 768px) {
         height: 8em;
-        width: 100%;
+        width: 70%;
     }
     @media (min-width: 1024px) {
+        width: 100%;
     }
 `
 const FaqsAnswer = styled.div`
@@ -100,10 +102,11 @@ const AnswerContent = styled.p`
     font-size: 16px;
     @media (min-width: 768px) {
         padding: 1em 2em 1em 2em;
-        width:unset;
+        width:60%;
     }
     @media (min-width: 1024px) {
         padding: 1em 2em 1em 2em;
+        width: unset;
     }
 `
 
@@ -113,13 +116,13 @@ const FaqsImg = styled.img`
     z-index: 0;
     @media (min-width: 500px) {
     }
-    @media (min-width: 800px) {
-        width: 60%;
-        height:auto;
+    @media (min-width: 768px) {
+        width: 530px;
+        height: 614px;
     }
     @media (min-width: 1024px) {
         height: 80vh;
-        top: -55vh;
+        top: -40vh;
         width: auto;
         position: absolute;
         margin-left: auto;
@@ -131,7 +134,7 @@ const FaqsImg = styled.img`
     @media (min-height: 1024px) {
         height: 60vh;
         width: auto;
-        top: -50vh;
+        top: -40vh;
     }
 `
 
@@ -198,34 +201,36 @@ export default class Faqs extends Component {
         activeQuestion_3: "none",
         activeQuestion_4: "none",
         activeQuestion_5: "none",
-        activeStyle: "drop-shadow(0 0 0.5rem white)"
+        activeStyle: "drop-shadow(0 0 0.5rem #2C898B)"
     }
 
     changeAnswer = e => {
-        var prevQ = "activeQuestion_" + this.state.currentAnswerIndex
-        this.setState({
-            faqClass: "none",
-            [prevQ]: "none"
-        })
-        if (e >= 0 && e <= 5) {
-            var currentQ = "activeQuestion_" + e
-            setTimeout(
-                function () {
-                    this.setState({
-                        answer: this.state.answerArray[e],
-                        currentAnswerIndex: e,
-                        faqClass: "animatedFadeInUp",
-                        [currentQ]: this.state.activeStyle
-                    })
-                }
-                    .bind(this),
-                1
-            )
-        } else {
+        if (e != this.state.currentAnswerIndex) {
+            var prevQ = "activeQuestion_" + this.state.currentAnswerIndex
             this.setState({
-                answerOpacity: 0,
-                currentAnswerIndex: e
+                faqClass: "none",
+                [prevQ]: "none"
             })
+            if (e >= 0 && e <= 5) {
+                var currentQ = "activeQuestion_" + e
+                setTimeout(
+                    function () {
+                        this.setState({
+                            answer: this.state.answerArray[e],
+                            currentAnswerIndex: e,
+                            faqClass: "animatedFadeInUp",
+                            [currentQ]: this.state.activeStyle
+                        })
+                    }
+                        .bind(this),
+                    1
+                )
+            } else {
+                this.setState({
+                    answerOpacity: 0,
+                    currentAnswerIndex: e
+                })
+            }
         }
     }
 
@@ -259,17 +264,17 @@ export default class Faqs extends Component {
                     <Row className="mt-5 order-2">
                         <Col lg='4' md='3' sm="3" xs="2">
                             <div className="d-flex flex-column align-items-center">
-                                <FaqsBox onClick={() => this.changeAnswer(0)} active={this.state.activeQuestion_0}>
+                                <FaqsBox onClick={() => this.changeAnswer(0)}>
                                     <Qtag lineHeight="3em">รับสมัครคนเข้าค่ายกี่คน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_0} />
                                 </FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(1)} active={this.state.activeQuestion_1}>
+                                <FaqsBox onClick={() => this.changeAnswer(1)}>
                                     <Qtag lineHeight="3em">พักค้างคืนที่ไหน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_1} />
                                 </FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(2)} active={this.state.activeQuestion_2}>
+                                <FaqsBox onClick={() => this.changeAnswer(2)}>
                                     <Qtag lineHeight="3em">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_2} />
                                 </FaqsBox>
                             </div>
                         </Col>
@@ -277,17 +282,17 @@ export default class Faqs extends Component {
                         </Col>
                         <Col lg='4' md='3' sm="3" xs="2">
                             <div className="d-flex flex-column align-items-center">
-                                <FaqsBox onClick={() => this.changeAnswer(3)} active={this.state.activeQuestion_3}>
+                                <FaqsBox onClick={() => this.changeAnswer(3)}>
                                     <Qtag>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_3} />
                                 </FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(4)} active={this.state.activeQuestion_4}>
+                                <FaqsBox onClick={() => this.changeAnswer(4)} >
                                     <Qtag>หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_4} />
                                 </FaqsBox>
                                 <FaqsBox onClick={() => this.changeAnswer(5)} active={this.state.activeQuestion_5}>
                                     <Qtag>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox.png" />
+                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_5} />
                                 </FaqsBox>
                             </div>
                         </Col>
@@ -300,17 +305,17 @@ export default class Faqs extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col lg="3" md="2" sm="4" ></Col>
-                            <Col lg="6" md="8" sm="4" >
-                                <AnswerContainer className="d-flex align-items-center">
-                                    <FaqsAnswer className={this.state.faqClass} opacity={this.state.answerOpacity}>
-                                        <AnswerContent>{this.state.answer}</AnswerContent>
-                                        <AnswerBoxImage src='img/Faqs/answerbox.png' />
-                                    </FaqsAnswer>
-                                </AnswerContainer>
-                            </Col>
-                            <Col lg="3" md="2" sm="4" ></Col>
-                        </Row>
+                        <Col lg="3" md="auto" sm="auto" ></Col>
+                        <Col lg="6" md="12" sm="12" >
+                            <AnswerContainer className="d-flex align-items-center">
+                                <FaqsAnswer className={this.state.faqClass} opacity={this.state.answerOpacity}>
+                                    <AnswerContent>{this.state.answer}</AnswerContent>
+                                    <AnswerBoxImage src='img/Faqs/answerbox.png' />
+                                </FaqsAnswer>
+                            </AnswerContainer>
+                        </Col>
+                        <Col lg="3" md="12" sm="auto" ></Col>
+                    </Row>
 
                 </StyledContainer>
             </FaqsContainer>
