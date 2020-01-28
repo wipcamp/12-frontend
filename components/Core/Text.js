@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeadLine = styled.h1`
-    font-family: 'Prompt-Medium', sans-serif;
+    font-family: 'NotoSansThai-Regular', sans-serif;
     font-size: 40px;
     letter-spacing: 0.1em;
     color: ${props => props.color};
@@ -18,7 +18,7 @@ const HeadLine = styled.h1`
 `
 
 const SubHead = styled.h2`
-    font-family: 'Prompt-Light', sans-serif;
+    font-family: 'NotoSansThai-Light', sans-serif;
     font-size: 14px;
     text-align: center;
     color: ${props => props.color};
@@ -29,7 +29,7 @@ const SubHead = styled.h2`
 `
 
 const ContentText = styled.p`
-    font-family: "ChakraPetch-Regular", sans-serif;
+    font-family: 'Sarabun-Regular', sans-serif;
     font-size: 12px;
     color: ${props => props.color};
     text-align: ${props => props.textAlign};
@@ -73,6 +73,9 @@ export const Content = (props) => {
         <ContentText color = {props.color}
          textAlign = {props.textAlign}
           textIndent = {props.textIndent}
+          textIndentIpad = {props.textIndentIpad}
+          textIndentDesktop = {props.textIndentDesktop}
+          textAlignResponsive = {props.textAlignResponsive}
            padding = {props.padding}
            >
                

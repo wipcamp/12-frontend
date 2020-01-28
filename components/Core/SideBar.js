@@ -25,12 +25,12 @@ export default class SideBar extends Component {
               WHAT
             </CustomLink>
       
-            <CustomLink className="menu-item" href="#when">
-              WHEN
+            <CustomLink className="menu-item" href="#track">
+              TRACK
             </CustomLink>
       
             <CustomLink className="menu-item" href="#when">
-              TRACK
+              WHEN
             </CustomLink>
             <CustomLink className="menu-item" href="#faqs">
               FAQS

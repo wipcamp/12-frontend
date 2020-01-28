@@ -44,6 +44,7 @@ const Fieldset = styled.fieldset`
     border-radius:8px;
     border-image: linear-gradient(#FF66ED,#64A4FF )1;
     margin-bottom: 30px;
+    text-align: center;
     @media (min-width: 1080px){
         width: 80%;
 }

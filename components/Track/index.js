@@ -17,18 +17,18 @@ const TrackBg = styled.div`
 
 const Trackcontainer = styled.div`
         display:block;
-        margin-top:32px 0px 23px 0px;
+        margin-top: 20px;
 
         @media (min-width: 768px) {
-            margin-top:50.36px 0px 50px 0px;
+            margin:50.36px 0px 50px 0px;
         }
     
         @media (min-width: 1024px) {
-            margin-top:120px 0px 75px 0px;
+            margin:60px 0px 75px 0px;
         }
 `
 const ButtomContainer = styled.div`
-
+    margin-top: 20px;
  @media (min-width: 768px) {
     margin-top:50px;
  }
@@ -101,36 +101,40 @@ export default class Track extends Component {
                     </Row>
 
                     <Row>
-                        <Col>
+                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
+                        <Col xl="10" lg="10" md="10" sm="10" xs="10">
                         <Trackcontainer>
                         <Content
-                         textIndent="50px"
+                         textIndent="0px"
+                         textIndentIpad="68px"
+                         textIndentDesktop="68px"
                          textAlign="left"
                          color="white"
                          content="แทร็ก (Track) หมายถึง สายอาชีพไอทีที่เปิดโอกาสให้น้อง ๆ ได้เข้ามาสัมผัสและเรียนรู้ตามความสนใจ น้อง ๆ จะได้เลือก Track ตามที่ตนเองสนใจ     
                          2 Track จากทั้งหมด 4 Track โดย เลือก Track ที่น้องสนใจ ลำดับที่ 1 สำหรับการเลือกเข้าร่วม Track ลำดับที่ 2 จะได้เลือกในวันค่าย" />
                         </Trackcontainer>
                         </Col>
+                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
                     </Row>
 
                     <Row id="cards-grid" >
                         <Col xl='3' lg='3' xs='6'>
-                            <div className="yakhaimunmefaiahmae d-flex justify-content-lg-center justify-content-md-end">
+                            <div className=" d-flex justify-content-lg-center justify-content-md-end">
                                 <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
                             </div>
                         </Col>
                         <Col xl='3' lg='3' xs='6'>
-                            <div className="yakhaimunmefaiahmae d-flex justify-content-lg-center justify-content-md-start">
+                            <div className=" d-flex justify-content-lg-center justify-content-md-start">
                                 <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
                             </div>
                         </Col>
                         <Col xl='3' lg='3' xs='6'>
-                            <div className="yakhaimunmefaiahmae d-flex justify-content-lg-center justify-content-md-end">
+                            <div className=" d-flex justify-content-lg-center justify-content-md-end">
                                 <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
                             </div>
                         </Col>
                         <Col xl='3' lg='3' xs='6'>
-                            <div className="yakhaimunmefaiahmae d-flex justify-content-lg-center justify-content-md-start">
+                            <div className=" d-flex justify-content-lg-center justify-content-md-start">
                                 <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
                             </div>
                         </Col>
@@ -140,15 +144,19 @@ export default class Track extends Component {
                     <CarouselTrack />
                 </div>
                 <Row>
-                        <Col>
+                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
+                        <Col xl="10" lg="10" md="10" sm="10" xs="10">
                         <ButtomContainer>
                         <Content
-                        textIndent="50px"
-                        textAlign="center"
+                        textIndent="0px"
+                        textAlign="left"
+                        textAlignResponsive="center"
                         color="white"
+                        padding=""
                         content="สำหรับการเลือกเข้าร่วม Track ลำดับที่ 2 จะได้เลือกภายในวันค่าย WIP Camp #12" />   
                         </ButtomContainer>
                         </Col>
+                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
                     </Row>
             </TrackBg>
         )
