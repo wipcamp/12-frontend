@@ -39,7 +39,7 @@ const FaqsBox = styled.div`
 const BoxImage = styled.img`
     position: absolute;
     width: 22em;
-    transform: translate(0, -20px);
+    transform: translate(0, -2.5em);
     z-index: 0;
     display:none;
     margin-left: auto;
@@ -48,7 +48,7 @@ const BoxImage = styled.img`
     right: 0;
     filter : ${props => props.active};
     ${FaqsBox}:hover &{
-        filter: drop-shadow(0 0 0.5rem #2C898B);
+        filter: drop-shadow(0 0 0.5rem #CCA403);
     }
         @media (min-width: 1080px) {
         display: block;
@@ -87,7 +87,7 @@ const FaqsAnswer = styled.div`
         top: -20em;
     }
     @media (min-width: 1024px) {
-        top: -25em;
+        top: -22em;
     }
     @media (min-width: 1080px) {
         width: 100%;
@@ -211,7 +211,7 @@ export default class Faqs extends Component {
         activeQuestion_3: "none",
         activeQuestion_4: "none",
         activeQuestion_5: "none",
-        activeStyle: "drop-shadow(0 0 0.5rem #2C898B)",
+        activeStyle: "drop-shadow(0 0 0.5rem #CCA403)",
         isMobile: true,
         middleContent: 6,
         sideCol:3

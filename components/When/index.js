@@ -22,6 +22,7 @@ const WhenImg = styled.img`
     }
     @media (min-width: 1024px) {
     width: 10em;
+    height: 10em;
     }
     @media (min-width: 1080px) {
     }
