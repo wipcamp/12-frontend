@@ -46,6 +46,7 @@ const BoxImage = styled.img`
     margin-right: auto;
     left: 0;
     right: 0;
+    transition: filter 0.5s ease-in-out;
     filter : ${props => props.active};
     ${FaqsBox}:hover &{
         filter: drop-shadow(0 0 0.5rem #CCA403);
@@ -120,6 +121,7 @@ const FaqsImg = styled.img`
     /* top: -64vh; */
     z-index: 0;
     margin-top: 12em;
+    animation: float 5s ease-in-out infinite;
     @media (min-width: 500px) {
     }
     @media (min-width: 768px) {
@@ -139,7 +141,17 @@ const FaqsImg = styled.img`
         right: 0;
         bottom: -29em;
     }
-    
+    @keyframes float {
+	0% {
+		transform: translatey(0);
+	}
+	50% {
+		transform: translatey(-1em);
+	}
+	100% {
+		transform: translatey(0);
+    }
+}
     /* Ipad pro */
     /* @media (min-height: 1000px) {
         height: 45em;
@@ -160,7 +172,7 @@ const AnswerContainer = styled.div`
 
 const DropRow = styled(Row)`
         @media (min-width: 1080px) {
-        display:none
+        display:none;
     }
 `
 const FaqsImgContainer = styled.div`
@@ -236,7 +248,7 @@ export default class Faqs extends Component {
                         })
                     }
                         .bind(this),
-                    1
+                    10
                 )
             } else {
                 this.setState({
