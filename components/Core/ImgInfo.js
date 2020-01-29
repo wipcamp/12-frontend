@@ -6,7 +6,7 @@ const glow = keyframes`
     to {filter:drop-shadow(0px 0px 10px rgba(255,255,255,1));}
 `
 const Image = styled.img`
-    width: 5em;
+    width: 94px;
     height: auto;
     align-self: center;
     @media (min-width: 1080px){
