@@ -118,15 +118,15 @@ export default class contact extends Component {
             <Col xl="6" lg={{ size: 6, offset: 1 }} md={{ size: 6, offset: 1 }} sm="12">
               <HeaderStyled>Contact</HeaderStyled>
               <TextBox>
-                <Link href="/"><StyledLink href="/"><ContactImg src="img/Contact/messengergray.png" /></StyledLink></Link>
+                <Link href="/"><StyledLink href="/"><ContactImg src="img/Contact/messenger.png" /></StyledLink></Link>
                 MESSENGER
                 </TextBox>
               <TextBox>
-                <ContactImg src="img/Contact/phonegray.png" />
+                <ContactImg src="img/Contact/phone.png" />
                 095-581-2385 (พี่ทีเจ)
                 </TextBox>
               <TextBox>
-                <ContactImg src="img/Contact/emailgray.png" />
+                <ContactImg src="img/Contact/email.png" />
                 wippo@wipcamp.com
                 </TextBox>
             </Col>
@@ -143,15 +143,15 @@ export default class contact extends Component {
             <Col xl="6" lg={{size:6, offset:7}} md={{size:6, offset:7}} sm="12">
               <HeaderStyled>Follow Us</HeaderStyled>
               <TextBox>
-                <ContactImg src="img/Contact/facebookgray.png" />
+                <ContactImg src="img/Contact/facebook.png" />
                 WIP Camp
               </TextBox>
               <TextBox>
-                <ContactImg src="img/Contact/youtubegray.png" />
+                <ContactImg src="img/Contact/youtube.png" />
                 wip camp
               </TextBox>
               <TextBox>
-                <ContactImg src="img/Contact/instragramgray.png" />
+                <ContactImg src="img/Contact/instragram.png" />
                 wip camp
             </TextBox>
             </Col>

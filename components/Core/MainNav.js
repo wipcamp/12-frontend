@@ -45,9 +45,9 @@ const StyledNavLink = styled(NavLink)`
 const ColorNav = styled(Navbar)`
   margin: 0;
   padding: 0;
-  background-color : #14B0BF;
-  transition : 0.5s ease-in-out;
-  -webkit-transition : 0.45s ease-in-out;
+  background-color : #468BB1;
+  transition : 0.2s ease-in-out;
+  -webkit-transition : 0.2s ease-in-out;
   
 
   @media (min-width: 1024px) {
@@ -78,7 +78,7 @@ export default class MainNav extends Component {
 	state = {
 		noBg: 'rgba(255, 255, 255, 0.0)',
 		defaultMobile: 'darkgrey',
-		defaultDesktop: '#14B0BF',
+		defaultDesktop: '#468BB1',
 		isDesktop: true
 	}
 
