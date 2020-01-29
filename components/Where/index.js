@@ -87,7 +87,7 @@ export default class Where extends Component {
                     <Row>
                         <Col>
                             <Header color="#ffffff" headerText="WHERE" />
-                            <SubHeader color="#ffffff" subHeaderText="ค่ายจัดที่ไหน" />
+                            <SubHeader color="#ffffff" subHeaderText="ค่ายจัดที่ไหน ?" />
                         </Col>
                     </Row>
                     <Row>
