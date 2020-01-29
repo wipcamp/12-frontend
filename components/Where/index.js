@@ -110,10 +110,10 @@ export default class Where extends Component {
 
             <WhereBg>
                 <Container fluid={true}>
-                    <Parallax y={[-9, 9]} >
-                        <Parallax y={[3, -3]}>
-                            <Parallax y={[3, -3]}>
-                                <Parallax y={[3, -3]}>
+                    <Parallax y={[-9, 9]} x={[1, -1]}>
+                        <Parallax y={[3, -3]} x={[-1, 1]}>
+                            <Parallax y={[3, -3]} x={[1, -1]}>
+                                <Parallax y={[3, -3]} x={[-1, 1]}>
                                     <Row>
                                         <Col>
                                             <Header color="#ffffff" headerText="WHERE" />
