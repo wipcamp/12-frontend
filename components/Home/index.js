@@ -116,8 +116,8 @@ export default class Home extends Component {
         return (
                 <HomeContainer>
                     <HomeContent>
-                    <Parallax y={[-30, 30]}>
-                        <Parallax y={[30,-30]}>
+                    <Parallax y={[-15, 15]}>
+                        <Parallax y={[15,-15]}>
                         <WipLogoImg src='/img/Home/logo.png' />
                         <WrapLogoCana>
                             <LogoImg src='/img/Home/LogoCana.png' />
