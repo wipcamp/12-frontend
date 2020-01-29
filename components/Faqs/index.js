@@ -32,7 +32,7 @@ const FaqsBox = styled.div`
     -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
     transition: filter 0.25s ease-in-out;
     /* filter: ${props => props.active || "none"}; */
-    @media (min-width: 1024px) {
+    @media (min-width: 1080px) {
     display: flex;
     }
 `
@@ -50,7 +50,7 @@ const BoxImage = styled.img`
     ${FaqsBox}:hover &{
         filter: drop-shadow(0 0 0.5rem #2C898B);
     }
-        @media (min-width: 1024px) {
+        @media (min-width: 1080px) {
         display: block;
     }
 `
@@ -69,7 +69,7 @@ const AnswerBoxImage = styled.img`
         height: 8em;
         width: 70%;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 1080px) {
         width: 100%;
     }
 `
@@ -80,11 +80,13 @@ const FaqsAnswer = styled.div`
     color: white;
     text-align: center;
     position:absolute;
-    top: -35vw;
+    top: -10em;
     opacity: ${props => props.opacity || '0'};
     z-index: 2;
-
     @media (min-width: 1024px) {
+        top: -10em;
+    }
+    @media (min-width: 1080px) {
         width: 100%;
         position:initial;
     }
@@ -104,7 +106,7 @@ const AnswerContent = styled.p`
         padding: 1em 2em 1em 2em;
         width:60%;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 1080px) {
         padding: 1em 2em 1em 2em;
         width: unset;
     }
@@ -114,6 +116,7 @@ const FaqsImg = styled.img`
     width : 80%;
     top: -64vh;
     z-index: 0;
+    margin-top: 5em;
     @media (min-width: 500px) {
     }
     @media (min-width: 768px) {
@@ -121,6 +124,9 @@ const FaqsImg = styled.img`
         height: 614px;
     }
     @media (min-width: 1024px) {
+    }
+    @media (min-width: 1080px) {
+        margin-top: 0;
         height: 80vh;
         top: -40vh;
         width: auto;
@@ -130,25 +136,27 @@ const FaqsImg = styled.img`
         left: 0;
         right: 0;
     }
+    
     /* Ipad pro */
-    @media (min-height: 1024px) {
-        height: 60vh;
-        width: auto;
-        top: -40vh;
+    @media (min-height: 1000px) {
+        height: 45em;
+        top: -25em;
     }
 `
 
 const AnswerContainer = styled.div`
     width: 100%;
-    height: 10em;
     display: flex;
     justify-content: center;
     @media (min-width: 1024px) {
     }
+    @media (min-width: 1080px) {
+        height: 10em;
+    }
 `
 
 const DropRow = styled(Row)`
-        @media (min-width: 1024px) {
+        @media (min-width: 1080px) {
         display:none
     }
 `
@@ -161,11 +169,10 @@ const StyledContainer = styled(Container)`
         min-height: 25em;
         padding-bottom: 10vh;
         @media (min-width: 1024px) {
-        min-height: 100vh;
+            padding-bottom: 0;
     }
-    @media (min-height: 1024px) {
-        min-height: 60vh;
-        padding-bottom: 3vh;
+    @media (min-width: 1080px) {
+        padding-bottom: 10vh;
     }
 `
 
@@ -202,7 +209,9 @@ export default class Faqs extends Component {
         activeQuestion_4: "none",
         activeQuestion_5: "none",
         activeStyle: "drop-shadow(0 0 0.5rem #2C898B)",
-        isMobile: true
+        isMobile: true,
+        middleContent: 6,
+        sideCol:3
     }
 
     changeAnswer = e => {
@@ -241,13 +250,17 @@ export default class Faqs extends Component {
     }
 
     updateWindowDimensions = () => {
-        if (window.innerWidth < 1024){
+        if (window.innerWidth < 1080){
             this.setState({
-                isMobile: true
+                isMobile: true,
+                middleContent: 12,
+                sideCol:'auto'
             })
     } else {
         this.setState({
-            isMobile: false
+            isMobile: false,
+            middleContent: 6,
+            sideCol:3
         })
     }
 }
@@ -329,8 +342,8 @@ render() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg="3" md="auto" sm="auto" ></Col>
-                    <Col lg="6" md="12" sm="12" >
+                    <Col lg={this.state.sideCol} md="auto" sm="auto" ></Col>
+                    <Col lg={this.state.middleContent} md="12" sm="12" >
                         <AnswerContainer className="d-flex align-items-center">
                             <FaqsAnswer className={this.state.faqClass} opacity={this.state.answerOpacity}>
                                 <AnswerContent>{this.state.answer}</AnswerContent>
@@ -338,7 +351,7 @@ render() {
                             </FaqsAnswer>
                         </AnswerContainer>
                     </Col>
-                    <Col lg="3" md="12" sm="auto" ></Col>
+                    <Col lg={this.state.sideCol} md="12" sm="auto" ></Col>
                 </Row>
 
             </StyledContainer>

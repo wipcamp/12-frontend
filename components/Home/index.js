@@ -88,7 +88,7 @@ const StyledButton = styled.button`
 const Wippo = styled.img`
     position: absolute;
     bottom: -20rem;
-    right: -20em;
+    right: 5rem;
     display:none;
     width: 15vw;
     z-index: 3;
@@ -116,16 +116,15 @@ export default class Home extends Component {
         return (
                 <HomeContainer>
                     <HomeContent>
-                    <Parallax x={[40, -40]}>
-                        <Parallax x={[-40,40]}>
+                    <Parallax y={[30, -30]}>
+                        <Parallax y={[-30,30]}>
                         <WipLogoImg src='/img/Home/logo.png' />
                         <WrapLogoCana>
                             <LogoImg src='/img/Home/LogoCana.png' />
                         </WrapLogoCana>
                         <StyledButton>REGISTER</StyledButton>
                         </Parallax>
-                            <Wippo src="/img/Who/Wippo.png" />
-                        
+                        <Wippo src="/img/Who/Wippo.png" />
                     </Parallax>
                     </HomeContent>
                 </HomeContainer>

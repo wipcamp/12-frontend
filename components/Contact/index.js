@@ -131,7 +131,7 @@ export default class contact extends Component {
                 </TextBox>
             </Col>
             <Col xl="5" lg="5" md="5    " sm="auto">
-              <ImgObject src="img/Contact/obcontact_1.png" />
+              <ImgObject src="img/Contact/obcontact1.png" />
             </Col>
           
           </Row>

@@ -96,7 +96,7 @@ export default class Track extends Component {
                     <Row>
                         <Col>
                             <Header color="white" headerText="TRACK" />
-                            <SubHeader color="white" subHeaderText="สาขาอาชีพในค่าย" />
+                            <SubHeader color="white" subHeaderText="เส้นทางในค่าย" />
                         </Col>
                     </Row>
 

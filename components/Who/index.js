@@ -96,7 +96,7 @@ export default class Who extends Component {
                     </Row>
                     <Row>
                         <Col>
-                            <SubHeader color="white" subHeaderText="ค่ายนี้เหมาะกับใคร?" />
+                            <SubHeader color="white" subHeaderText="ค่ายนี้เหมาะกับใคร ?" />
                         </Col>
                     </Row>
                     <WhoRow>

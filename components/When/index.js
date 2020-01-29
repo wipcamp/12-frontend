@@ -15,10 +15,10 @@ const WhenImg = styled.img`
     width:20vw;
     margin: 20px 0 20px 0;
     transition: filter 0.5s ease-in;
-    filter: ${ props => props.glow ? 'drop-shadow(0 0 1rem #2C898B)' : 'unset' };    
+    filter: ${ props => props.glow ? 'drop-shadow(0 0 1rem #2C898B)' : 'grayscale(90%)' };
     @media (min-width: 768px) {
     width: 8em;
-    margin: 20px 20px 20px 20px;    
+    margin: 20px 20px 20px 20px;
     }
     @media (min-width: 1024px) {
     width: 10em;
@@ -33,21 +33,21 @@ const TimerText = styled.h4`
     font-family:'ChakraPetch-Regular', sans-serif;
     margin-left: 2em;
     text-align: left;
-    width: 8.5em; 
+    width: 8.5em;
     @media (min-width: 768px){
         margin: 0;
-        width: 10em; 
+        width: 10em;
         font-size: 18px;
     }
     @media (min-width: 1080px) {
-        text-align:  center; 
-        width: auto; 
+        text-align:  center;
+        width: auto;
         height: 5em;
     }
-    
+
 `
 const BigContainer = styled(Container)`
-    
+
 `
 const WhenRow = styled(Row)`
     height: auto;
@@ -65,7 +65,7 @@ const BoxContainer = styled.div`
         flex-direction:column;
         justify-content: center;
     }
-  
+
 `
 const Span = styled.span`
     font-weight: bold;
@@ -133,8 +133,8 @@ export default class When extends Component {
                 <BigContainer fluid={true} >
                     <Row>
                         <Col>
-                            <Header color="#ffffff" headerText="WHEN" />
-                            <SubHeader color="#ffffff" subHeaderText="ค่ายจัดเมื่อไหร่" />
+                        <Header color="#ffffff" headerText="WHEN" />
+                        <SubHeader color="#ffffff" subHeaderText="ค่ายจัดเมื่อไหร่ ?" />
                         </Col>
                     </Row>
                     <WhenRow>
