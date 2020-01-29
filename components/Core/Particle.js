@@ -68,7 +68,7 @@ export default class StarParticle extends Component {
                 "move": {
                     "enable": true,
                     "direction": "right",
-                    "speed": 0.5
+                    "speed": 0.2
                 },
                 "size": {
                     "value": 2,
