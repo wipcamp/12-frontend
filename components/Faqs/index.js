@@ -250,7 +250,7 @@ export default class Faqs extends Component {
                         })
                     }
                         .bind(this),
-                    10
+                    50
                 )
             } else {
                 this.setState({

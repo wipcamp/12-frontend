@@ -10,10 +10,17 @@ const ContactBg = styled.div`
     display: table;
     height: 80vh;
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 15em;
     position: relative;
     width: 100%;
+    overflow: hidden;
     background-size: cover;
+    @media (min-width:768px){ 
+      padding-bottom: 20em;
+}
+@media (min-width:1100px){ 
+      padding-bottom: 30em;
+}
 `
 const ContactImg = styled.img`
 width:2.5em;
@@ -107,6 +114,19 @@ const ImgObject = styled.img`
  
 `
 
+const Mountain = styled.img`
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+`
+const Tower = styled.img`
+  position: absolute;
+  bottom: 0;
+  left: 3em;
+  width: 18vw;
+`
+
+
 
 export default class contact extends Component {
   render() {
@@ -160,6 +180,8 @@ export default class contact extends Component {
 
             </Row>
         </Container>
+        <Tower src="/img/contact/tower.png" />
+        <Mountain src="/img/contact/mountain.png" />
       </ContactBg >
 
     )
