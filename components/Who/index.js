@@ -66,6 +66,11 @@ const Zodiac = styled.img`
     right: 2vw;
     width: 20vw;
     bottom: -15vh;
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
 `
 
 const Star = styled(Zodiac)`
