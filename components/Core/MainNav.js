@@ -110,6 +110,7 @@ updateWindowDimensions = () => {
 }
 
 componentDidMount() {
+	this.listenScrollEvent()
 	window.addEventListener('resize', this.updateWindowDimensions)
 	window.addEventListener('scroll', this.listenScrollEvent)
 }
