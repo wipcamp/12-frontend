@@ -66,7 +66,9 @@ const AnswerBoxImage = styled.img`
     top: 0;
     left: 0;
     right: 0;
+    display: none;
     @media (min-width: 768px) {
+        /* display: block; */
         height: 8em;
         width: 70%;
     }
@@ -103,9 +105,9 @@ const AnswerContent = styled.p`
     margin-right: auto;
     left: 0;
     right: 0;
-    padding: 0;
+    padding: 1em 0 0 0;
     width: 70%;
-    font-size: 16px;
+    font-size: 15px;
     @media (min-width: 768px) {
         padding: 1em 2em 1em 2em;
         width:60%;
