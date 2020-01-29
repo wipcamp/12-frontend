@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
-import { ImageInfo , WhoMobile } from '../Core/ImgInfo'
+import { ImageInfo, WhoMobile } from '../Core/ImgInfo'
+import { Parallax } from 'react-scroll-parallax'
 
 const WhoContainer = styled.div`
-    /* background: rgb(9,10,15);
-    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);  */
+    position: relative;
 `
 
 const ContentContainer = styled(Container)`
@@ -61,8 +61,20 @@ const WhoRow = styled(Row)`
 }
 `
 
+const Zodiac = styled.img`
+    position: absolute;
+    right: 2vw;
+    width: 20vw;
+    bottom: -15vh;
+`
+
+const Star = styled(Zodiac)`
+    right: 2vw;
+    bottom: -4vh;
+`
+
 export default class Who extends Component {
-    state={
+    state = {
         midColumn: 2,
         contentColumn: 4
     }
@@ -72,12 +84,12 @@ export default class Who extends Component {
     }
 
     updateWindowDimensions = () => {
-        if(window.innerWidth < 1080) {
+        if (window.innerWidth < 1080) {
             this.setState({
                 midColumn: 'auto',
                 contentColumn: 5
             })
-        }else {
+        } else {
             this.setState({
                 midColumn: 2,
                 contentColumn: 4
@@ -89,52 +101,60 @@ export default class Who extends Component {
         return (
             <WhoContainer>
                 <ContentContainer fluid={true} >
-                    <Row>
-                        <Col>
-                        <Header color="white" headerText="WHO" />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <SubHeader color="white" subHeaderText="ค่ายนี้เหมาะกับใคร ?" />
-                        </Col>
-                    </Row>
-                    <WhoRow>
-                        <Col lg="1" md='1'></Col>
-                        <Col lg={this.state.contentColumn} md='5'>
-                            <WhoMobile  src="/img/Who/who1.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
-                            <ImageInfo src="/img/Who/who1.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"/>
-                        </Col>
-                        <Col lg={this.state.midColumn} md="auto">
-                        </Col>
-                        <Col lg={this.state.contentColumn} md='5'>
-                        <WhoMobile  src="/img/Who/who2.png" color="white" content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”"/>
-                            <ImageInfo src="/img/Who/who2.png" color="white" content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”"/>
-                        </Col>
-                        <Col lg="1" md='1'></Col>
-                    </WhoRow>
-                        <Row>
-                        <Col><Image src="/img/Who/Wippo.png"/></Col>
-                        </Row>
-                    <Row>
-                        <Col lg="1" md='1' sm="auto"></Col>
-                        <Col lg={this.state.contentColumn} md='5' sm="12">
-                        <WhoMobile src="/img/Who/who3.png" color="white" content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน"/>
-                            <ImageInfo src="/img/Who/who3.png" color="white" content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน"/>
-                        </Col>
-                        <Col lg={this.state.midColumn} md='auto' >
-                        </Col>
-                        <Col lg={this.state.contentColumn} md='5' sm="12">
-                        <WhoMobile src="/img/Who/who4.png" color="white" content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง"/>
-                            <ImageInfo src="/img/Who/who4.png" color="white" content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง"/>
-                        </Col>
-                        <Col lg="2" md='1' sm="auto"></Col>
-                    </Row>
-                    <Row>
-                        <Col md="12" className="d-flex justify-content-center">
-                            <Image2 src="/img/Who/Wippo.png" />
-                        </Col>
-                    </Row>
+                    <Parallax y={[0, 10]}>
+                        <Parallax y={[0, 10]}>
+                            <Parallax y={[0, -20]}>
+                                <Row>
+                                    <Col>
+                                        <Header color="white" headerText="WHO" />
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <SubHeader color="white" subHeaderText="ค่ายนี้เหมาะกับใคร ?" />
+                                    </Col>
+                                </Row>
+                                <WhoRow>
+                                    <Col lg="1" md='1'></Col>
+                                    <Col lg={this.state.contentColumn} md='5'>
+                                        <WhoMobile src="/img/Who/who1.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง" />
+                                        <ImageInfo src="/img/Who/who1.png" color="white" content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง" />
+                                    </Col>
+                                    <Col lg={this.state.midColumn} md="auto">
+                                    </Col>
+                                    <Col lg={this.state.contentColumn} md='5'>
+                                        <WhoMobile src="/img/Who/who2.png" color="white" content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”" />
+                                        <ImageInfo src="/img/Who/who2.png" color="white" content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”" />
+                                    </Col>
+                                    <Col lg="1" md='1'></Col>
+                                </WhoRow>
+                                <Row>
+                                    <Col><Image src="/img/Who/Wippo.png" /></Col>
+                                </Row>
+                                <Row>
+                                    <Col lg="1" md='1' sm="auto"></Col>
+                                    <Col lg={this.state.contentColumn} md='5' sm="12">
+                                        <WhoMobile src="/img/Who/who3.png" color="white" content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน" />
+                                        <ImageInfo src="/img/Who/who3.png" color="white" content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน" />
+                                    </Col>
+                                    <Col lg={this.state.midColumn} md='auto' >
+                                    </Col>
+                                    <Col lg={this.state.contentColumn} md='5' sm="12">
+                                        <WhoMobile src="/img/Who/who4.png" color="white" content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง" />
+                                        <ImageInfo src="/img/Who/who4.png" color="white" content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง" />
+                                    </Col>
+                                    <Col lg="2" md='1' sm="auto"></Col>
+                                </Row>
+                                <Row>
+                                    <Col md="12" className="d-flex justify-content-center">
+                                        <Image2 src="/img/Who/Wippo.png" />
+                                    </Col>
+                                </Row>
+                            </Parallax>
+                            <Star src="/img/Who/star.png" />
+                        </Parallax>
+                        <Zodiac src="/img/Who/zodiac.png" />
+                    </Parallax>
                 </ContentContainer>
             </WhoContainer>
         )
