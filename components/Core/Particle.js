@@ -55,7 +55,7 @@ export default class StarParticle extends Component {
         params={{
             "particles": {
                 "number": {
-                    "value": 60,
+                    "value": 200,
                     "density": {
                         "enable": true,
                         "value_area": 1500
@@ -68,7 +68,7 @@ export default class StarParticle extends Component {
                 "move": {
                     "enable": true,
                     "direction": "right",
-                    "speed": 0.1
+                    "speed": 0.5
                 },
                 "size": {
                     "value": 2,
@@ -109,7 +109,7 @@ export default class StarParticle extends Component {
         params={{
             "particles": {
                 "number": {
-                    "value": 60,
+                    "value": 200,
                     "density": {
                         "enable": true,
                         "value_area": 1500
