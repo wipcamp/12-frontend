@@ -180,8 +180,8 @@ export default class contact extends Component {
 
             </Row>
         </Container>
-        <Tower src="/img/contact/tower.png" />
-        <Mountain src="/img/contact/mountain.png" />
+        <Tower src="/img/Contact/tower.png" />
+        <Mountain src="/img/Contact/mountain.png" />
       </ContactBg >
 
     )
