@@ -80,11 +80,14 @@ const FaqsAnswer = styled.div`
     color: white;
     text-align: center;
     position:absolute;
-    top: -10em;
+    top: -15em;
     opacity: ${props => props.opacity || '0'};
     z-index: 2;
+    @media (min-width: 768px) {
+        top: -20em;
+    }
     @media (min-width: 1024px) {
-        top: -10em;
+        top: -25em;
     }
     @media (min-width: 1080px) {
         width: 100%;
@@ -114,34 +117,34 @@ const AnswerContent = styled.p`
 
 const FaqsImg = styled.img`
     width : 80%;
-    top: -64vh;
+    /* top: -64vh; */
     z-index: 0;
-    margin-top: 5em;
+    margin-top: 12em;
     @media (min-width: 500px) {
     }
     @media (min-width: 768px) {
-        width: 530px;
-        height: 614px;
+        margin-top: 10em;
+        width: 621px;
+        height: 298px;
     }
     @media (min-width: 1024px) {
     }
     @media (min-width: 1080px) {
-        margin-top: 0;
-        height: 80vh;
-        top: -40vh;
-        width: auto;
+        width: 90%;
+        height: auto;
         position: absolute;
         margin-left: auto;
         margin-right: auto;
         left: 0;
         right: 0;
+        bottom: -29em;
     }
     
     /* Ipad pro */
-    @media (min-height: 1000px) {
+    /* @media (min-height: 1000px) {
         height: 45em;
         top: -25em;
-    }
+    } */
 `
 
 const AnswerContainer = styled.div`
@@ -167,12 +170,12 @@ const FaqsImgContainer = styled.div`
 
 const StyledContainer = styled(Container)`
         min-height: 25em;
-        padding-bottom: 10vh;
-        @media (min-width: 1024px) {
+        padding-bottom: 0;
+        @media (min-width: 768px) {
             padding-bottom: 0;
     }
     @media (min-width: 1080px) {
-        padding-bottom: 10vh;
+        padding-bottom: 10em;
     }
 `
 
@@ -337,7 +340,7 @@ render() {
                 <Row className="">
                     <Col lg='12'>
                         <FaqsImgContainer>
-                            <FaqsImg src="/img/Faqs/wipfaq.png" />
+                            <FaqsImg src="/img/Faqs/Book.png" />
                         </FaqsImgContainer>
                     </Col>
                 </Row>
