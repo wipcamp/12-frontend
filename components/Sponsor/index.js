@@ -20,7 +20,7 @@ const SponsorBg = styled.div`
 `
 
 const WrapLogo = styled.div`
-    background-color: #c4c4c4;
+    background-color: #141730;
     text-align: center;
     margin: 2em 2.25em 0;
 
