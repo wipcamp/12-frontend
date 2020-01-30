@@ -31,7 +31,7 @@ const TimerText = styled.h4`
     font-size: 15px;
     text-align:center ;
     color: white;
-    font-family:'ChakraPetch-Regular', sans-serif;
+    font-family:'Sarabun-Regular', sans-serif;
     margin-left: 2em;
     text-align: left;
     width: 8.5em;
