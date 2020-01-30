@@ -4,12 +4,12 @@ import { Row, Col, Button, Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header } from '../Core/Text'
 import Link from 'next/link'
+import { Parallax } from 'react-scroll-parallax'
 
 const GameContainer = styled.div`
-    /* background: rgb(9,10,15);
-    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%); */
     padding-top: 3em;
-
+    position: relative;
+    
     @media (min-width: 768px) {
         padding-top: 5em;
     }
@@ -80,20 +80,37 @@ const StyledLink = styled.a`
     text-decoration: none !important;
 `
 
+const Cloud1 = styled.img`
+    position: absolute;
+    top: -20vh;
+    left: -8vw;
+    width: 30vw;
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+`
+
 export default class Game extends Component {
     render() {
         return (
             <GameContainer>
-                <Container className="text-center">
-                    <Header color="#ffffff" headerText="GAME" />
-                    <Content>
-                        <Wrap>
-                            <VerticalAlign>
-                                <StyledButton><Link href="/"><StyledLink href="/">Go To Game</StyledLink></Link></StyledButton>
-                            </VerticalAlign>
-                        </Wrap>
-                    </Content>
-                </Container>
+                <Parallax y={[0, 15]} x={[-5,5]}>
+                    <Cloud1 src="/img/Game/cloud1.png" />
+                    <Parallax y={[0, -15]} x={[5,-5]}>
+                        <Container className="text-center">
+                            <Header color="#ffffff" headerText="GAME" />
+                            <Content>
+                                <Wrap>
+                                    <VerticalAlign>
+                                        <StyledButton><Link href="/"><StyledLink href="/">Go To Game</StyledLink></Link></StyledButton>
+                                    </VerticalAlign>
+                                </Wrap>
+                            </Content>
+                        </Container>
+                    </Parallax>
+                </Parallax>
             </GameContainer>
         )
     }

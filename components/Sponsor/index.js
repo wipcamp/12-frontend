@@ -3,10 +3,10 @@ import { Header, SubHeader } from '../Core/Text'
 import SponsorImage from './SponsorImage'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
+import { Parallax } from 'react-scroll-parallax'
 
 const SponsorBg = styled.div`
-    /* background: rgb(9,10,15);
-    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);  */
+    position: relative;
     padding-top: 3em;
     padding-bottom: 3em;
 
@@ -33,6 +33,19 @@ const WrapLogo = styled.div`
         padding: 2.5em;
     }
 `
+
+const Cloud = styled.img`
+    position: absolute;
+    top: -12vh;
+    right: -15vw;
+    width: 35vw;
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+
+`
 export default class Sponsor extends Component {
     state = {
         images: [
@@ -55,21 +68,22 @@ export default class Sponsor extends Component {
     render() {
         return (
             <SponsorBg>
-                <div className="text-center">
-                    <Header color="white" headerText="SPONSOR" />
-                    <SubHeader color="white" subHeaderText="ผู้สนับสนุน" />
-                </div>
-                
-                    <Container>
+                <Parallax y={[0,15]} x={[5,-5]}>
+                    <Cloud src="/img/Sponsor/cloud.png" />
+                    <Parallax y={[0,-15]} x={[-5,5]}>
+                        <div className="text-center">
+                            <Header color="white" headerText="SPONSOR" />
+                            <SubHeader color="white" subHeaderText="ผู้สนับสนุน" />
+                        </div>
+                        <Container>
                             <WrapLogo>
                                 {this.state.images.map((data, key) => (
                                     <SponsorImage key={key} src={data.src} width={data.width} height={data.height} />
                                 ))}
                             </WrapLogo>
-                            </Container>
-                        
-
-                
+                        </Container>
+                    </Parallax>
+                </Parallax>
             </SponsorBg>
         )
     }

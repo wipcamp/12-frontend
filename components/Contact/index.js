@@ -1,19 +1,17 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Container,Col,Row,} from 'reactstrap'
+import { Container, Col, Row, } from 'reactstrap'
 import styled from 'styled-components'
 import Link from 'next/link'
+import { Parallax } from 'react-scroll-parallax'
 
 const ContactBg = styled.div`
-    /* background: rgb(9,10,15);
-    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);  */
     display: table;
     height: 80vh;
-    padding-top: 3rem;
+    padding-top: 8rem;
     padding-bottom: 15em;
     position: relative;
     width: 100%;
-    overflow: hidden;
     background-size: cover;
     @media (min-width:768px){ 
       padding-bottom: 20em;
@@ -126,60 +124,79 @@ const Tower = styled.img`
   width: 18vw;
 `
 
+const Cloud = styled.img`
+  position: absolute;
+  top: -25vh;
+  left: -8vw;
+  width: 30vw;
+  display: none;
+
+  @media screen {
+    display: block;
+  }
+`
+
 
 
 export default class contact extends Component {
   render() {
     return (
       <ContactBg>
-        <Container>
-          <Row>
-          
-            <Col xl="6" lg={{ size: 6, offset: 1 }} md={{ size: 6, offset: 1 }} sm="12">
-              <HeaderStyled>Contact</HeaderStyled>
-              <TextBox>
-                <Link href="/"><StyledLink href="/"><ContactImg src="img/Contact/messenger.png" /></StyledLink></Link>
-                MESSENGER
-                </TextBox>
-              <TextBox>
-                <ContactImg src="img/Contact/phone.png" />
-                095-581-2385 (พี่ทีเจ)
-                </TextBox>
-              <TextBox>
-                <ContactImg src="img/Contact/email.png" />
-                wippo@wipcamp.com
-                </TextBox>
-            </Col>
-            <Col xl="5" lg="5" md="5    " sm="auto">
-              <ImgObject src="img/Contact/obcontact1.png" />
-            </Col>
-          
-          </Row>
-          
+        <Parallax y={[0,10]} x={[-5,5]}>
+          <Cloud src="/img/Contact/cloud.png" />
+          <Parallax y={[0,-10]} x={[5,-5]}>
+            <Container>
+              <Row>
 
-          <Row>
-          <Col xl="6" lg="6" md="6" sm="auto">
-            </Col>
-            <Col xl="6" lg={{size:6, offset:7}} md={{size:6, offset:7}} sm="12">
-              <HeaderStyled>Follow Us</HeaderStyled>
-              <TextBox>
-                <ContactImg src="img/Contact/facebook.png" />
-                WIP Camp
+                <Col xl="6" lg={{ size: 6, offset: 1 }} md={{ size: 6, offset: 1 }} sm="12">
+                  <HeaderStyled>Contact</HeaderStyled>
+                  <TextBox>
+                    <Link href="/"><StyledLink href="/"><ContactImg src="img/Contact/messenger.png" /></StyledLink></Link>
+                    MESSENGER
+                </TextBox>
+                  <TextBox>
+                    <ContactImg src="img/Contact/phone.png" />
+                    095-581-2385 (พี่ทีเจ)
+                </TextBox>
+                  <TextBox>
+                    <ContactImg src="img/Contact/email.png" />
+                    wippo@wipcamp.com
+                </TextBox>
+                </Col>
+                <Col xl="5" lg="5" md="5    " sm="auto">
+                  <Parallax y={[-20,10]}>
+                    <ImgObject src="img/Contact/obcontact1.png" />
+                  </Parallax>
+                </Col>
+
+              </Row>
+
+
+              <Row>
+                <Col xl="6" lg="6" md="6" sm="auto">
+                </Col>
+                <Col xl="6" lg={{ size: 6, offset: 7 }} md={{ size: 6, offset: 7 }} sm="12">
+                  <HeaderStyled>Follow Us</HeaderStyled>
+                  <TextBox>
+                    <ContactImg src="img/Contact/facebook.png" />
+                    WIP Camp
               </TextBox>
-              <TextBox>
-                <ContactImg src="img/Contact/youtube.png" />
-                wip camp
+                  <TextBox>
+                    <ContactImg src="img/Contact/youtube.png" />
+                    wip camp
               </TextBox>
-              <TextBox>
-                <ContactImg src="img/Contact/instragram.png" />
-                wip camp
+                  <TextBox>
+                    <ContactImg src="img/Contact/instragram.png" />
+                    wip camp
             </TextBox>
-            </Col>
-          </Row>
-          <Row>
+                </Col>
+              </Row>
+              <Row>
 
-            </Row>
-        </Container>
+              </Row>
+            </Container>
+          </Parallax>
+        </Parallax>
         <Tower src="/img/Contact/tower.png" />
         <Mountain src="/img/Contact/mountain.png" />
       </ContactBg >
