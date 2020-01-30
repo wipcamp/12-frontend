@@ -20,11 +20,11 @@ const GameContainer = styled.div`
 `
 
 const Wrap = styled.div`
-    background: url(/img/temp.jpg) center no-repeat;
+    background: url(/img/Game/gamebg.png) center no-repeat;
     position: relative;
     display: table;
     width: 100%;
-    height: 354px;
+    height: auto;
     background-size: cover;
     
     @media (min-width: 768px) {
@@ -55,31 +55,24 @@ const Content = styled.div`
     }
 `
 
-const StyledButton = styled(Button)`
-    font-family: "ChakraPetch-Regular";
-    font-size: 18px;
-    padding: 0.5em 1.5em;
-    background-color: white;
-    border-color: white;
-    border-radius: 50px;
-    text-decoration: none !important;
+const StyledButton = styled.button`
+    background-color: transparent;
+    border: none;
+`
+const Play = styled.img`
+    width: 30vw;
+    height: auto;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
 
     @media (min-width: 768px) {
-        font-size: 40px;
-        padding: 1em 2em;
-        border-radius: 100px;
+        width: 40vw;
     }
 
     @media (min-width: 1024px) {
-        padding: 0.5em 1.75em;
+        width: 15vw;
     }
 `
-
-const StyledLink = styled.a`
-    color: black !important;
-    text-decoration: none !important;
-`
-
 const Cloud1 = styled.img`
     position: absolute;
     top: -20vh;
@@ -104,7 +97,11 @@ export default class Game extends Component {
                             <Content>
                                 <Wrap>
                                     <VerticalAlign>
-                                        <StyledButton><Link href="/"><StyledLink href="/">Go To Game</StyledLink></Link></StyledButton>
+                                        <StyledButton>
+                                        <Link href="/Game">
+                                            <Play src="/img/Game/play.png" />
+                                        </Link>
+                                        </StyledButton>
                                     </VerticalAlign>
                                 </Wrap>
                             </Content>
