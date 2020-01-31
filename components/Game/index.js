@@ -25,14 +25,21 @@ const Wrap = styled.div`
     display: table;
     width: 100%;
     height: auto;
-    background-size: cover;
-    
+    transition: background-size 0.8s ease-in-out, filter 0.8s ease-in-out;
+    background-size: 110%;
+    filter: grayscale(0);
+    pointer-events: none;
     @media (min-width: 768px) {
         height: 771px;   
     }
 
     @media (min-width: 1024px) {
-        height: 500px;    
+        height: 500px;  
+        :hover{
+        background-size: 100%;
+        filter: grayscale(0);
+    }
+        filter: grayscale(50%);  
     }
 `
 
@@ -58,6 +65,13 @@ const Content = styled.div`
 const StyledButton = styled.button`
     background-color: transparent;
     border: none;
+    pointer-events: auto;
+    transition: transform 0.5s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 0.5em #535CA9)
+    }
+
 `
 const Play = styled.img`
     width: 30vw;

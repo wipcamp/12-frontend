@@ -120,7 +120,7 @@ export default class When extends Component {
     }
 
     dateCheck = () => {
-        if (dayOpenRegis.isBefore(dayNow) || dayOpenRegis.isSame(dayNow)) {
+        if (dayOpenRegis.isBefore(dayNow) || dayOpenRegis.isSame(dayNow) || true) {
             this.setState({
                 openRegis: true
             })
