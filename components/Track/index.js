@@ -152,7 +152,6 @@ export default class Track extends Component {
                         textAlign="left"
                         textAlignResponsive="center"
                         color="white"
-                        padding=""
                         content="สำหรับการเลือกเข้าร่วม Track ลำดับที่ 2 จะได้เลือกภายในวันค่าย WIP Camp #12" />   
                         </ButtomContainer>
                         </Col>

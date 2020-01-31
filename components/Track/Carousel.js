@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'reactstrap'
-import Flippycardnaja from '../Core/FlippyCard'
+import { FlippyOnClickInCarousel } from '../Core/FlippyCard'
 import styled from 'styled-components'
 import { WhatImage } from '../What/WhatImage'
 
@@ -15,7 +15,7 @@ const Wrap = styled.div`
 `
 
 const Card = styled.div`
-    padding: 0 10px;
+    padding: 8vh 10px;
     scroll-snap-align: center;
 `
 export default class Carousel extends Component {
@@ -29,7 +29,7 @@ export default class Carousel extends Component {
     }
     render() {
         const elements = this.state.cards.map((data, key) => {
-            return (<Card key={key}> <Flippycardnaja srcFront={data.srcFront} srcBack={data.srcBack} /> </Card>);
+            return (<Card key={key}> <FlippyOnClickInCarousel flipDirection="horizontal" srcFront={data.srcFront} srcBack={data.srcBack} /> </Card>);
         })
         return (
             <Row>

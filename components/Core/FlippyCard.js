@@ -15,18 +15,45 @@ const Card = styled.div`
 
 const FlippyStyle = {
   width: '170px',
-  height: '293px',
+  height: 'auto',
   padding: '0px',
   margin: '0px 0px 0px 0px',
   
 }
 
+const FlippyStyle3 = {
+  width: '361.55px',
+  height: 'auto',
+  padding: '0px',
+  margin: '0px 0px 3vh 0px',
+  
+}
+
+
+const isMobile = () => {
+  if (window.innerWidth < 768 ) {
+    return true;
+  } else {
+    return false;
+  }
+} 
+
+const isIpad = () => {
+  if (isMobile) {
+    return false;
+  } else if (window.innerWidth > 1024){
+    return false;
+  } else {
+    return true;
+  }
+
+}
 
 const DefaultCardContents = ({ children , srcFront = props.srcFront , srcBack = props.srcBack }) => (
   <React.Fragment>
     <FrontSide
       style={{
-        display: 'flex',
+        // display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
@@ -41,7 +68,7 @@ const DefaultCardContents = ({ children , srcFront = props.srcFront , srcBack = 
     </FrontSide>
     <BackSide
       style={{
-        display: 'flex',
+        // display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
@@ -67,6 +94,18 @@ const FlippyOnHover = ({ flipDirection = 'vertical' }) => (
 );
 
 const FlippyOnClick = ({ flipDirection = 'vertical', srcFront = props.srcFront , srcBack = props.srcBack}) => (
+  <Flippy
+    flipOnClick={true}
+    flipDirection={flipDirection}
+    style={FlippyStyle3}
+  >
+    <DefaultCardContents srcFront={srcFront} srcBack={srcBack}>
+    I flip {flipDirection}ly on click {srcFront}
+    </DefaultCardContents>
+  </Flippy>
+);
+
+export const FlippyOnClickInCarousel = ({ flipDirection = 'vertical', srcFront = props.srcFront , srcBack = props.srcBack}) => (
   <Flippy
     flipOnClick={true}
     flipDirection={flipDirection}
