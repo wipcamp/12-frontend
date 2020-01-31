@@ -39,13 +39,13 @@ const ContentText = styled.p`
 
     @media (min-width: 768px) {
         font-size: 20px;
-        line-height: 26px;
+        line-height: 30px;
         text-align: ${props => props.textAlignResponsive};
         text-indent: ${props => props.textIndentIpad};
     }
 
     @media (min-width: 1024px) {
-        line-height: 24px;
+        line-height: 35px;
         text-align: ${props => props.textAlignDeskTop};
         text-indent: ${props => props.textIndentDesktop};
     }
