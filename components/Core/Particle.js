@@ -55,10 +55,10 @@ export default class StarParticle extends Component {
         params={{
             "particles": {
                 "number": {
-                    "value": 200,
+                    "value": 50,
                     "density": {
                         "enable": true,
-                        "value_area": 1500
+                        "value_area": 1000
                     }
                 },
                 "line_linked": {
@@ -109,10 +109,10 @@ export default class StarParticle extends Component {
         params={{
             "particles": {
                 "number": {
-                    "value": 200,
+                    "value": 50,
                     "density": {
                         "enable": true,
-                        "value_area": 1500
+                        "value_area": 1000
                     }
                 },
                 "line_linked": {
