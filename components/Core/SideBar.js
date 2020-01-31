@@ -16,7 +16,7 @@ const CustomLink = styled.a`
 export default class SideBar extends Component {
     render() {
         return (
-            <Menu customBurgerIcon={ <img src="img/menu.svg" /> } disableAutoFocus width={ '60%' }>
+            <Menu customBurgerIcon={ <img src="img/Sidebar/menu.svg" /> } disableAutoFocus width={ '60%' }>
             <CustomLink className="menu-item" href="#home">
               HOME
             </CustomLink>

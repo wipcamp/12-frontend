@@ -41,9 +41,8 @@ body {
   position: fixed;
   /* width: 36px;
   height: 30px; */
-  left: 36px;
-  top: 36px;
-
+  left: 26px;
+  top: 26px;
   width: 3em;
   height: auto;
 }
@@ -60,8 +59,8 @@ body {
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  height: 24px !important;
+  width: 24px !important;
 }
 
 /* Color/shape of close button cross */
