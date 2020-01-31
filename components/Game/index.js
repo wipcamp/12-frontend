@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header } from '../Core/Text'
 import Link from 'next/link'
 import { Parallax } from 'react-scroll-parallax'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const GameContainer = styled.div`
     padding-top: 3em;
@@ -89,7 +91,7 @@ const Play = styled.img`
 `
 const Cloud1 = styled.img`
     position: absolute;
-    top: -20vh;
+    top: 2vh;
     left: -8vw;
     width: 30vw;
     display: none;
@@ -100,12 +102,17 @@ const Cloud1 = styled.img`
 `
 
 export default class Game extends Component {
+    componentDidMount = () => {
+        AOS.init({
+            duration: 3000
+        })
+    }
     render() {
         return (
             <GameContainer>
-                <Parallax y={[0, 15]} x={[-5,5]}>
-                    <Cloud1 src="/img/Game/cloud1.png" />
-                    <Parallax y={[0, -15]} x={[5,-5]}>
+                
+                    <Cloud1 src="/img/Game/cloud1.png" data-aos="fade-down-right"/>
+                    
                         <Container className="text-center">
                             <Header color="#ffffff" headerText="GAME" />
                             <Content>
@@ -120,8 +127,7 @@ export default class Game extends Component {
                                 </Wrap>
                             </Content>
                         </Container>
-                    </Parallax>
-                </Parallax>
+                    
             </GameContainer>
         )
     }

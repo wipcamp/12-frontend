@@ -4,6 +4,8 @@ import { Container, Col, Row, } from 'reactstrap'
 import styled from 'styled-components'
 import Link from 'next/link'
 import { Parallax } from 'react-scroll-parallax'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactBg = styled.div`
     display: table;
@@ -39,12 +41,9 @@ margin-right:14px;
 `
 const TextBox = styled.div`
 color: white;
-margin: 25px 0px 25px 72px;
+margin: 25px 0px 25px 0px;
 flex-wrap: wrap;
-font-family: 'Chakra Petch', sans-serif;
 width: 100%;
-font-style: normal;
-font-weight: normal;
 font-size: 12px;
 line-height: 18px;
 display:block;
@@ -127,7 +126,7 @@ const Tower = styled.img`
 
 const Cloud = styled.img`
   position: absolute;
-  top: -25vh;
+  top: -15vh;
   left: -8vw;
   width: 30vw;
   display: none;
@@ -140,16 +139,21 @@ const Cloud = styled.img`
 
 
 export default class contact extends Component {
+  componentDidMount() {
+    AOS.init({
+        duration: 3000
+    })
+}
   render() {
     return (
       <ContactBg>
-        <Parallax y={[0, 10]} x={[-5, 5]}>
-          <Cloud src="/img/Contact/cloud.png" />
-          <Parallax y={[0, -10]} x={[5, -5]}>
+        
+          <Cloud src="/img/Contact/cloud.png" data-aos="fade-down-right" />
+          
             <Container>
               <Row>
 
-                <Col xl="6" lg={{ size: 6, offset: 1 }} md={{ size: 6, offset: 1 }} sm="12">
+                <Col xl="6" lg="6" md="6" sm="12" xs="12">
                   <HeaderStyled>Contact</HeaderStyled>
                   <TextBox>
                     <StyledLink href="https://www.facebook.com/messages/t/wipcamp" target="_blank">
@@ -170,8 +174,8 @@ export default class contact extends Component {
                     </StyledLink>
                   </TextBox>
                 </Col>
-                <Col xl="5" lg="5" md="5" sm="auto">
-                  <Parallax y={[-20, 10]}>
+                <Col xl="6" lg="6" md="6" sm="12" xs="12">
+                  <Parallax y={[-10, 10]}>
                     <ImgObject src="img/Contact/obcontact1.png" />
                   </Parallax>
                 </Col>
@@ -180,9 +184,8 @@ export default class contact extends Component {
 
 
               <Row>
-                <Col xl="6" lg="6" md="6" sm="auto">
-                </Col>
-                <Col xl="6" lg={{ size: 6, offset: 7 }} md={{ size: 6, offset: 7 }} sm="12">
+                <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
+                <Col xl="6" lg="6" md="6" sm="12" xs="12">
                   <HeaderStyled>Follow Us</HeaderStyled>
                   <TextBox>
                     <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank">
@@ -208,8 +211,7 @@ export default class contact extends Component {
 
               </Row>
             </Container>
-          </Parallax>
-        </Parallax>
+          
         <Tower src="/img/Contact/tower.png" />
         <Mountain src="/img/Contact/mountain.png" />
       </ContactBg >

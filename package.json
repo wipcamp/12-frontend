@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "aos": "^2.3.4",
     "babelrc": "^0.0.7",
     "bootstrap": "^4.4.1",
     "dayjs": "^1.8.19",

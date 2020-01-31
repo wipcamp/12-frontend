@@ -10,6 +10,8 @@ import styled from 'styled-components'
 import { Header, SubHeader, Content } from '../Core/Text'
 import Iframe from 'react-iframe'
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const WhereBg = styled.div`
     padding-bottom: 4rem;
@@ -83,6 +85,9 @@ export default class Where extends Component {
     componentDidMount() {
         window.addEventListener('resize', this.updateWindowDimensions)
         this.updateWindowDimensions()
+        AOS.init({
+            duration: 3000
+        })
     }
 
     updateWindowDimensions = () => {
@@ -103,11 +108,11 @@ export default class Where extends Component {
 
             <WhereBg>
                 <Container fluid={true}>
-                    <Parallax y={[0, 10]}>
-                        <Star1 src="/img/Where/star1.png" />
-                        <Parallax y={[0,15]}>
-                            <Star2 src="/img/Where/star2.png" />
-                            <Parallax y={[0,-25]}>
+                    
+                        <Star1 src="/img/Where/star1.png" data-aos="fade-down-right"/>
+                        
+                            <Star2 src="/img/Where/star2.png" data-aos="fade-down-left"/>
+                        
                                 <Row>
                                     <Col>
                                         <Header color="#ffffff" headerText="WHERE" />
@@ -130,9 +135,7 @@ export default class Where extends Component {
                                         </Content>
                                     </Col>
                                 </Row>
-                            </Parallax>
-                        </Parallax>
-                    </Parallax>
+                            
                 </Container>
             </WhereBg>
         )
