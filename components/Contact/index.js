@@ -29,14 +29,12 @@ border-radius: 0em;
 
 @media (min-width:768px){ 
 margin-right:17px;
-border-radius:1.625em;
 }
 
 @media (min-width: 992px) {
 width:3.75em;
 height:3.75em; 
 margin-right:14px;
-border-radius:2.188em;
 }
 `
 const TextBox = styled.div`
@@ -68,10 +66,13 @@ text-indent: 0.625em;
 }
 `
 const StyledLink = styled.a`
-color: black !important;
+color: white !important;
+text-decoration: none !important;
+font-family: 'Sarabun-Regular', sans-serif;
+font-size: 20px;
 `
 const HeaderStyled = styled.div`
-font-family: 'Prompt-light', sans-serif;
+font-family: 'NotoSans-Regular', sans-serif;
 color:white;
 display:block;
 font-style: normal;
@@ -81,7 +82,7 @@ font-size: 36px;
 line-height: 49px;
 
 @media (min-width: 768px) {
-  font-size: 48px;
+  font-size: 64px;
   line-height: 109px;
   text-align:left;
   line-height: 65px;
@@ -89,7 +90,7 @@ line-height: 49px;
 
 @media (min-width: 992px) {
   font-weight: normal;
-  font-size: 48px;
+  font-size: 64px;
   line-height: 65px;
 }
 `
@@ -142,29 +143,35 @@ export default class contact extends Component {
   render() {
     return (
       <ContactBg>
-        <Parallax y={[0,10]} x={[-5,5]}>
+        <Parallax y={[0, 10]} x={[-5, 5]}>
           <Cloud src="/img/Contact/cloud.png" />
-          <Parallax y={[0,-10]} x={[5,-5]}>
+          <Parallax y={[0, -10]} x={[5, -5]}>
             <Container>
               <Row>
 
                 <Col xl="6" lg={{ size: 6, offset: 1 }} md={{ size: 6, offset: 1 }} sm="12">
                   <HeaderStyled>Contact</HeaderStyled>
                   <TextBox>
-                    <Link href="/"><StyledLink href="/"><ContactImg src="img/Contact/messenger.png" /></StyledLink></Link>
-                    MESSENGER
-                </TextBox>
+                    <StyledLink href="https://www.facebook.com/messages/t/wipcamp" target="_blank">
+                      <ContactImg src="img/Contact/messenger.png" />
+                      MESSENGER
+                    </StyledLink>
+                  </TextBox>
                   <TextBox>
-                    <ContactImg src="img/Contact/phone.png" />
-                    095-581-2385 (พี่ทีเจ)
-                </TextBox>
+                    <StyledLink href="tel://0955812385">
+                      <ContactImg src="img/Contact/phone.png" />
+                      095-581-2385 (พี่ทีเจ)
+                    </StyledLink>
+                  </TextBox>
                   <TextBox>
-                    <ContactImg src="img/Contact/email.png" />
-                    wippo@wipcamp.com
-                </TextBox>
+                    <StyledLink href="mailto:wippo@wipcamp.com" target="_blank">
+                      <ContactImg src="img/Contact/email.png" />
+                      wippo@wipcamp.com
+                    </StyledLink>
+                  </TextBox>
                 </Col>
-                <Col xl="5" lg="5" md="5    " sm="auto">
-                  <Parallax y={[-20,10]}>
+                <Col xl="5" lg="5" md="5" sm="auto">
+                  <Parallax y={[-20, 10]}>
                     <ImgObject src="img/Contact/obcontact1.png" />
                   </Parallax>
                 </Col>
@@ -178,17 +185,23 @@ export default class contact extends Component {
                 <Col xl="6" lg={{ size: 6, offset: 7 }} md={{ size: 6, offset: 7 }} sm="12">
                   <HeaderStyled>Follow Us</HeaderStyled>
                   <TextBox>
-                    <ContactImg src="img/Contact/facebook.png" />
-                    WIP Camp
-              </TextBox>
+                    <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank">
+                      <ContactImg src="img/Contact/facebook.png" />
+                      WIP Camp
+                    </StyledLink>
+                  </TextBox>
                   <TextBox>
-                    <ContactImg src="img/Contact/youtube.png" />
-                    wip camp
-              </TextBox>
+                    <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
+                      <ContactImg src="img/Contact/youtube.png" />
+                      WIP camp
+                    </StyledLink>
+                  </TextBox>
                   <TextBox>
-                    <ContactImg src="img/Contact/instragram.png" />
-                    wip camp
-            </TextBox>
+                    <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank">
+                      <ContactImg src="img/Contact/instragram.png" />
+                      wipcamp
+                    </StyledLink>
+                  </TextBox>
                 </Col>
               </Row>
               <Row>
