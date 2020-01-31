@@ -131,7 +131,7 @@ const Cloud = styled.img`
   width: 30vw;
   display: none;
 
-  @media screen {
+  @media (min-width: 1024px) {
     display: block;
   }
 `

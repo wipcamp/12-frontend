@@ -120,7 +120,7 @@ export default class SideScroll extends Component {
     }
 
     slideWidth = () => {
-        return (document.querySelector('.slide').clientWidth + 20)
+        return (document.querySelector('.slide').clientWidth)
     }
 
     render() {
