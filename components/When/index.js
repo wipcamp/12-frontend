@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
 import { isDayNow, dayAnnouce, dayCloseRegis, dayConfirm, dayNow, dayWip, dayOpenRegis } from './Day'
 import { Parallax } from 'react-scroll-parallax'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const WhenContainer = styled.div`
     padding: 0rem 0 3rem 0;
@@ -151,18 +152,21 @@ export default class When extends Component {
         window.addEventListener('resize', this.updateWindowDimensions)
         this.updateWindowDimensions()
         this.dateCheck()
+        AOS.init({
+            duration: 3000
+        })
     }
     render() {
         return (
             <WhenContainer>
                 <BigContainer fluid={true} >
-                    <Parallax y={[0,30]} x={[0,0]}>
+                    <div data-aos="fade-down-right">
                         <Star src="/img/When/star1.png" />
-                        <Parallax y={[0,-5]} x={[0,0]}>
+                        
                             <Zodiac src="/img/When/zodiac.png" />
-                            <Parallax y={[0,-5]} x={[0,-4]}>
-                                <Cloud src="/img/When/cloud.png" />
-                            <Parallax y={[0,-20]} x={[0,4]}>
+                            </div>
+                                <Cloud src="/img/When/cloud.png" data-aos="fade-down-left"/>
+                            
                                 <Row>
                                     <Col>
                                         <Header color="#ffffff" headerText="WHEN" />
@@ -203,10 +207,7 @@ export default class When extends Component {
                                     </Col>
                                     <Col lg='1' md="auto" sm="auto"></Col>
                                 </WhenRow>
-                                </Parallax>
-                            </Parallax>
-                        </Parallax>
-                    </Parallax>
+                                
                 </BigContainer>
 
             </WhenContainer>

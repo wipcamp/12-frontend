@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import { Header, SubHeader, Content } from '../Core/Text'
 import WhatSideScroll from './WhatSideScroll'
 import { Parallax } from 'react-scroll-parallax'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const WhatBg = styled.div`
     padding-bottom: 4rem;
@@ -73,14 +75,19 @@ const Cloud2 = styled(Cloud1)`
     top: 70vh;
 `
 export default class What extends Component {
+    componentDidMount = () => {
+        AOS.init({
+            duration: 3000
+        })
+    }
     render() {
         return (
             <WhatBg>
-                <Parallax y={[0,5]} x={[0,-5]}>
-                    <Cloud1 src="/img/What/cloud1.png" />
-                    <Parallax y={[0,5]} x={[0,10]}>
-                        <Cloud2 src="/img/What/cloud2.png" />
-                        <Parallax y={[0,-10]} x={[0,-5]}>
+                
+                        <Cloud1 src="/img/What/cloud1.png" data-aos="fade-down-left"/>
+                    
+                        <Cloud2 src="/img/What/cloud2.png" data-aos="fade-down-right" />
+                    
                             <br />
                             <div className="text-center">
                                 <Header color="white" headerText="WHAT" />
@@ -116,9 +123,7 @@ export default class What extends Component {
                                 </Col>
                             </Row>
                         </WrapGrid>
-                        </Parallax>
-                    </Parallax>
-                </Parallax>
+                        
             </WhatBg >
         )
     }

@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
 import { ImageInfo, WhoMobile } from '../Core/ImgInfo'
 import { Parallax } from 'react-scroll-parallax'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const WhoContainer = styled.div`
     position: relative;
@@ -65,7 +67,7 @@ const Zodiac = styled.img`
     position: absolute;
     right: 2vw;
     width: 20vw;
-    bottom: -15vh;
+    bottom: -25vh;
     display: none;
 
     @media (min-width: 1024px) {
@@ -75,7 +77,7 @@ const Zodiac = styled.img`
 
 const Star = styled(Zodiac)`
     right: 2vw;
-    bottom: -4vh;
+    bottom: -20vh;
 `
 
 export default class Who extends Component {
@@ -86,6 +88,9 @@ export default class Who extends Component {
 
     componentDidMount() {
         window.addEventListener('resize', this.updateWindowDimensions)
+        AOS.init({
+            duration: 3000
+        })
     }
 
     updateWindowDimensions = () => {
@@ -106,9 +111,7 @@ export default class Who extends Component {
         return (
             <WhoContainer>
                 <ContentContainer fluid={true} >
-                    <Parallax y={[0, 10]}>
-                        <Parallax y={[0, 10]}>
-                            <Parallax y={[0, -20]}>
+                    
                                 <Row>
                                     <Col>
                                         <Header color="white" headerText="WHO" />
@@ -197,11 +200,11 @@ export default class Who extends Component {
                                         <Image2 src="/img/Who/Wippo.png" />
                                     </Col>
                                 </Row>
-                            </Parallax>
+                            <div data-aos="fade-down-left"> 
                             <Star src="/img/Who/star.png" />
-                        </Parallax>
+                        
                         <Zodiac src="/img/Who/zodiac.png" />
-                    </Parallax>
+                    </div>
                 </ContentContainer>
             </WhoContainer>
         )

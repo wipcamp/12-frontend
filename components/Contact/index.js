@@ -4,6 +4,8 @@ import { Container, Col, Row, } from 'reactstrap'
 import styled from 'styled-components'
 import Link from 'next/link'
 import { Parallax } from 'react-scroll-parallax'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactBg = styled.div`
     display: table;
@@ -124,7 +126,7 @@ const Tower = styled.img`
 
 const Cloud = styled.img`
   position: absolute;
-  top: -25vh;
+  top: -15vh;
   left: -8vw;
   width: 30vw;
   display: none;
@@ -137,12 +139,17 @@ const Cloud = styled.img`
 
 
 export default class contact extends Component {
+  componentDidMount() {
+    AOS.init({
+        duration: 3000
+    })
+}
   render() {
     return (
       <ContactBg>
-        <Parallax y={[0, 10]} x={[-5, 5]}>
-          <Cloud src="/img/Contact/cloud.png" />
-          <Parallax y={[0, -10]} x={[5, -5]}>
+        
+          <Cloud src="/img/Contact/cloud.png" data-aos="fade-down-right" />
+          
             <Container>
               <Row>
 
@@ -168,7 +175,7 @@ export default class contact extends Component {
                   </TextBox>
                 </Col>
                 <Col xl="6" lg="6" md="6" sm="12" xs="12">
-                  <Parallax y={[-20, 10]}>
+                  <Parallax y={[-10, 10]}>
                     <ImgObject src="img/Contact/obcontact1.png" />
                   </Parallax>
                 </Col>
@@ -204,8 +211,7 @@ export default class contact extends Component {
 
               </Row>
             </Container>
-          </Parallax>
-        </Parallax>
+          
         <Tower src="/img/Contact/tower.png" />
         <Mountain src="/img/Contact/mountain.png" />
       </ContactBg >

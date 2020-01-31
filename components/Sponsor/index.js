@@ -4,6 +4,8 @@ import SponsorImage from './SponsorImage'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import { Parallax } from 'react-scroll-parallax'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SponsorBg = styled.div`
     position: relative;
@@ -36,7 +38,7 @@ const WrapLogo = styled.div`
 
 const Cloud = styled.img`
     position: absolute;
-    top: -12vh;
+    top: 0vh;
     right: -15vw;
     width: 35vw;
     display: none;
@@ -65,12 +67,19 @@ export default class Sponsor extends Component {
             { src: "/img/Sponsor/central.png" }
         ]
     };
+
+    componentDidMount = () => {
+        AOS.init({
+            duration: 3000
+        })
+    }
+
     render() {
         return (
             <SponsorBg>
-                <Parallax y={[0,15]} x={[5,-5]}>
-                    <Cloud src="/img/Sponsor/cloud.png" />
-                    <Parallax y={[0,-15]} x={[-5,5]}>
+                
+                    <Cloud src="/img/Sponsor/cloud.png" data-aos="fade-down-left"/>
+                
                         <div className="text-center">
                             <Header color="white" headerText="SPONSOR" />
                             <SubHeader color="white" subHeaderText="ผู้สนับสนุน" />
@@ -82,8 +91,8 @@ export default class Sponsor extends Component {
                                 ))}
                             </WrapLogo>
                         </Container>
-                    </Parallax>
-                </Parallax>
+                    
+                
             </SponsorBg>
         )
     }

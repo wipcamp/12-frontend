@@ -6,6 +6,8 @@ import Flippycardnaja from '../Core/FlippyCard'
 import { Container, Row, Col } from 'reactstrap'
 import CarouselTrack from './Carousel'
 import { Parallax } from 'react-scroll-parallax'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const TrackBg = styled.div`
     position: relative;
@@ -95,6 +97,9 @@ export default class Track extends Component {
     componentDidMount = () => {
         window.addEventListener('resize', this.updateDimensions);
         window.addEventListener('resize', this.showHideElement);
+        AOS.init({
+            duration: 3000
+        })
     }
 
     componentWillUnmount() {
@@ -104,8 +109,7 @@ export default class Track extends Component {
     render() {
         return (
             <TrackBg>
-                <Parallax y={[0,10]}>
-                    <Parallax y={[0,-10]}>
+                
                         <Container>
                             <Row>
                                 <Col>
@@ -169,9 +173,9 @@ export default class Track extends Component {
                             </Col>
                             <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
                         </Row>
-                    </Parallax>
-                    <Star src="/img/Track/star.png" />
-                </Parallax>
+                    
+                    <Star src="/img/Track/star.png" data-aos="fade-down-left" />
+                
             </TrackBg>
         )
     }
