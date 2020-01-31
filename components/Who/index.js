@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
-import { ImageInfo, WhoMobile } from '../Core/ImgInfo'
+import { ImageInfo, WhoMobile } from './ImgInfo'
 import { Parallax } from 'react-scroll-parallax'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
