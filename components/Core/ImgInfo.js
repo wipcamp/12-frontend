@@ -73,6 +73,8 @@ const ImageInfo = (props) => {
                         content={props.content || "Unknow"}
                         color={props.color}
                         textAlign = {props.textAlign || "Unknow"}
+                        textAlignResponsive = {props.textAlignResponsive || "Unknow"}
+                        textAlignDeskTop = {props.textAlignDeskTop || "Unknow"}
                     />
                 </TextBox>
             </Fieldset>
@@ -100,6 +102,7 @@ const WhoMobile = props => {
                 <Content
                     content={props.content || "Unknow"}
                     color={props.color}
+                    textAlign = {props.textAlign || "Unknow"}
                 />
             </TextBox>
         </WhoMobileContainer>

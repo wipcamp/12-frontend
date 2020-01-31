@@ -45,7 +45,8 @@ const ContentText = styled.p`
     }
 
     @media (min-width: 1024px) {
-        line-height: 35px;
+        line-height: 24px;
+        text-align: ${props => props.textAlignDeskTop};
         text-indent: ${props => props.textIndentDesktop};
     }
 `
