@@ -83,7 +83,7 @@ const FaqsAnswer = styled.div`
     color: white;
     text-align: center;
     position:absolute;
-    top: -15em;
+    top: -13.5em;
     opacity: ${props => props.opacity || '0'};
     z-index: 2;
     @media (min-width: 768px) {
@@ -107,7 +107,7 @@ const AnswerContent = styled.p`
     right: 0;
     padding: 1em 0 0 0;
     width: 70%;
-    font-size: 15px;
+    font-size: 16px;
     @media (min-width: 768px) {
         padding: 1em 2em 1em 2em;
         width:60%;
@@ -119,12 +119,15 @@ const AnswerContent = styled.p`
 `
 
 const FaqsImg = styled.img`
-    width : 80%;
+    width : 232px;
+    height: 111px;
     /* top: -64vh; */
     z-index: 0;
     margin-top: 12em;
     animation: float 5s ease-in-out infinite;
-    @media (min-width: 500px) {
+    @media (min-width: 414px) {
+        width: 307px;
+        height: 147px;
     }
     @media (min-width: 768px) {
         margin-top: 10em;
@@ -228,7 +231,7 @@ export default class Faqs extends Component {
         activeStyle: "drop-shadow(0 0 0.5rem #CCA403)",
         isMobile: true,
         middleContent: 6,
-        sideCol:3
+        sideCol: 3
     }
 
     changeAnswer = e => {
@@ -267,112 +270,112 @@ export default class Faqs extends Component {
     }
 
     updateWindowDimensions = () => {
-        if (window.innerWidth < 1080){
+        if (window.innerWidth < 1080) {
             this.setState({
                 isMobile: true,
                 middleContent: 12,
-                sideCol:'auto'
+                sideCol: 'auto'
             })
-    } else {
-        this.setState({
-            isMobile: false,
-            middleContent: 6,
-            sideCol:3
-        })
+        } else {
+            this.setState({
+                isMobile: false,
+                middleContent: 6,
+                sideCol: 3
+            })
+        }
     }
-}
 
-getType = () => {
-    return this.state.isMobile
-}
-
+    getType = () => {
+        return this.state.isMobile
+    }
 
 
-render() {
-    return (
-        <FaqsContainer>
-            <StyledContainer>
-                <Row>
-                    <Col style={{ margin: '0px' }}>
-                        <Header color="#ffffff" headerText="FAQS" />
-                        <SubHeader subHeaderText="คำถามที่พบบ่อย" color="#ffffff" />
-                    </Col>
-                </Row>
-                { (this.getType())?
-                     <DropRow>
-                     <Col>
-                         <div className="d-flex justify-content-center">
-                             <StyledSelect value={this.state.currentAnswerIndex} onChange={() => this.changeAnswer(event.target.value)}>
-                                 <option value="99">กรุณาเลือกคำถาม</option>
-                                 <option value="0">รับสมัครคนเข้าค่ายกี่คน ?</option>
-                                 <option value="1">พักค้างคืนที่ไหน ?</option>
-                                 <option value="2">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</option>
-                                 <option style={{ overflow: "warp" }} value="3">มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</option>
-                                 <option value="4">หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</option>
-                                 <option value="5">จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</option>
-                             </StyledSelect>
-                         </div>
-                     </Col>
-                 </DropRow> :
-                                 <Row className="mt-5 order-2">
-                                 <Col lg='4' md='3' sm="3" xs="2">
-                                     <div className="d-flex flex-column align-items-center">
-                                         <FaqsBox onClick={() => this.changeAnswer(0)}>
-                                             <Qtag lineHeight="3em">รับสมัครคนเข้าค่ายกี่คน ?</Qtag>
-                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_0} />
-                                         </FaqsBox>
-                                         <FaqsBox onClick={() => this.changeAnswer(1)}>
-                                             <Qtag lineHeight="3em">พักค้างคืนที่ไหน ?</Qtag>
-                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_1} />
-                                         </FaqsBox>
-                                         <FaqsBox onClick={() => this.changeAnswer(2)}>
-                                             <Qtag lineHeight="3em">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</Qtag>
-                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_2} />
-                                         </FaqsBox>
-                                     </div>
-                                 </Col>
-                                 <Col lg='4' md='6' sm="6" xs="8">
-                                 </Col>
-                                 <Col lg='4' md='3' sm="3" xs="2">
-                                     <div className="d-flex flex-column align-items-center">
-                                         <FaqsBox onClick={() => this.changeAnswer(3)}>
-                                             <Qtag>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</Qtag>
-                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_3} />
-                                         </FaqsBox>
-                                         <FaqsBox onClick={() => this.changeAnswer(4)} >
-                                             <Qtag>หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</Qtag>
-                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_4} />
-                                         </FaqsBox>
-                                         <FaqsBox onClick={() => this.changeAnswer(5)} active={this.state.activeQuestion_5}>
-                                             <Qtag>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</Qtag>
-                                             <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_5} />
-                                         </FaqsBox>
-                                     </div>
-                                 </Col>
-                             </Row>
-                }
-                <Row className="">
-                    <Col lg='12'>
-                        <FaqsImgContainer>
-                            <FaqsImg src="/img/Faqs/Book.png" />
-                        </FaqsImgContainer>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col lg={this.state.sideCol} md="auto" sm="auto" ></Col>
-                    <Col lg={this.state.middleContent} md="12" sm="12" >
-                        <AnswerContainer className="d-flex align-items-center">
-                            <FaqsAnswer className={this.state.faqClass} opacity={this.state.answerOpacity}>
-                                <AnswerContent>{this.state.answer}</AnswerContent>
-                                <AnswerBoxImage src='img/Faqs/answerbox.png' />
-                            </FaqsAnswer>
-                        </AnswerContainer>
-                    </Col>
-                    <Col lg={this.state.sideCol} md="12" sm="auto" ></Col>
-                </Row>
 
-            </StyledContainer>
-        </FaqsContainer>
-    )
-}
+    render() {
+        return (
+            <FaqsContainer>
+                <StyledContainer>
+                    <Row>
+                        <Col style={{ margin: '0px' }}>
+                            <Header color="#ffffff" headerText="FAQS" />
+                            <SubHeader subHeaderText="คำถามที่พบบ่อย" color="#ffffff" />
+                        </Col>
+                    </Row>
+                    {(this.getType()) ?
+                        <DropRow>
+                            <Col>
+                                <div className="d-flex justify-content-center">
+                                    <StyledSelect value={this.state.currentAnswerIndex} onChange={() => this.changeAnswer(event.target.value)}>
+                                        <option value="99">กรุณาเลือกคำถาม</option>
+                                        <option value="0">รับสมัครคนเข้าค่ายกี่คน ?</option>
+                                        <option value="1">พักค้างคืนที่ไหน ?</option>
+                                        <option value="2">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</option>
+                                        <option style={{ overflow: "warp" }} value="3">มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</option>
+                                        <option value="4">หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</option>
+                                        <option value="5">จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</option>
+                                    </StyledSelect>
+                                </div>
+                            </Col>
+                        </DropRow> :
+                        <Row className="mt-5 order-2">
+                            <Col lg='4' md='3' sm="3" xs="2">
+                                <div className="d-flex flex-column align-items-center">
+                                    <FaqsBox onClick={() => this.changeAnswer(0)}>
+                                        <Qtag lineHeight="3em">รับสมัครคนเข้าค่ายกี่คน ?</Qtag>
+                                        <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_0} />
+                                    </FaqsBox>
+                                    <FaqsBox onClick={() => this.changeAnswer(3)}>
+                                        <Qtag>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</Qtag>
+                                        <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_3} />
+                                    </FaqsBox>
+                                </div>
+                            </Col>
+                            <Col className="d-flex flex-column align-items-center" lg='4' md='6' sm="6" xs="8">
+                                <FaqsBox onClick={() => this.changeAnswer(1)}>
+                                    <Qtag lineHeight="3em">พักค้างคืนที่ไหน ?</Qtag>
+                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_1} />
+                                </FaqsBox>
+                                <FaqsBox onClick={() => this.changeAnswer(4)} >
+                                    <Qtag>หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</Qtag>
+                                    <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_4} />
+                                </FaqsBox>
+                            </Col>
+                            <Col lg='4' md='3' sm="3" xs="2">
+                                <div className="d-flex flex-column align-items-center">
+                                    <FaqsBox onClick={() => this.changeAnswer(2)}>
+                                        <Qtag lineHeight="3em">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</Qtag>
+                                        <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_2} />
+                                    </FaqsBox>
+                                    <FaqsBox onClick={() => this.changeAnswer(5)} active={this.state.activeQuestion_5}>
+                                        <Qtag>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</Qtag>
+                                        <BoxImage src="/img/Faqs/faqsbox.png" active={this.state.activeQuestion_5} />
+                                    </FaqsBox>
+                                </div>
+                            </Col>
+                        </Row>
+                    }
+                    <Row className="">
+                        <Col lg='12'>
+                            <FaqsImgContainer>
+                                <FaqsImg src="/img/Faqs/Book.png" />
+                            </FaqsImgContainer>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg={this.state.sideCol} md="auto" sm="auto" ></Col>
+                        <Col lg={this.state.middleContent} md="12" sm="12" >
+                            <AnswerContainer className="d-flex align-items-center">
+                                <FaqsAnswer className={this.state.faqClass} opacity={this.state.answerOpacity}>
+                                    <AnswerContent>{this.state.answer}</AnswerContent>
+                                    {/* <AnswerBoxImage src='img/Faqs/answerbox.png' /> */}
+                                </FaqsAnswer>
+                            </AnswerContainer>
+                        </Col>
+                        <Col lg={this.state.sideCol} md="12" sm="auto" ></Col>
+                    </Row>
+
+                </StyledContainer>
+            </FaqsContainer>
+        )
+    }
 }
