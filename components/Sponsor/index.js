@@ -22,7 +22,8 @@ const SponsorBg = styled.div`
 `
 
 const WrapLogo = styled.div`
-    background-color: #141730;
+    
+    
     text-align: center;
     margin: 2em 2.25em 0;
 
@@ -31,9 +32,17 @@ const WrapLogo = styled.div`
     }
     
     @media (min-width: 1024px) {
-        margin: 3em 0 0;
+        border: 50px solid transparent;
+        border-image: url(/img/Sponsor/Frame.png) 80 stretch;
+        margin: -1.5em;
         padding: 2.5em;
     }
+`
+
+const Frame = styled.div`
+background-color: #FAFAFA;
+margin: 3em 0 0;
+
 `
 
 const Cloud = styled.img`
@@ -85,11 +94,13 @@ export default class Sponsor extends Component {
                             <SubHeader color="white" subHeaderText="ผู้สนับสนุน" />
                         </div>
                         <Container>
+                            <Frame>
                             <WrapLogo>
                                 {this.state.images.map((data, key) => (
                                     <SponsorImage key={key} src={data.src} width={data.width} height={data.height} />
                                 ))}
                             </WrapLogo>
+                            </Frame>
                         </Container>
                     
                 

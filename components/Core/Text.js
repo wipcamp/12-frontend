@@ -13,7 +13,7 @@ const HeadLine = styled.h1`
     }
 
     @media (min-width: 1024px) {
-        font-size: 110px;
+        font-size: 90px;
     }
 `
 
@@ -24,7 +24,7 @@ const SubHead = styled.h2`
     color: ${props => props.color};
 
     @media (min-width: 768px) {
-        font-size: 35px;
+        font-size: 30px;
     }
 `
 
@@ -45,6 +45,7 @@ const ContentText = styled.p`
     }
 
     @media (min-width: 1024px) {
+        font-size: 18px;
         line-height: 35px;
         text-align: ${props => props.textAlignDeskTop};
         text-indent: ${props => props.textIndentDesktop};

@@ -84,6 +84,7 @@ export default class SideScroll extends Component {
             { src: "/img/What/3.png" },
             { src: "/img/What/4.png" },
             { src: "/img/What/5.png" },
+            { src: "/img/What/8.jpg" },
             { src: "/img/What/7.png" }
         ],
         currentIndex: 0,
