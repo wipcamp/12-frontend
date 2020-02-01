@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
@@ -23,11 +23,23 @@ const ContentContainer = styled(Container)`
     }
 `
 
+const Float = keyframes`
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+    }`
+
 const Image = styled.img`
-top: -21vh;
+top: -15em;
 display: none;
 width: 14vw;
 display: none;
+animation: ${Float} 5s infinite;
 
 @media (min-width: 1080px) {
 position: absolute;
@@ -42,6 +54,7 @@ right: 0;
 }
 `
 const Image2 = styled.img`
+    animation: ${Float} 5s infinite;
     display: none;
 @media (min-width: 768px) {
     display: block;

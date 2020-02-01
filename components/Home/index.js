@@ -124,7 +124,7 @@ export default class Home extends Component {
                         </WrapLogoCana>
                         <StyledButton>REGISTER</StyledButton>
                         </Parallax>
-                        <Wippo src="/img/Home/newWippo.png" />
+                        {/* <Wippo src="/img/Home/newWippo.png" /> */}
                     </Parallax>
                     </HomeContent>
                 </HomeContainer>
