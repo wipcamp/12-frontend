@@ -68,7 +68,7 @@ const StyledButton = styled.button`
     background-color: transparent;
     border: none;
     pointer-events: auto;
-    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     &:hover {
         transform: scale(1.1);
         filter: drop-shadow(0 0 0.5em #535CA9)
