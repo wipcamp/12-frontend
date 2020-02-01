@@ -101,7 +101,7 @@ export default class What extends Component {
                                         <Content
                                             textIndent="24px"
                                             textIndentIpad="50px"
-                                            textIndentDesktop="0px"                                
+                                            textIndentDesktop="50px"                                
                                             textAlign="left"
                                             color="white"
                                             content="กลับมาอีกครั้งพร้อมกับภารกิจอันยิ่งใหญ่ ซึ่งเปิดโอกาสให้น้อง ๆ 
