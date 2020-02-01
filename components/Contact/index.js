@@ -119,9 +119,9 @@ const Mountain = styled.img`
 `
 const Tower = styled.img`
   position: absolute;
-  bottom: 0;
+  bottom: 20vw;
   left: 3em;
-  width: 18vw;
+  width: 13vw;
 `
 
 const Cloud = styled.img`
