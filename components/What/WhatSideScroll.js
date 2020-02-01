@@ -61,7 +61,10 @@ const RightArrowButton = styled.div`
 
     @media (min-width: 1440px) {
         top: 140px;
-        display: flex;
+    }
+
+    @media (min-width: 1920px) {
+        top: 200px;
     }
 `
 
