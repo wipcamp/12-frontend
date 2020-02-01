@@ -13,6 +13,14 @@ const Image = styled.img`
     }
 
     @media (min-width: 1024px) {
+        height: 20vh;
+    }
+
+    @media (min-width: 1280px) {
+        height: 35vh;
+    }
+
+    @media (min-width: 1440px) {
         height: 40vh;
     }
 `

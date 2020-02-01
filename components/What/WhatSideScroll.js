@@ -25,14 +25,43 @@ const LeftArrowButton = styled.div`
     color: white;
     display: none;
     visibility: hidden;
+    position: absolute;
+    fill: white;
+    top: 133px;
+    left: 25px;
+    z-index: 3;
+    transform: rotate(180deg);
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1280px) {
         display: flex;
     }
 `
 
-const RightArrowButton = styled(LeftArrowButton)`
+const RightArrowButton = styled.div`
+    height: 62.68px;
+    width: 63.5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: rgba(134, 134, 134, 0.68);
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    fill: white;
+    right: 17.95px;
+    z-index: 3;
     visibility: visible;
+
+    @media (min-width: 1280px) {
+        top: 100px;
+        display: flex;
+    }
+
+    @media (min-width: 1440px) {
+        top: 140px;
+        display: flex;
+    }
 `
 
 const prev = {
@@ -54,15 +83,15 @@ const next = {
 
 const LeftArrow = (props) => {
     return (
-        <LeftArrowButton onClick={props.goToPrevSlide} style={prev} id="prevButton">
+        <LeftArrowButton onClick={props.goToPrevSlide} id="prevButton">
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="24.93" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z" /></svg>
-      </LeftArrowButton>
+        </LeftArrowButton>
     );
 }
 
 const RightArrow = (props) => {
     return (
-        <RightArrowButton onClick={props.goToNextSlide} style={next} >
+        <RightArrowButton onClick={props.goToNextSlide}  >
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="24.93" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z" /></svg>
         </RightArrowButton>
     );
@@ -136,7 +165,7 @@ export default class SideScroll extends Component {
                             transition: 'transform ease-out 0.45s',
                             padding: '0px',
                             margin: '0px'
-                            
+
                         }} >
                         {this.state.images.map((data, key) => (
                             <WhatImage

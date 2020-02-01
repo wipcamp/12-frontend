@@ -75,10 +75,30 @@ const Cloud2 = styled(Cloud1)`
     top: 70vh;
 `
 export default class What extends Component {
+    state = {
+        contentColumn1: 5,
+        contentColumn2: 6
+    }
     componentDidMount = () => {
+        window.addEventListener('resize', this.updateWindowDimensions)
+        this.updateWindowDimensions()
         AOS.init({
             duration: 3000
         })
+    }
+
+    updateWindowDimensions = () => {
+        if (window.innerWidth < 1080) {
+            this.setState({
+                contentColumn1: 10,
+                contentColumn2: 12
+            })
+        } else {
+            this.setState({
+                contentColumn1: 5,
+                contentColumn2: 6
+            })
+        }
     }
     render() {
         return (
@@ -96,7 +116,7 @@ export default class What extends Component {
                             <WrapGrid>
                                 <Row>
                                 <Col xl="1" lg="1" md="12" sm="12" xs="12"></Col>
-                                <Col xl="5" lg="5" md="12" sm="12" xs="12">
+                                <Col xl="5" lg={this.state.contentColumn1} md="12" sm="12" xs="12">
                                     <WrapContent>
                                         <Content
                                             textIndent="24px"
@@ -116,7 +136,7 @@ export default class What extends Component {
                                         />
                                         </WrapContent>
                                     </Col>
-                                <Col xl="6" lg="6" md="12" sm="12" xs="12" className="my-auto">
+                                <Col xl="6" lg={this.state.contentColumn2} md="12" sm="12" xs="12" className="my-auto">
                                     <WrapSideScroll>
                                         <WhatSideScroll />
                                     </WrapSideScroll>

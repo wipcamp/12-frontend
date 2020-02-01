@@ -9,7 +9,7 @@ const HeadLine = styled.h1`
     text-align: ${props => props.textAlign || "center"};
 
     @media (min-width: 768px) {
-        font-size: 120px;
+        font-size: 90px;
     }
 
     @media (min-width: 1024px) {
@@ -19,7 +19,7 @@ const HeadLine = styled.h1`
 
 const SubHead = styled.h2`
     font-family: 'NotoSansThai-Light', sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
     color: ${props => props.color};
 
@@ -38,7 +38,7 @@ const ContentText = styled.p`
     line-height: 18px;
 
     @media (min-width: 768px) {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 30px;
         text-align: ${props => props.textAlignResponsive};
         text-indent: ${props => props.textIndentIpad};
