@@ -201,7 +201,7 @@ export default class contact extends Component {
                   </TextBox>
                   <TextBox>
                     <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank">
-                      <ContactImg src="img/Contact/instragram.png" />
+                      <ContactImg src="img/Contact/instagram.png" />
                       wipcamp
                     </StyledLink>
                   </TextBox>
