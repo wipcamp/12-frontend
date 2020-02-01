@@ -78,7 +78,7 @@ export default class MainNav extends Component {
 	state = {
 		noBg: 'rgba(255, 255, 255, 0.0)',
 		defaultMobile: 'darkgrey',
-		defaultDesktop: '#468BB1',
+		defaultDesktop: '#111F42',
 		isDesktop: true
 	}
 
