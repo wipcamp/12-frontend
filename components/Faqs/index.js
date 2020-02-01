@@ -8,7 +8,7 @@ import './fade.css'
 const FaqsContainer = styled.div`
     /* background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%); */
-    font-family: "ChakraPetch-Regular", sans-serif;
+    font-family: 'Sarabun-Regular', sans-serif;
 `
 
 const FaqsBox = styled.div`
@@ -77,14 +77,12 @@ const AnswerBoxImage = styled.img`
     }
 `
 const FaqsAnswer = styled.div`
-    /* box-shadow: 0 0 0.5rem white; */
-    /* background-color: rgb(255,255,255,0.8); */
     width: 100%;
     color: white;
     text-align: center;
     position:absolute;
     top: -13.5em;
-    opacity: ${props => props.opacity || '0'};
+    opacity: ${props => props.opacity || '1'};
     z-index: 2;
     @media (min-width: 768px) {
         top: -20em;
@@ -99,6 +97,7 @@ const FaqsAnswer = styled.div`
 
 `
 const AnswerContent = styled.p`
+    white-space: pre-wrap;
     z-index: 2;
     position: relative;
     margin-left: auto;
@@ -213,15 +212,17 @@ const StyledSelect = styled.select`
 export default class Faqs extends Component {
 
     state = {
-        answer: "Default",
+        answer: "กรุณาเลือกคำถามจากด้านบน",
         answerArray: ["WIP Camp ครั้งที่ 12 นี้ รับสมัครผู้เข้าร่วมจำนวน 100 คนครับ",
-            "สำหรับที่พักนั้นจะอยู่ภายในหอพักนักศึกษา มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี โดยมีพี่ ๆ รวมไปถึงฝ่ายพยาบาล คอยดูแลน้อง ๆ ตลอด 24 ชั่วโมงครับ",
-            "มีค่าใช้จ่ายเป็นจำนวนเงิน 450 บาท สำหรับค่าอาหาร และที่พัก โดยสามารถชำระเงินได้ผ่านทางธนาคาร หลังจากผ่านการคัดเลือกแล้วเท่านั้นครับ",
-            "ในส่วนของการสมัครน้อง ๆ จำเป็นต้องอัปโหลดเอกสาร ปพ.7 ผ่านทางเว็บไซต์ค่ายเลยครับ",
-            "เอกสารยินยอมจากผู้ปกครอง และหลักฐานการโอนเงินยืนยันสิทธิ์ครับ โดยน้อง ๆ สามารถอัปโหลดผ่านทางเว็บไซต์ค่ายได้เลยครับ",
-            "ไม่จำเป็นต้องมีพื้นฐานครับ ขอเพียงน้อง ๆ มีความสนใจทางด้านไอที น้องก็สามารถเข้าร่วมได้แล้วครับ"],
-        currentAnswerIndex: 99,
-        answerOpacity: 0,
+            "สำหรับที่พักนั้นจะอยู่ภายในหอพักนักศึกษา\n มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี โดยมีพี่ ๆ รวมไปถึงฝ่ายพยาบาล คอยดูแลน้อง ๆ ตลอด 24 ชั่วโมงครับ",
+            "มีค่าใช้จ่ายเป็นจำนวนเงิน 450 บาท\n สำหรับค่าอาหาร และที่พัก โดยสามารถชำระเงินได้ผ่านทางธนาคาร\n หลังจากผ่านการคัดเลือกแล้วเท่านั้นครับ",
+            "ในส่วนของการสมัครน้อง ๆ จำเป็นต้องอัปโหลดเอกสาร\n ปพ.7 ผ่านทางเว็บไซต์ค่ายเลยครับ",
+            "เอกสารยินยอมจากผู้ปกครอง และหลักฐานการโอนเงินยืนยันสิทธิ์ครับ \nโดยน้อง ๆ สามารถอัปโหลดผ่านทางเว็บไซต์ค่ายได้เลยครับ",
+            "ไม่จำเป็นต้องมีพื้นฐานครับ \nขอเพียงน้อง ๆ มีความสนใจทางด้านไอที น้องก็สามารถเข้าร่วมได้แล้วครับ",
+            "กรุณาเลือกคำถามจากด้านบน"
+        ],
+        currentAnswerIndex: 6,
+        answerOpacity: 1,
         activeQuestion_0: "none",
         activeQuestion_1: "none",
         activeQuestion_2: "none",
@@ -241,7 +242,7 @@ export default class Faqs extends Component {
                 faqClass: "none",
                 [prevQ]: "none"
             })
-            if (e >= 0 && e <= 5) {
+            if (e >= 0 && e <= 6) {
                 var currentQ = "activeQuestion_" + e
                 setTimeout(
                     function () {
@@ -257,7 +258,8 @@ export default class Faqs extends Component {
                 )
             } else {
                 this.setState({
-                    answerOpacity: 0,
+                    answerOpacity: 1,
+                    answer:"กรุณาเลือกคำถามจากด้านบน",
                     currentAnswerIndex: e
                 })
             }
@@ -306,7 +308,7 @@ export default class Faqs extends Component {
                             <Col>
                                 <div className="d-flex justify-content-center">
                                     <StyledSelect value={this.state.currentAnswerIndex} onChange={() => this.changeAnswer(event.target.value)}>
-                                        <option value="99">กรุณาเลือกคำถาม</option>
+                                        <option value="6">กรุณาเลือกคำถาม</option>
                                         <option value="0">รับสมัครคนเข้าค่ายกี่คน ?</option>
                                         <option value="1">พักค้างคืนที่ไหน ?</option>
                                         <option value="2">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</option>
