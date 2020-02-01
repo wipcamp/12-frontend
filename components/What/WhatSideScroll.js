@@ -52,6 +52,7 @@ const RightArrowButton = styled.div`
     right: 17.95px;
     z-index: 3;
     visibility: visible;
+    display: none;
 
     @media (min-width: 1280px) {
         top: 100px;
