@@ -21,5 +21,4 @@ display:${ (dayWip.isBefore(dayNow) ? 'block' : 'none')};
 
 `
 
-// ใส่ display ตามวันเเล้วรอ kb มาใส่เเสง 
 

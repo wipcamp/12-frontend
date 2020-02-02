@@ -4,7 +4,6 @@ import { Row, Col} from 'reactstrap'
 import styled from 'styled-components'
 import { Header, SubHeader, Content } from '../Core/Text'
 import WhatSideScroll from './WhatSideScroll'
-import { Parallax } from 'react-scroll-parallax'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

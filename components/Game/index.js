@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
-import { Row, Col, Button, Container } from 'reactstrap'
+import { Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header } from '../Core/Text'
 import Link from 'next/link'
-import { Parallax } from 'react-scroll-parallax'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
