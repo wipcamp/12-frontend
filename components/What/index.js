@@ -71,9 +71,9 @@ const WrapSideScroll = styled.div`
 
 const Cloud1 = styled.img`
     position: absolute;
-    width: 30vw;
-    right: -8vw;
-    top: -8vh;
+    width: 15vw;
+    top: 65vh;
+    left: -5vw;
     display: none;
 
     @media (min-width: 1024px) {
@@ -82,9 +82,15 @@ const Cloud1 = styled.img`
 `
 
 const Cloud2 = styled(Cloud1)`
-    right: 0;
-    left: -8vw;
+    width: 30vw;
     top: 70vh;
+    left: -5vw;
+`
+
+const Cloud3 = styled(Cloud1)`
+    top: 71vh;
+    left: 0vw;
+    width: 25vw;
 `
 export default class What extends Component {
     state = {
@@ -116,9 +122,9 @@ export default class What extends Component {
         return (
             <WhatBg>
                 
-                        <Cloud1 src="/img/What/cloud1.png" data-aos="fade-down-left"/>
-                    
-                        <Cloud2 src="/img/What/cloud2.png" data-aos="fade-down-right" />
+                        <Cloud1 src="/img/What/cloud1.png" data-aos="fade-down-right" />
+                        <Cloud2 src="/img/What/cloud2.png" data-aos="fade-down-right" data-aos-duration="1500"/>
+                        <Cloud3 src="/img/What/cloud3.png" data-aos="fade-down-right" data-aos-duration="2000"/>
                     
                             <br />
                             <div className="text-center">
