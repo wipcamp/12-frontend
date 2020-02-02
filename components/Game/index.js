@@ -27,7 +27,7 @@ const Wrap = styled.div`
     width: 100%;
     height: auto;
     transition: background-size 0.8s ease-in-out, filter 0.8s ease-in-out;
-    background-size: 110%;
+    background-size: 90%;
     filter: grayscale(0);
     pointer-events: none;
     @media (min-width: 768px) {
@@ -69,8 +69,8 @@ const StyledButton = styled.button`
     pointer-events: auto;
     transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
     &:hover {
-        transform: scale(1.1);
-        filter: drop-shadow(0 0 0.5em #535CA9)
+        transform: scale(0.9);
+        /* filter: drop-shadow(0 0 0.5em #535CA9) */
     }
 
 `
