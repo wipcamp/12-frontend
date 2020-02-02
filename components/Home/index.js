@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Button } from 'reactstrap'
-import Star from '../Core/Star'
 import { Parallax } from 'react-scroll-parallax';
 
 

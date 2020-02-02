@@ -30,7 +30,7 @@ const SIT = styled.div`
     border-top-right-radius: 110px;
     border-top-left-radius: 110px;
     border-bottom: 0;
-    float: right; /* Change this to left to float it to left */
+    float: right;
     margin-left:50%;
     border-radius: 50%;
     display:none ;
@@ -63,6 +63,7 @@ const Star1 = styled.img`
     top: -5vh;
     left: 2vw;
     width: 15vw;
+    filter: brightness(50%);
     display: none;
 
     @media (min-width: 1024px) {
