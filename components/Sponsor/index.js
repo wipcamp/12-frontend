@@ -52,15 +52,29 @@ const Star1 = styled.img`
     width: 15vw;
     display: none;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1280px) {
         display: block;
     }
+
 `
 
 const Star2 = styled(Star1)`
     top: 90vh;
-    left: 91vw;
     width: 15vw;
+
+    @media (min-width: 1280px) {
+        display: none;
+    }
+
+    @media (min-width: 1366px) {
+        display: block;
+        left: 92vw;
+    }
+
+    @media (min-width: 1535px) {
+        left: 91vw;
+    }
+
 `
 
 const Zodiac1 = styled(Star2)`
@@ -72,13 +86,28 @@ const Zodiac1 = styled(Star2)`
 const Zodiac2 = styled(Zodiac1)`
     top: 62vh;
     width: 10vw;
-    left: 87.5vw;
+
+    @media (min-width: 1366px) {
+        left: 90vw;
+    }
+
+    @media (min-width: 1535px) {
+        left: 89vw;
+    }
 `
 
 const Zodiac3 = styled(Zodiac2)`
     top : 82vh;
     width: 5vw;
     left: 90vw;
+
+    @media (min-width: 1366px) {
+        left: 92vw;
+    }
+
+    @media (min-width: 1535px) {
+        left: 91vw;
+    }
 `
 export default class Sponsor extends Component {
     state = {
