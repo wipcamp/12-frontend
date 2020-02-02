@@ -32,7 +32,16 @@ const LeftArrowButton = styled.div`
     transform: rotate(180deg);
 
     @media (min-width: 1280px) {
+        top: 40%;
         display: flex;
+    }
+
+    @media (min-width: 1440px) {
+        top: 43%;
+    }
+
+    @media (min-width: 1920px) {
+        top: 48%;
     }
 `
 
@@ -59,7 +68,7 @@ const RightArrowButton = styled.div`
     }
 
     @media (min-width: 1440px) {
-        top: 45%;
+        top: 43%;
     }
 
     @media (min-width: 1920px) {
