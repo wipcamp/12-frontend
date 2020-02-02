@@ -89,16 +89,22 @@ const Play = styled.img`
         width: 15vw;
     }
 `
-const Cloud1 = styled.img`
+const Star1 = styled.img`
     position: absolute;
-    top: 2vh;
+    top: 5vh;
     left: -8vw;
-    width: 30vw;
+    width: 20vw;
     display: none;
 
     @media (min-width: 1024px) {
         display: block;
     }
+`
+
+const Star2 = styled(Star1)`
+    top: 8vh;
+    left: 85vw;
+    width: 10vw;
 `
 
 export default class Game extends Component {
@@ -111,8 +117,8 @@ export default class Game extends Component {
         return (
             <GameContainer>
                 
-                    <Cloud1 src="/img/Game/cloud1.png" data-aos="fade-down-right"/>
-                    
+                    <Star1 src="/img/Game/star1.png" data-aos="fade-down-right"/>
+                    <Star2 src="/img/Game/star2.png" data-aos="fade-down-left"/>
                         <Container className="text-center">
                             <Header color="#ffffff" headerText="GAME" />
                             <Content>

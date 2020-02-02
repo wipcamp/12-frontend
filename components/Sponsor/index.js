@@ -45,17 +45,40 @@ margin: 3em 0 0;
 
 `
 
-const Cloud = styled.img`
+const Star1 = styled.img`
     position: absolute;
-    top: 0vh;
-    right: -15vw;
-    width: 35vw;
+    top: 2vh;
+    left: -8vw;
+    width: 15vw;
     display: none;
 
     @media (min-width: 1024px) {
         display: block;
     }
+`
 
+const Star2 = styled(Star1)`
+    top: 90vh;
+    left: 91vw;
+    width: 15vw;
+`
+
+const Zodiac1 = styled(Star2)`
+    width: 5vw;
+    top: 50vh;
+    left: 90vw;
+`
+
+const Zodiac2 = styled(Zodiac1)`
+    top: 62vh;
+    width: 10vw;
+    left: 87.5vw;
+`
+
+const Zodiac3 = styled(Zodiac2)`
+    top : 82vh;
+    width: 5vw;
+    left: 90vw;
 `
 export default class Sponsor extends Component {
     state = {
@@ -87,8 +110,11 @@ export default class Sponsor extends Component {
         return (
             <SponsorBg>
                 
-                    <Cloud src="/img/Sponsor/cloud.png" data-aos="fade-down-left"/>
-                
+                    <Star1 src="/img/Sponsor/star1.png" data-aos="fade-down-right"/>
+                    <Zodiac1 src="/img/Sponsor/zodiac1.png" data-aos="fade-down-left"/>
+                    <Zodiac2 src="/img/Sponsor/zodiac2.png" data-aos="fade-down-left"/>
+                    <Zodiac3 src="/img/Sponsor/zodiac3.png" data-aos="fade-down-left"/>
+                    <Star2 src="/img/Sponsor/star2.png" data-aos="fade-down-left"/>
                         <div className="text-center">
                             <Header color="white" headerText="SPONSOR" />
                             <SubHeader color="white" subHeaderText="ผู้สนับสนุน" />

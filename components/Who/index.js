@@ -93,6 +93,13 @@ const WrapZodiac = styled.div`
     bottom: 2vw;
 `
 
+const Star = styled.img`
+    position: absolute;
+    width: 20vw;
+    left: -2vw;
+    top: 30vh;
+`
+
 export default class Who extends Component {
     state = {
         midColumn: 2,
@@ -123,6 +130,7 @@ export default class Who extends Component {
     render() {
         return (
             <WhoContainer>
+                <Star src="/img/Who/star.png" data-aos="fade-down-right"/>
                 <ContentContainer fluid={true} >
                     
                                 <Row>
@@ -213,9 +221,7 @@ export default class Who extends Component {
                                         <Image2 src="/img/Who/Wippo.png" />
                                     </Col>
                                 </Row>
-                            <WrapZodiac> 
-                            
-                        
+                        <WrapZodiac> 
                         <Zodiac src="/img/Who/scorpio.svg" data-aos="fade-down-right"/>
                     </WrapZodiac>
                 </ContentContainer>

@@ -100,11 +100,28 @@ const WrapZodiac = styled.div`
     top: -10vh;
 `
 
-const Cloud = styled(Zodiac)`
-    left: 80vw;
+const Cloud1 = styled(Zodiac)`
+    top: 60vh;
+    width: 25vw;
+    left: -2vw;
+`
+
+const Cloud2 = styled(Zodiac)`
+    left: 89vw;
     top: 55vh;
     width: 35vw;
-    right: -10vw;
+`
+
+const Cloud3 = styled(Zodiac)`
+    left: 80vw;
+    top: 70vh;
+    width: 40vw;
+`
+
+const Cloud4 = styled(Zodiac)`
+    top: 70vh;
+    left: 75vw;
+    width: 30vw;
 `
 
 export default class When extends Component {
@@ -172,8 +189,10 @@ export default class When extends Component {
                     <WrapZodiac>
                         <Zodiac src="/img/When/libra.svg" data-aos="fade-down-right"/>
                     </WrapZodiac>   
-                                <Cloud src="/img/When/cloud.png" data-aos="fade-down-left"/>
-                            
+                                <Cloud1 src="/img/When/cloud1.png" data-aos="fade-down-right" />
+                                <Cloud2 src="/img/When/cloud2.png" data-aos="fade-down-left"/>
+                                <Cloud3 src="/img/When/cloud3.png" data-aos="fade-down-left" data-aos-duration="2000" />
+                                <Cloud4 src="/img/When/cloud4.png" data-aos="fade-down-left" data-aos-duration="1500"/>
                                 <Row>
                                     <Col>
                                         <Header color="#ffffff" headerText="WHEN" />
