@@ -122,7 +122,7 @@ export default class Track extends Component {
                                 <Col xl="10" lg="10" md="10" sm="10" xs="10">
                                 <Trackcontainer>
                                 <Content
-                                 textIndent="0px"
+                                 textIndent="30px"
                                  textIndentIpad="68px"
                                  textIndentDesktop="68px"
                                  textAlign="left"
