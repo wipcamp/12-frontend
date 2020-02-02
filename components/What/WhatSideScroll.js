@@ -11,6 +11,8 @@ const Wrap = styled.div`
     ::-webkit-scrollbar {
          width: 0px;
     }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 `
 
 const LeftArrowButton = styled.div`
