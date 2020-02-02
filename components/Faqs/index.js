@@ -106,7 +106,7 @@ const AnswerContent = styled.p`
     left: 0;
     right: 0;
     padding: 1em 0 0 0;
-    width: 80%;
+    width: 95%;
     font-size: 16px ;
     @media (min-width: 768px) {
         font-size: 20px ;
