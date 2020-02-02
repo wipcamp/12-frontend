@@ -122,16 +122,38 @@ const Tower = styled.img`
   width: 13vw;
 `
 
-const Cloud = styled.img`
+const Star = styled.img`
   position: absolute;
-  top: -15vh;
-  left: -8vw;
-  width: 30vw;
+  top: 35vh;
+  left: 75vw;
+  width: 10vw;
   display: none;
 
   @media (min-width: 1024px) {
     display: block;
   }
+`
+
+const Star2 = styled(Star)`
+  top: 15vh;
+  left: 68vw;
+  width: 5vw;
+`
+
+const Star3 = styled(Star2)`
+  top: 25vh;
+  left: 45vw;
+  width: 8vw;
+`
+
+const Star4 = styled(Star3)`
+  top: 55vh;
+  left: 38vw;
+`
+
+const Star5 = styled(Star4)`
+  top: 70vh;
+  left: 30vw;
 `
 
 const WrapContact = styled.div`
@@ -184,9 +206,11 @@ export default class contact extends Component {
   render() {
     return (
       <ContactBg>
-
-        <Cloud src="/img/Contact/cloud.png" data-aos="fade-down-right" />
-
+          <Star src="/img/Contact/star1.png" />
+          <Star2 src="/img/Contact/star2.png" />
+          <Star3 src="/img/Contact/star3.png" />
+          <Star4 src="/img/Contact/star4.png" />
+          <Star5 src="/img/Contact/star5.png" />
         <Container>
 
           <Row>
@@ -214,11 +238,7 @@ export default class contact extends Component {
                 </TextBox>
               </WrapContact>
             </Col>
-            <Col xl="6" lg="6" md="6" sm="12" xs="12">
-              <Parallax y={[-20, 10]}>
-                <ImgObject src="img/Contact/sagittarius.svg" />
-              </Parallax>
-            </Col>
+            <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
 
           </Row>
 
