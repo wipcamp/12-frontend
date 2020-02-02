@@ -1,9 +1,6 @@
 import React, { useState, Fragment,Component } from 'react';
 import {
-	Collapse,
 	Navbar,
-	NavbarToggler,
-	NavbarBrand,
 	Nav,
 	NavItem,
 	NavLink,
@@ -144,93 +141,3 @@ componentDidMount() {
 		)
 	}
 }
-
-
-
-// const Navbar1 = (props) => {
-// 	const [isOpen, setIsOpen] = useState(false);
-
-// 	const toggle = () => setIsOpen(!isOpen);
-
-// 	const changeIconToX = () => {
-// 		var hamberger = document.getElementById("hamberger");
-// 		var close = document.getElementById("close");
-// 		var bgcolor = document.getElementById("bgcolor");
-// 		if (isOpen == false) {
-// 			hamberger.style.display = 'none';
-// 			close.style.display = 'inline';
-// 			bgcolor.style.backgroundColor = '#918686';
-// 		} 
-// 	}
-
-// 	const changeIconToHamberg = () => {
-// 		var hamberger = document.getElementById("hamberger");
-// 		var close = document.getElementById("close");
-// 		var bgcolor = document.getElementById("bgcolor");
-// 		if (isOpen == true) {
-// 			hamberger.style.display = 'inline';
-// 			close.style.display = 'none';
-// 			bgcolor.style.backgroundColor = '#c4c4c4'
-// 		}
-// 	}
-
-
-// 	return (
-// 		<div className="sticky-top">
-// 			<ColorNav expand="lg" id="bgcolor">
-// 				<NavMobile>
-// 					<StyledNavbarToggler onClick={() => { toggle(); changeIconToX();}} id="hamberger"/>
-// 					<StyledNavbarTogglerOpen  onClick={() => { toggle(); changeIconToHamberg();}} id="close" />
-// 					<StyledNavbarBrand href="/">
-// 						<StyledImg src="/img/Logo2.png" />
-// 					</StyledNavbarBrand>
-// 					<RegisterButton color="tranparent">
-// 						<StyledNavLink2 href="/" >REGISTER</StyledNavLink2>
-// 					</RegisterButton>
-// 				</NavMobile>
-// 				<Collapse isOpen={isOpen} navbar>
-// 					<div style={{width:'100%',display:'flex',justifyContent:'center'}}>
-// 					<StyledNav navbar>
-// 						<StyledNavItem>
-// 							<Link href="/index">
-// 								<StyledNavLink href="/" >HOME</StyledNavLink>
-// 							</Link>
-// 							<Line></Line>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<Link href="./App">
-// 								<StyledNavLink href="/">WHAT</StyledNavLink>
-// 							</Link>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/">WHO</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/">BRANCH</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/Where">WHERE</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/When">WHEN</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/">FAQS</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/">GAME</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/contact">CONTACT</StyledNavLink>
-// 						</StyledNavItem>
-// 					</StyledNav>
-// 					</div>
-// 					<PlaceHolder></PlaceHolder>
-// 				</Collapse>
-
-// 			</ColorNav>
-// 		</div>
-
-
-// 	);
-// }
