@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import { Content } from '../Core/Text'
 import styled, { keyframes } from 'styled-components'
-const glow = keyframes`
-    from { filter:drop-shadow(0px 0px 5px rgba(255,255,255,0.7));}
-    to {filter:drop-shadow(0px 0px 10px rgba(255,255,255,1));}
-`
+
 const Image = styled.img`
     width: 64px;
     height: auto;
@@ -17,11 +14,6 @@ const Image = styled.img`
     @media (min-width: 1080px){
         width: 90%;
 }
-`
-const ImageWho = styled.img`
-animation: ${glow} 2s ease-in-out alternate infinite;
-display: ${ props => props.display};
-
 `
 
 const TextBox = styled.div`
@@ -47,7 +39,6 @@ const Fieldset = styled.fieldset`
     -moz-border-radius:8px;
     -webkit-border-radius:8px;	
     border-radius:8px;
-    /* border-image: linear-gradient(#FF66ED,#64A4FF )1; */
     margin-bottom: 30px;
     text-align: center;
     @media (min-width: 1080px){
@@ -124,24 +115,8 @@ const WhoMobile = props => {
 }
 
 
-class ImageInfoGlow extends Component {
-    render() {
-        return (
-            <div className="media mt-3">
-                <ImageWho src={this.props.src} display={this.props.display} />
-                <div className="mt-1 ml-4"><Content
-                    content={this.props.content || "Unknow"}
-                    color={this.props.color}
-                   
-                />
-                </div>
-            </div>
 
-        )
-    }
-}
 export {
     ImageInfo,
-    ImageInfoGlow,
     WhoMobile
 };
