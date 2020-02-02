@@ -32,7 +32,15 @@
             transform-style: preserve-3d;
 }
 
- .yakhaimunmefaiahmae{
+
+@media screen and (min-width: 760px){
+    .yakhaimunmefaiahmae{
+      cursor: pointer;     
+      -moz-user-select: none;      
+      -ms-user-select: none;      
+      -khtml-user-select: none;     
+      -webkit-user-select: none;      
+      -webkit-touch-callout: none;
    -webkit-transition: 0.6s;
    -moz-transition: 0.6s;
     -ms-transition: 0.6s;
@@ -48,6 +56,8 @@
     -ms-transition: .6s;
      -o-transition: .6s;
         transition: .6s;
+
+}
 }
  
 

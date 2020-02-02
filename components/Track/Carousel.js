@@ -15,7 +15,7 @@ const Wrap = styled.div`
 `
 
 const Card = styled.div`
-    padding: 40px 10px 0px;
+    padding: 10px 10px 10px;
     scroll-snap-align: center;
 `
 export default class Carousel extends Component {
