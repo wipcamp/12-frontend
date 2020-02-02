@@ -29,7 +29,7 @@ const WhenImg = styled.img`
     }
 `
 const TimerText = styled.h4`
-    font-size: 15px;
+    font-size: 12px;
     text-align:center ;
     color: white;
     font-family:'Sarabun-Regular', sans-serif;
@@ -39,7 +39,7 @@ const TimerText = styled.h4`
     @media (min-width: 768px){
         margin: 0;
         width: 10em;
-        font-size: 18px;
+        font-size: 16px;
     }
     @media (min-width: 1080px) {
         text-align:  center;
@@ -71,14 +71,22 @@ const BoxContainer = styled.div`
 `
 const Span = styled.span`
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 18px;
+
+    @media (min-width: 768px) {
+        font-size: 25px
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 1.5em;
+    }
 `
 
 const Zodiac = styled.img`
-    position: absolute;
-    width: 20vw;
-    left: -2vw;
-    top: -15vh;
+   position: absolute;
+   width: 20vw;
+    left: 0vw;
+    top: -20vh;
     display: none;
 
     @media (min-width: 1024px) {
@@ -86,8 +94,9 @@ const Zodiac = styled.img`
     }
 `
 
-const Star = styled(Zodiac)`
-    left: -1vw;
+const WrapZodiac = styled.div`
+    transform: rotate(45deg);
+    position: absolute;
     top: -10vh;
 `
 
@@ -160,11 +169,9 @@ export default class When extends Component {
         return (
             <WhenContainer>
                 <BigContainer fluid={true} >
-                    <div data-aos="fade-down-right">
-                        <Star src="/img/When/star1.png" />
-                        
-                            <Zodiac src="/img/When/zodiac.png" />
-                            </div>
+                    <WrapZodiac>
+                        <Zodiac src="/img/When/libra.svg" data-aos="fade-down-right"/>
+                    </WrapZodiac>   
                                 <Cloud src="/img/When/cloud.png" data-aos="fade-down-left"/>
                             
                                 <Row>

@@ -100,13 +100,11 @@ const ImgObject = styled.img`
 
   @media (min-width: 768px) {
     width:17.313em;
-    height:16.375em;
     display:inherit;
   }
 
   @media (min-width: 992px) {
-    width: 28.125em;
-    height: 26.602em;
+    width: 25em;
     display:inherit;
   }
  
@@ -119,9 +117,9 @@ const Mountain = styled.img`
 `
 const Tower = styled.img`
   position: absolute;
-  bottom: 0;
+  bottom: 20vw;
   left: 3em;
-  width: 18vw;
+  width: 13vw;
 `
 
 const Cloud = styled.img`
@@ -136,82 +134,127 @@ const Cloud = styled.img`
   }
 `
 
+const WrapContact = styled.div`
+    padding-left: 3vw;
+
+    @media (min-width: 360px) {
+      padding-left: 8vw;
+    }
+
+    @media (min-width: 375px) {
+      padding-left: 9vw;
+    }
+
+    @media (min-width: 411px) {
+      padding-left: 13vw;
+    }
+
+    @media (min-width: 768px) {
+      padding-left: 0vw;
+    }
+`
+
+const WrapFollow = styled.div`
+  padding-left: 15vw;
+
+  @media (min-width: 360px) {
+    padding-left: 18vw;
+  }
+
+  @media (min-width: 375px) {
+    padding-left: 21vw;
+  }
+
+  @media (min-width: 411px) {
+    padding-left: 24vw;
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 0vw;
+  }
+`
 
 
 export default class contact extends Component {
   componentDidMount() {
     AOS.init({
-        duration: 3000
+      duration: 3000
     })
-}
+  }
   render() {
     return (
       <ContactBg>
-        
-          <Cloud src="/img/Contact/cloud.png" data-aos="fade-down-right" />
-          
-            <Container>
-              <Row>
 
-                <Col xl="6" lg="6" md="6" sm="12" xs="12">
-                  <HeaderStyled>Contact</HeaderStyled>
-                  <TextBox>
-                    <StyledLink href="https://www.facebook.com/messages/t/wipcamp" target="_blank">
-                      <ContactImg src="img/Contact/messenger.png" />
-                      MESSENGER
-                    </StyledLink>
-                  </TextBox>
-                  <TextBox>
-                    <StyledLink href="tel://0955812385">
-                      <ContactImg src="img/Contact/phone.png" />
-                      095-581-2385 (พี่ทีเจ)
-                    </StyledLink>
-                  </TextBox>
-                  <TextBox>
-                    <StyledLink href="mailto:wippo@wipcamp.com" target="_blank">
-                      <ContactImg src="img/Contact/email.png" />
-                      wippo@wipcamp.com
-                    </StyledLink>
-                  </TextBox>
-                </Col>
-                <Col xl="6" lg="6" md="6" sm="12" xs="12">
-                  <Parallax y={[-10, 10]}>
-                    <ImgObject src="img/Contact/obcontact1.png" />
-                  </Parallax>
-                </Col>
+        <Cloud src="/img/Contact/cloud.png" data-aos="fade-down-right" />
 
-              </Row>
+        <Container>
+
+          <Row>
+
+            <Col xl="6" lg="6" md="6" sm="12" xs="12">
+              <HeaderStyled>Contact</HeaderStyled>
+              <WrapContact>
+                <TextBox>
+                  <StyledLink href="https://www.facebook.com/messages/t/wipcamp" target="_blank">
+                    <ContactImg src="img/Contact/messenger.png" />
+                    MESSENGER
+                    </StyledLink>
+                </TextBox>
+                <TextBox>
+                  <StyledLink href="tel://0955812385">
+                    <ContactImg src="img/Contact/phone.png" />
+                    095-581-2385 (พี่ทีเจ)
+                    </StyledLink>
+                </TextBox>
+                <TextBox>
+                  <StyledLink href="mailto:wippo@wipcamp.com" target="_blank">
+                    <ContactImg src="img/Contact/email.png" />
+                    wippo@wipcamp.com
+                    </StyledLink>
+                </TextBox>
+              </WrapContact>
+            </Col>
+            <Col xl="6" lg="6" md="6" sm="12" xs="12">
+              <Parallax y={[-20, 10]}>
+                <ImgObject src="img/Contact/sagittarius.svg" />
+              </Parallax>
+            </Col>
+
+          </Row>
 
 
-              <Row>
-                <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
-                <Col xl="6" lg="6" md="6" sm="12" xs="12">
-                  <HeaderStyled>Follow Us</HeaderStyled>
-                  <TextBox>
-                    <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank">
-                      <ContactImg src="img/Contact/facebook.png" />
-                      WIP Camp
+          <Row>
+            <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
+            <Col xl="6" lg="6" md="6" sm="12" xs="12">
+              <HeaderStyled>Follow Us</HeaderStyled>
+              <WrapFollow>
+                <TextBox>
+                  <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank">
+                    <ContactImg src="img/Contact/facebook.png" />
+                    WIP Camp
                     </StyledLink>
-                  </TextBox>
-                  <TextBox>
-                    <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
-                      <ContactImg src="img/Contact/youtube.png" />
-                      WIP camp
+                </TextBox>
+                <TextBox>
+                  <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
+                    <ContactImg src="img/Contact/youtube.png" />
+                    WIP camp
                     </StyledLink>
-                  </TextBox>
-                  <TextBox>
-                    <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank">
-                      <ContactImg src="img/Contact/instragram.png" />
-                      wipcamp
+                </TextBox>
+                <TextBox>
+                  <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank">
+                    <ContactImg src="img/Contact/instagram.png" />
+                    wipcamp
                     </StyledLink>
-                  </TextBox>
-                </Col>
-              </Row>
-              <Row>
+                </TextBox>
+              </WrapFollow>
+            </Col>
+          </Row>
+          <Row>
 
-              </Row>
-            </Container>
-          
+          </Row>
+
+        </Container>
+
         <Tower src="/img/Contact/tower.png" />
         <Mountain src="/img/Contact/mountain.png" />
       </ContactBg >

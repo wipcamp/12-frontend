@@ -6,9 +6,14 @@ const glow = keyframes`
     to {filter:drop-shadow(0px 0px 10px rgba(255,255,255,1));}
 `
 const Image = styled.img`
-    width: 94px;
+    width: 64px;
     height: auto;
     align-self: center;
+
+    @media (min-width: 768px) {
+        width: 94px;
+    }
+
     @media (min-width: 1080px){
         width: 90%;
 }
@@ -47,7 +52,16 @@ const Fieldset = styled.fieldset`
     text-align: center;
     @media (min-width: 1080px){
         width: 80%;
-}
+        height: auto;
+        }
+        @media (min-width: 1440px){
+        width: 80%;
+        height: 250px;
+        }
+        @media (min-width: 1920px){
+        width: 80%;
+        height: 230px;
+        }
 `
 const Legend = styled.legend`
     width: 5em;

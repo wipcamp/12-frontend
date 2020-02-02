@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
@@ -23,11 +23,23 @@ const ContentContainer = styled(Container)`
     }
 `
 
+const Float = keyframes`
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+    }`
+
 const Image = styled.img`
-top: -21vh;
+top: -15em;
 display: none;
 width: 14vw;
 display: none;
+animation: ${Float} 5s infinite;
 
 @media (min-width: 1080px) {
 position: absolute;
@@ -42,6 +54,7 @@ right: 0;
 }
 `
 const Image2 = styled.img`
+    animation: ${Float} 5s infinite;
     display: none;
 @media (min-width: 768px) {
     display: block;
@@ -65,9 +78,7 @@ const WhoRow = styled(Row)`
 
 const Zodiac = styled.img`
     position: absolute;
-    right: 2vw;
-    width: 20vw;
-    bottom: -25vh;
+    width: 25vw;
     display: none;
 
     @media (min-width: 1024px) {
@@ -75,9 +86,11 @@ const Zodiac = styled.img`
     }
 `
 
-const Star = styled(Zodiac)`
-    right: 2vw;
-    bottom: -20vh;
+const WrapZodiac = styled.div`
+    position: absolute;
+    transform: rotate(120deg);
+    right: -5vw;
+    bottom: 2vw;
 `
 
 export default class Who extends Component {
@@ -200,11 +213,11 @@ export default class Who extends Component {
                                         <Image2 src="/img/Who/Wippo.png" />
                                     </Col>
                                 </Row>
-                            <div data-aos="fade-down-left"> 
-                            <Star src="/img/Who/star.png" />
+                            <WrapZodiac> 
+                            
                         
-                        <Zodiac src="/img/Who/zodiac.png" />
-                    </div>
+                        <Zodiac src="/img/Who/scorpio.svg" data-aos="fade-down-right"/>
+                    </WrapZodiac>
                 </ContentContainer>
             </WhoContainer>
         )

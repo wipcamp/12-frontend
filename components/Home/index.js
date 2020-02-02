@@ -28,36 +28,50 @@ const WipLogoImg = styled.img`
 
     @media (min-width: 1024px) {
         width: 38.5em;
-        
     }
 `
 
 const LogoImg = styled.img`
-    width: 138.77px;
-    height: 30.94px;
+    margin: 0 5px;
+    height: 30px;
 
     @media (min-width: 768px) {
-        width: 314.99px;
-        height: 70.24px;
+        height: 50px;
     }
 
     @media (min-width: 1024px) {
-        width: 18.3125em;
+        height: 60px;
+    }
+`
+
+const LogoCana = styled(LogoImg)`
+    height: 20px;
+    margin: 7px 2px 0px;
+
+    @media (min-width: 768px) {
+        height: 35px;
+        margin: 9px 8px 0px;
+    }
+
+    @media (min-width: 1024px) {
+        margin: 10px 10px 0;
+        height: 45px;
     }
 `
 
 const WrapLogoCana = styled.div`
-    margin-top: 9.02px;
-    margin-bottom: 17.52px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
     @media (min-width: 768px) {
-        margin-top: 21px;
-        margin-bottom: 44.76px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     @media (min-width: 1024px) {
-        margin-top: 12px;
-        margin-bottom: 47px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 `
 
@@ -120,11 +134,13 @@ export default class Home extends Component {
                         <Parallax y={[15,-15]}>
                         <WipLogoImg src='/img/Home/logo.png' />
                         <WrapLogoCana>
-                            <LogoImg src='/img/Home/LogoCana.png' />
+                            <LogoImg src="/img/Home/kmutt.svg" />
+                            <LogoCana src="/img/Home/sit.svg" />
+                            <LogoImg src="/img/Home/wipcamp.svg" />
                         </WrapLogoCana>
                         <StyledButton>REGISTER</StyledButton>
                         </Parallax>
-                        <Wippo src="/img/Home/newWippo.png" />
+                        {/* <Wippo src="/img/Home/newWippo.png" /> */}
                     </Parallax>
                     </HomeContent>
                 </HomeContainer>

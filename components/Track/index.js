@@ -122,7 +122,7 @@ export default class Track extends Component {
                                 <Col xl="10" lg="10" md="10" sm="10" xs="10">
                                 <Trackcontainer>
                                 <Content
-                                 textIndent="0px"
+                                 textIndent="30px"
                                  textIndentIpad="68px"
                                  textIndentDesktop="68px"
                                  textAlign="left"
@@ -136,22 +136,48 @@ export default class Track extends Component {
                             <Row id="cards-grid" >
                                 <Col xl='3' lg='3' xs='6'>
                                     <div className=" d-flex justify-content-lg-center justify-content-md-end">
-                                        <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
+                                        <Flippycardnaja 
+                                            srcFront="/img/Track/uxui.png" 
+                                            bg="/img/Track/uxui.png" 
+                                            content="หากเราจะสร้างแอปพลิเคชัน หรือเว็บไซต์ขึ้นมา สิ่งสำคัญที่เราควรจะคำนึงถึงคือ 
+                                                สิ่งที่ผู้ใช้ของเราต้องการ (UX) และเมื่อนำมาเพิ่มความสวยงาม (UI)
+                                                ก็จะช่วยเสริมให้แอปพลิเคชันหรือเว็บไซต์ของเราตอบโจทย์ผู้ใช้มากขึ้น 
+                                                น้อง ๆ คงสงสัยล่ะสิ ว่าเราทำงานเกี่ยวกับอะไร ? เส้นทางนี้จะทำให้รู้จัก 
+                                                UX & UI มากขึ้นแน่นอน" 
+                                            header="UX/UI"/>
                                     </div>
                                 </Col>
                                 <Col xl='3' lg='3' xs='6'>
                                     <div className=" d-flex justify-content-lg-center justify-content-md-start">
-                                        <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
+                                        <Flippycardnaja 
+                                            srcFront="/img/Track/website.png" 
+                                            bg="/img/Track/website.png" 
+                                            content="ถ้าพูดถึงไอทีหนึ่งในสิ่งที่หลายคน นึกถึงคงจะมีเว็บไซต์อยู่แน่นอน 
+                                                เส้นทางนี้จะพาไปทำความรู้จักสายอาชีพด้านเว็บไซต์ ทำความเข้าใจเกี่ยวกับเว็บไซต์ 
+                                                ด้วยการเขียน HTML และ CSS ถ้าอยากรู้จักสายอาชีพนี้มากขึ้นล่ะก็… เส้นทางนี้แหละ ใช่เลย !" 
+                                            header="DEVELOPER"/>
                                     </div>
                                 </Col>
                                 <Col xl='3' lg='3' xs='6'>
                                     <div className=" d-flex justify-content-lg-center justify-content-md-end">
-                                        <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
+                                        <Flippycardnaja 
+                                            srcFront="/img/Track/programming.png" 
+                                            bg="/img/Track/programming.png" 
+                                            content="เคยสงสัยกันไหมว่า ทำไมแอปพลิเคชันที่เราใช้ถึง โต้ตอบกับเราได้ และมันทำงานอย่างไร ? 
+                                                เส้นทางที่จะพาไปทำความเข้าใจ เกี่ยวกับ Concept ของการเขียนโปรแกรม 
+                                                ผ่านการเรียนภาษาจาวา (Java Programming) ถ้าอยากรู้จักสายอาชีพนี้มากกว่านี้ล่ะก็ ต้องเส้นทางนี้เลย !" 
+                                            header="PROGRAMMING"/>
                                     </div>
                                 </Col>
                                 <Col xl='3' lg='3' xs='6'>
                                     <div className=" d-flex justify-content-lg-center justify-content-md-start">
-                                        <Flippycardnaja srcFront="/img/FrontCard.png" srcBack="/img/BackCard.png" />
+                                        <Flippycardnaja 
+                                            srcFront="/img/Track/network.png" 
+                                            bg="/img/Track/network.png" 
+                                            content="ในยุคที่โลกทั้งใบเชื่อมต่อกันผ่าน สิ่งที่เรียกว่าอินเทอร์เน็ต แล้วมันทำได้ยังไง ? 
+                                                เส้นทางนี้จะพาไปเรียนรู้เกี่ยวกับ สายอาชีพ Networkและตามติด Internet Trends ในปัจจุบัน 
+                                                รวมถึงสัมผัสอุปกรณ์ของจริง กันไปเลยถ้าอยากรู้จักสายอาชีพนี้อย่างใกล้ชิด เส้นทางนี้ให้คำตอบได้แน่นอน" 
+                                            header="NETWORK"/>
                                     </div>
                                 </Col>
                             </Row>
