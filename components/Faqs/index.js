@@ -35,6 +35,13 @@ const FaqsBox = styled.div`
     @media (min-width: 1080px) {
     display: flex;
     }
+    @media (min-width: 1280px){
+        margin-bottom: 6em;
+    }
+    @media (min-width: 1500px){
+        margin-bottom: 10vh;
+        
+    }
 `
 const BoxImage = styled.img`
     position: absolute;
@@ -330,25 +337,25 @@ export default class Faqs extends Component {
                                     </FaqsBox>
                                     <FaqsBox onClick={() => this.changeAnswer(3)}>
                                         <Qtag>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</Qtag>
-                                        <BoxImage src="/img/Faqs/faqsbox3.png" active={this.state.activeQuestion_3} />
+                                        <BoxImage src="/img/Faqs/faqsbox4.png" active={this.state.activeQuestion_3} />
                                     </FaqsBox>
                                 </div>
                             </Col>
                             <Col className="d-flex flex-column align-items-center" lg='4' md='6' sm="6" xs="8">
                                 <FaqsBox onClick={() => this.changeAnswer(1)}>
                                     <Qtag lineHeight="3em">พักค้างคืนที่ไหน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox5.png" active={this.state.activeQuestion_1} />
+                                    <BoxImage src="/img/Faqs/faqsbox2.png" active={this.state.activeQuestion_1} />
                                 </FaqsBox>
                                 <FaqsBox onClick={() => this.changeAnswer(4)} >
                                     <Qtag>หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox2.png" active={this.state.activeQuestion_4} />
+                                    <BoxImage src="/img/Faqs/faqsbox5.png" active={this.state.activeQuestion_4} />
                                 </FaqsBox>
                             </Col>
                             <Col lg='4' md='3' sm="3" xs="2">
                                 <div className="d-flex flex-column align-items-center">
                                     <FaqsBox onClick={() => this.changeAnswer(2)}>
                                         <Qtag lineHeight="3em">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</Qtag>
-                                        <BoxImage src="/img/Faqs/faqsbox4.png" active={this.state.activeQuestion_2} />
+                                        <BoxImage src="/img/Faqs/faqsbox3.png" active={this.state.activeQuestion_2} />
                                     </FaqsBox>
                                     <FaqsBox onClick={() => this.changeAnswer(5)} active={this.state.activeQuestion_5}>
                                         <Qtag>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</Qtag>
