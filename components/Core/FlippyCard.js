@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Flippy, { FrontSide, BackSide } from '../../lib';
+import Flippy, { FrontSide, BackSide } from '../Track/CardTrackCom';
 import styled from 'styled-components'
 import './FlippyCSS.css';
 
