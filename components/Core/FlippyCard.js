@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Flippy, { FrontSide, BackSide } from '../../lib';
+import Flippy, { FrontSide, BackSide } from '../Track/CardCom';
 import styled from 'styled-components'
 import './FlippyCSS.css';
 
-const BackCard = styled.div`
+const BackCard = styled.div`A
   background-image: url(${props => props.bg});
   background-repeat: no-repeat;
   background-size: cover;
