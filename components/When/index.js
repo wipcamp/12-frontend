@@ -83,11 +83,10 @@ const Span = styled.span`
 `
 
 const Zodiac = styled.img`
-    position: absolute;
-    width: 20vw;
+   position: absolute;
+   width: 20vw;
     left: 0vw;
-    top: -15vh;
-    filter: brightness(50%);
+    top: -20vh;
     display: none;
 
     @media (min-width: 1024px) {
@@ -95,8 +94,9 @@ const Zodiac = styled.img`
     }
 `
 
-const Star = styled(Zodiac)`
-    left: -1vw;
+const WrapZodiac = styled.div`
+    transform: rotate(45deg);
+    position: absolute;
     top: -10vh;
 `
 
@@ -169,9 +169,9 @@ export default class When extends Component {
         return (
             <WhenContainer>
                 <BigContainer fluid={true} >
-                    
-                            <Zodiac src="/img/When/libra.svg" data-aos="fade-down-right"/>
-                            
+                    <WrapZodiac>
+                        <Zodiac src="/img/When/libra.svg" data-aos="fade-down-right"/>
+                    </WrapZodiac>   
                                 <Cloud src="/img/When/cloud.png" data-aos="fade-down-left"/>
                             
                                 <Row>

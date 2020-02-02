@@ -100,13 +100,11 @@ const ImgObject = styled.img`
 
   @media (min-width: 768px) {
     width:17.313em;
-    height:16.375em;
     display:inherit;
   }
 
   @media (min-width: 992px) {
-    width: 28.125em;
-    height: 26.602em;
+    width: 25em;
     display:inherit;
   }
  
@@ -217,8 +215,8 @@ export default class contact extends Component {
               </WrapContact>
             </Col>
             <Col xl="6" lg="6" md="6" sm="12" xs="12">
-              <Parallax y={[-10, 10]}>
-                <ImgObject src="img/Contact/obcontact1.png" />
+              <Parallax y={[-20, 10]}>
+                <ImgObject src="img/Contact/sagittarius.svg" />
               </Parallax>
             </Col>
 

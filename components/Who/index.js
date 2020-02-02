@@ -78,9 +78,7 @@ const WhoRow = styled(Row)`
 
 const Zodiac = styled.img`
     position: absolute;
-    right: 2vw;
-    width: 20vw;
-    bottom: -25vh;
+    width: 25vw;
     display: none;
 
     @media (min-width: 1024px) {
@@ -88,9 +86,11 @@ const Zodiac = styled.img`
     }
 `
 
-const Star = styled(Zodiac)`
-    right: 2vw;
-    bottom: -20vh;
+const WrapZodiac = styled.div`
+    position: absolute;
+    transform: rotate(120deg);
+    right: -5vw;
+    bottom: 2vw;
 `
 
 export default class Who extends Component {
@@ -213,11 +213,11 @@ export default class Who extends Component {
                                         <Image2 src="/img/Who/Wippo.png" />
                                     </Col>
                                 </Row>
-                            <div data-aos="fade-down-left"> 
-                            <Star src="/img/Who/star.png" />
+                            <WrapZodiac> 
+                            
                         
-                        <Zodiac src="/img/Who/zodiac.png" />
-                    </div>
+                        <Zodiac src="/img/Who/scorpio.svg" data-aos="fade-down-right"/>
+                    </WrapZodiac>
                 </ContentContainer>
             </WhoContainer>
         )
