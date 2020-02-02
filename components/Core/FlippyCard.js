@@ -22,7 +22,7 @@ const StyledCardHeader = styled.h4`
 `
 
 const Content = styled.div`
-  font-family: 'Sarabun-Regular';
+  font-family: 'ChakraPetch-Regular';
   font-size: 11px;
   color: white;
   padding: 10%;
