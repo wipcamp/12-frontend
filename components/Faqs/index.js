@@ -6,32 +6,27 @@ import { Header, SubHeader, Content } from '../Core/Text'
 import './fade.css'
 
 const FaqsContainer = styled.div`
-    /* background: rgb(9,10,15);
-    background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%); */
     font-family: 'Sarabun-Regular', sans-serif;
 `
 
 const FaqsBox = styled.div`
     text-align: center;
-    /* background-color: #cecece; */
     border-radius: 6px;
     width: 80%;
     height: 5.3em;
     color: white;
     padding: 0.7em;
     font-size: 16px;
-    /* margin-top: 10vh; */
     margin-bottom: 10vh;
     z-index:2;
     display: none;
     cursor: pointer;
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer */
-    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
-    -webkit-user-select: none; /* Chrome, Safari, and Opera */
-    -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    -khtml-user-select: none;
+    -webkit-user-select: none; 
+    -webkit-touch-callout: none; 
     transition: filter 0.25s ease-in-out;
-    /* filter: ${props => props.active || "none"}; */
     @media (min-width: 1080px) {
     display: flex;
     }
@@ -39,8 +34,7 @@ const FaqsBox = styled.div`
         margin-bottom: 6em;
     }
     @media (min-width: 1500px){
-        margin-bottom: 10vh;
-        
+        margin-bottom: 10vh;  
     }
 `
 const BoxImage = styled.img`
@@ -75,7 +69,6 @@ const AnswerBoxImage = styled.img`
     right: 0;
     display: none;
     @media (min-width: 768px) {
-        /* display: block; */
         height: 8em;
         width: 70%;
     }
@@ -116,12 +109,10 @@ const AnswerContent = styled.p`
     width: 80%;
     font-size: 16px ;
     @media (min-width: 768px) {
-        /* padding: 1em 2em 1em 2em; */
         font-size: 20px ;
         width:70%;
     }
     @media (min-width: 1080px) {
-        /* padding: 1em 2em 1em 2em; */
         width: unset;
     }
 `
@@ -129,7 +120,6 @@ const AnswerContent = styled.p`
 const FaqsImg = styled.img`
     width : 232px;
     height: 111px;
-    /* top: -64vh; */
     z-index: 0;
     margin-top: 12em;
     animation: float 5s ease-in-out infinite;
@@ -165,11 +155,6 @@ const FaqsImg = styled.img`
 		transform: translatey(0);
     }
 }
-    /* Ipad pro */
-    /* @media (min-height: 1000px) {
-        height: 45em;
-        top: -25em;
-    } */
 `
 
 const AnswerContainer = styled.div`
@@ -378,7 +363,6 @@ export default class Faqs extends Component {
                             <AnswerContainer className="d-flex align-items-center">
                                 <FaqsAnswer className={this.state.faqClass} opacity={this.state.answerOpacity}>
                                     <AnswerContent>{this.state.answer}</AnswerContent>
-                                    {/* <AnswerBoxImage src='img/Faqs/answerbox.png' /> */}
                                 </FaqsAnswer>
                             </AnswerContainer>
                         </Col>
