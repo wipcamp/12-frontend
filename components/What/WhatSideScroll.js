@@ -27,7 +27,6 @@ const LeftArrowButton = styled.div`
     visibility: hidden;
     position: absolute;
     fill: white;
-    top: 133px;
     left: 25px;
     z-index: 3;
     transform: rotate(180deg);
@@ -55,16 +54,16 @@ const RightArrowButton = styled.div`
     display: none;
 
     @media (min-width: 1280px) {
-        top: 100px;
+        top: 40%;
         display: flex;
     }
 
     @media (min-width: 1440px) {
-        top: 140px;
+        top: 45%;
     }
 
     @media (min-width: 1920px) {
-        top: 200px;
+        top: 48%;
     }
 `
 
