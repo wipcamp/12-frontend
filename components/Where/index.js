@@ -30,7 +30,7 @@ const SIT = styled.div`
     border-top-right-radius: 110px;
     border-top-left-radius: 110px;
     border-bottom: 0;
-    float: right; /* Change this to left to float it to left */
+    float: right;
     margin-left:50%;
     border-radius: 50%;
     display:none ;
