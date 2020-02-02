@@ -63,6 +63,7 @@ const Star1 = styled.img`
     top: -5vh;
     left: 2vw;
     width: 15vw;
+    filter: brightness(50%);
     display: none;
 
     @media (min-width: 1024px) {
