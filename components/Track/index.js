@@ -166,7 +166,7 @@ export default class Track extends Component {
                                             content="เคยสงสัยกันไหมว่า ทำไมแอปพลิเคชันที่เราใช้ถึง โต้ตอบกับเราได้ และมันทำงานอย่างไร ? 
                                                 เส้นทางที่จะพาไปทำความเข้าใจ เกี่ยวกับ Concept ของการเขียนโปรแกรม 
                                                 ผ่านการเรียนภาษาจาวา (Java Programming) ถ้าอยากรู้จักสายอาชีพนี้มากกว่านี้ล่ะก็ ต้องเส้นทางนี้เลย !" 
-                                            header="PROGRAMMING"/>
+                                            header="PROGRAMMER"/>
                                     </div>
                                 </Col>
                                 <Col xl='3' lg='3' xs='6'>

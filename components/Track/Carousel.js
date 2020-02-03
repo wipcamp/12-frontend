@@ -37,7 +37,7 @@ export default class Carousel extends Component {
                 srcFront: "/img/Track/programming.png", 
                 bg: "/img/Track/programmingb.png", 
                 content: "ถ้าพูดถึงไอทีหนึ่งในสิ่งที่หลายคน นึกถึงคงจะมีเว็บไซต์อยู่แน่นอน เส้นทางนี้จะพาไปทำความรู้จักสายอาชีพด้านเว็บไซต์ ทำความเข้าใจเกี่ยวกับเว็บไซต์ ด้วยการเขียน HTML และ CSS ถ้าอยากรู้จักสายอาชีพนี้มากขึ้นล่ะก็… เส้นทางนี้แหละ ใช่เลย !", 
-                header: "PROGRAMMING" },
+                header: "PROGRAMMER" },
             { 
                 srcFront: "/img/Track/network.png", 
                 bg: "/img/Track/networkb.png", 
