@@ -17,7 +17,7 @@ export default class CommingSoon extends Component {
         return (
             <CountdownContainer>
                 <Header color="white" headerText="Comming Soon" />
-                <SubHeader color="white" subHeaderText={this.props.children}></SubHeader>
+                <SubHeader color="white" subHeaderText={this.props.sec}></SubHeader>
             </CountdownContainer>
         )
     }

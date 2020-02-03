@@ -3,27 +3,23 @@ import Wrapper from './index'
 import Countdown,{zeroPad} from 'react-countdown';
 import CommingSoon from './CommingSoon';
 
-
-const renderer = ({ hours, minutes, seconds, completed }) => {
+const renderer = ({days ,hours, minutes, seconds, completed }) => {
     if (completed) {
-      // Render a complete state
       return <Wrapper />;
     } else {
-      // Render a countdown
       return (
-            <CommingSoon>
-                {zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
+            <CommingSoon day={zeroPad(days)} hr={zeroPad(hours)} min={zeroPad(minutes)} sec={zeroPad(seconds)} >
             </CommingSoon>
       );
     }
   };
-  
 
 export default class App extends Component {
     render() {
         return (
             <Fragment>
-                <Countdown date={Date.now()+100000} renderer={renderer} />
+                {/* <Countdown date='2020-02-05T00:00:00' renderer={renderer} /> */}
+                <Countdown date={Date.now()+10000} renderer={renderer} />
             </Fragment>
         )
     }
