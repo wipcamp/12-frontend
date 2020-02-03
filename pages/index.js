@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import GlobalStyles from '../components/Core/GlobalStyle'
-import App from '../components/Core/'
+import App from '../components/Core/App'
 
 
 export default class index extends Component {
