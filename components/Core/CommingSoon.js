@@ -16,7 +16,7 @@ export default class CommingSoon extends Component {
     render() {
         return (
             <CountdownContainer>
-                <Header color="white" headerText="Comming Soon" />
+                <Header color="white" headerText="Coming Soon" />
                 <SubHeader color="white" subHeaderText={this.props.sec}></SubHeader>
             </CountdownContainer>
         )
