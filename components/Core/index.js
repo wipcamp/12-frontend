@@ -16,7 +16,7 @@ import SideBar from "./SideBar"
 import './sidebar.css'
 import { ParallaxProvider } from 'react-scroll-parallax';
 import StarParticle from './Particle'
-import ComingSoon from './CommingSoon'
+
 const Wrap = styled.div`
     overflow: hidden;
 `

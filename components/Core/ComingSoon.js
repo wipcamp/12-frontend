@@ -33,7 +33,7 @@ const WipLogoImg = styled.img`
     }
 `
 
-const ComingSoon = styled.h1`
+const ComingSoonText = styled.h1`
     font-family: 'ChakraPetch-Regular';
     font-size: 24px;
     color: #6F7F8D;
@@ -47,7 +47,7 @@ const ComingSoon = styled.h1`
     }
 `
 
-const StayTune = styled(ComingSoon)`
+const StayTune = styled(ComingSoonText)`
     font-family: 'ChakraPetch-Regular';
     font-size: 18px;
 
@@ -56,7 +56,7 @@ const StayTune = styled(ComingSoon)`
     }
 `
 
-const CountDownText = styled(SubHeader)`
+const CountDownText = styled(ComingSoonText)`
     font-family: 'ChakraPetch-Regular';
 `
 
@@ -158,7 +158,7 @@ const Cloud3 = styled(Star2)`
     @media (min-height: 1366px) {
         top: 91vh;
     }
-` 
+`
 
 const Cloud4 = styled(Cloud3)`
     right: -41.5vw;
@@ -192,7 +192,29 @@ const Cloud4 = styled(Cloud3)`
         top: 85vh;
     }
 `
-export default class CommingSoon extends Component {
+const Li = styled.li`
+  display: inline-block;
+  font-size: 1em;
+  list-style-type: none;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-family: 'ChakraPetch-Regular';
+    color: #6F7F8D;
+   & span {
+    display: block;
+    font-size: 2.5rem;
+   }
+   @media (min-width: 768px) {
+        font-size: 1.5em;
+        padding: 1em;
+        & span {
+    display: block;
+    font-size: 4.5rem;
+   }
+    }
+
+`
+export default class ComingSoon extends Component {
 
     componentDidMount = () => {
         AOS.init({
@@ -203,27 +225,32 @@ export default class CommingSoon extends Component {
     render() {
         return (
             <StarParticle>
-            <CountdownContainer>
-                <Wrap>
-                    <Star1 src="/img/ComingSoon/star1.png" data-aos="fade-down-right"/>
-                    <Star2 src="/img/ComingSoon/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
-                    <Star3 src="/img/ComingSoon/star3.png" data-aos="fade-down-left" data-aos-duration="2500"/>
-                    <Cloud1 src="/img/ComingSoon/cloud1.png" data-aos="fade-up-right"/>
-                    <Cloud2 src="/img/ComingSoon/cloud2.png" data-aos="fade-up-right" data-aos-duration="2500"/>
-                    <Cloud3 src="/img/ComingSoon/cloud3.png" data-aos="fade-up-left" data-aos-duration="2500"/>
-                    <Cloud4 src="/img/ComingSoon/cloud4.png" data-aos="fade-up-left"/>
-                    <WipLogoImg src='/img/Home/logo.png' />
-                    <br />
-                    <br />
-                    <ComingSoon>C O M I N G &nbsp;&nbsp;S O O N</ComingSoon>
-                    
-                        <CountDownText color="#6F7F8D" subHeaderText={this.props.day+" "+this.props.hr+" "+this.props.min+" "+this.props.sec} />
-                    
-                    <br />
-                    <br />
-                    <StayTune>ติดตามได้ที่เพจ WIP Camp</StayTune>
-                </Wrap>
-            </CountdownContainer>
+                <CountdownContainer>
+                    <Wrap>
+                        <Star1 src="/img/ComingSoon/star1.png" data-aos="fade-down-right" />
+                        <Star2 src="/img/ComingSoon/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
+                        <Star3 src="/img/ComingSoon/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
+                        <Cloud1 src="/img/ComingSoon/cloud1.png" data-aos="fade-up-right" />
+                        <Cloud2 src="/img/ComingSoon/cloud2.png" data-aos="fade-up-right" data-aos-duration="2500" />
+                        <Cloud3 src="/img/ComingSoon/cloud3.png" data-aos="fade-up-left" data-aos-duration="2500" />
+                        <Cloud4 src="/img/ComingSoon/cloud4.png" data-aos="fade-up-left" />
+                        <WipLogoImg src='/img/Home/logo.png' />
+                        <br />
+                        <br />
+                        <ComingSoonText>C O M I N G &nbsp;&nbsp;S O O N</ComingSoonText>
+
+                        <ul>
+                            <Li><span id="days">{this.props.day}</span>days</Li>
+                            <Li><span id="hours">{this.props.hr}</span>Hours</Li>
+                            <Li><span id="minutes">{this.props.min}</span>Minutes</Li>
+                            <Li><span id="seconds">{this.props.sec}</span>Seconds</Li>
+                        </ul>
+
+                        <br />
+                        <br />
+                        <StayTune>ติดตามได้ที่เพจ WIP Camp</StayTune>
+                    </Wrap>
+                </CountdownContainer>
             </StarParticle>
         )
     }
