@@ -19,7 +19,7 @@ export default class App extends Component {
         return (
             <Fragment>
                 {/* <Countdown date='2020-02-12T00:00:00' renderer={renderer} /> */}
-                <Countdown date={Date.now()+50000} renderer={renderer} />
+                <Countdown date={Date.now()+5000} renderer={renderer} />
             </Fragment>
         )
     }
