@@ -4,6 +4,13 @@ import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader, Content } from '../Core/Text'
 import './fade.css'
+import {
+    Accordion,
+    AccordionItem,
+    AccordionItemHeading,
+    AccordionItemButton,
+    AccordionItemPanel,
+} from 'react-accessible-accordion';
 
 const FaqsContainer = styled.div`
     font-family: 'Sarabun-Regular', sans-serif;
@@ -156,7 +163,88 @@ const FaqsImg = styled.img`
     }
 }
 `
-
+const DropRow = styled(Row)`
+        padding: 3em 0 0 0;
+        height: 38em;
+        @media (min-width: 368px) {
+        height: 32em;
+    }
+        @media (min-width: 768px) {
+        height: 29em;
+    }
+        @media (min-width: 1080px) {
+        display:none;
+    }
+`
+const StyledAccordian = styled(Accordion)`
+    color: white;
+    font-size: 12px;
+    width: 90%;
+    @media (min-width: 500px) {
+        font-size: 16px;
+    }
+`
+const StyledAccordionItem = styled(AccordionItem)`
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    -khtml-user-select: none;
+    -webkit-user-select: none; 
+    -webkit-touch-callout: none; 
+`
+const StyledAccordionItemHeading = styled(AccordionItemHeading)`
+`
+const StyledAccordionItemButton = styled(AccordionItemButton)`
+    background-color: #223557;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    display: flex;
+    border-bottom: 1px solid #cecece;
+    & p {
+        display: inline-block;
+        width: 90%;
+        margin:0;
+    }
+    &:before {
+        width: 3em;
+        align-self: center;
+        display: inline-block;
+        content: '';
+        height: 10px;
+        width: 10px;
+        margin-right: 1em;
+        border-bottom: 2px solid currentColor;
+        border-right: 2px solid currentColor;
+        transform: rotate(-45deg);
+    }
+    &[aria-selected='true']::before,
+    &[aria-expanded='true']::before {
+        transform: rotate(45deg);
+    }
+    &[botBorder='none'] {
+        border: none;
+    }
+    &[aria-expanded='true'] {
+        border-bottom: 1px solid #cecece;
+    }
+     
+`
+const slideDown = keyframes`
+      0% { padding-top:0; max-height: 0; }
+      /* 25% {padding-top:1em}    */
+    100% { padding-top:1em;max-height:10em; }
+}
+`
+const StyledAccordionItemPanel = styled(AccordionItemPanel)`
+    background-color: #2e343e;
+    z-index:0;
+    overflow:hidden;
+    padding: 1em 1em 0.2em 1em;
+    animation: ${slideDown} 0.5s ease-in;
+`
 const AnswerContainer = styled.div`
     width: 100%;
     display: flex;
@@ -165,12 +253,6 @@ const AnswerContainer = styled.div`
     }
     @media (min-width: 1080px) {
         height: 10em;
-    }
-`
-
-const DropRow = styled(Row)`
-        @media (min-width: 1080px) {
-        display:none;
     }
 `
 const FaqsImgContainer = styled.div`
@@ -202,7 +284,6 @@ const Qtag = styled.p`
 const StyledSelect = styled.select`
     width: 80%;
 `
-
 export default class Faqs extends Component {
 
     state = {
@@ -226,7 +307,8 @@ export default class Faqs extends Component {
         activeStyle: "drop-shadow(0 0 0.5rem #CCA403)",
         isMobile: true,
         middleContent: 6,
-        sideCol: 3
+        sideCol: 3,
+        selectedIndex: 0
     }
 
     changeAnswer = e => {
@@ -299,20 +381,84 @@ export default class Faqs extends Component {
                     </Row>
                     {(this.getType()) ?
                         <DropRow>
-                            <Col>
-                                <div className="d-flex justify-content-center">
-                                    <StyledSelect value={this.state.currentAnswerIndex} onChange={() => this.changeAnswer(event.target.value)}>
-                                        <option value="6">กรุณาเลือกคำถาม</option>
-                                        <option value="0">รับสมัครคนเข้าค่ายกี่คน ?</option>
-                                        <option value="1">พักค้างคืนที่ไหน ?</option>
-                                        <option value="2">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</option>
-                                        <option style={{ overflow: "warp" }} value="3">มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</option>
-                                        <option value="4">หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</option>
-                                        <option value="5">จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</option>
-                                    </StyledSelect>
-                                </div>
-                            </Col>
+                            <Col className="d-flex justify-content-center">
+        <StyledAccordian allowZeroExpanded={true} >
+            <StyledAccordionItem>
+                <StyledAccordionItemHeading>
+                    <StyledAccordionItemButton>
+                    <p>รับสมัครคนเข้าค่ายกี่คน ?</p>
+                    </StyledAccordionItemButton>
+                </StyledAccordionItemHeading>
+                <StyledAccordionItemPanel>
+                    <p>
+                    WIP Camp ครั้งที่ 12 นี้ รับสมัครผู้เข้าร่วมจำนวน 100 คนครับ
+                    </p>
+                </StyledAccordionItemPanel>
+            </StyledAccordionItem>
+            <StyledAccordionItem>
+                <StyledAccordionItemHeading>
+                    <StyledAccordionItemButton>
+                    <p>พักค้างคืนที่ไหน ?</p>
+                    </StyledAccordionItemButton>
+                </StyledAccordionItemHeading>
+                <StyledAccordionItemPanel>
+                    <p>
+                    สำหรับที่พักนั้นจะอยู่ภายในหอพักนักศึกษา มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี โดยมีพี่ ๆ รวมไปถึงฝ่ายพยาบาล คอยดูแลน้อง ๆ ตลอด 24 ชั่วโมงครับ
+                    </p>
+                </StyledAccordionItemPanel>
+            </StyledAccordionItem>
+            <StyledAccordionItem>
+                <StyledAccordionItemHeading>
+                    <StyledAccordionItemButton>
+                    <p>มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่</p>
+                    </StyledAccordionItemButton>
+                </StyledAccordionItemHeading>
+                <StyledAccordionItemPanel>
+                    <p>
+                    มีค่าใช้จ่ายเป็นจำนวนเงิน 450 บาท สำหรับค่าอาหาร และที่พัก โดยสามารถชำระเงินได้ผ่านทางธนาคาร หลังจากผ่านการคัดเลือกแล้วเท่านั้นครับ
+                    </p>
+                </StyledAccordionItemPanel>
+            </StyledAccordionItem>
+            <StyledAccordionItem>
+                <StyledAccordionItemHeading>
+                    <StyledAccordionItemButton>
+                    <p>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</p>
+                    </StyledAccordionItemButton>
+                </StyledAccordionItemHeading>
+                <StyledAccordionItemPanel>
+                    <p>
+                    ในส่วนของการสมัครน้อง ๆ จำเป็นต้องอัปโหลดเอกสาร ปพ.7 ผ่านทางเว็บไซต์ค่ายเลยครับ
+                    </p>
+                </StyledAccordionItemPanel>
+            </StyledAccordionItem>
+            <StyledAccordionItem>
+                <StyledAccordionItemHeading>
+                    <StyledAccordionItemButton>
+                    <p>หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</p>
+                    </StyledAccordionItemButton>
+                </StyledAccordionItemHeading>
+                <StyledAccordionItemPanel>
+                    <p>
+                    เอกสารยินยอมจากผู้ปกครอง และหลักฐานการโอนเงินยืนยันสิทธิ์ครับ โดยน้อง ๆ สามารถอัปโหลดผ่านทางเว็บไซต์ค่ายได้เลยครับ 
+                    </p>
+                </StyledAccordionItemPanel>
+            </StyledAccordionItem>
+            <StyledAccordionItem>
+                <StyledAccordionItemHeading>
+                    <StyledAccordionItemButton botBorder="none">
+                     <p>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</p>
+                    </StyledAccordionItemButton>
+                </StyledAccordionItemHeading>
+                <StyledAccordionItemPanel>
+                    <p>
+                    ไม่จำเป็นต้องมีพื้นฐานครับ ขอเพียงน้อง ๆ มีความสนใจทางด้านไอที น้องก็สามารถเข้าร่วมได้แล้วครับ
+                    </p>
+                </StyledAccordionItemPanel>
+            </StyledAccordionItem>
+        </StyledAccordian>
+        </Col>
                         </DropRow> :
+                        <Fragment>
                         <Row className="mt-5 order-2">
                             <Col lg='4' md='3' sm="3" xs="2">
                                 <div className="d-flex flex-column align-items-center">
@@ -349,25 +495,26 @@ export default class Faqs extends Component {
                                 </div>
                             </Col>
                         </Row>
+                                            <Row className="">
+                                            <Col lg='12'>
+                                                <FaqsImgContainer>
+                                                    <FaqsImg src="/img/Faqs/Book.png" />
+                                                </FaqsImgContainer>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col lg={this.state.sideCol} md="auto" sm="auto" ></Col>
+                                            <Col lg={this.state.middleContent} md="12" sm="12" >
+                                                <AnswerContainer className="d-flex align-items-center">
+                                                    <FaqsAnswer className={this.state.faqClass} opacity={this.state.answerOpacity}>
+                                                        <AnswerContent>{this.state.answer}</AnswerContent>
+                                                    </FaqsAnswer>
+                                                </AnswerContainer>
+                                            </Col>
+                                            <Col lg={this.state.sideCol} md="12" sm="auto" ></Col>
+                                        </Row>
+                                        </Fragment>
                     }
-                    <Row className="">
-                        <Col lg='12'>
-                            <FaqsImgContainer>
-                                <FaqsImg src="/img/Faqs/Book.png" />
-                            </FaqsImgContainer>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg={this.state.sideCol} md="auto" sm="auto" ></Col>
-                        <Col lg={this.state.middleContent} md="12" sm="12" >
-                            <AnswerContainer className="d-flex align-items-center">
-                                <FaqsAnswer className={this.state.faqClass} opacity={this.state.answerOpacity}>
-                                    <AnswerContent>{this.state.answer}</AnswerContent>
-                                </FaqsAnswer>
-                            </AnswerContainer>
-                        </Col>
-                        <Col lg={this.state.sideCol} md="12" sm="auto" ></Col>
-                    </Row>
 
                 </StyledContainer>
             </FaqsContainer>
