@@ -219,7 +219,7 @@ export default class contact extends Component {
               <HeaderStyled>Contact</HeaderStyled>
               <WrapContact>
                 <TextBox>
-                  <StyledLink href="https://www.facebook.com/messages/t/wipcamp" target="_blank">
+                  <StyledLink href="https://m.me/wipcamp" target="_blank">
                     <ContactImg src="img/Contact/messenger.png" />
                     MESSENGER
                     </StyledLink>
