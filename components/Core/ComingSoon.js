@@ -92,32 +92,12 @@ const Cloud1 = styled(Star1)`
     left: -13vw;
     width: 55vw;
 
-    @media (min-height: 720px) {
-        top: 73vh;
+    @media (min-width: 1024px) {
+        top:80vh;
     }
 
-    @media (min-height: 768px) {
-        top: 80vh;
-    }
-
-    @media (min-height: 794px) {
-        top: 70vh;
-    }
-
-    @media (min-height: 900px) {
-        top: 75vh;
-    }
-
-    @media (min-height: 1024px) {
-        top: 81vh;
-    }
-
-    @media (min-height: 1080px) {
-        top: 75vh;
-    }
-
-    @media (min-height: 1366px) {
-        top: 89vh;
+    @media (min-width: 1280px) {
+        top:77vh;
     }
 `
 
@@ -130,32 +110,12 @@ const Cloud3 = styled(Star2)`
     right: 0vw;
     width: 50vw;
 
-    @media (min-height: 720px) {
-        top: 78vh;
+    @media (min-width: 1024px) {
+        top: 84vh;
     }
 
-    @media (min-height: 768px) {
-        top: 83vh;
-    }
-
-    @media (min-height: 794px) {
-        top: 81vh;
-    }
-
-    @media (min-height: 900px) {
-        top: 82vh;
-    }
-
-    @media (min-height: 1024px) {
-        top: 85vh;
-    }
-
-    @media (min-height: 1080px) {
-        top: 80vh;
-    }
-
-    @media (min-height: 1366px) {
-        top: 91vh;
+    @media (min-width: 1280px) {
+        top:80vh;
     }
 `
 
@@ -163,33 +123,14 @@ const Cloud4 = styled(Cloud3)`
     right: -41.5vw;
     width: 60vw;
 
-    @media (min-height: 720px) {
-        top: 73vh;
+    @media (min-width: 1024px) {
+        top: 78vh;
     }
 
-    @media (min-height: 768px) {
-        top: 75vh;
+    @media (min-width: 1280px) {
+        top:75vh;
     }
-
-    @media (min-height: 794px) {
-        top: 65vh;
-    }
-
-    @media (min-height: 900px) {
-        top: 71vh;
-    }
-
-    @media (min-height: 1024px) {
-        top: 75vh;
-    }
-
-    @media (min-height: 1080px) {
-        top: 70vh;
-    }
-
-    @media (min-height: 1366px) {
-        top: 85vh;
-    }
+    
 `
 const Li = styled.li`
   display: inline-block;
