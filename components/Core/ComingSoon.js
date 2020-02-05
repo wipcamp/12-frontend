@@ -6,13 +6,16 @@ import StarParticle from './Particle'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const OverFlowHidden = styled.div`
+    overflow: hidden;
+`
+
 const CountdownContainer = styled.div`
     font-family: 'NotoSansThai-Regular', sans-serif;
     width: 100%;
     height: 100vh;
     position: relative;
     display: table;
-    overflow: hidden;
 `
 
 const Wrap = styled.div`
@@ -54,10 +57,6 @@ const StayTune = styled(ComingSoonText)`
     @media (min-width: 768px) {
         font-size: 36px;
     }
-`
-
-const CountDownText = styled(ComingSoonText)`
-    font-family: 'ChakraPetch-Regular';
 `
 
 const Star1 = styled.img`
@@ -225,32 +224,34 @@ export default class ComingSoon extends Component {
     render() {
         return (
             <StarParticle>
-                <CountdownContainer>
-                    <Wrap>
-                        <Star1 src="/img/ComingSoon/star1.png" data-aos="fade-down-right" />
-                        <Star2 src="/img/ComingSoon/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
-                        <Star3 src="/img/ComingSoon/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
-                        <Cloud1 src="/img/ComingSoon/cloud1.png" data-aos="fade-up-right" />
-                        <Cloud2 src="/img/ComingSoon/cloud2.png" data-aos="fade-up-right" data-aos-duration="2500" />
-                        <Cloud3 src="/img/ComingSoon/cloud3.png" data-aos="fade-up-left" data-aos-duration="2500" />
-                        <Cloud4 src="/img/ComingSoon/cloud4.png" data-aos="fade-up-left" />
-                        <WipLogoImg src='/img/Home/logo.png' />
-                        <br />
-                        <br />
-                        <ComingSoonText>C O M I N G &nbsp;&nbsp;S O O N</ComingSoonText>
+                <OverFlowHidden>
+                    <CountdownContainer>
+                        <Wrap>
+                            <Star1 src="/img/ComingSoon/star1.png" data-aos="fade-down-right" />
+                            <Star2 src="/img/ComingSoon/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
+                            <Star3 src="/img/ComingSoon/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
+                            <Cloud1 src="/img/ComingSoon/cloud1.png" data-aos="fade-up-right" />
+                            <Cloud2 src="/img/ComingSoon/cloud2.png" data-aos="fade-up-right" data-aos-duration="2500" />
+                            <Cloud3 src="/img/ComingSoon/cloud3.png" data-aos="fade-up-left" data-aos-duration="2500" />
+                            <Cloud4 src="/img/ComingSoon/cloud4.png" data-aos="fade-up-left" />
+                            <WipLogoImg src='/img/Home/logo.png' />
+                            <br />
+                            <br />
+                            <ComingSoonText>C O M I N G &nbsp;&nbsp;S O O N</ComingSoonText>
 
-                        <ul>
-                            <Li><span id="days">{this.props.day}</span>days</Li>
-                            <Li><span id="hours">{this.props.hr}</span>Hours</Li>
-                            <Li><span id="minutes">{this.props.min}</span>Minutes</Li>
-                            <Li><span id="seconds">{this.props.sec}</span>Seconds</Li>
-                        </ul>
+                            <ul>
+                                <Li><span id="days">{this.props.day}</span>days</Li>
+                                <Li><span id="hours">{this.props.hr}</span>Hours</Li>
+                                <Li><span id="minutes">{this.props.min}</span>Minutes</Li>
+                                <Li><span id="seconds">{this.props.sec}</span>Seconds</Li>
+                            </ul>
 
-                        <br />
-                        <br />
-                        <StayTune>ติดตามได้ที่เพจ WIP Camp</StayTune>
-                    </Wrap>
-                </CountdownContainer>
+                            <br />
+                            <br />
+                            <StayTune>ติดตามได้ที่เพจ WIP Camp</StayTune>
+                        </Wrap>
+                    </CountdownContainer>
+                </OverFlowHidden>
             </StarParticle>
         )
     }
