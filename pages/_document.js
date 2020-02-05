@@ -26,7 +26,7 @@ export default class MyDocument extends Document {
           <meta property="og:site_name" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
 
           <link rel="stylesheet" href="\node_modules\bootstrap\dist\css\bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
-
+          <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon"/>
           <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
           <script dangerouslySetInnerHTML={{
