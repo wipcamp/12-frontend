@@ -21,25 +21,25 @@ const GameContainer = styled.div`
 `
 
 const Wrap = styled.div`
-    background: url(/img/Game/gamebg.png) center no-repeat;
+    background: url(/img/Game/gamemobile.png) center no-repeat;
     position: relative;
     display: table;
     width: 100%;
-    height: auto;
-    transition: background-size 0.8s ease-in-out, filter 0.8s ease-in-out;
-    background-size: 90%;
-    filter: grayscale(0);
-    pointer-events: none;
-    @media (min-width: 768px) {
-        height: 771px;   
-    }
+    height: 80vh;
+    background-size: 100%;
 
     @media (min-width: 1024px) {
-        height: 500px;  
-        :hover{
-        background-size: 100%;
+        background: url(/img/Game/gamebg.png) center no-repeat;
+        height: 643px;
+        transition: background-size 0.8s ease-in-out, filter 0.8s ease-in-out;
+        background-size: 90%;
         filter: grayscale(0);
-    }
+        pointer-events: none;
+        
+        :hover{
+            background-size: 100%;
+            filter: grayscale(0);
+        }
         filter: grayscale(50%);  
     }
 `
@@ -51,8 +51,7 @@ const VerticalAlign = styled.div`
 `
 
 const Content = styled.div`
-    margin-top: 41px;
-    margin: 2em 2.25em 0; 
+    margin: 2em 0 0; 
 
     @media (min-width: 768px) {
         margin: 2em 3em 0;
@@ -70,15 +69,12 @@ const StyledButton = styled.button`
     transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
     &:hover {
         transform: scale(0.9);
-        /* filter: drop-shadow(0 0 0.5em #535CA9) */
     }
 
 `
 const Play = styled.img`
     width: 30vw;
     height: auto;
-    padding-top: 20vh;
-    padding-bottom: 20vh;
 
     @media (min-width: 768px) {
         width: 40vw;
