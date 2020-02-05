@@ -5,6 +5,7 @@ import { SubHeader } from './Text'
 import StarParticle from './Particle'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link'
 
 const OverFlowHidden = styled.div`
     overflow: hidden;
@@ -16,6 +17,7 @@ const CountdownContainer = styled.div`
     height: 100vh;
     position: relative;
     display: table;
+    z-index: 1;
 `
 
 const Wrap = styled.div`
@@ -50,9 +52,11 @@ const ComingSoonText = styled.h1`
     }
 `
 
-const StayTune = styled(ComingSoonText)`
+const StayTune = styled.a`
     font-family: 'ChakraPetch-Regular';
     font-size: 18px;
+    color: #6F7F8D !important;
+    text-decoration: none !important;
 
     @media (min-width: 768px) {
         font-size: 36px;
@@ -91,6 +95,7 @@ const Star3 = styled(Star2)`
 const Cloud1 = styled(Star1)`
     left: -13vw;
     width: 55vw;
+    z-index: -1;
 
     @media (min-width: 1024px) {
         top:80vh;
@@ -109,6 +114,7 @@ const Cloud2 = styled(Cloud1)`
 const Cloud3 = styled(Star2)`
     right: 0vw;
     width: 50vw;
+    z-index: -1;
 
     @media (min-width: 1024px) {
         top: 84vh;
@@ -179,17 +185,14 @@ export default class ComingSoon extends Component {
                             <br />
                             <br />
                             <ComingSoonText>C O M I N G &nbsp;&nbsp;S O O N</ComingSoonText>
-
                             <ul>
                                 <Li><span id="days">{this.props.day}</span>days</Li>
                                 <Li><span id="hours">{this.props.hr}</span>Hours</Li>
                                 <Li><span id="minutes">{this.props.min}</span>Minutes</Li>
                                 <Li><span id="seconds">{this.props.sec}</span>Seconds</Li>
                             </ul>
-
                             <br />
-                            <br />
-                            <StayTune>ติดตามได้ที่เพจ WIP Camp</StayTune>
+                            <StayTune href="https://www.facebook.com/wipcamp/" target="_blank">ติดตามได้ที่เพจ WIP Camp</StayTune>
                         </Wrap>
                     </CountdownContainer>
                 </OverFlowHidden>
