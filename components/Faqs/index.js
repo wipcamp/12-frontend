@@ -11,6 +11,7 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
+import { goToAnchor } from 'react-scrollable-anchor'
 
 const FaqsContainer = styled.div`
     font-family: 'Sarabun-Regular', sans-serif;
@@ -308,11 +309,13 @@ export default class Faqs extends Component {
         isMobile: true,
         middleContent: 6,
         sideCol: 3,
-        selectedIndex: 0
+        selectedIndex: 0,
+        isFirstClick: true
     }
 
     changeAnswer = e => {
         if (e != this.state.currentAnswerIndex) {
+            this.isFirstClick()
             var prevQ = "activeQuestion_" + this.state.currentAnswerIndex
             this.setState({
                 faqClass: "none",
@@ -367,6 +370,14 @@ export default class Faqs extends Component {
         return this.state.isMobile
     }
 
+    isFirstClick = () => {
+        if (this.state.isFirstClick) {
+            goToAnchor('faqs', true)
+            this.setState({
+                isFirstClick: false
+            })
+        }
+    }
 
 
     render() {
