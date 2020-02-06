@@ -77,6 +77,7 @@ const StyledButton = styled.button`
     font-size: 12px;
     color: white !important;
     padding: 0.5em 1em;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 
     :hover {
         background-color: white;
