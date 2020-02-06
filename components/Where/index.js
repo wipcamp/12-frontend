@@ -110,9 +110,9 @@ export default class Where extends Component {
             <WhereBg>
                 <Container fluid={true}>
                     
-                        <Star1 src="/img/Where/star1.png" data-aos="fade-down-right"/>
+                        <Star1 src="/img/Where/star1.svg" data-aos="fade-down-right"/>
                         
-                            <Star2 src="/img/Where/star2.png" data-aos="fade-down-left"/>
+                            <Star2 src="/img/Where/star2.svg" data-aos="fade-down-left"/>
                         
                                 <Row>
                                     <Col>
