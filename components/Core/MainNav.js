@@ -5,7 +5,6 @@ import {
 	NavItem,
 	NavLink,
 } from 'reactstrap'
-import Scrollspy from 'react-scrollspy'
 import styled from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './sidebar.css'
