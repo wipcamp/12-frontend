@@ -203,31 +203,31 @@ export default class When extends Component {
                                     <Col lg='1' md="auto" sm="auto"></Col>
                                     <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                                         <BoxContainer>
-                                            <WhenImg src='/img/When/OpenRegis.png' glow={this.state.openRegis} />
+                                            <WhenImg src='/img/When/openregis.webp' glow={this.state.openRegis} />
                                             <TimerText ><Span>เปิดรับสมัคร</Span><br /> 12 กุมภาพันธ์ 2563</TimerText>
                                         </BoxContainer>
                                     </Col>
                                     <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                                         <BoxContainer>
-                                            <WhenImg src='/img/When/CloseRegis.png' glow={this.state.closeRegis} />
+                                            <WhenImg src='/img/When/closeregis.webp' glow={this.state.closeRegis} />
                                             <TimerText ><Span>ปิดรับสมัคร</Span><br /> 12 มีนาคม 2563</TimerText>
                                         </BoxContainer>
                                     </Col>
                                     <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                                         <BoxContainer>
-                                            <WhenImg src='/img/When/Annouce.png' glow={this.state.announce} />
+                                            <WhenImg src='/img/When/announce.webp' glow={this.state.announce} />
                                             <TimerText><Span>ประกาศผล</Span><br />28 มีนาคม 2563</TimerText>
                                         </BoxContainer>
                                     </Col>
                                     <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                                         <BoxContainer>
-                                            <WhenImg src='/img/When/Confirm.png' glow={this.state.confirm} />
+                                            <WhenImg src='/img/When/confirm.webp' glow={this.state.confirm} />
                                             <TimerText><Span>ยืนยันสิทธิ์</Span><br />29 เมษายน 2563<br /> ถึง 4 พฤษภาคม 2563</TimerText>
                                         </BoxContainer>
                                     </Col>
                                     <Col className="d-flex" lg={this.state.contentColumn} md={this.state.contentColumn} sm="12">
                                         <BoxContainer>
-                                            <WhenImg src='/img/When/WipDay.png' glow={this.state.dayWIP} />
+                                            <WhenImg src='/img/When/wipday.webp' glow={this.state.dayWIP} />
                                             <TimerText><Span>เปิดค่าย</Span><br />27 พฤษภาคม 2563<br /> ถึง 31 พฤษภาคม 2563</TimerText>
                                         </BoxContainer>
                                     </Col>
