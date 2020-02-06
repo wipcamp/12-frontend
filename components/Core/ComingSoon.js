@@ -39,7 +39,7 @@ const WipLogoImg = styled.img`
 `
 
 const ComingSoonText = styled.h1`
-    font-family: 'ChakraPetch-Regular';
+    font-family: 'NotoSans-Regular';
     font-size: 24px;
     color: #6F7F8D;
 
@@ -53,9 +53,9 @@ const ComingSoonText = styled.h1`
 `
 
 const StayTune = styled.a`
-    font-family: 'ChakraPetch-Regular';
+    font-family: 'Sarabun-Regular';
     font-size: 18px;
-    color: #6F7F8D !important;
+    color: #1877F2 !important;
     text-decoration: none !important;
 
     @media (min-width: 768px) {
@@ -67,7 +67,7 @@ const Star1 = styled.img`
     position: absolute;
     top: 5vh;
     left: 5vw;
-    width: 15vw;
+    width: 10vw;
     display: none;
 
     @media (min-width: 1024px) {
@@ -92,59 +92,76 @@ const Star3 = styled(Star2)`
     right: -3vw;
 `
 
-const Cloud1 = styled(Star1)`
-    left: -13vw;
-    width: 55vw;
-    z-index: -1;
-
-    @media (min-width: 1024px) {
-        top:80vh;
-    }
-
-    @media (min-width: 1280px) {
-        top:77vh;
-    }
+const Zodiac1 = styled(Star2)`
+    right: 15vw;
+    top: 22vh;
+    transform: rotate(40deg);
+    width: 3vw;
 `
 
-const Cloud2 = styled(Cloud1)`
-    top: 73vh;
-    left: -0vw;
-    width: 50vw;
-`
-const Cloud3 = styled(Star2)`
-    right: 0vw;
-    width: 50vw;
-    z-index: -1;
-
-    @media (min-width: 1024px) {
-        top: 84vh;
-    }
-
-    @media (min-width: 1280px) {
-        top:80vh;
-    }
+const Zodiac2 = styled(Star1)`
+    transform: rotate(-40deg);
+    width: 8vw;
+    top: 2vh;
+    left: 12vw;
 `
 
-const Cloud4 = styled(Cloud3)`
-    right: -41.5vw;
-    width: 60vw;
+const Zodiac3 = styled(Star1)`
+    top: 20vh;
+    width: 4vw;
+`
 
-    @media (min-width: 1024px) {
-        top: 78vh;
-    }
-
-    @media (min-width: 1280px) {
-        top:75vh;
-    }
+const CloudLeft = styled.img`
+    position: absolute;
+    left: -7vw;
+    width: 42vw;
+    bottom: -1vh;
+    display: none;
     
+    @media (min-width: 1024px) {
+        display: block;
+    }
 `
+
+const CloudLeft2 = styled(CloudLeft)`
+    width: 32vw;
+    left: 8vw;
+`
+
+const CloudRight = styled.img`
+    position: absolute;
+    width: 40vw;
+    bottom: -2vh;
+    right: -5vw;
+    z-index: 3;
+
+    display: none;
+    
+    @media (min-width: 1024px) {
+        display: block;
+    }
+`
+
+const CloudRight2 = styled(CloudRight)`
+    right: -8vw;
+    z-index: 2;
+    width: 41vw;
+`
+
+const CloudRight3 = styled(CloudRight)`
+    right: -25vw;
+    z-index: 1;
+    bottom: 0vh;
+    width: 45vw;
+`
+
 const Li = styled.li`
   display: inline-block;
   font-size: 1em;
   list-style-type: none;
   padding: 0.5em;
   text-transform: uppercase;
-  font-family: 'ChakraPetch-Regular';
+  font-family: 'NotoSans-Regular';
     color: #6F7F8D;
    & span {
     display: block;
@@ -160,6 +177,16 @@ const Li = styled.li`
     }
 
 `
+
+const Facebook = styled.img`
+    width: 30px;
+    height: 30px;
+
+    @media (min-width: 768px) {
+        width: 50px;
+        height: 50px;
+    }
+`
 export default class ComingSoon extends Component {
 
     componentDidMount = () => {
@@ -174,13 +201,17 @@ export default class ComingSoon extends Component {
                 <OverFlowHidden>
                     <CountdownContainer>
                         <Wrap>
+                            <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down"/>
+                            <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down"/>
+                            <Zodiac3 src="/img/Core/zodiac3.png" data-aos="fade-down"/>
                             <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" />
                             <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
                             <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
-                            <Cloud1 src="/img/Core/cloud1.png" data-aos="fade-up-right" />
-                            <Cloud2 src="/img/Core/cloud2.png" data-aos="fade-up-right" data-aos-duration="2500" />
-                            <Cloud3 src="/img/Core/cloud3.png" data-aos="fade-up-left" data-aos-duration="2500" />
-                            <Cloud4 src="/img/Core/cloud4.png" data-aos="fade-up-left" />
+                            <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" />
+                            <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000"/>
+                            <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" />
+                            <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000"/>
+                            <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500"/>
                             <WipLogoImg src='/img/Core/logo.png' />
                             <br />
                             <br />
@@ -192,7 +223,10 @@ export default class ComingSoon extends Component {
                                 <Li><span id="seconds">{this.props.sec}</span>Seconds</Li>
                             </ul>
                             <br />
-                            <StayTune href="https://www.facebook.com/wipcamp/" target="_blank">ติดตามได้ที่เพจ WIP Camp</StayTune>
+                            <StayTune href="https://www.facebook.com/wipcamp/" target="_blank">
+                                ติดตามได้ที่&nbsp;&nbsp;
+                                <Facebook src="/img/Contact/Facebook.png" />
+                                &nbsp;&nbsp;WIP Camp</StayTune>
                         </Wrap>
                     </CountdownContainer>
                 </OverFlowHidden>
