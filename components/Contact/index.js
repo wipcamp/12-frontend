@@ -225,15 +225,21 @@ export default class contact extends Component {
                     </StyledLink>
                 </TextBox>
                 <TextBox>
-                  <StyledLink href="tel://0955812385">
+                  <StyledLink href="tel://0922687835">
                     <ContactImg src="img/Contact/phone.png" />
-                    095-581-2385 (พี่ทีเจ)
+                    092-268-7835 (พี่ปลาย)
                     </StyledLink>
                 </TextBox>
                 <TextBox>
                   <StyledLink href="mailto:wippo@wipcamp.com" target="_blank">
                     <ContactImg src="img/Contact/email.png" />
                     wippo@wipcamp.com
+                    </StyledLink>
+                </TextBox>
+                <TextBox>
+                  <StyledLink href="https://line.me/R/ti/p/%40wipcamp" target="_blank">
+                    <ContactImg src="img/Contact/line.png" />
+                    @wipcamp
                     </StyledLink>
                 </TextBox>
               </WrapContact>
