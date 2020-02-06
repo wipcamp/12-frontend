@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
           <meta name="og:title" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที " />
           <meta property="og:image" content="http://35.240.193.76/img/temp.jpg" />
           <meta property="og:type" content="company" />
-          <meta property="og:url" content="https://wip.camp/" />
+          <meta property="og:url" content="https://12-pr.freezer.wip.camp/" />
           <meta property="og:site_name" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
           <link rel="stylesheet" href="\node_modules\bootstrap\dist\css\bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
           <link rel="shortcut icon" href="/img/Favicon/favicon.ico" type="image/x-icon"/>
