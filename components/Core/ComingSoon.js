@@ -115,7 +115,7 @@ const CloudLeft = styled.img`
     position: absolute;
     left: -7vw;
     width: 42vw;
-    bottom: -1vh;
+    bottom: -2vh;
     display: none;
     
     @media (min-width: 1024px) {
@@ -225,7 +225,7 @@ export default class ComingSoon extends Component {
                             <br />
                             <StayTune href="https://www.facebook.com/wipcamp/" target="_blank">
                                 ติดตามได้ที่&nbsp;&nbsp;
-                                <Facebook src="/img/Contact/Facebook.png" />
+                                <Facebook src="/img/Contact/facebook.png" />
                                 &nbsp;&nbsp;WIP Camp</StayTune>
                         </Wrap>
                     </CountdownContainer>
