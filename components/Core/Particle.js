@@ -43,6 +43,8 @@ export default class StarParticle extends Component {
             })  
         }
     }
+
+    
     getMove = () => {
         return this.state.move
     }
@@ -68,7 +70,7 @@ export default class StarParticle extends Component {
                 "move": {
                     "enable": true,
                     "direction": "right",
-                    "speed": 0.2
+                    "speed": 0
                 },
                 "size": {
                     "value": 2,
@@ -131,7 +133,7 @@ export default class StarParticle extends Component {
                 "opacity": {
                     'value': 1,
                     "anim": {
-                        "enable": true,
+                        "enable": false,
                         "speed": 1,
                         "opacity_min": 0
                     }
