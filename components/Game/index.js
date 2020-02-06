@@ -31,16 +31,8 @@ const Wrap = styled.div`
     @media (min-width: 1024px) {
         background: url(/img/Game/gamebg.png) center no-repeat;
         height: 643px;
-        transition: background-size 0.8s ease-in-out, filter 0.8s ease-in-out;
-        background-size: 90%;
-        filter: grayscale(0);
-        pointer-events: none;
-        
-        :hover{
-            background-size: 100%;
-            filter: grayscale(0);
-        }
-        filter: grayscale(50%);  
+        background-size: 100%;
+        pointer-events: none;     
     }
 `
 
@@ -66,8 +58,11 @@ const StyledButton = styled.button`
     background-color: transparent;
     border: none;
     pointer-events: auto;
-    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+    transition: transform 0.25s ease-in-out,filter 0.25s ease-in-out;
+    transform: scale(0.8);
+    filter: brightness(1.2) ;
     &:hover {
+        filter: brightness(1.4) ;
         transform: scale(0.9);
     }
 
