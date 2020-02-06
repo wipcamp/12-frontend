@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Parallax } from 'react-scroll-parallax';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const HomeContainer = styled.div`
@@ -57,22 +58,22 @@ const LogoCana = styled(LogoImg)`
 const WrapLogoCana = styled.div`
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
 
     @media (min-width: 768px) {
         margin-top: 50px;
-        margin-bottom: 50px;
+        margin-bottom: 65px;
     }
 
     @media (min-width: 1024px) {
         margin-top: 55px;
-        margin-bottom: 55px;
+        margin-bottom: 70px;
     }
 `
 
-const StyledButton = styled.button`
+const StyledButton = styled.a`
     background-color: #F4693D;
-    border: none;
+    text-decoration: none !important;
     font-family: "Prompt-Regular";
     font-size: 12px;
     color: white !important;
@@ -96,7 +97,7 @@ const StyledButton = styled.button`
 
 const Wippo = styled.img`
     position: absolute;
-    bottom: -25vh;
+    bottom: 5vh;
     right: 5vw;
     display:none;
     width: 15vw;
@@ -118,23 +119,109 @@ const Wippo = styled.img`
 }
 `
 
+const Star1 = styled.img`
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    width: 15vw;
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+`
+
+const Star2 = styled.img`
+    position: absolute;
+    top: -5vh;
+    right: 10vw;
+    width: 20vw;
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+`
+
+const Star3 = styled(Star2)`
+    top: 0vh;
+    right: -3vw;
+`
+
+const Cloud1 = styled(Star1)`
+    left: -13vw;
+    width: 55vw;
+    z-index: -1;
+
+    @media (min-width: 1024px) {
+        top:80vh;
+    }
+
+    @media (min-width: 1280px) {
+        top:77vh;
+    }
+`
+
+const Cloud2 = styled(Cloud1)`
+    top: 73vh;
+    left: -0vw;
+    width: 50vw;
+`
+const Cloud3 = styled(Star2)`
+    right: 0vw;
+    width: 50vw;
+    z-index: -1;
+
+    @media (min-width: 1024px) {
+        top: 84vh;
+    }
+
+    @media (min-width: 1280px) {
+        top:80vh;
+    }
+`
+
+const Cloud4 = styled(Cloud3)`
+    right: -41.5vw;
+    width: 60vw;
+
+    @media (min-width: 1024px) {
+        top: 78vh;
+    }
+
+    @media (min-width: 1280px) {
+        top:75vh;
+    }
+    
+`
 
 export default class Home extends Component {
+
+    componentDidMount = () => {
+        AOS.init({
+            duration: 1500
+        })
+    }
 
     render() {
         return (
                 <HomeContainer>
+                    <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" />
+                    <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
+                    <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
+                    <Cloud1 src="/img/Core/cloud1.png" data-aos="fade-up-right" />
+                    <Cloud2 src="/img/Core/cloud2.png" data-aos="fade-up-right" data-aos-duration="2500" />
+                    <Cloud3 src="/img/Core/cloud3.png" data-aos="fade-up-left" data-aos-duration="2500" />
+                    <Cloud4 src="/img/Core/cloud4.png" data-aos="fade-up-left" />
                     <HomeContent>
-                    <Parallax y={[-15, 15]}>
-                        <Parallax y={[15,-15]}>
-                        <WipLogoImg src='/img/Home/logo.png' />
+                        <WipLogoImg src='/img/Core/logo.png' />
                         <WrapLogoCana>
                             <LogoCana src="/img/Home/LogoCana.png" />
                         </WrapLogoCana>
-                        <StyledButton>REGISTER</StyledButton>
-                        </Parallax>
-                        {/* <Wippo src="/img/Home/newWippo.png" /> */}
-                    </Parallax>
+                        <StyledButton href="https://itim.wip.camp/login">REGISTER</StyledButton>
+                        
+                        <Wippo src="/img/Core/Wippo.png" data-aos="fade-up-left"/>
+                    
                     </HomeContent>
                 </HomeContainer>
         )

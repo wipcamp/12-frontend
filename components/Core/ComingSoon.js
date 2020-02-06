@@ -174,14 +174,14 @@ export default class ComingSoon extends Component {
                 <OverFlowHidden>
                     <CountdownContainer>
                         <Wrap>
-                            <Star1 src="/img/ComingSoon/star1.png" data-aos="fade-down-right" />
-                            <Star2 src="/img/ComingSoon/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
-                            <Star3 src="/img/ComingSoon/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
-                            <Cloud1 src="/img/ComingSoon/cloud1.png" data-aos="fade-up-right" />
-                            <Cloud2 src="/img/ComingSoon/cloud2.png" data-aos="fade-up-right" data-aos-duration="2500" />
-                            <Cloud3 src="/img/ComingSoon/cloud3.png" data-aos="fade-up-left" data-aos-duration="2500" />
-                            <Cloud4 src="/img/ComingSoon/cloud4.png" data-aos="fade-up-left" />
-                            <WipLogoImg src='/img/Home/logo.png' />
+                            <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" />
+                            <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
+                            <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
+                            <Cloud1 src="/img/Core/cloud1.png" data-aos="fade-up-right" />
+                            <Cloud2 src="/img/Core/cloud2.png" data-aos="fade-up-right" data-aos-duration="2500" />
+                            <Cloud3 src="/img/Core/cloud3.png" data-aos="fade-up-left" data-aos-duration="2500" />
+                            <Cloud4 src="/img/Core/cloud4.png" data-aos="fade-up-left" />
+                            <WipLogoImg src='/img/Core/logo.png' />
                             <br />
                             <br />
                             <ComingSoonText>C O M I N G &nbsp;&nbsp;S O O N</ComingSoonText>
