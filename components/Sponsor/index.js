@@ -140,8 +140,8 @@ export default class Sponsor extends Component {
             <SponsorBg>
                 
                     <Star1 src="/img/Sponsor/star1.png" data-aos="fade-down-right"/>
-                    <Zodiac1 src="/img/Sponsor/zodiac1.png" data-aos="fade-down-left"/>
-                    <Zodiac2 src="/img/Sponsor/zodiac2.png" data-aos="fade-down-left"/>
+                    <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down-left"/>
+                    <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down-left"/>
                     <Zodiac3 src="/img/Sponsor/zodiac3.png" data-aos="fade-down-left"/>
                     <Star2 src="/img/Sponsor/star2.png" data-aos="fade-down-left"/>
                         <div className="text-center">

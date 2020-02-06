@@ -179,7 +179,7 @@ export default class Who extends Component {
                                     <Col lg="1" md='1'></Col>
                                 </WhoRow>
                                 <Row>
-                                    <Col><Image src="/img/Who/Wippo.png" /></Col>
+                                    <Col><Image src="/img/Core/Wippo.png" /></Col>
                                 </Row>
                                 <Row>
                                     <Col lg="1" md='1' sm="auto"></Col>
