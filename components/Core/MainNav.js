@@ -5,6 +5,7 @@ import {
 	NavItem,
 	NavLink,
 } from 'reactstrap'
+import Scrollspy from 'react-scrollspy'
 import styled from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -117,6 +118,7 @@ componentDidMount() {
 			<MainNavContainer className='fixed-top'>
 			<ColorNav expand="lg" id="navcolor">
 					<div style={{width:'100%',display:'flex',justifyContent:'center'}}>
+						{/* <Scrollspy items={ ['home', 'what', 'track','when','faqs'] } currentClassName="is-current"> */}
 					<StyledNav navbar>
 						<StyledNavItem>
 								<StyledNavLink href="#home">HOME</StyledNavLink>
@@ -134,6 +136,7 @@ componentDidMount() {
 							<StyledNavLink href="#faqs">FAQS</StyledNavLink>
 						</StyledNavItem>
 					</StyledNav>
+					{/* </Scrollspy> */}
 					</div>
 			</ColorNav>
 		</MainNavContainer>

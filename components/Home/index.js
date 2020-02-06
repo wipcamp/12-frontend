@@ -43,33 +43,30 @@ const LogoImg = styled.img`
 `
 
 const LogoCana = styled(LogoImg)`
-    height: 20px;
-    margin: 7px 2px 0px;
+    height: 40px;
 
     @media (min-width: 768px) {
-        height: 35px;
-        margin: 9px 8px 0px;
+        height: 60px;
     }
 
     @media (min-width: 1024px) {
-        margin: 10px 10px 0;
-        height: 45px;
+        height: 70px;
     }
 `
 
 const WrapLogoCana = styled.div`
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
     @media (min-width: 768px) {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     @media (min-width: 1024px) {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 55px;
+        margin-bottom: 55px;
     }
 `
 
@@ -79,7 +76,6 @@ const StyledButton = styled.button`
     font-family: "Prompt-Regular";
     font-size: 12px;
     color: white !important;
-    border-radius: 50px;
     padding: 0.5em 1em;
 
     :hover {
@@ -132,9 +128,7 @@ export default class Home extends Component {
                         <Parallax y={[15,-15]}>
                         <WipLogoImg src='/img/Home/logo.png' />
                         <WrapLogoCana>
-                            <LogoImg src="/img/Home/kmutt.svg" />
-                            <LogoCana src="/img/Home/sit.svg" />
-                            <LogoImg src="/img/Home/wipcamp.svg" />
+                            <LogoCana src="/img/Home/LogoCana.png" />
                         </WrapLogoCana>
                         <StyledButton>REGISTER</StyledButton>
                         </Parallax>
