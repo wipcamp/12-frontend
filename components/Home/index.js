@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
+const Wrap = styled.div`
+    overflow: hidden;
+`
 const HomeContainer = styled.div`
     display: table;
     position: relative;
@@ -205,6 +207,7 @@ export default class Home extends Component {
 
     render() {
         return (
+            <Wrap>
                 <HomeContainer>
                     <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" />
                     <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
@@ -224,6 +227,7 @@ export default class Home extends Component {
                     
                     </HomeContent>
                 </HomeContainer>
+            </Wrap>
         )
     }
 }
