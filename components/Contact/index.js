@@ -226,7 +226,7 @@ export default class contact extends Component {
                 </TextBox>
                 <TextBox>
                   <StyledLink href="tel://0922687835">
-                    <ContactImg src="img/Contact/phone.png" />
+                    <ContactImg src="img/Contact/tel.png" />
                     092-268-7835 (พี่ปลาย)
                     </StyledLink>
                 </TextBox>
