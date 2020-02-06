@@ -200,7 +200,7 @@ export default class Track extends Component {
                             <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
                         </Row>
                     
-                    <Star src="/img/Track/star.png" data-aos="fade-down-left" />
+                    
                 
             </TrackBg>
         )
