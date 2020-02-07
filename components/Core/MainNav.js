@@ -21,7 +21,7 @@ const StyledNavLink = styled(NavLink)`
 	font-size: 14px;
 	border: none;
   	color : white;
-	background-color: ${ props => props.isCurrent ? "#37558a" : "unset"};
+	background-color: ${ props => props.iscurrent == "true" ? "#37558a" : "unset"};
 	transition: background-color 0.3s ease-in-out;
 	:hover {
 		color: black;
@@ -75,10 +75,10 @@ export default class MainNav extends Component {
 		noBg: 'rgba(255, 255, 255, 0.0)',
 		defaultDesktop: '#223557',
 		isDesktop: true,
-		isWhat: false,
-		isTrack: false,
-		isWhen: false,
-		isFaqs: false
+		isWhat: "false",
+		isTrack: "false",
+		isWhen: "false",
+		isFaqs: "false"
 	}
 
 	listenScrollEvent = () => {
@@ -121,27 +121,27 @@ export default class MainNav extends Component {
 		updateCurrentSection = () => {
 			let currentHash = window.location.hash
 			this.setState({
-				isWhat: false,
-				isTrack: false,
-				isWhen: false,
-				isFaqs: false
+				isWhat: "false",
+				isTrack: "false",
+				isWhen: "false",
+				isFaqs: "false"
 			})
 			if (currentHash == '#what') {
 				this.setState({
-					isWhat: true
+					isWhat: "true"
 				})
 			} else if (currentHash == '#track') {
 				this.setState({
-					isTrack: true
+					isTrack: "true"
 				})
 
 			} else if (currentHash == '#when') {
 				this.setState({
-					isWhen: true
+					isWhen: "true"
 				})
 			} else if (currentHash == '#faqs') {
 				this.setState({
-					isFaqs: true
+					isFaqs: "true"
 				})
 			}
 		}
@@ -150,7 +150,12 @@ export default class MainNav extends Component {
 			this.listenScrollEvent()
 			window.addEventListener('resize', this.updateWindowDimensions)
 			window.addEventListener('scroll', this.listenScrollEvent)
-			window.addEventListener("hashchange", this.updateCurrentSection);
+			window.addEventListener("hashchange", this.updateCurrentSection)
+		}
+		componentWillUnmount() {
+			window.removeEventListener('resize', this.updateWindowDimensions)
+			window.removeEventListener('scroll', this.listenScrollEvent)
+			window.removeEventListener("hashchange", this.updateCurrentSection)
 		}
 
 		getViewport = () => {
@@ -162,23 +167,23 @@ export default class MainNav extends Component {
 			if (this.getViewport()) {
 				return (
 					<MainNavContainer className='fixed-top'>
-						<ColorNav expand="lg" id="navcolor" isScrolled={this.state.isScrolled}>
+						<ColorNav expand="lg" id="navcolor">
 							<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
 								<StyledNav navbar>
 									<StyledNavItem>
 										<StyledNavLink className="nav-style" href="#home">HOME</StyledNavLink>
 									</StyledNavItem>
 									<StyledNavItem >
-										<StyledNavLink className="nav-style" isCurrent={this.state.isWhat} href="#what">WHAT</StyledNavLink>
+										<StyledNavLink className="nav-style" iscurrent={this.state.isWhat} href="#what">WHAT</StyledNavLink>
 									</StyledNavItem>
 									<StyledNavItem >
-										<StyledNavLink className="nav-style" isCurrent={this.state.isTrack} href="#track">TRACK</StyledNavLink>
+										<StyledNavLink className="nav-style" iscurrent={this.state.isTrack} href="#track">TRACK</StyledNavLink>
 									</StyledNavItem>
 									<StyledNavItem >
-										<StyledNavLink className="nav-style" isCurrent={this.state.isWhen} href="#when">WHEN</StyledNavLink>
+										<StyledNavLink className="nav-style" iscurrent={this.state.isWhen} href="#when">WHEN</StyledNavLink>
 									</StyledNavItem>
 									<StyledNavItem>
-										<StyledNavLink className="nav-style" isCurrent={this.state.isFaqs} href="#faqs">FAQS</StyledNavLink>
+										<StyledNavLink className="nav-style" iscurrent={this.state.isFaqs} href="#faqs">FAQS</StyledNavLink>
 									</StyledNavItem>
 								</StyledNav>
 							</div>
