@@ -25,7 +25,7 @@ body {
   height: 10vh;
   /* Our sidebar item styling */
   margin-bottom: 10px;
-  color: #d1d1d1;
+  color: #FFFFFF;
   transition: color 0.2s;
 }
 
@@ -39,42 +39,52 @@ body {
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  /* width: 36px;
-  height: 30px; */
+  width: 44px;
+  height: 40px;
   left: 26px;
   top: 26px;
-  width: 3em;
-  height: auto;
+  background: #37558a;
+  border: 8px solid #37558a;
+  border-radius: 5px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1080px) {
     .bm-burger-button {
         display: none;
     }
 }
 
+.bm-burger-bars-hover {
+  background: #37558a;
+}
+
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: #ffffff;
 }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px !important;
-  width: 24px !important;
+  height: 24px;
+  width: 24px;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
   background: #bdc3c7;
-  height: 24px !important;
+  height: 24px;
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: #121933;
+  background: #223557;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {

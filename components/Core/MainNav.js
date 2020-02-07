@@ -19,6 +19,7 @@ const StyledNavItem = styled(NavItem)`
 
 const StyledNavLink = styled(NavLink)`
 	font-size: 14px;
+	border: none;
   	color : white;
 	background-color: ${ props => props.isCurrent ? "#37558a" : "unset"};
 	transition: background-color 0.3s ease-in-out;
@@ -86,14 +87,14 @@ export default class MainNav extends Component {
 			if (document.getElementById('navcolor') !== null && document.getElementsByClassName("nav-style") !== null) {
 				if (window.scrollY > 100) {
 					document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
-					document.getElementById('navcolor').style.height = '65px'
+					document.getElementById('navcolor').style.height = '67px'
 					let navLinkAfter = document.getElementsByClassName("nav-style")
 					this.applyStyles(navLinkAfter,'50px')
 				} else {
 					document.getElementById('navcolor').style.backgroundColor = this.state.noBg
 					document.getElementById('navcolor').style.height = '89px'
 					let navLinkBefore = document.getElementsByClassName("nav-style")
-					this.applyStyles(navLinkBefore,'70px')
+					this.applyStyles(navLinkBefore,'72px')
 				}
 
 			}
@@ -112,6 +113,8 @@ export default class MainNav extends Component {
 				this.setState({ isDesktop: false })
 			} else if (window.innerWidth >= 1080) {
 				this.setState({ isDesktop: true })
+				if (document.getElementById('navcolor') !== null && window.scrollY > 100)
+				{ document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop}
 			}
 		}
 

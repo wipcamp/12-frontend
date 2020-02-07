@@ -19,30 +19,70 @@ const FaqsContainer = styled.div`
 
 const FaqsBox = styled.div`
     text-align: center;
-    border-radius: 6px;
-    width: 80%;
-    height: 5.3em;
+    background-color:#263555;
+    width: 90%;
+    height: auto;
     color: white;
+    border: 2px solid rgb(255,255,255,0.4);
     padding: 0.7em;
     font-size: 16px;
-    margin-bottom: 10vh;
     z-index:2;
     display: none;
+    margin-bottom: 2em;
     cursor: pointer;
     -moz-user-select: none; 
     -ms-user-select: none; 
     -khtml-user-select: none;
     -webkit-user-select: none; 
     -webkit-touch-callout: none; 
-    transition: filter 0.25s ease-in-out;
+    transition: box-shadow 0.25s ease-in-out;
+    box-shadow: ${props => props.active? "0px 0px 25px rgba(65, 147, 222, 0.71)" : "unset"};
+    
+    :hover{
+        box-shadow: 0px 0px 25px rgba(65, 147, 222, 0.71);
+        transition: box-shadow 0.3s ease-in-out;
+    }
     @media (min-width: 1080px) {
-    display: flex;
+    display: block;
+    height: 8em;
+    width: 100%;
     }
     @media (min-width: 1280px){
-        margin-bottom: 6em;
+        margin-bottom: 2em;
     }
     @media (min-width: 1500px){
-        margin-bottom: 10vh;  
+        margin-bottom: 2em; 
+    }
+`
+const Qtag = styled.p`
+    margin: 0;
+    width: 100%;
+    text-align: inherit;
+    line-height: ${props => props.lineHeight || "unset"};
+    z-index:1;
+    @media (min-width: 1024px) {
+    }
+`
+const Qhead = styled.h4`
+    font-family: 'Sarabun-Regular', sans-serif;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+
+    &:before {
+        margin-right: 2px;
+        display:inline-block;
+        width: 20px;
+        height: 19px;
+        content: '';
+        background: url(/img/Faqs/star.png) center no-repeat;
+    }
+    &:after {
+        margin-left: 2px;
+        display:inline-block;
+        width: 20px;
+        height: 19px;
+        content: '';
+        background: url(/img/Faqs/star.png) center no-repeat;
     }
 `
 const BoxImage = styled.img`
@@ -264,22 +304,11 @@ const FaqsImgContainer = styled.div`
 const StyledContainer = styled(Container)`
         min-height: 25em;
         padding-bottom: 0;
-        @media (min-width: 768px) {
+        @medi4 (min-width: 768px) {
             padding-bottom: 0;
     }
     @media (min-width: 1080px) {
         padding-bottom: 10em;
-    }
-`
-
-const Qtag = styled.p`
-    width: 100%;
-    text-align: inherit;
-    line-height: ${props => props.lineHeight || "unset"};
-    padding-bottom: 5px;
-    z-index:1;
-    @media (min-width: 1024px) {
-        margin-top: 1em;
     }
 `
 const StyledSelect = styled.select`
@@ -299,12 +328,12 @@ export default class Faqs extends Component {
         ],
         currentAnswerIndex: 6,
         answerOpacity: 1,
-        activeQuestion_0: "none",
-        activeQuestion_1: "none",
-        activeQuestion_2: "none",
-        activeQuestion_3: "none",
-        activeQuestion_4: "none",
-        activeQuestion_5: "none",
+        activeQuestion_0: false,
+        activeQuestion_1: false,
+        activeQuestion_2: false,
+        activeQuestion_3: false,
+        activeQuestion_4: false,
+        activeQuestion_5: false,
         activeStyle: "drop-shadow(0 0 0.5rem #CCA403)",
         isMobile: true,
         middleContent: 6,
@@ -319,7 +348,7 @@ export default class Faqs extends Component {
             var prevQ = "activeQuestion_" + this.state.currentAnswerIndex
             this.setState({
                 faqClass: "none",
-                [prevQ]: "none"
+                [prevQ]: false
             })
             if (e >= 0 && e <= 6) {
                 var currentQ = "activeQuestion_" + e
@@ -329,7 +358,7 @@ export default class Faqs extends Component {
                             answer: this.state.answerArray[e],
                             currentAnswerIndex: e,
                             faqClass: "animatedFadeInUp",
-                            [currentQ]: this.state.activeStyle
+                            [currentQ]: true
                         })
                     }
                         .bind(this),
@@ -473,35 +502,37 @@ export default class Faqs extends Component {
                         <Row className="mt-5 order-2">
                             <Col lg='4' md='3' sm="3" xs="2">
                                 <div className="d-flex flex-column align-items-center">
-                                    <FaqsBox onClick={() => this.changeAnswer(0)}>
+                                    <FaqsBox onClick={() => this.changeAnswer(0)} active={this.state.activeQuestion_0}>
+                                    <Qhead>QUESTION 1</Qhead>
                                         <Qtag lineHeight="3em">รับสมัครคนเข้าค่ายกี่คน ?</Qtag>
-                                        <BoxImage src="/img/Faqs/faqsbox1.png" active={this.state.activeQuestion_0} />
+    
                                     </FaqsBox>
-                                    <FaqsBox onClick={() => this.changeAnswer(3)}>
+                                    <FaqsBox onClick={() => this.changeAnswer(3)} active={this.state.activeQuestion_3}>
+                                    <Qhead>QUESTION 2</Qhead>
                                         <Qtag>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</Qtag>
-                                        <BoxImage src="/img/Faqs/faqsbox4.png" active={this.state.activeQuestion_3} />
                                     </FaqsBox>
                                 </div>
                             </Col>
                             <Col className="d-flex flex-column align-items-center" lg='4' md='6' sm="6" xs="8">
-                                <FaqsBox onClick={() => this.changeAnswer(1)}>
+                                <FaqsBox onClick={() => this.changeAnswer(1)} active={this.state.activeQuestion_1}>
+                                <Qhead>QUESTION 3</Qhead>
                                     <Qtag lineHeight="3em">พักค้างคืนที่ไหน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox2.png" active={this.state.activeQuestion_1} />
                                 </FaqsBox>
-                                <FaqsBox onClick={() => this.changeAnswer(4)} >
+                                <FaqsBox onClick={() => this.changeAnswer(4)} active={this.state.activeQuestion_4}>
+                                <Qhead>QUESTION 4</Qhead>
                                     <Qtag>หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</Qtag>
-                                    <BoxImage src="/img/Faqs/faqsbox5.png" active={this.state.activeQuestion_4} />
                                 </FaqsBox>
                             </Col>
                             <Col lg='4' md='3' sm="3" xs="2">
                                 <div className="d-flex flex-column align-items-center">
-                                    <FaqsBox onClick={() => this.changeAnswer(2)}>
+                                    <FaqsBox onClick={() => this.changeAnswer(2)} active={this.state.activeQuestion_2}>
+                                    <Qhead>QUESTION 5</Qhead>
                                         <Qtag lineHeight="3em">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</Qtag>
-                                        <BoxImage src="/img/Faqs/faqsbox3.png" active={this.state.activeQuestion_2} />
                                     </FaqsBox>
                                     <FaqsBox onClick={() => this.changeAnswer(5)} active={this.state.activeQuestion_5}>
+                                    <Qhead>QUESTION 6</Qhead>
                                         <Qtag>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</Qtag>
-                                        <BoxImage src="/img/Faqs/faqsbox6.png" active={this.state.activeQuestion_5} />
+    
                                     </FaqsBox>
                                 </div>
                             </Col>
