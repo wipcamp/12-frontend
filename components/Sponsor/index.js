@@ -145,7 +145,7 @@ export default class Sponsor extends Component {
                     <Zodiac3 src="/img/Sponsor/zodiac3.png" data-aos="fade-down-left"/>
                     <Star2 src="/img/Sponsor/star2.png" data-aos="fade-down-left"/>
                         <div className="text-center">
-                            <Header color="white" headerText="SPONSOR" />
+                            <Header color="white" headerText="SPONSORS" />
                             <SubHeader color="white" subHeaderText="ผู้สนับสนุน" />
                         </div>
                         <Container>
@@ -157,8 +157,6 @@ export default class Sponsor extends Component {
                             </WrapLogo>
                             </Frame>
                         </Container>
-                    
-                
             </SponsorBg>
         )
     }
