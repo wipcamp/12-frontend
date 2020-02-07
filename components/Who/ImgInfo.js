@@ -28,9 +28,10 @@ const TextBox = styled.div`
     width: auto;
     
 }
-@media (min-width: 1080px){
-margin:0;
-width: 80%;
+@media (min-width: 1440px){
+text-align: center;
+width:20em;
+margin:0 0 0 1rem;
 }
 `
 
@@ -101,19 +102,22 @@ const WhoMobileContainer = styled.div`
 `
 const WhoContentText = styled.p`
     font-family: 'Sarabun-Regular', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     color: ${props => props.color};
     text-align: ${props => props.textAlign};
-    line-height: 18px;
-
+    line-height: 20px;
+@media (min-width: 768px) {
+    font-size: 16px;
+    } 
 @media (min-width: 1080px) {
-    font-size: 18px;
     vertical-align: center;
-    width: 90%;
-    margin-left: 2em;
+    text-align: center;
     line-height: unset;
     white-space: normal;
 
+}
+@media (min-width: 1080px){
+    font-size: 18px; 
 }
   `
 
@@ -126,7 +130,7 @@ const WhoMobile = props => {
                 <WhoContentText 
                     color={props.color}
                     textAlign = {props.textAlign || "Unknow"} > 
-                 {props.content || "Unknow"}</WhoContentText>
+                 {props.children}</WhoContentText>
             </TextBox>
         </WhoMobileContainer>
     )
