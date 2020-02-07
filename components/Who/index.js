@@ -22,6 +22,9 @@ const ContentContainer = styled(Container)`
     @media (min-width: 1280px) {
         padding-bottom:10vh;
     }
+    @media (min-width: 1680px) {
+        padding-bottom:20vh;
+    }
 `
 
 const Float = keyframes`
@@ -51,7 +54,7 @@ left: 0;
 right: 0;
 }
 @media (min-height: 1280px) {
-    top: -15vw;
+    top: -15em;
 }
 `
 const Image2 = styled.img`
@@ -71,10 +74,13 @@ const Image2 = styled.img`
 } 
 `
 const WhoRow = styled(Row)`
-    height: 13em;
+    @media (min-width: 1080px) {
+        height: 13em;
     margin-top: 3em;
-    @media (min-height: 1680px) {
-    height: 22em;
+}
+    @media (min-width: 1680px) {
+        height: 15em;
+    margin-top: 4em;
 }
 `
 
@@ -101,7 +107,12 @@ const Star = styled.img`
     left: -2vw;
     top: 30vh;
 `
-
+const Br = styled.br`
+display: ${props => props.break? 'unset':'none'};
+@media (min-width: 1440px) {
+    display:unset;
+}
+`
 export default class Who extends Component {
     state = {
         midColumn: 2,
@@ -154,7 +165,7 @@ export default class Who extends Component {
                                             content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง" 
                                             textAlign="left"
                                             textAlignResponsive="left"
-                                        />
+                                        >น้อง ๆ ที่มีความสนใจทางด้านไอที<Br/> หรือต้องการตามหาเส้นทางเดิน ของตัวเอง</WhoMobile>
                                         {/* <ImageInfo 
                                             src="/img/Who/who1.png" 
                                             color="white" 
@@ -170,7 +181,7 @@ export default class Who extends Component {
                                             content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”" 
                                             textAlign="left"
                                             textAlignResponsive="left"                                            
-                                        />
+                                        >น้องระดับชั้นมัธยมศึกษาตอนปลาย<Br break={true} /> “ทุกแผนการเรียน”</WhoMobile>
                                         {/* <ImageInfo 
                                             src="/img/Who/who2.png" 
                                             color="white" 
@@ -192,7 +203,7 @@ export default class Who extends Component {
                                             content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน" 
                                             textAlign="left"
                                             textAlignResponsive="left"
-                                        />
+                                        >น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน<Br/> ได้ตลอดระยะเวลา 5 วัน 4 คืน</WhoMobile>
                                         {/* <ImageInfo 
                                             src="/img/Who/who3.png" 
                                             color="white" 
@@ -208,7 +219,7 @@ export default class Who extends Component {
                                             content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง" 
                                             textAlign="left"
                                             textAlignResponsive="left"
-                                        />
+                                        >น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง<Br/> โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง</WhoMobile>
                                         {/* <ImageInfo 
                                             src="/img/Who/who4.png" 
                                             color="white" 
@@ -220,7 +231,7 @@ export default class Who extends Component {
                                 </Row>
                                 <Row>
                                     <Col md="12" className="d-flex justify-content-center">
-                                        <Image2 src="/img/Who/Wippo.png" />
+                                        <Image2 src="/img/Core/Wippo.png" />
                                     </Col>
                                 </Row>
                         <WrapZodiac> 
