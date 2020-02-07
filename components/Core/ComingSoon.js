@@ -34,12 +34,12 @@ const WipLogoImg = styled.img`
     }
 
     @media (min-width: 1024px) {
-        width: 38.5em;
+        width: 32em;
     }
 `
 
 const ComingSoonText = styled.h1`
-    font-family: 'NotoSans-Regular';
+    font-family: 'NotoSansThai-Regular', sans-serif;
     font-size: 24px;
     color: #6F7F8D;
 
@@ -48,16 +48,19 @@ const ComingSoonText = styled.h1`
     }
 
     @media (min-width: 1024px) {
-        font-size: 48px;
+        font-size: 56px;
     }
 `
 
 const StayTune = styled.a`
-    font-family: 'Sarabun-Regular';
+    font-family: 'Sarabun-Regular', sans-serif;
     font-size: 18px;
     color: #1877F2 !important;
     text-decoration: none !important;
-
+    & span {
+        font-family: 'NotoSansThai-Regular', sans-serif;
+        color: #ffffff;
+    }
     @media (min-width: 768px) {
         font-size: 36px;
     }
@@ -157,31 +160,37 @@ const CloudRight3 = styled(CloudRight)`
 
 const Li = styled.li`
   display: inline-block;
-  font-size: 1em;
+  font-size: 0.5em;
   list-style-type: none;
-  padding: 0.5em;
+  margin-left: 0.5em;
   text-transform: uppercase;
-  font-family: 'NotoSans-Regular';
+  letter-spacing: 0px;
+  font-family: 'NotoSansThai-Regular', sans-serif;
     color: #6F7F8D;
    & span {
+    width: 1.5em;
+    margin-bottom: 0.2em;
+    line-height: 1.4em;
+    background-color: rgb(0,0,0,0.2);
     display: block;
+    color: #ffffff;
     font-size: 2.5rem;
    }
    @media (min-width: 768px) {
-        font-size: 1.5em;
-        padding: 1em;
+        font-size: 1em;
         & span {
     display: block;
     font-size: 4.5rem;
    }
     }
 
+
 `
 
 const Facebook = styled.img`
     width: 30px;
     height: 30px;
-
+    transform: translateY(-0.2em);
     @media (min-width: 768px) {
         width: 50px;
         height: 50px;
@@ -220,13 +229,13 @@ export default class ComingSoon extends Component {
                                 <Li><span id="days">{this.props.day}</span>days</Li>
                                 <Li><span id="hours">{this.props.hr}</span>Hours</Li>
                                 <Li><span id="minutes">{this.props.min}</span>Minutes</Li>
-                                <Li><span id="seconds">{this.props.sec}</span>Seconds</Li>
+                                <Li><span pulse={true} id="seconds">{this.props.sec}</span>Seconds</Li>
                             </ul>
                             <br />
                             <StayTune href="https://www.facebook.com/wipcamp/" target="_blank">
                                 ติดตามได้ที่&nbsp;&nbsp;
                                 <Facebook src="/img/Contact/facebook.png" />
-                                &nbsp;&nbsp;WIP Camp</StayTune>
+                                &nbsp;<span>WIP Camp</span></StayTune>
                         </Wrap>
                     </CountdownContainer>
                 </OverFlowHidden>
