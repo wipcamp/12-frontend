@@ -27,9 +27,7 @@ export default class MyDocument extends Document {
           <meta property="og:type" content="company" />
           <meta property="og:url" content="https://12-pr.freezer.wip.camp/" />
           <meta property="og:site_name" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
-          <link rel="stylesheet" href="\node_modules\bootstrap\dist\css\bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
           <link rel="shortcut icon" href="/img/Favicon/favicon.ico" type="image/x-icon"/>
-          <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
           <script dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -63,11 +61,6 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-        <script src="../components/Home/Sketch.js" >
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
-        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
         <noscript dangerouslySetInnerHTML={{
           __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFZH4C8"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>`}} />
