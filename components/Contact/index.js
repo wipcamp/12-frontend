@@ -281,7 +281,6 @@ export default class contact extends Component {
 
         </Container>
 
-        <Tower src="/img/Contact/tower.png" />
         <Mountain src="/img/Contact/mountain.png" />
       </ContactBg >
 
