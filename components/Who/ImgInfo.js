@@ -12,7 +12,9 @@ const Image = styled.img`
     }
 
     @media (min-width: 1080px){
-        width: 90%;
+        width: 25%;
+        height: auto;
+       
 }
 `
 
@@ -24,12 +26,11 @@ const TextBox = styled.div`
     margin-top:0.5rem;
 @media (min-width: 1024px){
     width: auto;
-    text-align: center;
     
 }
 @media (min-width: 1080px){
-margin:0.5em 3em 2em 2em;
-width: unset;
+margin:0;
+width: 80%;
 }
 `
 
@@ -91,12 +92,30 @@ const WhoMobileContainer = styled.div`
         display: flex;
         justify-content: center;
         margin-top: 1.5em;
+
         @media (min-width: 1080px){
         }	
         @media (min-width: 1080px){
-            display: none;
+        
 }	
 `
+const WhoContentText = styled.p`
+    font-family: 'Sarabun-Regular', sans-serif;
+    font-size: 16px;
+    color: ${props => props.color};
+    text-align: ${props => props.textAlign};
+    line-height: 18px;
+
+@media (min-width: 1080px) {
+    font-size: 18px;
+    vertical-align: center;
+    width: 90%;
+    margin-left: 2em;
+    line-height: unset;
+    white-space: normal;
+
+}
+  `
 
 
 const WhoMobile = props => {
@@ -104,11 +123,10 @@ const WhoMobile = props => {
         <WhoMobileContainer justify={props.justify}>
             <Image src={props.src} />
             <TextBox>
-                <Content
-                    content={props.content || "Unknow"}
+                <WhoContentText 
                     color={props.color}
-                    textAlign = {props.textAlign || "Unknow"}
-                />
+                    textAlign = {props.textAlign || "Unknow"} > 
+                 {props.content || "Unknow"}</WhoContentText>
             </TextBox>
         </WhoMobileContainer>
     )

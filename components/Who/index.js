@@ -10,6 +10,7 @@ import 'aos/dist/aos.css';
 
 const WhoContainer = styled.div`
     position: relative;
+    
 `
 
 const ContentContainer = styled(Container)`
@@ -70,9 +71,10 @@ const Image2 = styled.img`
 } 
 `
 const WhoRow = styled(Row)`
-
-    @media (min-height: 1280px) {
-    
+    height: 13em;
+    margin-top: 3em;
+    @media (min-height: 1680px) {
+    height: 22em;
 }
 `
 
@@ -153,12 +155,12 @@ export default class Who extends Component {
                                             textAlign="left"
                                             textAlignResponsive="left"
                                         />
-                                        <ImageInfo 
+                                        {/* <ImageInfo 
                                             src="/img/Who/who1.png" 
                                             color="white" 
                                             content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"                                            
                                             textAlignDeskTop="center"
-                                        />
+                                        /> */}
                                     </Col>
                                     <Col lg={this.state.midColumn} md="auto"></Col>
                                     <Col lg={this.state.contentColumn} md='5'>
@@ -169,12 +171,12 @@ export default class Who extends Component {
                                             textAlign="left"
                                             textAlignResponsive="left"                                            
                                         />
-                                        <ImageInfo 
+                                        {/* <ImageInfo 
                                             src="/img/Who/who2.png" 
                                             color="white" 
                                             content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”" 
                                             textAlignDeskTop="center"
-                                        />
+                                        /> */}
                                     </Col>
                                     <Col lg="1" md='1'></Col>
                                 </WhoRow>
@@ -191,12 +193,12 @@ export default class Who extends Component {
                                             textAlign="left"
                                             textAlignResponsive="left"
                                         />
-                                        <ImageInfo 
+                                        {/* <ImageInfo 
                                             src="/img/Who/who3.png" 
                                             color="white" 
                                             content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน" 
                                             textAlignDeskTop="center"
-                                        />
+                                        /> */}
                                     </Col>
                                     <Col lg={this.state.midColumn} md='auto' ></Col>
                                     <Col lg={this.state.contentColumn} md='5' sm="12">
@@ -207,12 +209,12 @@ export default class Who extends Component {
                                             textAlign="left"
                                             textAlignResponsive="left"
                                         />
-                                        <ImageInfo 
+                                        {/* <ImageInfo 
                                             src="/img/Who/who4.png" 
                                             color="white" 
                                             content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง"                                             
                                             textAlignDeskTop="center"
-                                        />
+                                        /> */}
                                     </Col>
                                     <Col lg="2" md='1' sm="auto"></Col>
                                 </Row>
