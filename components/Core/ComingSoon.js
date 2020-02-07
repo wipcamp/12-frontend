@@ -221,7 +221,7 @@ export default class ComingSoon extends Component {
                             <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" />
                             <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000"/>
                             <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500"/>
-                            <WipLogoImg src='/img/Core/logo.png' />
+                            <WipLogoImg src='/img/Core/oldlogo.png' />
                             <br />
                             <br />
                             <ComingSoonText>C O M I N G &nbsp;&nbsp;S O O N</ComingSoonText>
