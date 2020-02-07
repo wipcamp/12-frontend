@@ -35,14 +35,14 @@ export default class Wrapper extends Component {
                 <MainNav />
                 <ScrollableAnchor id="home"><Home/></ScrollableAnchor>
                 <ScrollableAnchor id="what"><What /></ScrollableAnchor>
-                <ScrollableAnchor id="who"><Who /></ScrollableAnchor>
+                <ScrollableAnchor id="Who"><Who /></ScrollableAnchor>
                 <ScrollableAnchor id="track"><Track /></ScrollableAnchor>
-                <Where />
+                <ScrollableAnchor id="where"><Where /></ScrollableAnchor>
                 <ScrollableAnchor id="when"><When /></ScrollableAnchor>
                 <ScrollableAnchor id="faqs"><Faqs /></ScrollableAnchor>
-                <Game />
-                <Sponsor />    
-                <Contact />
+                <ScrollableAnchor id="game"><Game /></ScrollableAnchor>
+                <ScrollableAnchor id="sponsor"><Sponsor /></ScrollableAnchor>
+                <ScrollableAnchor id="contact"><Contact /></ScrollableAnchor>
                 </StarParticle>
                 </div>       
             </Wrap>
