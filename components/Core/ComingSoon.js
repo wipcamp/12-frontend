@@ -229,7 +229,7 @@ export default class ComingSoon extends Component {
                                 <Li><span id="days">{this.props.day}</span>days</Li>
                                 <Li><span id="hours">{this.props.hr}</span>Hours</Li>
                                 <Li><span id="minutes">{this.props.min}</span>Minutes</Li>
-                                <Li><span pulse={true} id="seconds">{this.props.sec}</span>Seconds</Li>
+                                <Li><span id="seconds">{this.props.sec}</span>Seconds</Li>
                             </ul>
                             <br />
                             <StayTune href="https://www.facebook.com/wipcamp/" target="_blank">

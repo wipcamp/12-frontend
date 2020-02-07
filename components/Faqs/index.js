@@ -508,25 +508,25 @@ export default class Faqs extends Component {
     
                                     </FaqsBox>
                                     <FaqsBox onClick={() => this.changeAnswer(3)} active={this.state.activeQuestion_3}>
-                                    <Qhead>QUESTION 2</Qhead>
+                                    <Qhead>QUESTION 4</Qhead>
                                         <Qtag>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัปโหลดทางไหน ?</Qtag>
                                     </FaqsBox>
                                 </div>
                             </Col>
                             <Col className="d-flex flex-column align-items-center" lg='4' md='6' sm="6" xs="8">
                                 <FaqsBox onClick={() => this.changeAnswer(1)} active={this.state.activeQuestion_1}>
-                                <Qhead>QUESTION 3</Qhead>
+                                <Qhead>QUESTION 2</Qhead>
                                     <Qtag lineHeight="3em">พักค้างคืนที่ไหน ?</Qtag>
                                 </FaqsBox>
                                 <FaqsBox onClick={() => this.changeAnswer(4)} active={this.state.activeQuestion_4}>
-                                <Qhead>QUESTION 4</Qhead>
+                                <Qhead>QUESTION 5</Qhead>
                                     <Qtag>หากผ่านการคัดเลือกแล้ว มีเอกสารอะไรที่ต้องใช้ไหม และต้องอัปโหลดทางไหน ?</Qtag>
                                 </FaqsBox>
                             </Col>
                             <Col lg='4' md='3' sm="3" xs="2">
                                 <div className="d-flex flex-column align-items-center">
                                     <FaqsBox onClick={() => this.changeAnswer(2)} active={this.state.activeQuestion_2}>
-                                    <Qhead>QUESTION 5</Qhead>
+                                    <Qhead>QUESTION 3</Qhead>
                                         <Qtag lineHeight="3em">มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่  ?</Qtag>
                                     </FaqsBox>
                                     <FaqsBox onClick={() => this.changeAnswer(5)} active={this.state.activeQuestion_5}>
