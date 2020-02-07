@@ -265,7 +265,7 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
     &[aria-expanded='true']::before {
         transform: rotate(45deg);
     }
-    &[botBorder='none'] {
+    &[botborder='none'] {
         border: none;
     }
     &[aria-expanded='true'] {
@@ -304,7 +304,7 @@ const FaqsImgContainer = styled.div`
 const StyledContainer = styled(Container)`
         min-height: 25em;
         padding-bottom: 0;
-        @medi4 (min-width: 768px) {
+        @media (min-width: 768px) {
             padding-bottom: 0;
     }
     @media (min-width: 1080px) {
@@ -443,7 +443,7 @@ export default class Faqs extends Component {
                 </StyledAccordionItemHeading>
                 <StyledAccordionItemPanel>
                     <p>
-                    สำหรับที่พักนั้นจะอยู่ภายในหอพักนักศึกษา มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี โดยมีพี่ ๆ รวมไปถึงฝ่ายพยาบาล คอยดูแลน้อง ๆ ตลอด 24 ชั่วโมงครับ
+                    สำหรับที่พักนั้นจะอยู่ภายในหอพักนักศึกษา มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี โดยมีพี่ ๆ รวมไปถึงฝ่ายพยาบาล <br/>คอยดูแลน้อง ๆ ตลอด 24 ชั่วโมงครับ
                     </p>
                 </StyledAccordionItemPanel>
             </StyledAccordionItem>
@@ -485,7 +485,7 @@ export default class Faqs extends Component {
             </StyledAccordionItem>
             <StyledAccordionItem>
                 <StyledAccordionItemHeading>
-                    <StyledAccordionItemButton botBorder="none">
+                    <StyledAccordionItemButton botborder="none">
                      <p>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</p>
                     </StyledAccordionItemButton>
                 </StyledAccordionItemHeading>
