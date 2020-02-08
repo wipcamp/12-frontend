@@ -213,9 +213,9 @@ export default class ComingSoon extends Component {
                             <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down"/>
                             <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down"/>
                             <Zodiac3 src="/img/Core/zodiac3.png" data-aos="fade-down"/>
-                            <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" />
-                            <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
-                            <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
+                            <Star1 src="/img/Core/star1.webp" data-aos="fade-down-right" />
+                            <Star2 src="/img/Core/star2.webp" data-aos="fade-down-left" data-aos-duration="2000" />
+                            <Star3 src="/img/Core/star3.webp" data-aos="fade-down-left" data-aos-duration="2500" />
                             <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" />
                             <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000"/>
                             <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" />
