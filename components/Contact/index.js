@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Col, Row, } from 'reactstrap'
 import styled from 'styled-components'
-import Link from 'next/link'
-import { Parallax } from 'react-scroll-parallax'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -156,47 +154,6 @@ const Star5 = styled(Star4)`
   left: 30vw;
 `
 
-const WrapContact = styled.div`
-    padding-left: 3vw;
-
-    @media (min-width: 360px) {
-      padding-left: 8vw;
-    }
-
-    @media (min-width: 375px) {
-      padding-left: 9vw;
-    }
-
-    @media (min-width: 411px) {
-      padding-left: 13vw;
-    }
-
-    @media (min-width: 768px) {
-      padding-left: 0vw;
-    }
-`
-
-const WrapFollow = styled.div`
-  padding-left: 15vw;
-
-  @media (min-width: 360px) {
-    padding-left: 18vw;
-  }
-
-  @media (min-width: 375px) {
-    padding-left: 21vw;
-  }
-
-  @media (min-width: 411px) {
-    padding-left: 24vw;
-  }
-
-  @media (min-width: 768px) {
-    padding-left: 0vw;
-  }
-`
-
-
 export default class contact extends Component {
   componentDidMount() {
     AOS.init({
@@ -206,43 +163,41 @@ export default class contact extends Component {
   render() {
     return (
       <ContactBg>
-          <Star src="/img/Contact/star1.png" />
-          <Star2 src="/img/Contact/star2.png" />
-          <Star3 src="/img/Contact/star3.png" />
-          <Star4 src="/img/Contact/star4.png" />
-          <Star5 src="/img/Contact/star5.png" />
+        <Star src="/img/Contact/star1.png" />
+        <Star2 src="/img/Contact/star2.png" />
+        <Star3 src="/img/Contact/star3.png" />
+        <Star4 src="/img/Contact/star4.png" />
+        <Star5 src="/img/Contact/star5.png" />
         <Container>
 
           <Row>
 
             <Col xl="6" lg="6" md="6" sm="12" xs="12">
               <HeaderStyled>Contact</HeaderStyled>
-              <WrapContact>
-                <TextBox>
-                  <StyledLink href="https://m.me/wipcamp" target="_blank">
-                    <ContactImg src="img/Contact/messenger.png" />
-                    MESSENGER
+              <TextBox>
+                <StyledLink href="https://m.me/wipcamp" target="_blank">
+                  <ContactImg src="img/Contact/messenger.png" />
+                  MESSENGER
                     </StyledLink>
-                </TextBox>
-                <TextBox>
-                  <StyledLink href="tel://0922687835">
-                    <ContactImg src="img/Contact/tel.png" />
-                    092-268-7835 (พี่ปลาย)
+              </TextBox>
+              <TextBox>
+                <StyledLink href="tel://0922687835">
+                  <ContactImg src="img/Contact/tel.png" />
+                  092-268-7835 (พี่ปลาย)
                     </StyledLink>
-                </TextBox>
-                <TextBox>
-                  <StyledLink href="mailto:wippo@wipcamp.com" target="_blank">
-                    <ContactImg src="img/Contact/email.png" />
-                    wippo@wipcamp.com
+              </TextBox>
+              <TextBox>
+                <StyledLink href="mailto:wippo@wipcamp.com" target="_blank">
+                  <ContactImg src="img/Contact/email.png" />
+                  wippo@wipcamp.com
                     </StyledLink>
-                </TextBox>
-                <TextBox>
-                  <StyledLink href="https://line.me/R/ti/p/%40wipcamp" target="_blank">
-                    <ContactImg src="img/Contact/line.png" />
-                    @wipcamp
+              </TextBox>
+              <TextBox>
+                <StyledLink href="https://line.me/R/ti/p/%40wipcamp" target="_blank">
+                  <ContactImg src="img/Contact/line.png" />
+                  @wipcamp
                     </StyledLink>
-                </TextBox>
-              </WrapContact>
+              </TextBox>
             </Col>
             <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
 
@@ -253,26 +208,24 @@ export default class contact extends Component {
             <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
             <Col xl="6" lg="6" md="6" sm="12" xs="12">
               <HeaderStyled>Follow Us</HeaderStyled>
-              <WrapFollow>
-                <TextBox>
-                  <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank">
-                    <ContactImg src="img/Contact/facebook.png" />
-                    WIP Camp
+              <TextBox>
+                <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank">
+                  <ContactImg src="img/Contact/facebook.png" />
+                  WIP Camp
                     </StyledLink>
-                </TextBox>
-                <TextBox>
-                  <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
-                    <ContactImg src="img/Contact/youtube.png" />
-                    WIP camp
+              </TextBox>
+              <TextBox>
+                <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
+                  <ContactImg src="img/Contact/youtube.png" />
+                  WIP camp
                     </StyledLink>
-                </TextBox>
-                <TextBox>
-                  <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank">
-                    <ContactImg src="img/Contact/instagram.png" />
-                    wipcamp
+              </TextBox>
+              <TextBox>
+                <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank">
+                  <ContactImg src="img/Contact/instagram.png" />
+                  wipcamp
                     </StyledLink>
-                </TextBox>
-              </WrapFollow>
+              </TextBox>
             </Col>
           </Row>
           <Row>
