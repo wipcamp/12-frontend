@@ -24,7 +24,7 @@ export default class Carousel extends Component {
             { 
                 srcFront: "/img/Track/programming.png", 
                 bg: "/img/Track/programmingb.png", 
-                content: "ส้นทางที่จะพาไปทำความเข้าใจ Concept ของการเขียนโปรแกรม ผ่านการเรียนภาษาจาวา (Java Programming)", 
+                content: "เส้นทางที่จะพาไปทำความเข้าใจ Concept ของการเขียนโปรแกรม ผ่านการเรียนภาษาจาวา (Java Programming)", 
                 header: "PROGRAMMER"
             },
             { 
