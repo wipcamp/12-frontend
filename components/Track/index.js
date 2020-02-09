@@ -26,30 +26,18 @@ const Trackcontainer = styled.div`
         }
     
         @media (min-width: 1024px) {
-            margin:60px 0px 75px 0px;
+            margin:60px 0px 30px 0px;
         }
 `
 const ButtomContainer = styled.div`
-    margin-top: 20px;
+    margin-top: 10px;
  @media (min-width: 768px) {
     margin-top:50px;
  }
 
  @media (min-width: 1024px) {
-    margin-top:75px
+    margin-top:20px
  }
-`
-
-const Star = styled.img`
-    position: absolute;
-    bottom: -8vh;
-    width: 20vw;
-    right: -11vw;
-    display: none;
-
-    @media (min-width: 1024px) {
-        display: block;
-    }
 `
 
 const showCardGrid = () => {
@@ -185,6 +173,7 @@ export default class Track extends Component {
                         <div id="cards-scroll" style={{display: 'none'}}>
                             <CarouselTrack />
                         </div>
+                        <Container>
                         <Row>
                             <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
                             <Col xl="10" lg="10" md="10" sm="10" xs="10">
@@ -199,7 +188,7 @@ export default class Track extends Component {
                             </Col>
                             <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
                         </Row>
-                    
+                        </Container>
                     
                 
             </TrackBg>
