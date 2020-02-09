@@ -25,7 +25,10 @@ const Content = styled.div`
   font-family: 'ChakraPetch-Regular';
   font-size: 11px;
   color: white;
-  padding: 10%;
+  padding-top: 15%;
+  padding-left: 12%;
+  padding-right: 12%;
+
   text-align: center;
 
   @media (min-width: 768px) {
@@ -94,7 +97,7 @@ const DefaultCardContents = ({ srcFront = props.srcFront , content = props.conte
         <BackCard bg={bg}>
           <Content>
             <Header header={header} />
-            
+            <br />
             {content}
           </Content>
       </BackCard>
