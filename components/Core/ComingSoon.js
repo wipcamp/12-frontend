@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Countdown from 'react-countdown'
 import styled from 'styled-components'
-import { SubHeader } from './Text'
 import StarParticle from './Particle'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Link from 'next/link'
 
 const OverFlowHidden = styled.div`
     overflow: hidden;
@@ -71,11 +69,6 @@ const Star1 = styled.img`
     top: 5vh;
     left: 5vw;
     width: 10vw;
-    display: none;
-
-    @media (min-width: 1024px) {
-        display: block;
-    }
 `
 
 const Star2 = styled.img`
@@ -83,11 +76,6 @@ const Star2 = styled.img`
     top: -5vh;
     right: 10vw;
     width: 20vw;
-    display: none;
-
-    @media (min-width: 1024px) {
-        display: block;
-    }
 `
 
 const Star3 = styled(Star2)`
@@ -119,11 +107,6 @@ const CloudLeft = styled.img`
     left: -7vw;
     width: 42vw;
     bottom: -2vh;
-    display: none;
-    
-    @media (min-width: 1024px) {
-        display: block;
-    }
 `
 
 const CloudLeft2 = styled(CloudLeft)`
@@ -137,12 +120,6 @@ const CloudRight = styled.img`
     bottom: -2vh;
     right: -5vw;
     z-index: 3;
-
-    display: none;
-    
-    @media (min-width: 1024px) {
-        display: block;
-    }
 `
 
 const CloudRight2 = styled(CloudRight)`
@@ -196,13 +173,51 @@ const Facebook = styled.img`
         height: 50px;
     }
 `
+
+const StarAndCloud = () => {
+    return (
+        <Fragment>
+            <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down" />
+            <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down" />
+            <Zodiac3 src="/img/Core/zodiac3.png" data-aos="fade-down" />
+            <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" />
+            <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
+            <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
+            <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" />
+            <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000" />
+            <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" />
+            <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000" />
+            <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500" />
+        </Fragment>
+    )
+}
 export default class ComingSoon extends Component {
+    state = {
+        width: 0,
+        height: 0,
+        isMobile: false
+    };
 
     componentDidMount = () => {
+        window.addEventListener('resize', this.updateDimensions);
         AOS.init({
             duration: 1500
         })
     }
+
+    updateDimensions = () => {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+        if (window.innerWidth < 1024) {
+            this.setState({ isMobile: true })
+        } else if (window.innerWidth >= 1024) {
+            this.setState({ isMobile: false })
+        }
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    }
+
 
     render() {
         return (
@@ -210,17 +225,10 @@ export default class ComingSoon extends Component {
                 <OverFlowHidden>
                     <CountdownContainer>
                         <Wrap>
-                            <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down"/>
-                            <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down"/>
-                            <Zodiac3 src="/img/Core/zodiac3.png" data-aos="fade-down"/>
-                            <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" />
-                            <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
-                            <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
-                            <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" />
-                            <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000"/>
-                            <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" />
-                            <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000"/>
-                            <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500"/>
+                            { this.state.isMobile ?
+                                <Fragment></Fragment>
+                                : <StarAndCloud />
+                            }
                             <WipLogoImg src='/img/Core/oldlogo.png' />
                             <br />
                             <br />
