@@ -84,11 +84,6 @@ const Star1 = styled.img`
     top: 5vh;
     left: -8vw;
     width: 20vw;
-    display: none;
-
-    @media (min-width: 1024px) {
-        display: block;
-    }
 `
 
 const Star2 = styled(Star1)`
@@ -96,34 +91,58 @@ const Star2 = styled(Star1)`
     left: 85vw;
     width: 10vw;
 `
-
+const GroupOfStar = () => {
+    return (
+        <Fragment>
+            <Star1 src="/img/Game/star1.png" data-aos="fade-down-right"/>
+            <Star2 src="/img/Game/star2.png" data-aos="fade-down-left"/>
+        </Fragment>
+    )
+}
 export default class Game extends Component {
+    state = {
+        width: window.innerWidth
+    };
+
     componentDidMount = () => {
+        window.addEventListener('resize', this.updateDimensions);
         AOS.init({
-            duration: 3000
+            duration: 1500
         })
     }
+
+    updateDimensions = () => {
+        this.setState({
+            width: window.innerWidth
+          });
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    }
+
     render() {
         return (
             <GameContainer>
-                
-                    <Star1 src="/img/Game/star1.png" data-aos="fade-down-right"/>
-                    <Star2 src="/img/Game/star2.png" data-aos="fade-down-left"/>
-                        <Container className="text-center">
-                            <Header color="#ffffff" headerText="GAME" />
-                            <Content>
-                                <Wrap>
-                                    <VerticalAlign>
-                                        <StyledButton>
-                                        <Link href="/Game">
-                                            <Play src="/img/Game/play.png" />
-                                        </Link>
-                                        </StyledButton>
-                                    </VerticalAlign>
-                                </Wrap>
-                            </Content>
-                        </Container>
-                    
+                {
+                    (this.state.width < 1024) ?
+                        <Fragment></Fragment>
+                        : <GroupOfStar />
+                }
+                <Container className="text-center">
+                    <Header color="#ffffff" headerText="GAME" />
+                    <Content>
+                        <Wrap>
+                            <VerticalAlign>
+                                <StyledButton>
+                                    <Link href="/Game">
+                                        <Play src="/img/Game/play.png" />
+                                    </Link>
+                                </StyledButton>
+                            </VerticalAlign>
+                        </Wrap>
+                    </Content>
+                </Container>                    
             </GameContainer>
         )
     }
