@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import React, { Component, Fragment } from 'react'
 import { Container, Col, Row, } from 'reactstrap'
 import styled from 'styled-components'
 import AOS from 'aos';
@@ -125,11 +124,6 @@ const Star = styled.img`
   top: 35vh;
   left: 75vw;
   width: 10vw;
-  display: none;
-
-  @media (min-width: 1024px) {
-    display: block;
-  }
 `
 
 const Star2 = styled(Star)`
@@ -154,24 +148,50 @@ const Star5 = styled(Star4)`
   left: 30vw;
 `
 
+const GroupOfStar = () => {
+  return (
+    <Fragment>
+      <Star src="/img/Contact/star1.png" />
+      <Star2 src="/img/Contact/star2.png" />
+      <Star3 src="/img/Contact/star3.png" />
+      <Star4 src="/img/Contact/star4.png" />
+      <Star5 src="/img/Contact/star5.png" />
+    </Fragment>
+  )
+}
+
 export default class contact extends Component {
-  componentDidMount() {
+  state = {
+    width: window.innerWidth
+  };
+
+  componentDidMount = () => {
+    window.addEventListener('resize', this.updateDimensions);
     AOS.init({
-      duration: 3000
+      duration: 1500
     })
   }
+
+  updateDimensions = () => {
+    this.setState({
+      width: window.innerWidth
+    });
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions);
+  }
+
   render() {
     return (
       <ContactBg>
-        <Star src="/img/Contact/star1.png" />
-        <Star2 src="/img/Contact/star2.png" />
-        <Star3 src="/img/Contact/star3.png" />
-        <Star4 src="/img/Contact/star4.png" />
-        <Star5 src="/img/Contact/star5.png" />
+        {
+          (this.state.width < 1024) ?
+            <Fragment></Fragment>
+            : <GroupOfStar />
+        }
         <Container>
-
           <Row>
-
             <Col xl="6" lg="6" md="6" sm="12" xs="12">
               <HeaderStyled>Contact</HeaderStyled>
               <TextBox>
@@ -200,10 +220,7 @@ export default class contact extends Component {
               </TextBox>
             </Col>
             <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
-
           </Row>
-
-
           <Row>
             <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
             <Col xl="6" lg="6" md="6" sm="12" xs="12">
@@ -227,16 +244,10 @@ export default class contact extends Component {
                     </StyledLink>
               </TextBox>
             </Col>
-          </Row>
-          <Row>
-
-          </Row>
-
+          </Row>          
         </Container>
-
         <Mountain src="/img/Contact/mountain.png" />
       </ContactBg >
-
     )
   }
 }
