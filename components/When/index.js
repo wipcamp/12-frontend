@@ -87,11 +87,6 @@ const Zodiac = styled.img`
    width: 20vw;
     left: 0vw;
     top: -20vh;
-    display: none;
-
-    @media (min-width: 1024px) {
-        display: block;
-    }
 `
 
 const WrapZodiac = styled.div`
@@ -124,8 +119,24 @@ const Cloud4 = styled(Zodiac)`
     width: 30vw;
 `
 
+const StarAndCloud = () => {
+    return(
+        <Fragment>
+            <WrapZodiac>
+                <Zodiac src="/img/When/libra.svg" data-aos="fade-down-right"/>
+            </WrapZodiac>   
+            <Cloud1 src="/img/What/cloud2.png" data-aos="fade-down-right" />
+            <Cloud1 src="/img/What/cloud3.png" data-aos="fade-down-right" />
+            <Cloud2 src="/img/When/cloud2.png" data-aos="fade-down-left"/>
+            <Cloud3 src="/img/When/cloud3.png" data-aos="fade-down-left" data-aos-duration="2000" />
+            <Cloud4 src="/img/When/cloud4.png" data-aos="fade-down-left" data-aos-duration="1500"/>
+        </Fragment>
+    )
+}
+
 export default class When extends Component {
     state = {
+        width: window.innerWidth,
         contentColumn: 2,
         openRegis: false,
         closeRegis: false,
@@ -135,6 +146,9 @@ export default class When extends Component {
     }
 
     updateWindowDimensions = () => {
+        this.setState({
+            width: window.innerWidth
+        });
         if (window.innerWidth < 1080) {
             this.setState({
                 contentColumn: 12
@@ -176,67 +190,65 @@ export default class When extends Component {
 
     componentDidMount() {
         window.addEventListener('resize', this.updateWindowDimensions)
-        this.updateWindowDimensions()
         this.dateCheck()
         AOS.init({
             duration: 3000
         })
     }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    }
     render() {
         return (
             <WhenContainer>
                 <BigContainer fluid={true} >
-                    <WrapZodiac>
-                        <Zodiac src="/img/When/libra.svg" data-aos="fade-down-right"/>
-                    </WrapZodiac>   
-                                <Cloud1 src="/img/What/cloud2.png" data-aos="fade-down-right" />
-                                <Cloud1 src="/img/What/cloud3.png" data-aos="fade-down-right" />
-                                <Cloud2 src="/img/When/cloud2.png" data-aos="fade-down-left"/>
-                                <Cloud3 src="/img/When/cloud3.png" data-aos="fade-down-left" data-aos-duration="2000" />
-                                <Cloud4 src="/img/When/cloud4.png" data-aos="fade-down-left" data-aos-duration="1500"/>
-                                <Row>
-                                    <Col>
-                                        <Header color="#ffffff" headerText="WHEN" />
-                                        <SubHeader color="#ffffff" subHeaderText="ค่ายจัดเมื่อไหร่ ?" />
-                                    </Col>
-                                </Row>
-                                <WhenRow>
-                                    <Col lg='1' md="auto" sm="auto"></Col>
-                                    <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
-                                        <BoxContainer>
-                                            <WhenImg src='/img/When/openregis.webp' glow={this.state.openRegis} />
-                                            <TimerText ><Span>เปิดรับสมัคร</Span><br /> 19 กุมภาพันธ์ 2563</TimerText>
-                                        </BoxContainer>
-                                    </Col>
-                                    <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
-                                        <BoxContainer>
-                                            <WhenImg src='/img/When/closeregis.webp' glow={this.state.closeRegis} />
-                                            <TimerText ><Span>ปิดรับสมัคร</Span><br /> 12 มีนาคม 2563</TimerText>
-                                        </BoxContainer>
-                                    </Col>
-                                    <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
-                                        <BoxContainer>
-                                            <WhenImg src='/img/When/announce.webp' glow={this.state.announce} />
-                                            <TimerText><Span>ประกาศผล</Span><br />28 มีนาคม 2563</TimerText>
-                                        </BoxContainer>
-                                    </Col>
-                                    <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
-                                        <BoxContainer>
-                                            <WhenImg src='/img/When/confirm.webp' glow={this.state.confirm} />
-                                            <TimerText><Span>ยืนยันสิทธิ์</Span><br />29 เมษายน 2563<br /> ถึง 4 พฤษภาคม 2563</TimerText>
-                                        </BoxContainer>
-                                    </Col>
-                                    <Col className="d-flex" lg={this.state.contentColumn} md={this.state.contentColumn} sm="12">
-                                        <BoxContainer>
-                                            <WhenImg src='/img/When/wipday.webp' glow={this.state.dayWIP} />
-                                            <TimerText><Span>เปิดค่าย</Span><br />27 พฤษภาคม 2563<br /> ถึง 31 พฤษภาคม 2563</TimerText>
-                                        </BoxContainer>
-                                    </Col>
-                                    <Col lg='1' md="auto" sm="auto"></Col>
-                                </WhenRow>
-                                
+                    {
+                        (this.state.width < 1024) ?
+                            <Fragment></Fragment>
+                            : <StarAndCloud />
+                    }
+                    <Row>
+                        <Col>
+                            <Header color="#ffffff" headerText="WHEN" />
+                            <SubHeader color="#ffffff" subHeaderText="ค่ายจัดเมื่อไหร่ ?" />
+                        </Col>
+                    </Row>
+                    <WhenRow>
+                        <Col lg='1' md="auto" sm="auto"></Col>
+                        <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
+                            <BoxContainer>
+                                <WhenImg src='/img/When/openregis.webp' glow={this.state.openRegis} />
+                                <TimerText ><Span>เปิดรับสมัคร</Span><br /> 19 กุมภาพันธ์ 2563</TimerText>
+                            </BoxContainer>
+                        </Col>
+                        <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
+                            <BoxContainer>
+                                <WhenImg src='/img/When/closeregis.webp' glow={this.state.closeRegis} />
+                                <TimerText ><Span>ปิดรับสมัคร</Span><br /> 12 มีนาคม 2563</TimerText>
+                            </BoxContainer>
+                        </Col>
+                        <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
+                            <BoxContainer>
+                                <WhenImg src='/img/When/announce.webp' glow={this.state.announce} />
+                                <TimerText><Span>ประกาศผล</Span><br />28 มีนาคม 2563</TimerText>
+                            </BoxContainer>
+                        </Col>
+                        <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
+                            <BoxContainer>
+                                <WhenImg src='/img/When/confirm.webp' glow={this.state.confirm} />
+                                <TimerText><Span>ยืนยันสิทธิ์</Span><br />29 เมษายน 2563<br /> ถึง 4 พฤษภาคม 2563</TimerText>
+                            </BoxContainer>
+                        </Col>
+                        <Col className="d-flex" lg={this.state.contentColumn} md={this.state.contentColumn} sm="12">
+                            <BoxContainer>
+                                <WhenImg src='/img/When/wipday.webp' glow={this.state.dayWIP} />
+                                <TimerText><Span>เปิดค่าย</Span><br />27 พฤษภาคม 2563<br /> ถึง 31 พฤษภาคม 2563</TimerText>
+                            </BoxContainer>
+                        </Col>
+                        <Col lg='1' md="auto" sm="auto"></Col>
+                    </WhenRow>                             
                 </BigContainer>
-
             </WhenContainer>
         )
     }
