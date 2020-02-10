@@ -87,11 +87,6 @@ const WhoRow = styled(Row)`
 const Zodiac = styled.img`
     position: absolute;
     width: 25vw;
-    display: none;
-
-    @media (min-width: 1024px) {
-        display: block;
-    }
 `
 
 const WrapZodiac = styled.div`
@@ -113,8 +108,20 @@ display: ${props => props.break? 'unset':'none'};
     display:unset;
 }
 `
+
+const GroupOfStar = () => {
+    return(
+        <Fragment>
+            <Star src="/img/Who/star.png" data-aos="fade-down-right"/>
+            <WrapZodiac> 
+                <Zodiac src="/img/Who/scorpio.svg" data-aos="fade-down-right"/>
+            </WrapZodiac>
+        </Fragment>
+    )
+}
 export default class Who extends Component {
     state = {
+        width: window.innerWidth,
         midColumn: 2,
         contentColumn: 4
     }
@@ -127,6 +134,9 @@ export default class Who extends Component {
     }
 
     updateWindowDimensions = () => {
+        this.setState({
+            width: window.innerWidth
+          });
         if (window.innerWidth < 1080) {
             this.setState({
                 midColumn: 'auto',
@@ -140,10 +150,18 @@ export default class Who extends Component {
         }
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    }
+
     render() {
         return (
             <WhoContainer>
-                <Star src="/img/Who/star.png" data-aos="fade-down-right"/>
+                {
+                    (this.state.width < 1024) ?
+                        <Fragment></Fragment>
+                        : <GroupOfStar />
+                }
                 <ContentContainer fluid={true} >
                     
                                 <Row>
@@ -234,9 +252,7 @@ export default class Who extends Component {
                                         <Image2 src="/img/Core/Wippo.png" />
                                     </Col>
                                 </Row>
-                        <WrapZodiac> 
-                        <Zodiac src="/img/Who/scorpio.svg" data-aos="fade-down-right"/>
-                    </WrapZodiac>
+                        
                 </ContentContainer>
             </WhoContainer>
         )
