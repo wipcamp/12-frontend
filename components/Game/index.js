@@ -68,7 +68,7 @@ const StyledButton = styled.button`
 
 `
 const Play = styled.img`
-    width: 30vw;
+    width: 50vw;
     height: auto;
 
     @media (min-width: 768px) {
