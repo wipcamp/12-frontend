@@ -28,7 +28,7 @@ export default class Wrapper extends Component {
     render() {
         return (
             <Fragment>
-            {/* <Wrap id="App">
+            <Wrap id="App">
                 <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
                 <div id="page-wrap" style={{overflow:'hidden'}}>
                 <StarParticle>
@@ -45,7 +45,7 @@ export default class Wrapper extends Component {
                 <ScrollableAnchor id="contact"><Contact /></ScrollableAnchor>
                 </StarParticle>
                 </div>       
-            </Wrap> */}
+            </Wrap>
             </Fragment>
         )
     }
