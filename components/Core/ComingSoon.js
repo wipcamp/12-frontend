@@ -232,9 +232,9 @@ export default class ComingSoon extends Component {
                                 <Li><span id="seconds">{this.props.sec}</span>Seconds</Li>
                             </ul>
                             <br />
-                            <StayTune href="https://www.facebook.com/wipcamp/" target="_blank">
+                            <StayTune href="https://www.facebook.com/wipcamp/" target="_blank" rel="noopener">
                                 ติดตามได้ที่&nbsp;&nbsp;
-                                <Facebook src="/img/Contact/facebook.png" />
+                                <Facebook src="/img/Contact/facebook.png" alt="facebook icon" />
                                 &nbsp;<span>WIP Camp</span></StayTune>
                         </Wrap>
                     </CountdownContainer>
