@@ -195,26 +195,26 @@ export default class contact extends Component {
             <Col xl="6" lg="6" md="6" sm="12" xs="12">
               <HeaderStyled>Contact</HeaderStyled>
               <TextBox>
-                <StyledLink href="https://m.me/wipcamp" target="_blank">
-                  <ContactImg src="img/Contact/messenger.png" />
+                <StyledLink href="https://m.me/wipcamp" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/messenger.png" alt="messenger icon" />
                   MESSENGER
                     </StyledLink>
               </TextBox>
               <TextBox>
-                <StyledLink href="tel://0922687835">
-                  <ContactImg src="img/Contact/tel.png" />
+                <StyledLink href="tel://0922687835" rel="noopener">
+                  <ContactImg src="img/Contact/tel.png" alt="phone icon" />
                   092-268-7835 (พี่ปลาย)
                     </StyledLink>
               </TextBox>
               <TextBox>
-                <StyledLink href="mailto:wippo@wipcamp.com" target="_blank">
-                  <ContactImg src="img/Contact/email.png" />
+                <StyledLink href="mailto:wippo@wipcamp.com" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/email.png" alt="email icon" />
                   wippo@wipcamp.com
                     </StyledLink>
               </TextBox>
               <TextBox>
-                <StyledLink href="https://line.me/R/ti/p/%40wipcamp" target="_blank">
-                  <ContactImg src="img/Contact/line.png" />
+                <StyledLink href="https://line.me/R/ti/p/%40wipcamp" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/line.png" alt="line icon" />
                   @wipcamp
                     </StyledLink>
               </TextBox>
@@ -226,27 +226,27 @@ export default class contact extends Component {
             <Col xl="6" lg="6" md="6" sm="12" xs="12">
               <HeaderStyled>Follow Us</HeaderStyled>
               <TextBox>
-                <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank">
-                  <ContactImg src="img/Contact/facebook.png" />
+                <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/facebook.png" alt="facebook icon" />
                   WIP Camp
                     </StyledLink>
               </TextBox>
               <TextBox>
-                <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
-                  <ContactImg src="img/Contact/youtube.png" />
+                <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/youtube.png" alt="youtube icon" />
                   WIP camp
                     </StyledLink>
               </TextBox>
               <TextBox>
-                <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank">
-                  <ContactImg src="img/Contact/instagram.png" />
+                <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/instagram.png" alt="instagram icon" />
                   wipcamp
                     </StyledLink>
               </TextBox>
             </Col>
           </Row>          
         </Container>
-        <Mountain src="/img/Contact/mountain.png" />
+        <Mountain src="/img/Contact/mountain.png" alt="mountain artwork at footer" />
       </ContactBg >
     )
   }
