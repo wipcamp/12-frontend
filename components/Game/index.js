@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
-import { Row, Col, Button, Container } from 'reactstrap'
+import { Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header } from '../Core/Text'
 import Link from 'next/link'
-import { Parallax } from 'react-scroll-parallax'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -22,26 +21,18 @@ const GameContainer = styled.div`
 `
 
 const Wrap = styled.div`
-    background: url(/img/Game/gamebg.png) center no-repeat;
+    background: url(/img/Game/gamemobile.png) center no-repeat;
     position: relative;
     display: table;
     width: 100%;
-    height: auto;
-    transition: background-size 0.8s ease-in-out, filter 0.8s ease-in-out;
-    background-size: 110%;
-    filter: grayscale(0);
-    pointer-events: none;
-    @media (min-width: 768px) {
-        height: 771px;   
-    }
+    height: 80vh;
+    background-size: 100%;
 
     @media (min-width: 1024px) {
-        height: 500px;  
-        :hover{
+        background: url(/img/Game/gamebg.png) center no-repeat;
+        height: 643px;
         background-size: 100%;
-        filter: grayscale(0);
-    }
-        filter: grayscale(50%);  
+        pointer-events: none;     
     }
 `
 
@@ -52,8 +43,7 @@ const VerticalAlign = styled.div`
 `
 
 const Content = styled.div`
-    margin-top: 41px;
-    margin: 2em 2.25em 0; 
+    margin: 2em 0 0; 
 
     @media (min-width: 768px) {
         margin: 2em 3em 0;
@@ -68,18 +58,18 @@ const StyledButton = styled.button`
     background-color: transparent;
     border: none;
     pointer-events: auto;
-    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+    transition: transform 0.25s ease-in-out,filter 0.25s ease-in-out;
+    transform: scale(0.8);
+    filter: brightness(1.2) ;
     &:hover {
-        transform: scale(1.1);
-        filter: drop-shadow(0 0 0.5em #535CA9)
+        filter: brightness(1.4) ;
+        transform: scale(0.9);
     }
 
 `
 const Play = styled.img`
-    width: 30vw;
+    width: 50vw;
     height: auto;
-    padding-top: 20vh;
-    padding-bottom: 20vh;
 
     @media (min-width: 768px) {
         width: 40vw;
@@ -89,45 +79,81 @@ const Play = styled.img`
         width: 15vw;
     }
 `
-const Cloud1 = styled.img`
+const Star1 = styled.img`
     position: absolute;
-    top: 2vh;
+    top: 5vh;
     left: -8vw;
-    width: 30vw;
-    display: none;
-
-    @media (min-width: 1024px) {
-        display: block;
-    }
+    width: 20vw;
 `
 
+const Star2 = styled(Star1)`
+    top: 8vh;
+    left: 85vw;
+    width: 10vw;
+`
+const GroupOfStar = () => {
+    return (
+        <Fragment>
+            <Star1 src="/img/Game/star1.png" data-aos="fade-down-right" />
+            <Star2 src="/img/Game/star2.png" data-aos="fade-down-left" />
+        </Fragment>
+    )
+}
 export default class Game extends Component {
+    state = {
+        isMobile: true
+    };
+
     componentDidMount = () => {
+        window.addEventListener('resize', this.updateDimensions)
+        this.updateDimensions()
         AOS.init({
-            duration: 3000
+            duration: 1500
         })
     }
+
+    updateDimensions = () => {
+        if (window.innerWidth < 1080) {
+            this.setState({
+                isMobile: true
+            })
+        } else {
+            this.setState({
+                isMobile: false
+            })
+        }
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    }
+
+    getType = () => {
+        return this.state.isMobile
+    }
+
     render() {
         return (
             <GameContainer>
-                
-                    <Cloud1 src="/img/Game/cloud1.png" data-aos="fade-down-right"/>
-                    
-                        <Container className="text-center">
-                            <Header color="#ffffff" headerText="GAME" />
-                            <Content>
-                                <Wrap>
-                                    <VerticalAlign>
-                                        <StyledButton>
-                                        <Link href="/Game">
-                                            <Play src="/img/Game/play.png" />
-                                        </Link>
-                                        </StyledButton>
-                                    </VerticalAlign>
-                                </Wrap>
-                            </Content>
-                        </Container>
-                    
+                {
+                    (this.getType()) ?
+                        <Fragment></Fragment>
+                        : <GroupOfStar />
+                }
+                <Container className="text-center">
+                    <Header color="#ffffff" headerText="GAME" />
+                    <Content>
+                        <Wrap>
+                            <VerticalAlign>
+                                <StyledButton>
+                                    <Link href="/Game">
+                                        <Play src="/img/Game/play.png" />
+                                    </Link>
+                                </StyledButton>
+                            </VerticalAlign>
+                        </Wrap>
+                    </Content>
+                </Container>
             </GameContainer>
         )
     }

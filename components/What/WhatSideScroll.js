@@ -11,6 +11,8 @@ const Wrap = styled.div`
     ::-webkit-scrollbar {
          width: 0px;
     }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 `
 
 const LeftArrowButton = styled.div`
@@ -120,13 +122,13 @@ const hidePrevButton = () => {
 export default class SideScroll extends Component {
     state = {
         images: [
-            { src: "/img/What/1.png" },
-            { src: "/img/What/2.png" },
-            { src: "/img/What/3.png" },
-            { src: "/img/What/4.png" },
-            { src: "/img/What/5.png" },
-            { src: "/img/What/8.jpg" },
-            { src: "/img/What/7.png" }
+            { src: "/img/What/1.png", alt: "wipcamp#11" },
+            { src: "/img/What/2.png", alt: "wipcamp#11" },
+            { src: "/img/What/3.png", alt: "wipcamp#11" },
+            { src: "/img/What/4.png", alt: "wipcamp#11" },
+            { src: "/img/What/5.png", alt: "wipcamp#11" },
+            { src: "/img/What/8.jpg", alt: "wipcamp#11" },
+            { src: "/img/What/7.png", alt: "wipcamp#11" }
         ],
         currentIndex: 0,
         translateValue: 0

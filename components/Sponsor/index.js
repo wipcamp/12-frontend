@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Header, SubHeader } from '../Core/Text'
 import SponsorImage from './SponsorImage'
 import styled from 'styled-components'
@@ -45,20 +45,74 @@ margin: 3em 0 0;
 
 `
 
-const Cloud = styled.img`
+const Star1 = styled.img`
     position: absolute;
-    top: 0vh;
-    right: -15vw;
-    width: 35vw;
-    display: none;
+    top: 2vh;
+    left: -8vw;
+    width: 15vw;
+`
 
-    @media (min-width: 1024px) {
-        display: block;
+const Star2 = styled(Star1)`
+    top: 90vh;
+    width: 15vw;
+
+    @media (min-width: 1366px) {
+        left: 92vw;
+    }
+
+    @media (min-width: 1535px) {
+        left: 91vw;
     }
 
 `
+
+const Zodiac1 = styled(Star2)`
+    width: 5vw;
+    top: 50vh;
+    left: 90vw;
+`
+
+const Zodiac2 = styled(Zodiac1)`
+    top: 62vh;
+    width: 10vw;
+
+    @media (min-width: 1366px) {
+        left: 90vw;
+    }
+
+    @media (min-width: 1535px) {
+        left: 89vw;
+    }
+`
+
+const Zodiac3 = styled(Zodiac2)`
+    top : 82vh;
+    width: 5vw;
+    left: 90vw;
+
+    @media (min-width: 1366px) {
+        left: 92vw;
+    }
+
+    @media (min-width: 1535px) {
+        left: 91vw;
+    }
+`
+
+const GroupOfStar = () => {
+    return (
+        <Fragment>
+            <Star1 src="/img/Sponsor/star1.png" data-aos="fade-down-right" />
+            <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down-left" />
+            <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down-left" />
+            <Zodiac3 src="/img/Sponsor/zodiac3.png" data-aos="fade-down-left" />
+            <Star2 src="/img/Sponsor/star2.png" data-aos="fade-down-left" />
+        </Fragment>
+    )
+}
 export default class Sponsor extends Component {
     state = {
+        isMobile: true,
         images: [
             { src: "/img/Sponsor/alibaba.png" },
             { src: "/img/Sponsor/thaibev.png" },
@@ -78,32 +132,54 @@ export default class Sponsor extends Component {
     };
 
     componentDidMount = () => {
+        window.addEventListener('resize', this.updateDimensions)
+        this.updateDimensions()
         AOS.init({
             duration: 3000
         })
     }
 
+    updateDimensions = () => {
+        if (window.innerWidth < 1366) {
+            this.setState({
+                isMobile: true
+            })
+        } else {
+            this.setState({
+                isMobile: false
+            })
+        }
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    }
+
+    getType = () => {
+        return this.state.isMobile
+    }
+
     render() {
         return (
             <SponsorBg>
-                
-                    <Cloud src="/img/Sponsor/cloud.png" data-aos="fade-down-left"/>
-                
-                        <div className="text-center">
-                            <Header color="white" headerText="SPONSOR" />
-                            <SubHeader color="white" subHeaderText="ผู้สนับสนุน" />
-                        </div>
-                        <Container>
-                            <Frame>
-                            <WrapLogo>
-                                {this.state.images.map((data, key) => (
-                                    <SponsorImage key={key} src={data.src} width={data.width} height={data.height} />
-                                ))}
-                            </WrapLogo>
-                            </Frame>
-                        </Container>
-                    
-                
+                {
+                    (this.getType()) ?
+                        <Fragment></Fragment>
+                        : <GroupOfStar />
+                }
+                <div className="text-center">
+                    <Header color="white" headerText="SPONSORS" />
+                    <SubHeader color="white" subHeaderText="ผู้สนับสนุน" />
+                </div>
+                <Container>
+                    <Frame>
+                        <WrapLogo>
+                            {this.state.images.map((data, key) => (
+                                <SponsorImage key={key} src={data.src} width={data.width} height={data.height} />
+                            ))}
+                        </WrapLogo>
+                    </Frame>
+                </Container>
             </SponsorBg>
         )
     }

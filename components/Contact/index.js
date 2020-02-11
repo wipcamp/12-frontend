@@ -1,9 +1,6 @@
-import React, { Component } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import React, { Component, Fragment } from 'react'
 import { Container, Col, Row, } from 'reactstrap'
 import styled from 'styled-components'
-import Link from 'next/link'
-import { Parallax } from 'react-scroll-parallax'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -122,143 +119,146 @@ const Tower = styled.img`
   width: 13vw;
 `
 
-const Cloud = styled.img`
+const Star = styled.img`
   position: absolute;
-  top: -15vh;
-  left: -8vw;
-  width: 30vw;
-  display: none;
-
-  @media (min-width: 1024px) {
-    display: block;
-  }
+  top: 35vh;
+  left: 75vw;
+  width: 10vw;
 `
 
-const WrapContact = styled.div`
-    padding-left: 3vw;
-
-    @media (min-width: 360px) {
-      padding-left: 8vw;
-    }
-
-    @media (min-width: 375px) {
-      padding-left: 9vw;
-    }
-
-    @media (min-width: 411px) {
-      padding-left: 13vw;
-    }
-
-    @media (min-width: 768px) {
-      padding-left: 0vw;
-    }
+const Star2 = styled(Star)`
+  top: 15vh;
+  left: 68vw;
+  width: 5vw;
 `
 
-const WrapFollow = styled.div`
-  padding-left: 15vw;
-
-  @media (min-width: 360px) {
-    padding-left: 18vw;
-  }
-
-  @media (min-width: 375px) {
-    padding-left: 21vw;
-  }
-
-  @media (min-width: 411px) {
-    padding-left: 24vw;
-  }
-
-  @media (min-width: 768px) {
-    padding-left: 0vw;
-  }
+const Star3 = styled(Star2)`
+  top: 25vh;
+  left: 45vw;
+  width: 8vw;
 `
 
+const Star4 = styled(Star3)`
+  top: 55vh;
+  left: 38vw;
+`
+
+const Star5 = styled(Star4)`
+  top: 70vh;
+  left: 30vw;
+`
+
+const GroupOfStar = () => {
+  return (
+    <Fragment>
+      <Star src="/img/Contact/star1.png" />
+      <Star2 src="/img/Contact/star2.png" />
+      <Star3 src="/img/Contact/star3.png" />
+      <Star4 src="/img/Contact/star4.png" />
+      <Star5 src="/img/Contact/star5.png" />
+    </Fragment>
+  )
+}
 
 export default class contact extends Component {
-  componentDidMount() {
+  state = {
+    isMobile: true
+  };
+
+  componentDidMount = () => {
+    window.addEventListener('resize', this.updateDimensions)
+    this.updateDimensions()
     AOS.init({
-      duration: 3000
+      duration: 1500
     })
   }
+
+  updateDimensions = () => {
+    if (window.innerWidth < 1080) {
+      this.setState({
+        isMobile: true
+      })
+    } else {
+      this.setState({
+        isMobile: false
+      })
+    }
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions);
+  }
+
+  getType = () => {
+    return this.state.isMobile
+  }
+
   render() {
     return (
       <ContactBg>
-
-        <Cloud src="/img/Contact/cloud.png" data-aos="fade-down-right" />
-
+        {
+          (this.getType()) ?
+            <Fragment></Fragment>
+            : <GroupOfStar />
+        }
         <Container>
-
           <Row>
-
             <Col xl="6" lg="6" md="6" sm="12" xs="12">
               <HeaderStyled>Contact</HeaderStyled>
-              <WrapContact>
-                <TextBox>
-                  <StyledLink href="https://www.facebook.com/messages/t/wipcamp" target="_blank">
-                    <ContactImg src="img/Contact/messenger.png" />
-                    MESSENGER
+              <TextBox>
+                <StyledLink href="https://m.me/wipcamp" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/messenger.png" alt="messenger icon" />
+                  MESSENGER
                     </StyledLink>
-                </TextBox>
-                <TextBox>
-                  <StyledLink href="tel://0955812385">
-                    <ContactImg src="img/Contact/phone.png" />
-                    095-581-2385 (พี่ทีเจ)
+              </TextBox>
+              <TextBox>
+                <StyledLink href="tel://0922687835" rel="noopener">
+                  <ContactImg src="img/Contact/tel.png" alt="phone icon" />
+                  092-268-7835 (พี่ปลาย)
                     </StyledLink>
-                </TextBox>
-                <TextBox>
-                  <StyledLink href="mailto:wippo@wipcamp.com" target="_blank">
-                    <ContactImg src="img/Contact/email.png" />
-                    wippo@wipcamp.com
+              </TextBox>
+              <TextBox>
+                <StyledLink href="mailto:wippo@wipcamp.com" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/email.png" alt="email icon" />
+                  wippo@wipcamp.com
                     </StyledLink>
-                </TextBox>
-              </WrapContact>
+              </TextBox>
+              <TextBox>
+                <StyledLink href="https://line.me/R/ti/p/%40wipcamp" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/line.png" alt="line icon" />
+                  @wipcamp
+                    </StyledLink>
+              </TextBox>
             </Col>
-            <Col xl="6" lg="6" md="6" sm="12" xs="12">
-              <Parallax y={[-20, 10]}>
-                <ImgObject src="img/Contact/sagittarius.svg" />
-              </Parallax>
-            </Col>
-
+            <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
           </Row>
-
-
           <Row>
             <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
             <Col xl="6" lg="6" md="6" sm="12" xs="12">
               <HeaderStyled>Follow Us</HeaderStyled>
-              <WrapFollow>
-                <TextBox>
-                  <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank">
-                    <ContactImg src="img/Contact/facebook.png" />
-                    WIP Camp
+              <TextBox>
+                <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/facebook.png" alt="facebook icon" />
+                  WIP Camp
                     </StyledLink>
-                </TextBox>
-                <TextBox>
-                  <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
-                    <ContactImg src="img/Contact/youtube.png" />
-                    WIP camp
+              </TextBox>
+              <TextBox>
+                <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/youtube.png" alt="youtube icon" />
+                  WIP camp
                     </StyledLink>
-                </TextBox>
-                <TextBox>
-                  <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank">
-                    <ContactImg src="img/Contact/instagram.png" />
-                    wipcamp
+              </TextBox>
+              <TextBox>
+                <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/instagram.png" alt="instagram icon" />
+                  wipcamp
                     </StyledLink>
-                </TextBox>
-              </WrapFollow>
+              </TextBox>
             </Col>
           </Row>
-          <Row>
-
-          </Row>
-
         </Container>
-
-        <Tower src="/img/Contact/tower.png" />
-        <Mountain src="/img/Contact/mountain.png" />
+        <Mountain src="/img/Contact/mountain.png" alt="mountain artwork at footer" />
       </ContactBg >
-
     )
   }
 }

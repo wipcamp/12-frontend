@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import { Content } from '../Core/Text'
 import styled, { keyframes } from 'styled-components'
-const glow = keyframes`
-    from { filter:drop-shadow(0px 0px 5px rgba(255,255,255,0.7));}
-    to {filter:drop-shadow(0px 0px 10px rgba(255,255,255,1));}
-`
+
 const Image = styled.img`
     width: 64px;
     height: auto;
@@ -15,13 +12,10 @@ const Image = styled.img`
     }
 
     @media (min-width: 1080px){
-        width: 90%;
+        width: 25%;
+        height: auto;
+       
 }
-`
-const ImageWho = styled.img`
-animation: ${glow} 2s ease-in-out alternate infinite;
-display: ${ props => props.display};
-
 `
 
 const TextBox = styled.div`
@@ -32,12 +26,12 @@ const TextBox = styled.div`
     margin-top:0.5rem;
 @media (min-width: 1024px){
     width: auto;
-    text-align: center;
     
 }
-@media (min-width: 1080px){
-margin:0.5em 3em 2em 2em;
-width: unset;
+@media (min-width: 1440px){
+text-align: center;
+width:20em;
+margin:0 0 0 1rem;
 }
 `
 
@@ -47,7 +41,6 @@ const Fieldset = styled.fieldset`
     -moz-border-radius:8px;
     -webkit-border-radius:8px;	
     border-radius:8px;
-    /* border-image: linear-gradient(#FF66ED,#64A4FF )1; */
     margin-bottom: 30px;
     text-align: center;
     @media (min-width: 1080px){
@@ -100,48 +93,52 @@ const WhoMobileContainer = styled.div`
         display: flex;
         justify-content: center;
         margin-top: 1.5em;
+
         @media (min-width: 1080px){
         }	
         @media (min-width: 1080px){
-            display: none;
+        
 }	
 `
+const WhoContentText = styled.p`
+    font-family: 'Sarabun-Regular', sans-serif;
+    font-size: 12px;
+    color: ${props => props.color};
+    text-align: ${props => props.textAlign};
+    line-height: 20px;
+@media (min-width: 768px) {
+    font-size: 16px;
+    } 
+@media (min-width: 1080px) {
+    vertical-align: center;
+    text-align: center;
+    line-height: unset;
+    white-space: normal;
+
+}
+@media (min-width: 1080px){
+    font-size: 18px; 
+}
+  `
 
 
 const WhoMobile = props => {
     return (
         <WhoMobileContainer justify={props.justify}>
-            <Image src={props.src} />
+            <Image src={props.src} alt={props.alt} />
             <TextBox>
-                <Content
-                    content={props.content || "Unknow"}
+                <WhoContentText 
                     color={props.color}
-                    textAlign = {props.textAlign || "Unknow"}
-                />
+                    textAlign = {props.textAlign || "Unknow"} > 
+                 {props.children}</WhoContentText>
             </TextBox>
         </WhoMobileContainer>
     )
 }
 
 
-class ImageInfoGlow extends Component {
-    render() {
-        return (
-            <div className="media mt-3">
-                <ImageWho src={this.props.src} display={this.props.display} />
-                <div className="mt-1 ml-4"><Content
-                    content={this.props.content || "Unknow"}
-                    color={this.props.color}
-                   
-                />
-                </div>
-            </div>
 
-        )
-    }
-}
 export {
     ImageInfo,
-    ImageInfoGlow,
     WhoMobile
 };

@@ -3615,6 +3615,11 @@ lodash.debounce@^4.0.6:
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+
 lodash.template@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.template/-/lodash.template-4.5.0.tgz#f976195cf3f347d0d5f52483569fe8031ccce8ab"
@@ -5046,6 +5051,11 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+react-accessible-accordion@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-accessible-accordion/-/react-accessible-accordion-3.0.1.tgz#8f3b08c712f4d5e526fad4c55c3d70fc3b68cbd5"
+  integrity sha512-2OZY6PWVOTYjVRQ5vnzVfvSRvapH1fYHNE6rG0S64cCatf+IOovokZEa4Xzmdl69ebrYO2HU3h8yLlEk9LqwPA==
+
 react-burger-menu@^2.6.13:
   version "2.6.13"
   resolved "https://registry.yarnpkg.com/react-burger-menu/-/react-burger-menu-2.6.13.tgz#51b86eb35076c5fbe80027e2ce4c58bd6708f724"
@@ -5056,6 +5066,14 @@ react-burger-menu@^2.6.13:
     eve "~0.5.1"
     prop-types "^15.7.2"
     snapsvg-cjs "0.0.6"
+
+react-countdown@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-countdown/-/react-countdown-2.2.0.tgz#87a8e72794a6f368dca4ca496ac1ce21cf3d19df"
+  integrity sha512-90CyqROLBgy4RKDaZdTdVPjRhTGT6DAWPAYAD0gKp+nO7QXl5+hrBSTfVTs4KyR6oRHgWkQ9VmMcFbAT4prBKQ==
+  dependencies:
+    lodash.isequal "^4.5.0"
+    prop-types "^15.7.2"
 
 react-dom@^16.12.0:
   version "16.12.0"

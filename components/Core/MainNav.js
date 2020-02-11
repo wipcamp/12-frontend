@@ -1,20 +1,16 @@
-import React, { useState, Fragment,Component } from 'react';
+import React, { useState, Fragment, Component } from 'react';
 import {
-	Collapse,
 	Navbar,
-	NavbarToggler,
-	NavbarBrand,
 	Nav,
 	NavItem,
 	NavLink,
 } from 'reactstrap'
 import styled from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import './sidebar.css'
 const StyledNavItem = styled(NavItem)`
     text-align:center;
 	font-weight:400;
-
 	@media (min-width:1024px) {
     	text-decoration: none;
     	height: 100%;
@@ -23,8 +19,10 @@ const StyledNavItem = styled(NavItem)`
 
 const StyledNavLink = styled(NavLink)`
 	font-size: 14px;
+	border: none;
   	color : white;
-	
+	background-color: ${ props => props.iscurrent == "true" ? "#37558a" : "unset"};
+	transition: background-color 0.3s ease-in-out;
 	:hover {
 		color: black;
 	}
@@ -37,7 +35,6 @@ const StyledNavLink = styled(NavLink)`
 		font-family: 'Prompt-medium', sans-serif;
 		:hover {
 		background-color: whitesmoke;
-		transition: background 0.5s ease-in-out;
 		}
   	}
   
@@ -45,7 +42,7 @@ const StyledNavLink = styled(NavLink)`
 const ColorNav = styled(Navbar)`
   margin: 0;
   padding: 0;
-  background-color : #468BB1;
+  background-color : #345185;
   transition : 0.2s ease-in-out;
   -webkit-transition : 0.2s ease-in-out;
   
@@ -58,7 +55,6 @@ const ColorNav = styled(Navbar)`
 `
 
 const StyledNav = styled(Nav)`
-
 	@media (min-width: 1024px) {
 		width: 100%;
 		height: inherit;
@@ -77,160 +73,125 @@ const MainNavContainer = styled.div`
 export default class MainNav extends Component {
 	state = {
 		noBg: 'rgba(255, 255, 255, 0.0)',
-		defaultMobile: 'darkgrey',
-		defaultDesktop: '#111F42',
-		isDesktop: true
+		defaultDesktop: '#223557',
+		isDesktop: true,
+		isWhat: "false",
+		isTrack: "false",
+		isWhen: "false",
+		isFaqs: "false"
 	}
 
-listenScrollEvent = () => {
+	listenScrollEvent = () => {
 
-	if (window.innerWidth >= 1024 && this.state.isDesktop) {
-		if (window.scrollY > 100) {
-			document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
-			document.getElementById('navcolor').style.height = '65px'
-			document.getElementById('navcolor').style.lineHeight = '50px'
-		} else {
-			document.getElementById('navcolor').style.backgroundColor = this.state.noBg
-			document.getElementById('navcolor').style.height = '89px'
-			document.getElementById('navcolor').style.lineHeight = '70px'
+		if (window.innerWidth >= 1024 && this.state.isDesktop) {
+			if (document.getElementById('navcolor') !== null && document.getElementsByClassName("nav-style") !== null) {
+				if (window.scrollY > 100) {
+					document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
+					document.getElementById('navcolor').style.height = '67px'
+					let navLinkAfter = document.getElementsByClassName("nav-style")
+					this.applyStyles(navLinkAfter,'50px')
+				} else {
+					document.getElementById('navcolor').style.backgroundColor = this.state.noBg
+					document.getElementById('navcolor').style.height = '89px'
+					let navLinkBefore = document.getElementsByClassName("nav-style")
+					this.applyStyles(navLinkBefore,'72px')
+				}
+
+			}
 		}
 	}
-}
 
-updateWindowDimensions = () => {
-	if (window.innerWidth < 1024) {
-		this.setState({ isDesktop: false})
-	}else if (window.innerWidth >= 1024) {
-		this.setState({ isDesktop: true})
-		if(window.scrollY > 100){
-		document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
-		document.getElementById('navcolor').style.height = '65px'
-		}
-	} 
-}
-
-componentDidMount() {
-	this.listenScrollEvent()
-	window.addEventListener('resize', this.updateWindowDimensions)
-	window.addEventListener('scroll', this.listenScrollEvent)
-}
-
-
-	render() {
-		return (
-			<MainNavContainer className='fixed-top'>
-			<ColorNav expand="lg" id="navcolor">
-					<div style={{width:'100%',display:'flex',justifyContent:'center'}}>
-					<StyledNav navbar>
-						<StyledNavItem>
-								<StyledNavLink href="#home">HOME</StyledNavLink>
-						</StyledNavItem>
-						<StyledNavItem>
-								<StyledNavLink href="#what">WHAT</StyledNavLink>
-						</StyledNavItem>
-						<StyledNavItem>
-							<StyledNavLink href="#track">TRACK</StyledNavLink>
-						</StyledNavItem>
-						<StyledNavItem>
-							<StyledNavLink href="#when">WHEN</StyledNavLink>
-						</StyledNavItem>
-						<StyledNavItem>
-							<StyledNavLink href="#faqs">FAQS</StyledNavLink>
-						</StyledNavItem>
-					</StyledNav>
-					</div>
-			</ColorNav>
-		</MainNavContainer>
-		)
+	applyStyles(navStyle,lineHeight) {
+		var i;
+		for (i = 0; i < navStyle.length; i++) {
+			navStyle[i].style.lineHeight = lineHeight;
+		  }
 	}
-}
+
+		updateWindowDimensions = () => {
+			if (window.innerWidth < 1080) {
+				this.setState({ isDesktop: false })
+			} else if (window.innerWidth >= 1080) {
+				this.setState({ isDesktop: true })
+				if (document.getElementById('navcolor') !== null && window.scrollY > 100)
+				{ document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop}
+			}
+		}
+
+		updateCurrentSection = () => {
+			let currentHash = window.location.hash
+			this.setState({
+				isWhat: "false",
+				isTrack: "false",
+				isWhen: "false",
+				isFaqs: "false"
+			})
+			if (currentHash == '#what') {
+				this.setState({
+					isWhat: "true"
+				})
+			} else if (currentHash == '#track') {
+				this.setState({
+					isTrack: "true"
+				})
+
+			} else if (currentHash == '#when') {
+				this.setState({
+					isWhen: "true"
+				})
+			} else if (currentHash == '#faqs') {
+				this.setState({
+					isFaqs: "true"
+				})
+			}
+		}
+
+		componentDidMount() {
+			this.listenScrollEvent()
+			window.addEventListener('resize', this.updateWindowDimensions)
+			window.addEventListener('scroll', this.listenScrollEvent)
+			window.addEventListener("hashchange", this.updateCurrentSection)
+		}
+		componentWillUnmount() {
+			window.removeEventListener('resize', this.updateWindowDimensions)
+			window.removeEventListener('scroll', this.listenScrollEvent)
+			window.removeEventListener("hashchange", this.updateCurrentSection)
+		}
+
+		getViewport = () => {
+			return this.state.isDesktop
+		}
 
 
-
-// const Navbar1 = (props) => {
-// 	const [isOpen, setIsOpen] = useState(false);
-
-// 	const toggle = () => setIsOpen(!isOpen);
-
-// 	const changeIconToX = () => {
-// 		var hamberger = document.getElementById("hamberger");
-// 		var close = document.getElementById("close");
-// 		var bgcolor = document.getElementById("bgcolor");
-// 		if (isOpen == false) {
-// 			hamberger.style.display = 'none';
-// 			close.style.display = 'inline';
-// 			bgcolor.style.backgroundColor = '#918686';
-// 		} 
-// 	}
-
-// 	const changeIconToHamberg = () => {
-// 		var hamberger = document.getElementById("hamberger");
-// 		var close = document.getElementById("close");
-// 		var bgcolor = document.getElementById("bgcolor");
-// 		if (isOpen == true) {
-// 			hamberger.style.display = 'inline';
-// 			close.style.display = 'none';
-// 			bgcolor.style.backgroundColor = '#c4c4c4'
-// 		}
-// 	}
-
-
-// 	return (
-// 		<div className="sticky-top">
-// 			<ColorNav expand="lg" id="bgcolor">
-// 				<NavMobile>
-// 					<StyledNavbarToggler onClick={() => { toggle(); changeIconToX();}} id="hamberger"/>
-// 					<StyledNavbarTogglerOpen  onClick={() => { toggle(); changeIconToHamberg();}} id="close" />
-// 					<StyledNavbarBrand href="/">
-// 						<StyledImg src="/img/Logo2.png" />
-// 					</StyledNavbarBrand>
-// 					<RegisterButton color="tranparent">
-// 						<StyledNavLink2 href="/" >REGISTER</StyledNavLink2>
-// 					</RegisterButton>
-// 				</NavMobile>
-// 				<Collapse isOpen={isOpen} navbar>
-// 					<div style={{width:'100%',display:'flex',justifyContent:'center'}}>
-// 					<StyledNav navbar>
-// 						<StyledNavItem>
-// 							<Link href="/index">
-// 								<StyledNavLink href="/" >HOME</StyledNavLink>
-// 							</Link>
-// 							<Line></Line>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<Link href="./App">
-// 								<StyledNavLink href="/">WHAT</StyledNavLink>
-// 							</Link>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/">WHO</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/">BRANCH</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/Where">WHERE</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/When">WHEN</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/">FAQS</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/">GAME</StyledNavLink>
-// 						</StyledNavItem>
-// 						<StyledNavItem>
-// 							<StyledNavLink href="/contact">CONTACT</StyledNavLink>
-// 						</StyledNavItem>
-// 					</StyledNav>
-// 					</div>
-// 					<PlaceHolder></PlaceHolder>
-// 				</Collapse>
-
-// 			</ColorNav>
-// 		</div>
-
-
-// 	);
-// }
+		render() {
+			if (this.getViewport()) {
+				return (
+					<MainNavContainer className='fixed-top'>
+						<ColorNav expand="lg" id="navcolor">
+							<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+								<StyledNav navbar>
+									<StyledNavItem>
+										<StyledNavLink className="nav-style" href="#home">HOME</StyledNavLink>
+									</StyledNavItem>
+									<StyledNavItem >
+										<StyledNavLink className="nav-style" iscurrent={this.state.isWhat} href="#what">WHAT</StyledNavLink>
+									</StyledNavItem>
+									<StyledNavItem >
+										<StyledNavLink className="nav-style" iscurrent={this.state.isTrack} href="#track">TRACK</StyledNavLink>
+									</StyledNavItem>
+									<StyledNavItem >
+										<StyledNavLink className="nav-style" iscurrent={this.state.isWhen} href="#when">WHEN</StyledNavLink>
+									</StyledNavItem>
+									<StyledNavItem>
+										<StyledNavLink className="nav-style" iscurrent={this.state.isFaqs} href="#faqs">FAQS</StyledNavLink>
+									</StyledNavItem>
+								</StyledNav>
+							</div>
+						</ColorNav>
+					</MainNavContainer>
+				)
+			} else {
+				return (<MainNavContainer />)
+			}
+		}
+	}
