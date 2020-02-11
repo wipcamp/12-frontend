@@ -162,31 +162,42 @@ const GroupOfStar = () => {
 
 export default class contact extends Component {
   state = {
-    width: 0
+    isMobile: true,
   };
 
   componentDidMount = () => {
-    window.addEventListener('resize', this.updateDimensions);
+    window.addEventListener('resize', this.updateDimensions)
+    this.updateDimensions()
     AOS.init({
       duration: 1500
     })
   }
 
   updateDimensions = () => {
-    this.setState({
-      width: window.innerWidth
-    });
+    if (window.innerWidth < 1080) {
+      this.setState({
+        isMobile: true
+      })
+    } else {
+      this.setState({
+        isMobile: false
+      })
+    }
   };
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateDimensions);
   }
 
+  getType = () => {
+    return this.state.isMobile
+  }
+
   render() {
     return (
       <ContactBg>
         {
-          (this.state.width < 1024) ?
+          (this.getType()) ?
             <Fragment></Fragment>
             : <GroupOfStar />
         }
@@ -244,7 +255,7 @@ export default class contact extends Component {
                     </StyledLink>
               </TextBox>
             </Col>
-          </Row>          
+          </Row>
         </Container>
         <Mountain src="/img/Contact/mountain.png" alt="mountain artwork at footer" />
       </ContactBg >
