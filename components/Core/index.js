@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 import Home from '../Home'
 import MainNav from '../Core/MainNav'
@@ -27,8 +27,8 @@ export default class Wrapper extends Component {
     }
     render() {
         return (
-            <ParallaxProvider>
-            <Wrap id="App">
+            <Fragment>
+            {/* <Wrap id="App">
                 <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
                 <div id="page-wrap" style={{overflow:'hidden'}}>
                 <StarParticle>
@@ -45,8 +45,8 @@ export default class Wrapper extends Component {
                 <ScrollableAnchor id="contact"><Contact /></ScrollableAnchor>
                 </StarParticle>
                 </div>       
-            </Wrap>
-            </ParallaxProvider>
+            </Wrap> */}
+            </Fragment>
         )
     }
 }
