@@ -210,7 +210,7 @@ const StarAndCloud = () => {
 }
 export default class Home extends Component {
     state = {
-        width: window.innerWidth
+        width: 0
     };
 
     componentDidMount = () => {
@@ -256,35 +256,3 @@ export default class Home extends Component {
 }
 
 
-// listenScrollEvent = e => {
-//     if (window.innerWidth >= 1024 && this.state.isDesktop) {
-//         if (window.scrollY > 100) {
-//             document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
-//             document.getElementById('navcolor').style.height = '65px'
-//             document.getElementById('navcolor').style.lineHeight = '50px'
-//         } else {
-//             document.getElementById('navcolor').style.backgroundColor = this.state.noBg
-//             document.getElementById('navcolor').style.height = '89px'
-//             document.getElementById('navcolor').style.lineHeight = '70px'
-//         }
-//     }
-// }
-
-
-// componentDidMount() {
-//     window.addEventListener('resize', this.updateWindowDimensions)
-//     window.addEventListener('scroll', this.listenScrollEvent)
-// }
-
-// updateWindowDimensions = () => {
-//     this.setState({ width: window.innerWidth, height: window.innerHeight });
-//     if (window.innerWidth < 1024) {
-//         this.setState({ isDesktop: false})
-//         document.getElementById('navcolor').style.backgroundColor = this.state.defaultMobile
-//         document.getElementById('navcolor').style.height = ''
-//     }else if (window.innerWidth >= 1024) {
-//         this.setState({ isDesktop: true})
-//         document.getElementById('navcolor').style.backgroundColor = this.state.defaultDesktop
-//         document.getElementById('navcolor').style.height = '89px'
-//     } 
-// }

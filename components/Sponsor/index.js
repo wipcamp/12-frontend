@@ -112,7 +112,7 @@ const GroupOfStar = () => {
 }
 export default class Sponsor extends Component {
     state = {
-        width: window.innerWidth,
+        width: 0,
         images: [
             { src: "/img/Sponsor/alibaba.png" },
             { src: "/img/Sponsor/thaibev.png" },

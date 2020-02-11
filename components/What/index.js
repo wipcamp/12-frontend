@@ -98,7 +98,7 @@ const GroupOfCloud = () => {
 }
 export default class What extends Component {
     state = {
-        width: window.innerWidth,
+        width: 0,
         contentColumn1: 5,
         contentColumn2: 6
     }

@@ -121,7 +121,7 @@ const GroupOfStar = () => {
 }
 export default class Who extends Component {
     state = {
-        width: window.innerWidth,
+        width: 0,
         midColumn: 2,
         contentColumn: 4
     }

@@ -162,7 +162,7 @@ const GroupOfStar = () => {
 
 export default class contact extends Component {
   state = {
-    width: window.innerWidth
+    width: 0
   };
 
   componentDidMount = () => {

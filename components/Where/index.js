@@ -78,7 +78,7 @@ const GroupOfStar = () => {
 }
 export default class Where extends Component {
     state = {
-        width: window.innerWidth,
+        width: 0,
         sideColumn: 3,
         contentColumn: 6
     }

@@ -136,7 +136,7 @@ const StarAndCloud = () => {
 
 export default class When extends Component {
     state = {
-        width: window.innerWidth,
+        width: 0,
         contentColumn: 2,
         openRegis: false,
         closeRegis: false,

@@ -60,7 +60,7 @@ const hideCardScroll = () => {
 
 export default class Track extends Component {
     state = { 
-        width: window.innerWidth, 
+        width: 0, 
     };
 
     updateDimensions = () => {

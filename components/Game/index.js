@@ -101,7 +101,7 @@ const GroupOfStar = () => {
 }
 export default class Game extends Component {
     state = {
-        width: window.innerWidth
+        width: 0
     };
 
     componentDidMount = () => {

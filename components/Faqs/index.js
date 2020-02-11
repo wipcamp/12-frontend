@@ -378,7 +378,9 @@ export default class Faqs extends Component {
         window.addEventListener('resize', this.updateWindowDimensions)
         this.updateWindowDimensions()
     }
-
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions)
+    }
     updateWindowDimensions = () => {
         if (window.innerWidth < 1080) {
             this.setState({
