@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
           <meta property="og:title" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
           <meta property="og:description" content="WIP Camp #12 : Ways to IT Professionals Camp ค่ายเส้นทางสู่ฝันนักไอที : ค่าย สำหรับน้องๆ มัธยม ปลาย ที่จะพาน้องๆมาทำความรู้จักกับ ไอที 
           อย่างเต็มตัว ตลอดทั้ง ค่าย น้องๆจะได้รับ ความรู้ ความสนุกสนาน จากพี่ๆ ไอที บางมด แล้วเจอกันนะครับ" />
-          <meta property="og:image" content="http://localhost:3111/img/OG/og2.png" />
+          <meta property="og:image" content="https://12-pr.freezer.wip.camp/img/OG/og2.png" />
 
           <link rel="shortcut icon" href="/img/Favicon/favicon.ico" type="image/x-icon"/>
           <script dangerouslySetInnerHTML={{
