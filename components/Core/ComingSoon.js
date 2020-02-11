@@ -210,18 +210,18 @@ export default class ComingSoon extends Component {
                 <OverFlowHidden>
                     <CountdownContainer>
                         <Wrap>
-                            <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down"/>
-                            <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down"/>
-                            <Zodiac3 src="/img/Core/zodiac3.png" data-aos="fade-down"/>
-                            <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" />
-                            <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
-                            <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
-                            <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" />
-                            <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000"/>
-                            <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" />
-                            <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000"/>
-                            <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500"/>
-                            <WipLogoImg src='/img/Core/oldlogo.png' />
+                            <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down" alt="Gemini" />
+                            <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down" alt="Taurus" />
+                            <Zodiac3 src="/img/Core/zodiac3.png" data-aos="fade-down" alt="Virgo" />
+                            <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" alt="group of stars" />
+                            <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" alt="group of stars" />
+                            <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" alt="group of stars" />
+                            <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" alt="cloud" />
+                            <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000" alt="cloud" />
+                            <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" alt="cloud" />
+                            <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000" alt="cloud" />
+                            <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500" alt="cloud" />
+                            <WipLogoImg src='/img/Core/oldlogo.png' alt="wipcamp logo" />
                             <br />
                             <br />
                             <ComingSoonText>C O M I N G &nbsp;&nbsp;S O O N</ComingSoonText>
