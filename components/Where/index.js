@@ -71,37 +71,39 @@ const Star2 = styled(Star1)`
 const GroupOfStar = () => {
     return (
         <Fragment>
-            <Star1 src="/img/Where/star1.svg" data-aos="fade-down-right"/>
-            <Star2 src="/img/Where/star2.svg" data-aos="fade-down-left"/>
+            <Star1 src="/img/Where/pisces.png" data-aos="fade-down-right" alt="pisces" />
+            <Star2 src="/img/Where/aquarius.png" data-aos="fade-down-left" alt="aquarius" />
         </Fragment>
     )
 }
 export default class Where extends Component {
     state = {
-        width: 0,
+        isMobile: true,
         sideColumn: 3,
         contentColumn: 6
     }
 
     componentDidMount() {
-        window.addEventListener('resize', this.updateWindowDimensions)
-        this.updateWindowDimensions()
+        window.addEventListener('resize', this.updateDimensions)
+        this.updateDimensions()
         AOS.init({
             duration: 3000
         })
     }
 
-    updateWindowDimensions = () => {
+    updateDimensions = () => {
         this.setState({
             width: window.innerWidth
           });
         if (window.innerWidth < 1080) {
             this.setState({
+                isMobile: true,
                 sideColumn: 2,
                 contentColumn: 8
             })
         } else {
             this.setState({
+                isMobile: false,
                 sideColumn: 3,
                 contentColumn: 6
             })
@@ -112,13 +114,17 @@ export default class Where extends Component {
         window.removeEventListener('resize', this.updateDimensions);
     }
 
+    getType = () => {
+        return this.state.isMobile
+    }
+
     render() {
         return (
 
             <WhereBg>
                 <Container fluid={true}>
                     {
-                        (this.state.width < 1024) ?
+                        (this.getType()) ?
                             <Fragment></Fragment>
                             : <GroupOfStar />
                     }

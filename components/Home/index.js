@@ -194,63 +194,70 @@ const CloudRight3 = styled(CloudRight)`
 const StarAndCloud = () => {
     return (
         <Fragment>
-            <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down" />
-            <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down" />
-            <Zodiac3 src="/img/Core/zodiac3.png" data-aos="fade-down" />
-            <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" />
-            <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" />
-            <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" />
-            <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" />
-            <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000" />
-            <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" />
-            <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000" />
-            <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500" />
+            <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down" alt="Gemini" />
+            <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down" alt="Taurus" />
+            <Zodiac3 src="/img/Core/zodiac3.png" data-aos="fade-down" alt="Virgo" />
+            <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" alt="group of stars"/>
+            <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" alt="group of stars"/>
+            <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" alt="group of stars"/>
+            <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" alt="cloud" />
+            <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000" alt="cloud" />
+            <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" alt="cloud" />
+            <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000" alt="cloud" />
+            <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500" alt="cloud" />
         </Fragment>
     )
 }
 export default class Home extends Component {
     state = {
-        width: 0
+        isMobile: true
     };
 
     componentDidMount = () => {
-        window.addEventListener('resize', this.updateDimensions);
+        window.addEventListener('resize', this.updateDimensions)
+        this.updateDimensions()
         AOS.init({
             duration: 1500
         })
     }
 
     updateDimensions = () => {
-        this.setState({
-            width: window.innerWidth
-          });
+        if (window.innerWidth < 1080) {
+            this.setState({
+                isMobile: true
+            })
+        } else {
+            this.setState({
+                isMobile: false
+            })
+        }
     };
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
     }
 
+    getType = () => {
+        return this.state.isMobile
+    }
+
     render() {
         return (
-
             <HomeContainer>
                 {
-                    (this.state.width < 1024) ?
+                    (this.getType()) ?
                         <Fragment></Fragment>
                         : <StarAndCloud />
                 }
                 <HomeContent>
-                    <WipLogoImg src='/img/Core/logo.png' />
+                    <WipLogoImg src='/img/Core/logo.png' alt="wipcamp#12 logo" />
                     <WrapLogoCana>
-                        <LogoCana src="/img/Home/LogoCana.png" />
+                        <LogoCana src="/img/Home/LogoCana.png" alt="kmutt logo, sit logo, wipcamp logo" />
                     </WrapLogoCana>
                     <StyledButton href="https://itim.wip.camp/login">REGISTER</StyledButton>
-
-                    <Wippo src="/img/Core/Wippo.png" />
-
+                    <Wippo src="/img/Core/Wippo.png" alt="Wippo" />
                 </HomeContent>
             </HomeContainer>
-
         )
     }
 }

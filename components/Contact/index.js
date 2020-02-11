@@ -162,7 +162,7 @@ const GroupOfStar = () => {
 
 export default class contact extends Component {
   state = {
-    isMobile: true,
+    isMobile: true
   };
 
   componentDidMount = () => {

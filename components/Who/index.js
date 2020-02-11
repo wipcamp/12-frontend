@@ -86,13 +86,13 @@ const WhoRow = styled(Row)`
 
 const Zodiac = styled.img`
     position: absolute;
-    width: 25vw;
+    width: 15vw;
 `
 
 const WrapZodiac = styled.div`
     position: absolute;
     transform: rotate(120deg);
-    right: -5vw;
+    right: 2vw;
     bottom: 2vw;
 `
 
@@ -112,38 +112,38 @@ display: ${props => props.break? 'unset':'none'};
 const GroupOfStar = () => {
     return(
         <Fragment>
-            <Star src="/img/Who/star.png" data-aos="fade-down-right"/>
+            <Star src="/img/Who/star.png" data-aos="fade-down-right" alt="star" />
             <WrapZodiac> 
-                <Zodiac src="/img/Who/scorpio.svg" data-aos="fade-down-right"/>
+                <Zodiac src="/img/Who/scorpio.png" data-aos="fade-down-right" alt="scorpio" />
             </WrapZodiac>
         </Fragment>
     )
 }
 export default class Who extends Component {
     state = {
-        width: 0,
+        isMobile: true,
         midColumn: 2,
         contentColumn: 4
     }
 
     componentDidMount() {
-        window.addEventListener('resize', this.updateWindowDimensions)
+        window.addEventListener('resize', this.updateDimensions)
+        this.updateDimensions()
         AOS.init({
             duration: 3000
         })
     }
 
-    updateWindowDimensions = () => {
-        this.setState({
-            width: window.innerWidth
-          });
+    updateDimensions = () => {
         if (window.innerWidth < 1080) {
             this.setState({
+                isMobile: true,
                 midColumn: 'auto',
                 contentColumn: 5
             })
         } else {
             this.setState({
+                isMobile: false,
                 midColumn: 2,
                 contentColumn: 4
             })
@@ -154,105 +154,115 @@ export default class Who extends Component {
         window.removeEventListener('resize', this.updateDimensions);
     }
 
+    getType = () => {
+        return this.state.isMobile
+    }
+
     render() {
         return (
             <WhoContainer>
                 {
-                    (this.state.width < 1024) ?
+                    (this.getType()) ?
                         <Fragment></Fragment>
                         : <GroupOfStar />
                 }
                 <ContentContainer fluid={true} >
-                    
-                                <Row>
-                                    <Col>
-                                        <Header color="white" headerText="WHO" />
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <SubHeader color="white" subHeaderText="ค่ายนี้เหมาะกับใคร ?" />
-                                    </Col>
-                                </Row>
-                                <WhoRow>
-                                    <Col lg="1" md='1'></Col>
-                                    <Col lg={this.state.contentColumn} md='5'>
-                                        <WhoMobile 
-                                            src="/img/Who/who1.png" 
-                                            color="white" 
-                                            content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง" 
-                                            textAlign="left"
-                                            textAlignResponsive="left"
-                                        >น้อง ๆ ที่มีความสนใจทางด้านไอที<Br/> หรือต้องการตามหาเส้นทางเดิน ของตัวเอง</WhoMobile>
+                    <Row>
+                        <Col>
+                            <Header color="white" headerText="WHO" />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <SubHeader color="white" subHeaderText="ค่ายนี้เหมาะกับใคร ?" />
+                        </Col>
+                    </Row>
+                    <WhoRow>
+                        <Col lg="1" md='1'></Col>
+                        <Col lg={this.state.contentColumn} md='5'>
+                            <WhoMobile 
+                                src="/img/Who/who1.png" 
+                                alt="interesting in IT"
+                                color="white" 
+                                content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง" 
+                                textAlign="left"
+                                textAlignResponsive="left"
+                            >
+                                น้อง ๆ ที่มีความสนใจทางด้านไอที<Br/> หรือต้องการตามหาเส้นทางเดิน ของตัวเอง</WhoMobile>
                                         {/* <ImageInfo 
                                             src="/img/Who/who1.png" 
                                             color="white" 
                                             content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"                                            
                                             textAlignDeskTop="center"
                                         /> */}
-                                    </Col>
-                                    <Col lg={this.state.midColumn} md="auto"></Col>
-                                    <Col lg={this.state.contentColumn} md='5'>
-                                        <WhoMobile 
-                                            src="/img/Who/who2.png" 
-                                            color="white" 
-                                            content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”" 
-                                            textAlign="left"
-                                            textAlignResponsive="left"                                            
-                                        >น้องระดับชั้นมัธยมศึกษาตอนปลาย<Br break={true} /> “ทุกแผนการเรียน”</WhoMobile>
+                        </Col>
+                        <Col lg={this.state.midColumn} md="auto"></Col>
+                        <Col lg={this.state.contentColumn} md='5'>
+                            <WhoMobile 
+                                src="/img/Who/who2.png" 
+                                alt="high school student"
+                                color="white" 
+                                content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”" 
+                                textAlign="left"
+                                textAlignResponsive="left"                                            
+                            >
+                                น้องระดับชั้นมัธยมศึกษาตอนปลาย<Br break={true} /> “ทุกแผนการเรียน”</WhoMobile>
                                         {/* <ImageInfo 
                                             src="/img/Who/who2.png" 
                                             color="white" 
                                             content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”" 
                                             textAlignDeskTop="center"
                                         /> */}
-                                    </Col>
-                                    <Col lg="1" md='1'></Col>
-                                </WhoRow>
-                                <Row>
-                                    <Col><Image src="/img/Core/Wippo.png" /></Col>
-                                </Row>
-                                <Row>
-                                    <Col lg="1" md='1' sm="auto"></Col>
-                                    <Col lg={this.state.contentColumn} md='5' sm="12">
-                                        <WhoMobile 
-                                            src="/img/Who/who3.png" 
-                                            color="white" 
-                                            content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน" 
-                                            textAlign="left"
-                                            textAlignResponsive="left"
-                                        >น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน<Br/> ได้ตลอดระยะเวลา 5 วัน 4 คืน</WhoMobile>
+                        </Col>
+                        <Col lg="1" md='1'></Col>
+                    </WhoRow>
+                    <Row>
+                        <Col><Image src="/img/Core/Wippo.png" alt="Wippo" /></Col>
+                    </Row>
+                    <Row>
+                        <Col lg="1" md='1' sm="auto"></Col>
+                        <Col lg={this.state.contentColumn} md='5' sm="12">
+                            <WhoMobile 
+                                src="/img/Who/who3.png" 
+                                alt="can stay in the camp for 5 days 4 nights"
+                                color="white" 
+                                content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน" 
+                                textAlign="left"
+                                textAlignResponsive="left"
+                            >
+                                น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน<Br/> ได้ตลอดระยะเวลา 5 วัน 4 คืน</WhoMobile>
                                         {/* <ImageInfo 
                                             src="/img/Who/who3.png" 
                                             color="white" 
                                             content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน" 
                                             textAlignDeskTop="center"
                                         /> */}
-                                    </Col>
-                                    <Col lg={this.state.midColumn} md='auto' ></Col>
-                                    <Col lg={this.state.contentColumn} md='5' sm="12">
-                                        <WhoMobile 
-                                            src="/img/Who/who4.png" 
-                                            color="white" 
-                                            content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง" 
-                                            textAlign="left"
-                                            textAlignResponsive="left"
-                                        >น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง<Br/> โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง</WhoMobile>
+                        </Col>
+                        <Col lg={this.state.midColumn} md='auto' ></Col>
+                        <Col lg={this.state.contentColumn} md='5' sm="12">
+                            <WhoMobile 
+                                src="/img/Who/who4.png" 
+                                alt="parents agreed to let student come to camp"
+                                color="white" 
+                                content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง" 
+                                textAlign="left"
+                                textAlignResponsive="left"
+                            >
+                                น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง<Br/> โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง</WhoMobile>
                                         {/* <ImageInfo 
                                             src="/img/Who/who4.png" 
                                             color="white" 
                                             content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง"                                             
                                             textAlignDeskTop="center"
                                         /> */}
-                                    </Col>
-                                    <Col lg="2" md='1' sm="auto"></Col>
-                                </Row>
-                                <Row>
-                                    <Col md="12" className="d-flex justify-content-center">
-                                        <Image2 src="/img/Core/Wippo.png" />
-                                    </Col>
-                                </Row>
-                        
+                        </Col>
+                        <Col lg="2" md='1' sm="auto"></Col>
+                    </Row>
+                    <Row>
+                        <Col md="12" className="d-flex justify-content-center">
+                            <Image2 src="/img/Core/Wippo.png" alt="Wippo" />
+                        </Col>
+                    </Row>            
                 </ContentContainer>
             </WhoContainer>
         )

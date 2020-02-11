@@ -123,20 +123,20 @@ const StarAndCloud = () => {
     return(
         <Fragment>
             <WrapZodiac>
-                <Zodiac src="/img/When/libra.svg" data-aos="fade-down-right"/>
+                <Zodiac src="/img/When/libra.png" data-aos="fade-down-right" alt="libra" />
             </WrapZodiac>   
-            <Cloud1 src="/img/What/cloud2.png" data-aos="fade-down-right" />
-            <Cloud1 src="/img/What/cloud3.png" data-aos="fade-down-right" />
-            <Cloud2 src="/img/When/cloud2.png" data-aos="fade-down-left"/>
-            <Cloud3 src="/img/When/cloud3.png" data-aos="fade-down-left" data-aos-duration="2000" />
-            <Cloud4 src="/img/When/cloud4.png" data-aos="fade-down-left" data-aos-duration="1500"/>
+            <Cloud1 src="/img/What/cloud2.png" data-aos="fade-down-right" alt="cloud" />
+            <Cloud1 src="/img/What/cloud3.png" data-aos="fade-down-right" alt="cloud" />
+            <Cloud2 src="/img/When/cloud2.png" data-aos="fade-down-left" alt="cloud" />
+            <Cloud3 src="/img/When/cloud3.png" data-aos="fade-down-left" data-aos-duration="2000" alt="cloud" />
+            <Cloud4 src="/img/When/cloud4.png" data-aos="fade-down-left" data-aos-duration="1500" alt="cloud" />
         </Fragment>
     )
 }
 
 export default class When extends Component {
     state = {
-        width: 0,
+        isMobile: true,
         contentColumn: 2,
         openRegis: false,
         closeRegis: false,
@@ -145,16 +145,15 @@ export default class When extends Component {
         dayWIP: false
     }
 
-    updateWindowDimensions = () => {
-        this.setState({
-            width: window.innerWidth
-        });
+    updateDimensions = () => {
         if (window.innerWidth < 1080) {
             this.setState({
+                isMobile: true,
                 contentColumn: 12
             })
         } else {
             this.setState({
+                isMobile: false,
                 contentColumn: 2
             })
         }
@@ -189,8 +188,8 @@ export default class When extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener('resize', this.updateWindowDimensions)
-        this.dateCheck()
+        window.addEventListener('resize', this.updateDimensions)
+        this.updateDimensions()
         AOS.init({
             duration: 3000
         })
@@ -199,12 +198,17 @@ export default class When extends Component {
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
     }
+
+    getType = () => {
+        return this.state.isMobile
+    }
+
     render() {
         return (
             <WhenContainer>
                 <BigContainer fluid={true} >
                     {
-                        (this.state.width < 1024) ?
+                        (this.getType()) ?
                             <Fragment></Fragment>
                             : <StarAndCloud />
                     }
@@ -218,31 +222,31 @@ export default class When extends Component {
                         <Col lg='1' md="auto" sm="auto"></Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer>
-                                <WhenImg src='/img/When/openregis.webp' glow={this.state.openRegis} />
+                                <WhenImg src='/img/When/openregis.webp' glow={this.state.openRegis} alt="open register" />
                                 <TimerText ><Span>เปิดรับสมัคร</Span><br /> 19 กุมภาพันธ์ 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer>
-                                <WhenImg src='/img/When/closeregis.webp' glow={this.state.closeRegis} />
+                                <WhenImg src='/img/When/closeregis.webp' glow={this.state.closeRegis} alt="close register" />
                                 <TimerText ><Span>ปิดรับสมัคร</Span><br /> 12 มีนาคม 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer>
-                                <WhenImg src='/img/When/announce.webp' glow={this.state.announce} />
+                                <WhenImg src='/img/When/announce.webp' glow={this.state.announce} alt="announce" />
                                 <TimerText><Span>ประกาศผล</Span><br />28 มีนาคม 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer>
-                                <WhenImg src='/img/When/confirm.webp' glow={this.state.confirm} />
+                                <WhenImg src='/img/When/confirm.webp' glow={this.state.confirm} alt="confirm" />
                                 <TimerText><Span>ยืนยันสิทธิ์</Span><br />29 เมษายน 2563<br /> ถึง 4 พฤษภาคม 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md={this.state.contentColumn} sm="12">
                             <BoxContainer>
-                                <WhenImg src='/img/When/wipday.webp' glow={this.state.dayWIP} />
+                                <WhenImg src='/img/When/wipday.webp' glow={this.state.dayWIP} alt="wipcamp day" />
                                 <TimerText><Span>เปิดค่าย</Span><br />27 พฤษภาคม 2563<br /> ถึง 31 พฤษภาคม 2563</TimerText>
                             </BoxContainer>
                         </Col>

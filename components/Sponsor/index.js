@@ -100,19 +100,19 @@ const Zodiac3 = styled(Zodiac2)`
 `
 
 const GroupOfStar = () => {
-    return(
+    return (
         <Fragment>
-            <Star1 src="/img/Sponsor/star1.png" data-aos="fade-down-right"/>
-            <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down-left"/>
-            <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down-left"/>
-            <Zodiac3 src="/img/Sponsor/zodiac3.png" data-aos="fade-down-left"/>
-            <Star2 src="/img/Sponsor/star2.png" data-aos="fade-down-left"/>
+            <Star1 src="/img/Sponsor/star1.png" data-aos="fade-down-right" />
+            <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down-left" />
+            <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down-left" />
+            <Zodiac3 src="/img/Sponsor/zodiac3.png" data-aos="fade-down-left" />
+            <Star2 src="/img/Sponsor/star2.png" data-aos="fade-down-left" />
         </Fragment>
     )
 }
 export default class Sponsor extends Component {
     state = {
-        width: 0,
+        isMobile: true,
         images: [
             { src: "/img/Sponsor/alibaba.png" },
             { src: "/img/Sponsor/thaibev.png" },
@@ -132,27 +132,38 @@ export default class Sponsor extends Component {
     };
 
     componentDidMount = () => {
-        window.addEventListener('resize', this.updateDimensions);
+        window.addEventListener('resize', this.updateDimensions)
+        this.updateDimensions()
         AOS.init({
             duration: 3000
         })
     }
 
     updateDimensions = () => {
-        this.setState({
-            width: window.innerWidth
-          });
+        if (window.innerWidth < 1366) {
+            this.setState({
+                isMobile: true
+            })
+        } else {
+            this.setState({
+                isMobile: false
+            })
+        }
     };
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
     }
 
+    getType = () => {
+        return this.state.isMobile
+    }
+
     render() {
         return (
             <SponsorBg>
                 {
-                    (this.state.width < 1366) ?
+                    (this.getType()) ?
                         <Fragment></Fragment>
                         : <GroupOfStar />
                 }

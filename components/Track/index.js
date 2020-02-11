@@ -60,24 +60,35 @@ const hideCardScroll = () => {
 
 export default class Track extends Component {
     state = { 
-        width: 0, 
+        isMobile: true
     };
 
-    updateDimensions = () => {
-        this.setState({ 
-            width: window.innerWidth
-        });
-    };
-    
     componentDidMount = () => {
-        window.addEventListener('resize', this.updateDimensions);
+        window.addEventListener('resize', this.updateDimensions)
+        this.updateDimensions()
         AOS.init({
             duration: 3000
         })
     }
 
+    updateDimensions = () => {
+        if (window.innerWidth < 768) {
+            this.setState({
+                isMobile: true
+            })
+        } else {
+            this.setState({
+                isMobile: false
+            })
+        }
+    };
+
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
+    }
+
+    getType = () => {
+        return this.state.isMobile
     }
 
     render() {
@@ -109,7 +120,7 @@ export default class Track extends Component {
                     </Row>
                 </Container>
                 {
-                    (this.state.width < 768) ?
+                    (this.getType()) ?
                         <CarouselTrack />
                         : <CardInGrid />
                 }

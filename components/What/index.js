@@ -90,36 +90,36 @@ const Cloud3 = styled(Cloud1)`
 const GroupOfCloud = () => {
     return(
         <Fragment>
-            <Cloud1 src="/img/What/cloud1.png" data-aos="fade-down-right" />
-            <Cloud2 src="/img/What/cloud2.png" data-aos="fade-down-right" data-aos-duration="1500"/>
-            <Cloud3 src="/img/What/cloud3.png" data-aos="fade-down-right" data-aos-duration="2000"/>
+            <Cloud1 src="/img/What/cloud1.png" data-aos="fade-down-right" alt="cloud" />
+            <Cloud2 src="/img/What/cloud2.png" data-aos="fade-down-right" data-aos-duration="1500" alt="cloud"/>
+            <Cloud3 src="/img/What/cloud3.png" data-aos="fade-down-right" data-aos-duration="2000" alt="cloud"/>
         </Fragment>
     )
 }
 export default class What extends Component {
     state = {
-        width: 0,
+        isMobile: true,
         contentColumn1: 5,
         contentColumn2: 6
     }
     componentDidMount = () => {
-        window.addEventListener('resize', this.updateWindowDimensions)
+        window.addEventListener('resize', this.updateDimensions)
+        this.updateDimensions()
         AOS.init({
             duration: 3000
         })
     }
 
-    updateWindowDimensions = () => {
-        this.setState({
-            width: window.innerWidth
-          });
+    updateDimensions = () => {
         if (window.innerWidth < 1080) {
             this.setState({
+                isMobile: true,
                 contentColumn1: 10,
                 contentColumn2: 12
             })
         } else {
             this.setState({
+                isMobile: false,
                 contentColumn1: 5,
                 contentColumn2: 6
             })
@@ -129,11 +129,16 @@ export default class What extends Component {
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
     }
+
+    getType = () => {
+        return this.state.isMobile
+    }
+
     render() {
         return (
             <WhatBg>
                 {
-                    (this.state.width < 1024) ?
+                    (this.getType()) ?
                         <Fragment></Fragment>
                         : <GroupOfCloud />
                 }

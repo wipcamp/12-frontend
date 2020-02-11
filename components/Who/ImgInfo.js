@@ -125,7 +125,7 @@ const WhoContentText = styled.p`
 const WhoMobile = props => {
     return (
         <WhoMobileContainer justify={props.justify}>
-            <Image src={props.src} />
+            <Image src={props.src} alt={props.alt} />
             <TextBox>
                 <WhoContentText 
                     color={props.color}

@@ -94,38 +94,49 @@ const Star2 = styled(Star1)`
 const GroupOfStar = () => {
     return (
         <Fragment>
-            <Star1 src="/img/Game/star1.png" data-aos="fade-down-right"/>
-            <Star2 src="/img/Game/star2.png" data-aos="fade-down-left"/>
+            <Star1 src="/img/Game/star1.png" data-aos="fade-down-right" />
+            <Star2 src="/img/Game/star2.png" data-aos="fade-down-left" />
         </Fragment>
     )
 }
 export default class Game extends Component {
     state = {
-        width: 0
+        isMobile: true
     };
 
     componentDidMount = () => {
-        window.addEventListener('resize', this.updateDimensions);
+        window.addEventListener('resize', this.updateDimensions)
+        this.updateDimensions()
         AOS.init({
             duration: 1500
         })
     }
 
     updateDimensions = () => {
-        this.setState({
-            width: window.innerWidth
-          });
+        if (window.innerWidth < 1080) {
+            this.setState({
+                isMobile: true
+            })
+        } else {
+            this.setState({
+                isMobile: false
+            })
+        }
     };
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
     }
 
+    getType = () => {
+        return this.state.isMobile
+    }
+
     render() {
         return (
             <GameContainer>
                 {
-                    (this.state.width < 1024) ?
+                    (this.getType()) ?
                         <Fragment></Fragment>
                         : <GroupOfStar />
                 }
@@ -142,7 +153,7 @@ export default class Game extends Component {
                             </VerticalAlign>
                         </Wrap>
                     </Content>
-                </Container>                    
+                </Container>
             </GameContainer>
         )
     }
