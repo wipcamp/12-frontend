@@ -507,7 +507,6 @@ export default class Faqs extends Component {
                                     <FaqsBox onClick={() => this.changeAnswer(0)} active={this.state.activeQuestion_0}>
                                     <Qhead>QUESTION 1</Qhead>
                                         <Qtag lineHeight="3em">รับสมัครคนเข้าค่ายกี่คน ?</Qtag>
-    
                                     </FaqsBox>
                                     <FaqsBox onClick={() => this.changeAnswer(3)} active={this.state.activeQuestion_3}>
                                     <Qhead>QUESTION 4</Qhead>
@@ -534,7 +533,6 @@ export default class Faqs extends Component {
                                     <FaqsBox onClick={() => this.changeAnswer(5)} active={this.state.activeQuestion_5}>
                                     <Qhead>QUESTION 6</Qhead>
                                         <Qtag>จำเป็นต้องมีพื้นฐานทางด้านคอมพิวเตอร์ หรือเขียนโปรแกรมไหม ?</Qtag>
-    
                                     </FaqsBox>
                                 </div>
                             </Col>
