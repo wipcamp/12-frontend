@@ -25,13 +25,17 @@ export default class MyDocument extends Document {
           <meta name="og:description" content="WIP Camp #12 : Ways to IT Professionals Camp ค่ายเส้นทางสู่ฝันนักไอที : ค่าย สำหรับน้องๆ มัธยม ปลาย ที่จะพาน้องๆมาทำความรู้จักกับ ไอที อย่างเต็มตัว ตลอดทั้ง ค่าย น้องๆจะได้รับ ความรู้ ความสนุกสนาน จากพี่ๆ ไอที บางมด แล้วเจอกันนะครับ"/>
           <meta name="og:title" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที " />
           <meta property="og:image" content="/img/OG/og2.png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+
+
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://12-pr.freezer.wip.camp/" />
           <meta property="og:site_name" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
           <meta property="fb:app_id" content="250617067968" />
           {/* OG Twitter */}
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:image" content="/img/OG/og2.png" />
+          <meta name="twitter:image" content="/img/OG/og1.png" />
           <meta property="og:url" content="https://12-pr.freezer.wip.camp/" />
           <meta property="og:title" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
           <meta property="og:description" content="WIP Camp #12 : Ways to IT Professionals Camp ค่ายเส้นทางสู่ฝันนักไอที : ค่าย สำหรับน้องๆ มัธยม ปลาย ที่จะพาน้องๆมาทำความรู้จักกับ ไอที 
