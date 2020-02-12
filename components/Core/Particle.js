@@ -129,7 +129,7 @@ export default class StarParticle extends Component {
                     "opacity": 0.02
                 },
                 "move": {
-                    "enable": true,
+                    "enable": false,
                     "speed": 0
                 },
                 "size": {
