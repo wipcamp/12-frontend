@@ -19,6 +19,8 @@ import StarParticle from './Particle'
 
 const Wrap = styled.div`
     overflow: hidden;
+    height: 100%;
+    width: 100%;
 `
 export default class Wrapper extends Component {
     
