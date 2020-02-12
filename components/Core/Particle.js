@@ -60,7 +60,7 @@ export default class StarParticle extends Component {
         return (
 
             <ParticleContainer>
-            <Particles key="move" height={this.getHeight()} style={ParticleStyle}
+            <Particles key="move" height="1000px" style={ParticleStyle}
         params={{
             "particles": {
                 "number": {
