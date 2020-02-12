@@ -105,7 +105,7 @@ export default class StarParticle extends Component {
                     }
                 }
             },
-            "retina_detect": false
+            "retina_detect": true
         }} />  
             {this.props.children}
              </ParticleContainer>
