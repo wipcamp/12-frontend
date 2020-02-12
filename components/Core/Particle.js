@@ -28,7 +28,7 @@ export default class StarParticle extends Component {
         window.removeEventListener('resize', this.updateWindowDimensions)
     }
     updateWindowDimensions = () => {
-        let Height = window.document.body.offsetHeight+"px"      
+        let Height = window.document.body.clientHeight+"px"      
         this.setState({
             WindowHeight: Height
         })
@@ -129,8 +129,7 @@ export default class StarParticle extends Component {
                     "opacity": 0.02
                 },
                 "move": {
-                    "enable": false,
-                    "direction": "right",
+                    "enable": true,
                     "speed": 0
                 },
                 "size": {
