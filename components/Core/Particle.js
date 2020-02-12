@@ -105,7 +105,7 @@ export default class StarParticle extends Component {
                     }
                 }
             },
-            "retina_detect": true
+            "retina_detect": false
         }} />  
             {this.props.children}
              </ParticleContainer>
@@ -129,7 +129,7 @@ export default class StarParticle extends Component {
                     "opacity": 0.02
                 },
                 "move": {
-                    "enable": false,
+                    "enable": true,
                     "direction": "right",
                     "speed": 0
                 },
@@ -159,7 +159,7 @@ export default class StarParticle extends Component {
                     }
                 }
             },
-            "retina_detect": true
+            "retina_detect": false
         }} />  
             {this.props.children}
              </ParticleContainer>
