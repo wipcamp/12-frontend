@@ -27,15 +27,13 @@ export default class MyDocument extends Document {
           <meta property="og:image" content="/img/OG/og2.png" />
           <meta property="og:image:width" content="600" />
           <meta property="og:image:height" content="314" />
-
-
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://12-pr.freezer.wip.camp/" />
           <meta property="og:site_name" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
           <meta property="fb:app_id" content="250617067968" />
           {/* OG Twitter */}
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:image" content="/img/OG/og1.png" />
+          <meta name="twitter:card" content="summary" />  
+          <meta name="twitter:image" content="%PUBLIC_URL%/img/OG/og1.png" />
           <meta property="og:url" content="https://12-pr.freezer.wip.camp/" />
           <meta property="og:title" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
           <meta property="og:description" content="WIP Camp #12 : Ways to IT Professionals Camp ค่ายเส้นทางสู่ฝันนักไอที : ค่าย สำหรับน้องๆ มัธยม ปลาย ที่จะพาน้องๆมาทำความรู้จักกับ ไอที 
