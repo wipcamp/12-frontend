@@ -10,6 +10,8 @@ const ParticleContainer = styled.div`
 `
 const ParticleStyle = {
     position:'absolute',
+    width: '100%',
+    height: '100%',
 }
 
 
@@ -114,7 +116,7 @@ export default class StarParticle extends Component {
         return (
 
             <ParticleContainer>
-            <Particles key="don't move" height="1000px" style={ParticleStyle}
+            <Particles key="don't move" height={this.getHeight} style={ParticleStyle}
         params={{
             "particles": {
                 "number": {
