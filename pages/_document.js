@@ -32,9 +32,9 @@ export default class MyDocument extends Document {
           <meta property="og:site_name" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
           <meta property="fb:app_id" content="250617067968" />
           {/* OG Twitter */}
-          <meta name="twitter:card" content="summary" />  
+          <meta name="twitter:card" content="summary_large_image" />  
           <meta name="twitter:image" content="https://12-pr.freezer.wip.camp/img/OG/og2.png" />
-          <meta name="thumbnail" content="https://12-pr.freezer.wip.camp/img/OG/og1.png" />
+          <meta name="thumbnail" content="/img/OG/og1.png" />
           <meta property="og:url" content="https://12-pr.freezer.wip.camp/" />
           <meta property="og:title" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
           <meta property="og:description" content="WIP Camp #12 : Ways to IT Professionals Camp ค่ายเส้นทางสู่ฝันนักไอที : ค่าย สำหรับน้องๆ มัธยม ปลาย ที่จะพาน้องๆมาทำความรู้จักกับ ไอที 
