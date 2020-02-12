@@ -28,7 +28,7 @@ export default class StarParticle extends Component {
         window.removeEventListener('resize', this.updateWindowDimensions)
     }
     updateWindowDimensions = () => {
-        let Height = window.document.body.clientHeight+"px"      
+        let Height = window.clientHeight+"px"      
         this.setState({
             WindowHeight: Height
         })
@@ -114,7 +114,7 @@ export default class StarParticle extends Component {
         return (
 
             <ParticleContainer>
-            <Particles key="don't move" height={this.getHeight()} style={ParticleStyle}
+            <Particles key="don't move" height="1000px" style={ParticleStyle}
         params={{
             "particles": {
                 "number": {
