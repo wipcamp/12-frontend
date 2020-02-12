@@ -9,13 +9,18 @@ const ParticleContainer = styled.div`
     background-color: black;
 `
 const ParticleStyle = {
-    position:'absolute',
+    position:'absolute'
 }
+const ParticleStyleMobile = {
+    position:'fixed'
+}
+
 
 
 export default class StarParticle extends Component {
     state={
         WindowHeight: '2000px',
+        innerHeight: '1000px',
         move: true
     }
     
@@ -28,9 +33,11 @@ export default class StarParticle extends Component {
         window.removeEventListener('resize', this.updateWindowDimensions)
     }
     updateWindowDimensions = () => {
-        let Height = window.document.body.offsetHeight+"px"      
+        let Height = window.document.body.offsetHeight+"px"     
+        let inHeight = window.outerHeight+"px" 
         this.setState({
-            WindowHeight: Height
+            WindowHeight: Height,
+            innerHeight: inHeight
         })
         this.moveCheck()
     }
@@ -51,12 +58,16 @@ export default class StarParticle extends Component {
     getMove = () => {
         return this.state.move
     }
+
+    getHeight = () => {
+        return this.state.WindowHeight
+    }
     render() {
         if (this.getMove()){
         return (
 
             <ParticleContainer>
-            <Particles key="move" height={this.state.WindowHeight} style={ParticleStyle}
+            <Particles key="move" height={this.getHeight()} style={ParticleStyle}
         params={{
             "particles": {
                 "number": {
@@ -71,7 +82,7 @@ export default class StarParticle extends Component {
                     "opacity": 0.02
                 },
                 "move": {
-                    "enable": true,
+                    "enable": false,
                     "direction": "right",
                     "speed": 0
                 },
@@ -110,11 +121,11 @@ export default class StarParticle extends Component {
         return (
 
             <ParticleContainer>
-            <Particles key="don't move" height={this.state.WindowHeight} style={ParticleStyle}
+            <Particles key="don't move" height={this.state.innerHeight} style={ParticleStyleMobile}
         params={{
             "particles": {
                 "number": {
-                    "value": 50,
+                    "value": 120,
                     "density": {
                         "enable": true,
                         "value_area": 1000
@@ -125,18 +136,18 @@ export default class StarParticle extends Component {
                     "opacity": 0.02
                 },
                 "move": {
-                    "enable": false,
-                    "direction": "right",
-                    "speed": 0
+                    "enable": true,
+                    "direction": "none",
+                    "speed": 0.125
                 },
                 "size": {
                     "value": 2,
                     "random": true
                 },
                 "opacity": {
-                    'value': 1,
+                    'value': 0.8,
                     "anim": {
-                        "enable": false,
+                        "enable": true,
                         "speed": 1,
                         "opacity_min": 0
                     }
