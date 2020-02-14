@@ -9,6 +9,11 @@ export default css.global`
     -khtml-user-select: none;     
     -webkit-user-select: none;      
     -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+	  -khtml-user-drag: none;
+	  -moz-user-drag: none;
+	  -o-user-drag: none;
+	  user-drag: none;
   }
   body, html {
     font-family: 'Prompt', sans-serif;
