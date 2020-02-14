@@ -112,8 +112,8 @@ export default class Track extends Component {
                                     textAlign="left"
                                     color="white"
                                     content="แทร็ก (Track) หมายถึง สายอาชีพไอทีที่เปิดโอกาสให้น้อง ๆ 
-                                        ได้เข้ามาสัมผัสและเรียนรู้ตามความสนใจ น้อง ๆ จะได้เลือก Track ตามที่ตนเองสนใจ     
-                                        2 Track จากทั้งหมด 4 Track โดยเลือก Track ที่น้องสนใจลำดับที่ 1 " />
+                                        ได้เข้ามาสัมผัสและเรียนรู้ตามความสนใจ โดยน้อง ๆ จะได้เลือก Track ตามที่ตนเองสนใจ     
+                                        2 Track จากทั้งหมด 4 Track เลือก Track ที่น้องสนใจลำดับที่ 1 " />
                             </Trackcontainer>
                         </Col>
                         <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>

@@ -141,7 +141,7 @@ export default class Where extends Component {
                     </Row>
                     <Row>
                         <Col className="mt-5">
-                            <Content textAlign="center" color="white" content="คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />>  
+                            <Content textAlign="center" color="white" content="คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />
                         </Col>
                     </Row>        
                 </Container>

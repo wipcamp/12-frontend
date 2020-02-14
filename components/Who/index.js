@@ -184,7 +184,7 @@ export default class Who extends Component {
                                 src="/img/Who/who1.png" 
                                 alt="interesting in IT"
                                 color="white" 
-                                content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง" 
+                                content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดินของตัวเอง" 
                                 textAlign="left"
                                 textAlignResponsive="left"
                             >
@@ -226,7 +226,7 @@ export default class Who extends Component {
                                 src="/img/Who/who3.png" 
                                 alt="can stay in the camp for 5 days 4 nights"
                                 color="white" 
-                                content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน" 
+                                content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน" 
                                 textAlign="left"
                                 textAlignResponsive="left"
                             >
@@ -244,7 +244,7 @@ export default class Who extends Component {
                                 src="/img/Who/who4.png" 
                                 alt="parents agreed to let student come to camp"
                                 color="white" 
-                                content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง" 
+                                content="น้อง ๆ ที่ได้รับการอนุญาตจากผู้ปกครอง โดยมีเอกสารเป็นลายลักษณ์อักษรที่ถูกต้อง" 
                                 textAlign="left"
                                 textAlignResponsive="left"
                             >

@@ -247,7 +247,7 @@ export default class When extends Component {
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer>
                                 <WhenImg src='/img/When/confirm.webp' glow={this.state.confirm} alt="confirm" />
-                                <TimerText><Span>ยืนยันสิทธิ์</Span><br />29 เมษายน 2563<br /> ถึง 4 พฤษภาคม 2563</TimerText>
+                                <TimerText><Span>ยืนยันสิทธิ์</Span><br />29 มีนาคม 2563<br /> ถึง 4 เมษายน 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md={this.state.contentColumn} sm="12">
