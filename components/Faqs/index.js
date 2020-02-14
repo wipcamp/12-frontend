@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Header, SubHeader, Content } from '../Core/Text'
+import { Header, SubHeader } from '../Core/Text'
 import './fade.css'
 import {
     Accordion,

@@ -14,7 +14,6 @@ import Contact from '../Contact'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 import SideBar from "./SideBar"
 import './sidebar.css'
-import { ParallaxProvider } from 'react-scroll-parallax';
 import StarParticle from './Particle'
 
 const Wrap = styled.div`

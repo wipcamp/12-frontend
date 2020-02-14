@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Header, SubHeader, Content } from '../Core/Text'
 import CardInGrid from './CardInGrid'
-import Flippycardnaja from '../Core/FlippyCard'
 import { Container, Row, Col } from 'reactstrap'
 import CarouselTrack from './Carousel'
-import { Parallax } from 'react-scroll-parallax'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

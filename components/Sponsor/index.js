@@ -2,8 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Header, SubHeader } from '../Core/Text'
 import SponsorImage from './SponsorImage'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'reactstrap'
-import { Parallax } from 'react-scroll-parallax'
+import { Container } from 'reactstrap'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

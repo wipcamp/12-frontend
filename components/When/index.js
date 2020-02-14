@@ -4,7 +4,6 @@ import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
 import { isDayNow, dayAnnouce, dayCloseRegis, dayConfirm, dayNow, dayWip, dayOpenRegis } from './Day'
-import { Parallax } from 'react-scroll-parallax'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
