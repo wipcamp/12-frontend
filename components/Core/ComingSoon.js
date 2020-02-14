@@ -225,12 +225,12 @@ export default class ComingSoon extends Component {
                             <br />
                             <br />
                             <ComingSoonText>C O M I N G &nbsp;&nbsp;S O O N</ComingSoonText>
-                            {/* <ul>
+                            <ul>
                                 <Li><span id="days">{this.props.day}</span>days</Li>
                                 <Li><span id="hours">{this.props.hr}</span>Hours</Li>
                                 <Li><span id="minutes">{this.props.min}</span>Minutes</Li>
                                 <Li><span id="seconds">{this.props.sec}</span>Seconds</Li>
-                            </ul> */}
+                            </ul>
                             <br />
                             <StayTune href="https://www.facebook.com/wipcamp/" target="_blank" rel="noopener">
                                 ติดตามได้ที่&nbsp;&nbsp;
