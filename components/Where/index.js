@@ -11,7 +11,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const WhereBg = styled.div`
-    
+    position: relative;
 `
 
 const SIT = styled.div`
