@@ -11,6 +11,12 @@ import 'aos/dist/aos.css';
 const WhenContainer = styled.div`
     padding: 0rem 0 3rem 0;
     position: relative;
+    padding-bottom: 4rem;
+    position: relative;
+
+    @media (min-width: 1024px) {
+        padding-bottom: 10vh;
+    }
 `
 const WhenImg = styled.img`
     width:20vw;
