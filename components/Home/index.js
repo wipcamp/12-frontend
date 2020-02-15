@@ -76,11 +76,12 @@ const WrapLogoCana = styled.div`
 const StyledButton = styled.a`
     background-color: #F4693D;
     text-decoration: none !important;
-    font-family: "Prompt-Regular";
-    font-size: 12px;
+    font-family: 'NotoSans-Medium';
+    font-size: 16px;
     color: white !important;
-    padding: 0.5em 1em;
+    padding: 0.75em 3em;
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    border-radius: 5px;
 
     :hover {
         background-color: white;
@@ -99,15 +100,19 @@ const StyledButton = styled.a`
 
 const Wippo = styled.img`
     position: absolute;
-    bottom: 5vh;
-    right: 5vw;
-    display:none;
-    width: 15vw;
+    /* bottom: 2vh;
+    right: 40vw;
+    width: 20vw; */
+    display: none;
     z-index: 3;
     animation: float 5s infinite;
+    
     @media (min-width: 1024px) {
-	  display: block;
-  }
+        display: block;
+        bottom: 5vh;
+        right: 5vw;
+        width: 15vw;
+    }
   @keyframes float {
 	0% {
 		transform: translatey(0px);
