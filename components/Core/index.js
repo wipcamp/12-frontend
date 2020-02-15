@@ -24,8 +24,15 @@ const Wrap = styled.div`
 export default class Wrapper extends Component {
     
     componentDidMount(){
-        configureAnchors({offset: -60, scrollDuration: 600}) 
+        this.configScroll()
     }
+
+    configScroll = () => {
+        (window.innerWidth >= 768)?
+        configureAnchors({offset: -60, scrollDuration: 600}) 
+        :  configureAnchors({offset: 0, scrollDuration: 600}) 
+    }
+
     render() {
         return (
             <Fragment>

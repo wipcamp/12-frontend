@@ -8,13 +8,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const WhenContainer = styled.div`
-    padding: 0rem 0 3rem 0;
+    padding: 2rem 0 4rem 0;
     position: relative;
-    padding-bottom: 4rem;
     position: relative;
 
     @media (min-width: 1024px) {
         padding-bottom: 10vh;
+        padding-top: 4rem;
     }
 `
 const WhenImg = styled.img`
@@ -193,6 +193,7 @@ export default class When extends Component {
     }
 
     componentDidMount() {
+        this.dateCheck()
         window.addEventListener('resize', this.updateDimensions)
         this.updateDimensions()
         AOS.init({
