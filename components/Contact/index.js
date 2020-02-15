@@ -8,12 +8,12 @@ const ContactBg = styled.div`
     display: table;
     height: 80vh;
     padding-top: 8rem;
-    padding-bottom: 15em;
+    padding-bottom: 13em;
     position: relative;
     width: 100%;
     background-size: cover;
     @media (min-width:768px){ 
-      padding-bottom: 20em;
+      padding-bottom: 13em;
 }
 @media (min-width:1100px){ 
       padding-bottom: 30em;

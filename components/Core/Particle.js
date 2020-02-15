@@ -36,7 +36,7 @@ export default class StarParticle extends Component {
     }
     updateWindowDimensions = () => {
         let Height = window.document.body.offsetHeight+"px"     
-        let inHeight = window.document.body.clientHeight+"px" 
+        let inHeight = window.document.body.scrollHeight+"px" 
         this.setState({
             WindowHeight: Height,
             innerHeight: inHeight
