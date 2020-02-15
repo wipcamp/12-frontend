@@ -7,7 +7,7 @@ const ParticleContainer = styled.div`
     background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
     background-color: black;
-    height: ${props => props.height || '100%'};
+    height: 100%;
     width: 100%;
 `
 const ParticleStyle = {
@@ -16,14 +16,23 @@ const ParticleStyle = {
 const ParticleStyleMobile = {
     position:'fixed'
 }
+const HeightSet = styled.div`
+    position: fixed;
+    height: ${ props => props.height || '100%' };
 
+    @media (min-width: 768px) {
+        position: unset;
+        height: unset;
+    }
+`
 
 
 export default class StarParticle extends Component {
     state={
         WindowHeight: '2000px',
         innerHeight: '1000px',
-        move: true
+        move: true,
+        ClientHeight: '1000px'
     }
     
     componentDidMount() {
@@ -37,9 +46,11 @@ export default class StarParticle extends Component {
     updateWindowDimensions = () => {
         let Height = window.document.body.offsetHeight+"px"     
         let inHeight = window.innerHeight+"px" 
+        let ClientHeight = window.document.body.clientHeight+"px" 
         this.setState({
             WindowHeight: Height,
-            innerHeight: inHeight
+            innerHeight: inHeight,
+            ClientHeight: ClientHeight
         })
         this.moveCheck()
     }
@@ -63,6 +74,9 @@ export default class StarParticle extends Component {
 
     getHeight = () => {
         return this.state.WindowHeight
+    }
+    getClientHeight = () => {
+        return this.state.ClientHeight
     }
     render() {
         if (this.getMove()){
@@ -122,7 +136,8 @@ export default class StarParticle extends Component {
     }else {
         return (
 
-            <ParticleContainer  height={this.getHeight()}>
+            <ParticleContainer>
+            <HeightSet height={this.getClientHeight()} >
             <Particles key="don't move" height={this.state.innerHeight} style={ParticleStyleMobile}
         params={{
             "particles": {
@@ -169,7 +184,7 @@ export default class StarParticle extends Component {
                 }
             },
             "retina_detect": true
-        }} />  
+        }} /></HeightSet>
             {this.props.children}
              </ParticleContainer>
         )
