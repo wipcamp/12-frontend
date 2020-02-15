@@ -7,6 +7,8 @@ const ParticleContainer = styled.div`
     background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
     background-color: black;
+    height: 100%;
+    width: 100%;
 `
 const ParticleStyle = {
     position:'absolute'
@@ -34,7 +36,7 @@ export default class StarParticle extends Component {
     }
     updateWindowDimensions = () => {
         let Height = window.document.body.offsetHeight+"px"     
-        let inHeight = window.innerHeight+"px" 
+        let inHeight = window.document.body.clientHeight+"px" 
         this.setState({
             WindowHeight: Height,
             innerHeight: inHeight
