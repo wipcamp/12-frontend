@@ -7,7 +7,7 @@ const ParticleContainer = styled.div`
     background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
     background-color: black;
-    height: 100%;
+    height: ${props => props.height || '100%'};
     width: 100%;
 `
 const ParticleStyle = {
@@ -36,7 +36,7 @@ export default class StarParticle extends Component {
     }
     updateWindowDimensions = () => {
         let Height = window.document.body.offsetHeight+"px"     
-        let inHeight = window.document.body.scrollHeight+"px" 
+        let inHeight = window.innerHeight+"px" 
         this.setState({
             WindowHeight: Height,
             innerHeight: inHeight
@@ -122,7 +122,7 @@ export default class StarParticle extends Component {
     }else {
         return (
 
-            <ParticleContainer>
+            <ParticleContainer  height={this.getHeight()}>
             <Particles key="don't move" height={this.state.innerHeight} style={ParticleStyleMobile}
         params={{
             "particles": {
