@@ -344,21 +344,25 @@ export default class Faqs extends Component {
     }
 
     scrollDown = () => {
-        var scroll = (window.innerWidth <= 1280) ? 4200 : 
-            (window.innerWidth <= 1366) ? 4800 : 
-            (window.innerWidth <= 1440) ? 4600 : 
-            (window.innerWidth <= 1535) ? 4400 :
+        var scroll = (window.innerWidth <= 1280) ? 4100 : 
+            (window.innerWidth <= 1366) ? 4100 : 
+            (window.innerWidth <= 1440) ? 4250 : 
+            (window.innerWidth <= 1536) ? 4250 :
             (window.innerWidth <= 1600) ? 4600 :
-            (window.innerWidth <= 1920) ? 5200 : 6000; 
+            (window.innerWidth <= 1920) ? 4600 : 6000;
+           if( window.innerWidth < 1536) {  
         window.scrollTo({
             top: scroll,
             behavior: 'smooth'
         })
+      }else{
+        goToAnchor('faqs', true)
+      }
     }
 
     changeAnswer = e => {
         if (e != this.state.currentAnswerIndex) {
-            this.isFirstClick()
+            this.FirstClick()
             var prevQ = "activeQuestion_" + this.state.currentAnswerIndex
             this.setState({
                 faqClass: "none",
@@ -386,7 +390,6 @@ export default class Faqs extends Component {
                 })
             }
         }
-        this.scrollDown();
     }
 
     componentDidMount() {
@@ -416,9 +419,9 @@ export default class Faqs extends Component {
         return this.state.isMobile
     }
 
-    isFirstClick = () => {
+    FirstClick = () => {
         if (this.state.isFirstClick) {
-            goToAnchor('faqs', true)
+            this.scrollDown();
             this.setState({
                 isFirstClick: false
             })
