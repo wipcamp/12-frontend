@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Container, Col, Row, } from 'reactstrap'
+import { Header, SubHeader } from '../Core/Text'
 import styled from 'styled-components'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -8,16 +9,16 @@ const ContactBg = styled.div`
     display: table;
     height: 80vh;
     padding-top: 8rem;
-    padding-bottom: 13em;
+    /* padding-bottom: 13em; */
     position: relative;
     width: 100%;
     background-size: cover;
-    @media (min-width:768px){ 
+    /* @media (min-width:768px){ 
       padding-bottom: 13em;
 }
 @media (min-width:1100px){ 
       padding-bottom: 30em;
-}
+} */
 `
 const ContactImg = styled.img`
 width:2.5em;
@@ -108,7 +109,7 @@ const ImgObject = styled.img`
 `
 
 const Mountain = styled.img`
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: 100vw;
 `
@@ -196,33 +197,18 @@ export default class contact extends Component {
   render() {
     return (
       <ContactBg>
-        {
+        {/* {
           (this.getType()) ?
             <Fragment></Fragment>
             : <GroupOfStar />
-        }
+        } */}
         <Container>
+          <Header headerText="CONTACT" color="white" />
+          <SubHeader subHeaderText="ช่องทางการติดต่อ" color="white" />
+          <br />
           <Row>
-            <Col xl="6" lg="6" md="6" sm="12" xs="12">
-              <HeaderStyled>Contact</HeaderStyled>
-              <TextBox>
-                <StyledLink href="https://m.me/wipcamp" target="_blank" rel="noopener">
-                  <ContactImg src="img/Contact/messenger.png" alt="messenger icon" />
-                  MESSENGER
-                    </StyledLink>
-              </TextBox>
-              <TextBox>
-                <StyledLink href="tel://0922687835" rel="noopener">
-                  <ContactImg src="img/Contact/tel.png" alt="phone icon" />
-                  092-268-7835 (พี่ปลาย)
-                    </StyledLink>
-              </TextBox>
-              <TextBox>
-                <StyledLink href="mailto:wippo@wipcamp.com" target="_blank" rel="noopener">
-                  <ContactImg src="img/Contact/email.png" alt="email icon" />
-                  wippo@wipcamp.com
-                    </StyledLink>
-              </TextBox>
+            <Col xl="2" lg="2" md="1" sm="12" xs="12"></Col>
+            <Col xl="4" lg="4" md="4" sm="12" xs="12">
               <TextBox>
                 <StyledLink href="https://line.me/R/ti/p/%40wipcamp" target="_blank" rel="noopener">
                   <ContactImg src="img/Contact/line.png" alt="line icon" />
@@ -230,35 +216,74 @@ export default class contact extends Component {
                     </StyledLink>
               </TextBox>
             </Col>
-            <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
-          </Row>
-          <Row>
-            <Col xl="6" lg="6" md="6" sm="12" xs="12"></Col>
-            <Col xl="6" lg="6" md="6" sm="12" xs="12">
-              <HeaderStyled>Follow Us</HeaderStyled>
+            <Col xl="1" lg="1" md="1" sm="12" xs="12"></Col>
+            <Col xl="5" lg="5" md="6" sm="12" xs="12">
               <TextBox>
-                <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank" rel="noopener">
-                  <ContactImg src="img/Contact/facebook.png" alt="facebook icon" />
-                  WIP Camp
-                    </StyledLink>
-              </TextBox>
-              <TextBox>
-                <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank" rel="noopener">
-                  <ContactImg src="img/Contact/youtube.png" alt="youtube icon" />
-                  WIP camp
-                    </StyledLink>
-              </TextBox>
-              <TextBox>
-                <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank" rel="noopener">
-                  <ContactImg src="img/Contact/instagram.png" alt="instagram icon" />
-                  wipcamp
+                <StyledLink href="mailto:wippo@wipcamp.com" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/email.png" alt="email icon" />
+                  wippo@wipcamp.com
                     </StyledLink>
               </TextBox>
             </Col>
+            
           </Row>
-        </Container>
-        <Mountain src="/img/Contact/mountain.png" alt="mountain artwork at footer" />
+          <Row>
+            <Col xl="2" lg="2" md="1" sm="12" xs="12"></Col>
+            <Col xl="4" lg="4" md="4" sm="12" xs="12">
+              <TextBox>
+                <StyledLink href="https://m.me/wipcamp" target="_blank" rel="noopener">
+                  <ContactImg src="img/Contact/messenger.png" alt="messenger icon" />
+                  MESSENGER
+                    </StyledLink>
+              </TextBox>
+            </Col>
+            <Col xl="1" lg="1" md="1" sm="12" xs="12"></Col>
+            <Col xl="5" lg="5" md="6" sm="12" xs="12">
+              <TextBox>
+                <StyledLink href="tel://0922687835" rel="noopener">
+                  <ContactImg src="img/Contact/tel.png" alt="phone icon" />
+                  092-268-7835 (พี่ปลาย)
+                    </StyledLink>
+              </TextBox>
+            </Col>
+            
+          </Row>
+          <br />
+          <br />
+          <Header headerText="FOLLOW US" color="white" />
+          <SubHeader subHeaderText="ช่องทางการติดตาม" color="white" />
+          <br />
+          <Row>
+            <Col xl="2" lg="2" md="12" sm="12" xs="12"></Col>
+              <Col xl="3" lg="3" md="4" sm="12" xs="12">
+                <TextBox>
+                  <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank" rel="noopener">
+                    <ContactImg src="img/Contact/facebook.png" alt="facebook icon" />
+                    WIP Camp
+                    </StyledLink>
+                </TextBox>
+              </Col>
+              <Col xl="3" lg="3" md="4" sm="12" xs="12">
+                <TextBox>
+                  <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank" rel="noopener">
+                    <ContactImg src="img/Contact/youtube.png" alt="youtube icon" />
+                    WIP camp
+                    </StyledLink>
+                </TextBox>
+              </Col>
+              <Col xl="3" lg="3" md="4" sm="12" xs="12">
+                <TextBox>
+                  <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank" rel="noopener">
+                    <ContactImg src="img/Contact/instagram.png" alt="instagram icon" />
+                    wipcamp
+                    </StyledLink>
+                </TextBox>
+              </Col>
+              <Col xl="1" lg="1" md="12" sm="12" xs="12"></Col>
+          </Row>
+          </Container>
+          <Mountain src="/img/Contact/mountain.png" alt="mountain artwork at footer" />
       </ContactBg >
-    )
-  }
-}
+        )
+      }
+    }
