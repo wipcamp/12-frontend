@@ -95,7 +95,7 @@ const GroupOfStar = () => {
     return (
         <Fragment>
             <Star1 src="/img/Game/star1.png" data-aos="fade-down-right" />
-            <Star2 src="/img/Game/star2.png" data-aos="fade-down-left" />
+            <Star2 src="/img/Who/star.png" data-aos="fade-down-left" />
         </Fragment>
     )
 }
