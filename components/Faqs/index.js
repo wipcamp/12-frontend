@@ -18,6 +18,7 @@ const FaqsContainer = styled.div`
 `
 
 const FaqsBox = styled.div`
+scroll-behavior: smooth;
     text-align: center;
     background-color:#263555;
     width: 90%;
@@ -342,6 +343,19 @@ export default class Faqs extends Component {
         isFirstClick: true
     }
 
+    scrollDown = () => {
+        var scroll = (window.innerWidth <= 1280) ? 4200 : 
+            (window.innerWidth <= 1366) ? 4800 : 
+            (window.innerWidth <= 1440) ? 4600 : 
+            (window.innerWidth <= 1535) ? 4400 :
+            (window.innerWidth <= 1600) ? 4600 :
+            (window.innerWidth <= 1920) ? 5200 : 6000; 
+        window.scrollTo({
+            top: scroll,
+            behavior: 'smooth'
+        })
+    }
+
     changeAnswer = e => {
         if (e != this.state.currentAnswerIndex) {
             this.isFirstClick()
@@ -372,6 +386,7 @@ export default class Faqs extends Component {
                 })
             }
         }
+        this.scrollDown();
     }
 
     componentDidMount() {
@@ -413,7 +428,7 @@ export default class Faqs extends Component {
 
     render() {
         return (
-            <FaqsContainer>
+            <FaqsContainer id="container">
                 <StyledContainer>
                     <Row>
                         <Col style={{ margin: '0px' }}>
@@ -504,10 +519,12 @@ export default class Faqs extends Component {
                         <Row className="mt-5 order-2">
                             <Col lg='4' md='3' sm="3" xs="2">
                                 <div className="d-flex flex-column align-items-center">
-                                    <FaqsBox onClick={() => this.changeAnswer(0)} active={this.state.activeQuestion_0}>
+                                    
+                                    <FaqsBox onClick={() => this.changeAnswer(0)} active={this.state.activeQuestion_0} >
                                     <Qhead>QUESTION 1</Qhead>
                                         <Qtag lineHeight="3em">รับสมัครคนเข้าค่ายกี่คน ?</Qtag>
                                     </FaqsBox>
+                                   
                                     <FaqsBox onClick={() => this.changeAnswer(3)} active={this.state.activeQuestion_3}>
                                     <Qhead>QUESTION 4</Qhead>
                                         <Qtag>มีเอกสารอะไรที่จำเป็นบ้างในขั้นตอนการสมัคร และต้องอัพโหลดทางไหน ?</Qtag>
