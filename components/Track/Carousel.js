@@ -37,7 +37,7 @@ export default class Carousel extends Component {
                 srcFront: "/img/Track/uxui.png", 
                 bg: "/img/Track/uxuib.png", 
                 content: "เส้นทางที่จะพาไปเรียนรู้ Concept ของ UX & UI และการออกแบบแอปพลิเคชันหรือเว็บไซต์ของเราให้ตอบโจทย์กับผู้ใช้งาน", 
-                header: "UX/UI" 
+                header: "UX&UI" 
             },
             { 
                 srcFront: "/img/Track/network.png", 
