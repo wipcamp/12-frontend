@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 import { Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Header } from '../Core/Text'
+import { Header, SubHeader } from '../Core/Text'
 import Link from 'next/link'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -142,6 +142,7 @@ export default class Game extends Component {
                 }
                 <Container className="text-center">
                     <Header color="#ffffff" headerText="GAME" />
+                    <SubHeader color="white" subHeaderText="เกิดเหตุการณ์บางอย่างขึ้น!!! คลิกเพื่อเล่น" />
                     <Content>
                         <Wrap>
                             <VerticalAlign>
