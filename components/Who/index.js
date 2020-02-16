@@ -107,6 +107,15 @@ display: ${props => props.break? 'unset':'none'};
     display:unset;
 }
 `
+const Br2 = styled.br`
+    display:none;
+@media (min-width: 1280px) {
+    display:unset;
+}
+@media (min-width: 1500px) {
+    display:none;
+}
+`
 
 const GroupOfStar = () => {
     return(
@@ -205,7 +214,7 @@ export default class Who extends Component {
                                 textAlign="left"
                                 textAlignResponsive="left"                                            
                             >
-                                น้องระดับชั้นมัธยมศึกษาตอนปลาย<Br break={true} /> “ทุกแผนการเรียน”</WhoMobile>
+                                น้องระดับชั้น<Br2/>มัธยมศึกษาตอนปลาย<Br break={true} /> “ทุกแผนการเรียน”</WhoMobile>
                                         {/* <ImageInfo 
                                             src="/img/Who/who2.png" 
                                             color="white" 

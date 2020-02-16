@@ -28,6 +28,10 @@ const TextBox = styled.div`
     width: auto;
     
 }
+@media (min-width: 1280px){
+    width: 14em;
+    
+}
 @media (min-width: 1440px){
 text-align: center;
 width:20em;
