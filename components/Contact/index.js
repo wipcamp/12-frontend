@@ -122,14 +122,14 @@ const Tower = styled.img`
 
 const Star = styled.img`
   position: absolute;
-  top: 35vh;
-  left: 75vw;
+  top: 15vh;
+  right: 15vw;
   width: 10vw;
 `
 
 const Star2 = styled(Star)`
-  top: 15vh;
-  left: 68vw;
+  top: 50vh;
+  right: 20vw;
   width: 5vw;
 `
 
@@ -139,24 +139,25 @@ const Star3 = styled(Star2)`
   width: 8vw;
 `
 
-const Star4 = styled(Star3)`
-  top: 55vh;
-  left: 38vw;
+const Star4 = styled(Star)`
+  right: 8vw;
+  width: 5vw;
 `
 
-const Star5 = styled(Star4)`
-  top: 70vh;
-  left: 30vw;
+const Star5 = styled(Star)`
+  top: 80vh;
+  right: 8vw;
+  width: 5vw;
 `
 
 const GroupOfStar = () => {
   return (
     <Fragment>
-      <Star src="/img/Contact/star1.png" />
-      <Star2 src="/img/Contact/star2.png" />
-      <Star3 src="/img/Contact/star3.png" />
-      <Star4 src="/img/Contact/star4.png" />
-      <Star5 src="/img/Contact/star5.png" />
+      <Star src="/img/Contact/pisces.png" alt="pisces" />
+      <Star2 src="/img/Contact/cancer.png" alt="cancer" />
+      <Star3 src="/img/Contact/capricorn.png" alt="capricorn" />
+      <Star4 src="/img/Contact/leo.png" alt="leo" />
+      <Star5 src="/img/Contact/taurus.png" alt="taurus" />
     </Fragment>
   )
 }
