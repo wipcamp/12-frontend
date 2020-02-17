@@ -435,7 +435,7 @@ export default class Faqs extends Component {
                 <StyledContainer>
                     <Row>
                         <Col style={{ margin: '0px' }}>
-                            <Header color="#ffffff" headerText="FAQS" />
+                            <Header color="#ffffff" headerText="FAQs" />
                             <SubHeader subHeaderText="คำถามที่พบบ่อย" color="#ffffff" />
                         </Col>
                     </Row>
