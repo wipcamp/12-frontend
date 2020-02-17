@@ -65,29 +65,16 @@ const Star2 = styled(Star1)`
 
 `
 
-const Zodiac1 = styled(Star2)`
-    width: 5vw;
-    top: 50vh;
+const Zodiac1 = styled.img`
+    position: absolute;
+    width: 8vw;
+    top: 60vh;
     left: 90vw;
 `
 
 const Zodiac2 = styled(Zodiac1)`
-    top: 62vh;
-    width: 10vw;
-
-    @media (min-width: 1366px) {
-        left: 90vw;
-    }
-
-    @media (min-width: 1535px) {
-        left: 89vw;
-    }
-`
-
-const Zodiac3 = styled(Zodiac2)`
-    top : 82vh;
-    width: 5vw;
-    left: 90vw;
+    top: 85vh;
+    width: 3vw;
 
     @media (min-width: 1366px) {
         left: 92vw;
@@ -98,14 +85,26 @@ const Zodiac3 = styled(Zodiac2)`
     }
 `
 
+const Zodiac3 = styled(Zodiac1)`
+    top : 50vh;
+    width: 5vw;
+    left: 2vw;
+`
+
+const Zodiac4 = styled(Zodiac1)`
+    top : 70vh;
+    width: 5vw;
+    left: 2vw;
+`
+
 const GroupOfStar = () => {
     return (
         <Fragment>
             <Star1 src="/img/Sponsor/star1.png" data-aos="fade-down-right" />
-            <Zodiac1 src="/img/Core/zodiac1.png" data-aos="fade-down-left" />
-            <Zodiac2 src="/img/Core/zodiac2.png" data-aos="fade-down-left" />
-            <Zodiac3 src="/img/Sponsor/zodiac3.png" data-aos="fade-down-left" />
-            <Star2 src="/img/Sponsor/star2.png" data-aos="fade-down-left" />
+            <Zodiac1 src="/img/Core/zodiac2.png" data-aos="fade-down-left" />
+            <Zodiac2 src="/img/Core/zodiac1.png" data-aos="fade-down-left" />
+            <Zodiac3 src="/img/Sponsor/zodiac3.png" data-aos="fade-down-right" />
+            <Zodiac4 src="/img/Sponsor/zodiac4.png" data-aos="fade-down-right" />
         </Fragment>
     )
 }
