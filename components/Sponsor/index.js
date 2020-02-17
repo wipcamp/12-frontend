@@ -21,8 +21,8 @@ const SponsorBg = styled.div`
 `
 
 const WrapLogo = styled.div`
-    
-    
+    border: #3F66B2 10px solid;
+    background-color: #FAFAFA;
     text-align: center;
     margin: 2em 2.25em 0;
 
@@ -31,17 +31,12 @@ const WrapLogo = styled.div`
     }
     
     @media (min-width: 1024px) {
-        border: 50px solid transparent;
-        border-image: url(/img/Sponsor/Frame.png) 80 stretch;
-        margin: -1.5em;
-        padding: 2.5em;
+        padding: 3em;
     }
 `
 
 const Frame = styled.div`
-background-color: #FAFAFA;
-margin: 3em 0 0;
-
+    margin: 3em 0 0;
 `
 
 const Star1 = styled.img`
@@ -49,20 +44,6 @@ const Star1 = styled.img`
     top: 2vh;
     left: -8vw;
     width: 15vw;
-`
-
-const Star2 = styled(Star1)`
-    top: 90vh;
-    width: 15vw;
-
-    @media (min-width: 1366px) {
-        left: 92vw;
-    }
-
-    @media (min-width: 1535px) {
-        left: 91vw;
-    }
-
 `
 
 const Zodiac1 = styled.img`
