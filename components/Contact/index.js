@@ -9,16 +9,9 @@ const ContactBg = styled.div`
     display: table;
     height: 80vh;
     padding-top: 8rem;
-    /* padding-bottom: 13em; */
     position: relative;
     width: 100%;
     background-size: cover;
-    /* @media (min-width:768px){ 
-      padding-bottom: 13em;
-}
-@media (min-width:1100px){ 
-      padding-bottom: 30em;
-} */
 `
 const ContactImg = styled.img`
 width:2.5em;
@@ -123,41 +116,57 @@ const Tower = styled.img`
 const Star = styled.img`
   position: absolute;
   top: 15vh;
-  right: 15vw;
+  left: 10vw;
   width: 10vw;
 `
 
-const Star2 = styled(Star)`
-  top: 50vh;
-  right: 20vw;
-  width: 5vw;
+const Star2 = styled.img`
+  position: absolute;
+  top: 70vh;
+  right: 8vw;
+  width: 10vw;
 `
 
-const Star3 = styled(Star2)`
-  top: 25vh;
-  left: 45vw;
+const Star3 = styled(Star)`
+  top: 65vh;
+  left: 5vw;
   width: 8vw;
 `
 
-const Star4 = styled(Star)`
+const Star4 = styled(Star2)`
+  top: 15vh;
   right: 8vw;
-  width: 5vw;
+  width: 10vw;
 `
 
 const Star5 = styled(Star)`
-  top: 80vh;
-  right: 8vw;
-  width: 5vw;
+  top: 45vh;
+  left: 8vw;
+  width: 3vw;
+`
+
+const Star6 = styled(Star)`
+  top: 85vh;
+  left: 5vw;
+  width: 4vw;
+`
+
+const Star7 = styled(Star2)`
+  top: 83vh;
+  right: 10vw;
+  width: 4vw;
 `
 
 const GroupOfStar = () => {
   return (
     <Fragment>
-      <Star src="/img/Contact/pisces.png" alt="pisces" />
-      <Star2 src="/img/Contact/cancer.png" alt="cancer" />
-      <Star3 src="/img/Contact/capricorn.png" alt="capricorn" />
-      <Star4 src="/img/Contact/leo.png" alt="leo" />
-      <Star5 src="/img/Contact/taurus.png" alt="taurus" />
+      <Star src="/img/Contact/pisces.png" alt="pisces" data-aos="fade-down-right" />
+      <Star2 src="/img/Contact/taurus.png" alt="taurus" data-aos="fade-down-left" />
+      <Star3 src="/img/Contact/capricorn.png" alt="capricorn" data-aos="fade-down-right" />
+      <Star4 src="/img/Contact/cancer.png" alt="cancer" data-aos="fade-down-left" />
+      <Star5 src="/img/Contact/moon.png" alt="moon" data-aos="fade-down-right" />
+      <Star6 src="/img/Core/zodiac3.png" alt="zodiac sign" data-aos="fade-down-right" />
+      <Star7 src="/img/Contact/zodiacSign.png" alt="zodiac sign" data-aos="fade-down-left" />
     </Fragment>
   )
 }
@@ -198,11 +207,11 @@ export default class contact extends Component {
   render() {
     return (
       <ContactBg>
-        {/* {
+        {
           (this.getType()) ?
             <Fragment></Fragment>
             : <GroupOfStar />
-        } */}
+        }
         <Container>
           <Header headerText="CONTACT" color="white" />
           <SubHeader subHeaderText="ช่องทางการติดต่อ" color="white" />
