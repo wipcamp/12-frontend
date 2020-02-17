@@ -166,6 +166,7 @@ const Zodiac3 = styled(Star1)`
 
 const CloudLeft = styled.img`
     position: absolute;
+    margin-top: -10vh;
     left: -7vw;
     width: 42vw;
     bottom: -2vh;
@@ -205,11 +206,11 @@ const StarAndCloud = () => {
             <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" alt="group of stars"/>
             <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" alt="group of stars"/>
             <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" alt="group of stars"/>
-            <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" alt="cloud" />
-            <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000" alt="cloud" />
-            <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" alt="cloud" />
-            <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000" alt="cloud" />
-            <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500" alt="cloud" />
+            <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-offset="-100" alt="cloud" />
+            <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000" data-aos-offset="-100" alt="cloud" />
+            <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" data-aos-offset="-100" alt="cloud" />
+            <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000" data-aos-offset="-100" alt="cloud" />
+            <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500" data-aos-offset="-100" alt="cloud" />
         </Fragment>
     )
 }
