@@ -37,12 +37,17 @@ flex-wrap: wrap;
 width: 100%;
 font-size: 12px;
 line-height: 18px;
-display:block;
 text-align:left;
 text-indent: 0.625em;
+display: flex;
+justify-content: start;
+
 
 @media (min-width: 768px) {
+  display: flex;
+  justify-content: ${props => props.justify || 'unset'};
   font-size: 20px;
+  width: ${props => props.width || '16em'};
   margin: 24px 0px 24px 0px;
   line-height: 28px;
   text-indent: 10px;
@@ -217,8 +222,8 @@ export default class contact extends Component {
           <SubHeader subHeaderText="ช่องทางการติดต่อ" color="white" />
           <br />
           <Row>
-            <Col xl="2" lg="2" md="1" sm="12" xs="12"></Col>
-            <Col xl="4" lg="4" md="4" sm="12" xs="12">
+            {/* <Col xl="1" lg="1" md="1" sm="12" xs="12"></Col> */}
+            <Col className="d-flex justify-content-end" xl="6" lg="6" md="6" sm="12" xs="12">
               <TextBox>
                 <StyledLink href="https://line.me/R/ti/p/%40wipcamp" target="_blank" rel="noopener">
                   <ContactImg src="img/Contact/line.png" alt="line icon" />
@@ -226,8 +231,8 @@ export default class contact extends Component {
                     </StyledLink>
               </TextBox>
             </Col>
-            <Col xl="1" lg="1" md="1" sm="12" xs="12"></Col>
-            <Col xl="5" lg="5" md="6" sm="12" xs="12">
+            {/* <Col xl="1" lg="1" md="1" sm="12" xs="12"></Col> */}
+            <Col className="d-flex justify-content-start" xl="6" lg="6" md="6" sm="12" xs="12">
               <TextBox>
                 <StyledLink href="mailto:wippo@wipcamp.com" target="_blank" rel="noopener">
                   <ContactImg src="img/Contact/email.png" alt="email icon" />
@@ -238,8 +243,8 @@ export default class contact extends Component {
             
           </Row>
           <Row>
-            <Col xl="2" lg="2" md="1" sm="12" xs="12"></Col>
-            <Col xl="4" lg="4" md="4" sm="12" xs="12">
+            {/* <Col xl="2" lg="2" md="1" sm="12" xs="12"></Col> */}
+            <Col className="d-flex justify-content-end" xl="6" lg="6" md="6" sm="12" xs="12">
               <TextBox>
                 <StyledLink href="https://m.me/wipcamp" target="_blank" rel="noopener">
                   <ContactImg src="img/Contact/messenger.png" alt="messenger icon" />
@@ -247,8 +252,8 @@ export default class contact extends Component {
                     </StyledLink>
               </TextBox>
             </Col>
-            <Col xl="1" lg="1" md="1" sm="12" xs="12"></Col>
-            <Col xl="5" lg="5" md="6" sm="12" xs="12">
+            {/* <Col xl="1" lg="1" md="1" sm="12" xs="12"></Col> */}
+            <Col className="d-flex justify-content-start" xl="6" lg="6" md="6" sm="12" xs="12">
               <TextBox>
                 <StyledLink href="tel://0922687835" rel="noopener">
                   <ContactImg src="img/Contact/tel.png" alt="phone icon" />
@@ -264,32 +269,32 @@ export default class contact extends Component {
           <SubHeader subHeaderText="ช่องทางการติดตาม" color="white" />
           <br />
           <Row>
-            <Col xl="2" lg="2" md="12" sm="12" xs="12"></Col>
-              <Col xl="3" lg="3" md="4" sm="12" xs="12">
-                <TextBox>
+            {/* <Col xl="2" lg="2" md="12" sm="12" xs="12"></Col> */}
+              <Col xl="4" lg="4" md="4" sm="12" xs="12">
+                <TextBox width="100%" justify="center">
                   <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank" rel="noopener">
                     <ContactImg src="img/Contact/facebook.png" alt="facebook icon" />
                     WIP Camp
                     </StyledLink>
                 </TextBox>
               </Col>
-              <Col xl="3" lg="3" md="4" sm="12" xs="12">
-                <TextBox>
+              <Col xl="4" lg="4" md="4" sm="12" xs="12">
+                <TextBox justify="center" width="100%">
                   <StyledLink href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank" rel="noopener">
                     <ContactImg src="img/Contact/youtube.png" alt="youtube icon" />
                     WIP camp
                     </StyledLink>
                 </TextBox>
               </Col>
-              <Col xl="3" lg="3" md="4" sm="12" xs="12">
-                <TextBox>
+              <Col xl="4" lg="4" md="4" sm="12" xs="12">
+                <TextBox justify="center" width="100%">
                   <StyledLink href="https://www.instagram.com/wipcamp/" target="_blank" rel="noopener">
                     <ContactImg src="img/Contact/instagram.png" alt="instagram icon" />
                     wipcamp
                     </StyledLink>
                 </TextBox>
               </Col>
-              <Col xl="1" lg="1" md="12" sm="12" xs="12"></Col>
+              {/* <Col xl="1" lg="1" md="12" sm="12" xs="12"></Col> */}
           </Row>
           </Container>
           <Mountain src="/img/Contact/mountain.png" alt="mountain artwork at footer" />
