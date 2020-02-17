@@ -350,7 +350,7 @@ export default class Faqs extends Component {
             (window.innerWidth <= 1536) ? 4250 :
             (window.innerWidth <= 1600) ? 4600 :
             (window.innerWidth <= 1920) ? 4600 : 6000;
-           if( window.innerWidth < 1536) {  
+           if( window.innerWidth < 1536 && window.innerHeight <= 750) {  
         window.scrollTo({
             top: scroll,
             behavior: 'smooth'

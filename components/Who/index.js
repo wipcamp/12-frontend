@@ -38,7 +38,7 @@ const Float = keyframes`
     }`
 
 const Image = styled.img`
-top: -15em;
+top: -12em;
 display: none;
 width: 14vw;
 display: none;
@@ -52,7 +52,7 @@ margin-right: auto;
 left: 0;
 right: 0;
 }
-@media (min-height: 1280px) {
+@media (min-width: 1280px) {
     top: -15em;
 }
 `
