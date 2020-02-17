@@ -32,19 +32,28 @@ export default class StarParticle extends Component {
         WindowHeight: '2000px',
         innerHeight: '1000px',
         move: true,
-        ClientHeight: '1000px'
+        ClientHeight: '1000px',
+        isInHeightSet: true
     }
     
     componentDidMount() {
         window.addEventListener('resize', this.updateWindowDimensions)
         this.updateWindowDimensions()
         this.moveCheck()
+        setTimeout(
+            function() {
+                this.updateWindowDimensions()
+            }
+            .bind(this),
+            500
+        );
     }
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateWindowDimensions)
     }
+    
     updateWindowDimensions = () => {
-        let Height = window.document.body.offsetHeight+"px"     
+        let Height = window.document.body.clientHeight+"px"     
         let inHeight = window.innerHeight+"px" 
         let ClientHeight = window.document.body.clientHeight+"px" 
         this.setState({
@@ -78,12 +87,15 @@ export default class StarParticle extends Component {
     getClientHeight = () => {
         return this.state.ClientHeight
     }
+    getInnerHeight = () => {
+        return this.state.innerHeight
+    }
     render() {
         if (this.getMove()){
         return (
 
-            <ParticleContainer>
-            <Particles key="move" height={this.getHeight()} style={ParticleStyle}
+            <ParticleContainer id="desktop-container">
+            <Particles key="move" height={this.state.WindowHeight} style={ParticleStyle}
         params={{
             "particles": {
                 "number": {
@@ -136,9 +148,9 @@ export default class StarParticle extends Component {
     }else {
         return (
 
-            <ParticleContainer>
+            <ParticleContainer id="mobile-container">
             <HeightSet height={this.getClientHeight()} >
-            <Particles key="don't move" height={this.state.innerHeight} style={ParticleStyleMobile}
+            <Particles key="don't move" height={window.clientHeight} style={ParticleStyleMobile}
         params={{
             "particles": {
                 "number": {
