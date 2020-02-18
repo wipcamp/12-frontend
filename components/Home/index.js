@@ -267,11 +267,11 @@ export default class Home extends Component {
                     <WrapLogoCana>
                         <LogoCana src="/img/Home/LogoCana.png" alt="kmutt logo, sit logo, wipcamp logo" />
                     </WrapLogoCana>
-                    {/* <a href="https://itim.wip.camp/"> */}
+                    
                         <StyledButton disabled>
                             REGISTER
                         </StyledButton>
-                    {/* </a> */}
+                    
                     <StyledP className="mt-2">เปิดรับสมัครวันที่ 21 กุมภาพันธ์ 2563</StyledP>
                     <Wippo src="/img/Core/Wippo.png" alt="Wippo" />
                 </HomeContent>
