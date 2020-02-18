@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
           <meta property="fb:app_id" content="250617067968" />
           {/* OG Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@meawmafia" />
+          {/* <meta name="twitter:site" content="@meawmafia" /> */}
           <meta name="twitter:image" content="https://wip.camp/img/OG/og1.png" />
           <meta property="og:url" content="https://wip.camp/" />
           <meta property="og:title" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
