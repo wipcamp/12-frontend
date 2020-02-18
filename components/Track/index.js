@@ -1,19 +1,16 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Header, SubHeader, Content } from '../Core/Text'
-import Trackpage from './Track'
-import Flippycardnaja from '../Core/FlippyCard'
+import CardInGrid from './CardInGrid'
 import { Container, Row, Col } from 'reactstrap'
 import CarouselTrack from './Carousel'
-import { Parallax } from 'react-scroll-parallax'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const TrackBg = styled.div`
     position: relative;
-    padding-bottom: 4rem;
+    margin-top: 4em;
     @media (min-width: 1024px) {
-        padding-bottom: 10vh;
     }
 `
 
@@ -26,30 +23,18 @@ const Trackcontainer = styled.div`
         }
     
         @media (min-width: 1024px) {
-            margin:60px 0px 75px 0px;
+            margin:60px 0px 30px 0px;
         }
 `
 const ButtomContainer = styled.div`
-    margin-top: 20px;
+    margin-top: 10px;
  @media (min-width: 768px) {
     margin-top:50px;
  }
 
  @media (min-width: 1024px) {
-    margin-top:75px
+    margin-top:20px
  }
-`
-
-const Star = styled.img`
-    position: absolute;
-    bottom: -8vh;
-    width: 20vw;
-    right: -11vw;
-    display: none;
-
-    @media (min-width: 1024px) {
-        display: block;
-    }
 `
 
 const showCardGrid = () => {
@@ -72,136 +57,86 @@ const hideCardScroll = () => {
 
 export default class Track extends Component {
     state = { 
-        width: 0, 
-        height: 0,
-        isMobile: false
+        isMobile: true
     };
 
-    showHideElement = e => {
-        if (!this.state.isMobile) {
-            showCardGrid();
-        }else{
-            showCardScroll();
-        }
-    }
-
-    updateDimensions = () => {
-        this.setState({ width: window.innerWidth, height: window.innerHeight });
-        if (window.innerWidth < 768) {
-            this.setState({ isMobile: true})
-        }else if (window.innerWidth >= 768) {
-            this.setState({ isMobile: false})
-        } 
-      };
-    
     componentDidMount = () => {
-        window.addEventListener('resize', this.updateDimensions);
-        window.addEventListener('resize', this.showHideElement);
+        window.addEventListener('resize', this.updateDimensions)
+        this.updateDimensions()
         AOS.init({
             duration: 3000
         })
     }
 
+    updateDimensions = () => {
+        if (window.innerWidth < 768) {
+            this.setState({
+                isMobile: true
+            })
+        } else {
+            this.setState({
+                isMobile: false
+            })
+        }
+    };
+
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
+    }
+
+    getType = () => {
+        return this.state.isMobile
     }
 
     render() {
         return (
             <TrackBg>
-                
-                        <Container>
-                            <Row>
-                                <Col>
-                                    <Header color="white" headerText="TRACK" />
-                                    <SubHeader color="white" subHeaderText="เส้นทางในค่าย" />
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
-                                <Col xl="10" lg="10" md="10" sm="10" xs="10">
-                                <Trackcontainer>
+                <Container>
+                    <Row>
+                        <Col>
+                            <Header color="white" headerText="TRACK" />
+                            <SubHeader color="white" subHeaderText="เส้นทางในค่าย" />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
+                        <Col xl="10" lg="10" md="10" sm="10" xs="10">
+                            <Trackcontainer>
                                 <Content
-                                 textIndent="30px"
-                                 textIndentIpad="68px"
-                                 textIndentDesktop="68px"
-                                 textAlign="left"
-                                 color="white"
-                                 content="แทร็ก (Track) หมายถึง สายอาชีพไอทีที่เปิดโอกาสให้น้อง ๆ ได้เข้ามาสัมผัสและเรียนรู้ตามความสนใจ น้อง ๆ จะได้เลือก Track ตามที่ตนเองสนใจ     
-                                 2 Track จากทั้งหมด 4 Track โดย เลือก Track ที่น้องสนใจ ลำดับที่ 1 สำหรับการเลือกเข้าร่วม Track ลำดับที่ 2 จะได้เลือกในวันค่าย" />
-                                </Trackcontainer>
-                                </Col>
-                                <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
-                            </Row>
-                            <Row id="cards-grid" >
-                                <Col xl='3' lg='3' xs='6'>
-                                    <div className=" d-flex justify-content-lg-center justify-content-md-end">
-                                        <Flippycardnaja 
-                                            srcFront="/img/Track/uxui.png" 
-                                            bg="/img/Track/uxuibg.png" 
-                                            content="หากเราจะสร้างแอปพลิเคชัน หรือเว็บไซต์ขึ้นมา สิ่งสำคัญที่เราควรจะคำนึงถึงคือ 
-                                                สิ่งที่ผู้ใช้ของเราต้องการ (UX) และเมื่อนำมาเพิ่มความสวยงาม (UI)
-                                                ก็จะช่วยเสริมให้แอปพลิเคชันหรือเว็บไซต์ของเราตอบโจทย์ผู้ใช้มากขึ้น 
-                                                น้อง ๆ คงสงสัยล่ะสิ ว่าเราทำงานเกี่ยวกับอะไร ? เส้นทางนี้จะทำให้รู้จัก 
-                                                UX & UI มากขึ้นแน่นอน" 
-                                            header="UX/UI"/>
-                                    </div>
-                                </Col>
-                                <Col xl='3' lg='3' xs='6'>
-                                    <div className=" d-flex justify-content-lg-center justify-content-md-start">
-                                        <Flippycardnaja 
-                                            srcFront="/img/Track/website.png" 
-                                            bg="/img/Track/websitebg.png" 
-                                            content="ถ้าพูดถึงไอทีหนึ่งในสิ่งที่หลายคน นึกถึงคงจะมีเว็บไซต์อยู่แน่นอน 
-                                                เส้นทางนี้จะพาไปทำความรู้จักสายอาชีพด้านเว็บไซต์ ทำความเข้าใจเกี่ยวกับเว็บไซต์ 
-                                                ด้วยการเขียน HTML และ CSS ถ้าอยากรู้จักสายอาชีพนี้มากขึ้นล่ะก็… เส้นทางนี้แหละ ใช่เลย !" 
-                                            header="DEVELOPER"/>
-                                    </div>
-                                </Col>
-                                <Col xl='3' lg='3' xs='6'>
-                                    <div className=" d-flex justify-content-lg-center justify-content-md-end">
-                                        <Flippycardnaja 
-                                            srcFront="/img/Track/programming.png" 
-                                            bg="/img/Track/programmingbg.png" 
-                                            content="เคยสงสัยกันไหมว่า ทำไมแอปพลิเคชันที่เราใช้ถึง โต้ตอบกับเราได้ และมันทำงานอย่างไร ? 
-                                                เส้นทางที่จะพาไปทำความเข้าใจ เกี่ยวกับ Concept ของการเขียนโปรแกรม 
-                                                ผ่านการเรียนภาษาจาวา (Java Programming) ถ้าอยากรู้จักสายอาชีพนี้มากกว่านี้ล่ะก็ ต้องเส้นทางนี้เลย !" 
-                                            header="PROGRAMMING"/>
-                                    </div>
-                                </Col>
-                                <Col xl='3' lg='3' xs='6'>
-                                    <div className=" d-flex justify-content-lg-center justify-content-md-start">
-                                        <Flippycardnaja 
-                                            srcFront="/img/Track/network.png" 
-                                            bg="/img/Track/networkbg.png" 
-                                            content="ในยุคที่โลกทั้งใบเชื่อมต่อกันผ่าน สิ่งที่เรียกว่าอินเทอร์เน็ต แล้วมันทำได้ยังไง ? 
-                                                เส้นทางนี้จะพาไปเรียนรู้เกี่ยวกับ สายอาชีพ Networkและตามติด Internet Trends ในปัจจุบัน 
-                                                รวมถึงสัมผัสอุปกรณ์ของจริง กันไปเลยถ้าอยากรู้จักสายอาชีพนี้อย่างใกล้ชิด เส้นทางนี้ให้คำตอบได้แน่นอน" 
-                                            header="NETWORK"/>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Container>
-                        <div id="cards-scroll" style={{display: 'none'}}>
-                            <CarouselTrack />
-                        </div>
-                        <Row>
-                            <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
-                            <Col xl="10" lg="10" md="10" sm="10" xs="10">
-                                <ButtomContainer>
+                                    textIndent="30px"
+                                    textIndentIpad="68px"
+                                    textIndentDesktop="68px"
+                                    textAlign="left"
+                                    color="white"
+                                    content="แทร็ก (Track) หมายถึง สายอาชีพไอทีที่เปิดโอกาสให้น้อง ๆ 
+                                        ได้เข้ามาสัมผัสและเรียนรู้ตามความสนใจ โดยน้อง ๆ จะได้เลือก Track ตามที่ตนเองสนใจ     
+                                        2 Track จากทั้งหมด 4 Track ซึ่งสามารถเลือก Track ที่สนใจลำดับที่ 1 ได้ตอนสมัคร" />
+                            </Trackcontainer>
+                        </Col>
+                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
+                    </Row>
+                </Container>
+                {
+                    (this.getType()) ?
+                        <CarouselTrack />
+                        : <CardInGrid />
+                }
+                <Container>
+                    <Row>
+                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
+                        <Col xl="10" lg="10" md="10" sm="10" xs="10">
+                            <ButtomContainer>
                                 <Content
-                                textIndent="0px"
-                                textAlign="left"
-                                textAlignResponsive="center"
-                                color="white"
-                                content="สำหรับการเลือกเข้าร่วม Track ลำดับที่ 2 จะได้เลือกภายในวันค่าย WIP Camp #12" />   
-                                </ButtomContainer>
-                            </Col>
-                            <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
-                        </Row>
-                    
-                    <Star src="/img/Track/star.png" data-aos="fade-down-left" />
-                
+                                    textIndent="0px"
+                                    textAlign="left"
+                                    textAlignResponsive="center"
+                                    color="white"
+                                    content="สำหรับการเลือกเข้าร่วม Track ลำดับที่ 2 จะได้เลือกภายในวันค่าย WIP Camp #12" />   
+                            </ButtomContainer>
+                        </Col>
+                        <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>
+                    </Row>
+                </Container>
             </TrackBg>
         )
     }

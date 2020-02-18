@@ -7,33 +7,57 @@ const ParticleContainer = styled.div`
     background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
     background-color: black;
+    height: 100%;
+    width: 100%;
 `
 const ParticleStyle = {
-    position:'absolute',
+    position:'absolute'
 }
+const ParticleStyleMobile = {
+    position:'fixed'
+}
+
 
 
 export default class StarParticle extends Component {
     state={
         WindowHeight: '2000px',
-        move: true
+        innerHeight: '1000px',
+        move: true,
+        ClientHeight: '1000px',
+        isInHeightSet: true
     }
     
     componentDidMount() {
         window.addEventListener('resize', this.updateWindowDimensions)
         this.updateWindowDimensions()
         this.moveCheck()
+        setTimeout(
+            function() {
+                this.updateWindowDimensions()
+            }
+            .bind(this),
+            500
+        );
     }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions)
+    }
+    
     updateWindowDimensions = () => {
-        let Height = window.document.body.offsetHeight+"px"      
+        let Height = window.document.body.clientHeight+"px"     
+        let inHeight = window.innerHeight+"px" 
+        let ClientHeight = window.document.body.clientHeight+"px" 
         this.setState({
-            WindowHeight: Height
+            WindowHeight: Height,
+            innerHeight: inHeight,
+            ClientHeight: ClientHeight
         })
         this.moveCheck()
     }
 
     moveCheck = () => {
-        if (window.innerWidth < 768){
+        if (window.innerWidth < 1080){
             this.setState({
                 move: false
             })   
@@ -43,14 +67,26 @@ export default class StarParticle extends Component {
             })  
         }
     }
+
+    
     getMove = () => {
         return this.state.move
+    }
+
+    getHeight = () => {
+        return this.state.WindowHeight
+    }
+    getClientHeight = () => {
+        return this.state.ClientHeight
+    }
+    getInnerHeight = () => {
+        return this.state.innerHeight
     }
     render() {
         if (this.getMove()){
         return (
 
-            <ParticleContainer>
+            <ParticleContainer id="desktop-container">
             <Particles key="move" height={this.state.WindowHeight} style={ParticleStyle}
         params={{
             "particles": {
@@ -66,9 +102,9 @@ export default class StarParticle extends Component {
                     "opacity": 0.02
                 },
                 "move": {
-                    "enable": true,
+                    "enable": false,
                     "direction": "right",
-                    "speed": 0.2
+                    "speed": 0
                 },
                 "size": {
                     "value": 2,
@@ -104,12 +140,12 @@ export default class StarParticle extends Component {
     }else {
         return (
 
-            <ParticleContainer>
-            <Particles key="don't move" height={this.state.WindowHeight} style={ParticleStyle}
+            <ParticleContainer id="mobile-container">
+            <Particles key="don't move" height={window.clientHeight} style={ParticleStyleMobile}
         params={{
             "particles": {
                 "number": {
-                    "value": 50,
+                    "value": 120,
                     "density": {
                         "enable": true,
                         "value_area": 1000
@@ -120,16 +156,16 @@ export default class StarParticle extends Component {
                     "opacity": 0.02
                 },
                 "move": {
-                    "enable": false,
-                    "direction": "right",
-                    "speed": 0.05
+                    "enable": true,
+                    "direction": "none",
+                    "speed": 0.125
                 },
                 "size": {
                     "value": 2,
                     "random": true
                 },
                 "opacity": {
-                    'value': 1,
+                    'value': 0.8,
                     "anim": {
                         "enable": true,
                         "speed": 1,
@@ -151,7 +187,7 @@ export default class StarParticle extends Component {
                 }
             },
             "retina_detect": true
-        }} />  
+        }} />
             {this.props.children}
              </ParticleContainer>
         )

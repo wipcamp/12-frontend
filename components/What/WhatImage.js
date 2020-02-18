@@ -32,7 +32,7 @@ const Image = styled.img`
 export const WhatImage = (props) => {
 
     return (
-        <Image src={props.src} className="slide"/>
+        <Image src={props.src} alt={props.alt} className="slide"/>
     )
 }
 Image.defaultProps = {

@@ -15,21 +15,27 @@ const BackCard = styled.div`
 `
 
 const StyledCardHeader = styled.h4`
-  font-size: 1.5em;
-  font-family: 'ChakraPetch-Regular';
+  font-size: 1.2em;
+  font-family: 'NotoSans-Medium';
   color: white;
 
+  @media (min-width: 768px) {
+    font-size: 1.5em;
+  }
 `
 
 const Content = styled.div`
-  font-family: 'ChakraPetch-Regular';
-  font-size: 11px;
+  font-family: 'Sarabun-Regular';
+  font-size: 12px;
   color: white;
-  padding: 10%;
+  padding-top: 15%;
+  padding-left: 12%;
+  padding-right: 12%;
+
   text-align: center;
 
   @media (min-width: 768px) {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   @media (min-width: 1024px) {
@@ -37,7 +43,7 @@ const Content = styled.div`
   }
 
   @media (min-width: 1280px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `
 
@@ -94,7 +100,7 @@ const DefaultCardContents = ({ srcFront = props.srcFront , content = props.conte
         <BackCard bg={bg}>
           <Content>
             <Header header={header} />
-            
+            <br />
             {content}
           </Content>
       </BackCard>
