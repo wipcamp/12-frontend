@@ -73,8 +73,9 @@ const WrapLogoCana = styled.div`
     }
 `
 
-const StyledButton = styled.a`
+const StyledButton = styled.button`
     background-color: #F4693D;
+    border-color: transparent;
     text-decoration: none !important;
     font-family: 'NotoSans-Medium';
     font-size: 16px;
@@ -82,11 +83,12 @@ const StyledButton = styled.a`
     padding: 0.75em 3em;
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
     border-radius: 5px;
+    filter: brightness(60%);
 
-    :hover {
+    /* :hover {
         background-color: white;
         color: #F4693D !important;
-    }
+    } */
 
     @media (min-width: 768px) {
         font-size: 24px;
@@ -197,6 +199,11 @@ const CloudRight3 = styled(CloudRight)`
     bottom: 0vh;
     width: 45vw;
 `
+
+const StyledP = styled.p`
+    color: white;
+    font-family: 'Sarabun-Regular';
+`
 const StarAndCloud = () => {
     return (
         <Fragment>
@@ -260,7 +267,12 @@ export default class Home extends Component {
                     <WrapLogoCana>
                         <LogoCana src="/img/Home/LogoCana.png" alt="kmutt logo, sit logo, wipcamp logo" />
                     </WrapLogoCana>
-                    <StyledButton href="https://itim.wip.camp/">REGISTER</StyledButton>
+                    {/* <a href="https://itim.wip.camp/"> */}
+                        <StyledButton disabled>
+                            REGISTER
+                        </StyledButton>
+                    {/* </a> */}
+                    <StyledP className="mt-2">เปิดรับสมัครวันที่ 10 มีนาคม 2563</StyledP>
                     <Wippo src="/img/Core/Wippo.png" alt="Wippo" />
                 </HomeContent>
             </HomeContainer>
