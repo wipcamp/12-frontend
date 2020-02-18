@@ -11,8 +11,7 @@ const ParticleContainer = styled.div`
     width: 100%;
 `
 const ParticleStyle = {
-    position:'absolute',
-    zIndex:'3'
+    position:'absolute'
 }
 const ParticleStyleMobile = {
     position:'fixed'
@@ -88,7 +87,7 @@ export default class StarParticle extends Component {
         return (
 
             <ParticleContainer id="desktop-container">
-            <Particles key="move" height={this.state.WindowHeight} style={ParticleStyle}
+            <Particles key="move" height={window.clientHeight} style={ParticleStyle}
         params={{
             "particles": {
                 "number": {
