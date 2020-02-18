@@ -87,7 +87,7 @@ export default class StarParticle extends Component {
         return (
 
             <ParticleContainer id="desktop-container">
-            <Particles key="move" height={window.clientHeight} style={ParticleStyle}
+            <Particles key="move" height={this.getClientHeight()} style={ParticleStyle}
         params={{
             "particles": {
                 "number": {
