@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
-import Link from 'next/link'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -147,9 +146,9 @@ export default class Game extends Component {
                         <Wrap>
                             <VerticalAlign>
                                 <StyledButton>
-                                    <Link href="/Game">
+                                    <a href="https://gamepr.wip.camp/" target="_blank" rel="noopener">
                                         <Play src="/img/Game/play.png" />
-                                    </Link>
+                                    </a>
                                 </StyledButton>
                             </VerticalAlign>
                         </Wrap>
