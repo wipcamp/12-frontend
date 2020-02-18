@@ -33,7 +33,7 @@ export default class SideBar extends Component {
               WHEN
             </CustomLink>
             <CustomLink className="menu-item" href="#faqs">
-              FAQS
+              FAQs
             </CustomLink>
           </Menu>
         )

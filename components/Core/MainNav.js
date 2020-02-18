@@ -183,7 +183,7 @@ export default class MainNav extends Component {
 										<StyledNavLink className="nav-style" iscurrent={this.state.isWhen} href="#when">WHEN</StyledNavLink>
 									</StyledNavItem>
 									<StyledNavItem>
-										<StyledNavLink className="nav-style" iscurrent={this.state.isFaqs} href="#faqs">FAQS</StyledNavLink>
+										<StyledNavLink className="nav-style" iscurrent={this.state.isFaqs} href="#faqs">FAQs</StyledNavLink>
 									</StyledNavItem>
 								</StyledNav>
 							</div>
