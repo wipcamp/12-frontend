@@ -12,6 +12,7 @@ import 'aos/dist/aos.css';
 
 const WhereBg = styled.div`
     position: relative;
+    padding-top: 4em;
 `
 
 const SIT = styled.div`

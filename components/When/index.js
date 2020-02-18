@@ -8,13 +8,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const WhenContainer = styled.div`
-    padding: 2rem 0 4rem 0;
-    position: relative;
+    margin-top: 4em;
     position: relative;
 
     @media (min-width: 1024px) {
-        padding-bottom: 10vh;
-        padding-top: 4rem;
+        /* padding-bottom: 10vh; */
+        /* margin-top: 4rem; */
     }
 `
 const WhenImg = styled.img`

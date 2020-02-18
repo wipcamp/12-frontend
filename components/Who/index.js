@@ -9,20 +9,24 @@ import 'aos/dist/aos.css';
 
 const WhoContainer = styled.div`
     position: relative;
+    padding-top: 4em;
+
+@media (min-width: 1080px) {
     
+}    
 `
+
 
 const ContentContainer = styled(Container)`
     /* max-height: 130vh; */
-    padding-bottom:4vh;
     @media (min-width: 1080px) {
-        padding-bottom:10vh;
+        /* padding-bottom:10vh; */
     }
     @media (min-width: 1280px) {
-        padding-bottom:10vh;
+        /* padding-bottom:10vh; */
     }
     @media (min-width: 1680px) {
-        padding-bottom:20vh;
+        /* padding-bottom:20vh; */
     }
 `
 
@@ -40,7 +44,6 @@ const Float = keyframes`
 const Image = styled.img`
 top: -12em;
 display: none;
-width: 14vw;
 display: none;
 animation: ${Float} 5s infinite;
 
@@ -51,9 +54,12 @@ margin-left: auto;
 margin-right: auto;
 left: 0;
 right: 0;
+width: 10em;
 }
 @media (min-width: 1280px) {
     top: -15em;
+    width: 12em;
+
 }
 `
 const Image2 = styled.img`

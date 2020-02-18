@@ -16,7 +16,7 @@ const SponsorBg = styled.div`
     }
 
     @media (min-width: 1024px) {
-        padding-top: 8em;
+        padding-top: 4em;
     }
 `
 

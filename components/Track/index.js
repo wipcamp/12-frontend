@@ -9,9 +9,8 @@ import 'aos/dist/aos.css';
 
 const TrackBg = styled.div`
     position: relative;
-    padding-bottom: 4rem;
+    margin-top: 4em;
     @media (min-width: 1024px) {
-        padding-bottom: 10vh;
     }
 `
 

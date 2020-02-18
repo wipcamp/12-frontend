@@ -29,7 +29,7 @@ export default class Wrapper extends Component {
 
     configScroll = () => {
         (window.innerWidth >= 768)?
-        configureAnchors({offset: -60, scrollDuration: 600}) 
+        configureAnchors({offset: -80, scrollDuration: 600}) 
         :  configureAnchors({offset: 0, scrollDuration: 600}) 
     }
 

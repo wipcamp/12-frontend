@@ -25,7 +25,7 @@ const TextBox = styled.div`
     margin-left: 1rem;
     margin-top:0.5rem;
 @media (min-width: 1024px){
-    width: auto;
+    width: 13rem;
     
 }
 @media (min-width: 1280px){
