@@ -11,7 +11,8 @@ const ParticleContainer = styled.div`
     width: 100%;
 `
 const ParticleStyle = {
-    position:'absolute'
+    position:'absolute',
+    zIndex:'3'
 }
 const ParticleStyleMobile = {
     position:'fixed'
