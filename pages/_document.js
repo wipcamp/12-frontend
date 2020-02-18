@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
           <meta property="og:image:height" content="314" /> */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://wip.camp/" />
-          <meta property="og:site_name" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
+          {/* <meta property="og:site_name" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" /> */}
           <meta property="fb:app_id" content="250617067968" />
           {/* OG Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
