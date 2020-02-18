@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
           {/* OG Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           {/* <meta name="twitter:site" content="@meawmafia" /> */}
-          <meta name="twitter:image" content="https://wip.camp/img/OG/og1.png" />
+          <meta name="twitter:image" content="https://wip.camp/img/OG/og2.png" />
           <meta property="og:url" content="https://wip.camp/" />
           <meta property="og:title" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
           <meta property="og:description" content="WIP Camp #12 : Ways to IT Professionals Camp ค่ายเส้นทางสู่ฝันนักไอที : ค่าย สำหรับน้องๆ มัธยม ปลาย ที่จะพาน้องๆมาทำความรู้จักกับ ไอที 
