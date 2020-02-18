@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 const ContactBg = styled.div`
     display: table;
     height: 80vh;
-    padding-top: 8rem;
+    padding-top: 4rem;
     position: relative;
     width: 100%;
     background-size: cover;
