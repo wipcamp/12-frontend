@@ -470,7 +470,7 @@ export default class Faqs extends Component {
             <StyledAccordionItem>
                 <StyledAccordionItemHeading>
                     <StyledAccordionItemButton>
-                    <p>มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่</p>
+                    <p>มีค่าใช้จ่ายไหม ถ้ามีต้องจ่ายเท่าไหร่ ?</p>
                     </StyledAccordionItemButton>
                 </StyledAccordionItemHeading>
                 <StyledAccordionItemPanel>

@@ -118,7 +118,7 @@ const Br2 = styled.br`
 @media (min-width: 1280px) {
     display:unset;
 }
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
     display:none;
 }
 `
