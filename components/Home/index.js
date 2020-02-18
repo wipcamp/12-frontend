@@ -272,7 +272,7 @@ export default class Home extends Component {
                             REGISTER
                         </StyledButton>
                     {/* </a> */}
-                    <StyledP className="mt-2">เปิดรับสมัครวันที่ 10 มีนาคม 2563</StyledP>
+                    <StyledP className="mt-2">เปิดรับสมัครวันที่ 21 กุมภาพันธ์ 2563</StyledP>
                     <Wippo src="/img/Core/Wippo.png" alt="Wippo" />
                 </HomeContent>
             </HomeContainer>
