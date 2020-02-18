@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
           <meta name="keywords" content="wipcamp,itcamp,ค่ายไอที,ค่ายคอม"/>
           <meta name="og:description" content="WIP Camp #12 : Ways to IT Professionals Camp ค่ายเส้นทางสู่ฝันนักไอที : ค่าย สำหรับน้องๆ มัธยม ปลาย ที่จะพาน้องๆมาทำความรู้จักกับ ไอที อย่างเต็มตัว ตลอดทั้ง ค่าย น้องๆจะได้รับ ความรู้ ความสนุกสนาน จากพี่ๆ ไอที บางมด แล้วเจอกันนะครับ"/>
           <meta name="og:title" content="WIP Camp #12 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที " />
-          <meta property="og:image" content="/img/OG/og2.png" />
+          <meta property="og:image" content="/img/OG/og1.png" />
           {/* <meta property="og:image:width" content="600" />
           <meta property="og:image:height" content="314" /> */}
           <meta property="og:type" content="website" />
