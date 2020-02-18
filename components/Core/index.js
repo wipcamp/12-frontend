@@ -49,7 +49,7 @@ export default class Wrapper extends Component {
                 <ScrollableAnchor id="when"><When /></ScrollableAnchor>
                 <ScrollableAnchor id="faqs"><Faqs /></ScrollableAnchor>
                 <ScrollableAnchor id="game"><Game /></ScrollableAnchor>
-                <ScrollableAnchor id="sponsor"><Sponsor /></ScrollableAnchor>
+                {/* <ScrollableAnchor id="sponsor"><Sponsor /></ScrollableAnchor> */}
                 <ScrollableAnchor id="contact"><Contact /></ScrollableAnchor>
                 </StarParticle>
                 </div>       
