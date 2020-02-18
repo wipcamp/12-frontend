@@ -16,15 +16,7 @@ const ParticleStyle = {
 const ParticleStyleMobile = {
     position:'fixed'
 }
-const HeightSet = styled.div`
-    position: fixed;
-    height: ${ props => props.height || '100%' };
 
-    @media (min-width: 768px) {
-        position: unset;
-        height: unset;
-    }
-`
 
 
 export default class StarParticle extends Component {
@@ -65,7 +57,7 @@ export default class StarParticle extends Component {
     }
 
     moveCheck = () => {
-        if (window.innerWidth < 768){
+        if (window.innerWidth < 1080){
             this.setState({
                 move: false
             })   
@@ -149,7 +141,6 @@ export default class StarParticle extends Component {
         return (
 
             <ParticleContainer id="mobile-container">
-            <HeightSet height={this.getClientHeight()} >
             <Particles key="don't move" height={window.clientHeight} style={ParticleStyleMobile}
         params={{
             "particles": {
@@ -196,7 +187,7 @@ export default class StarParticle extends Component {
                 }
             },
             "retina_detect": true
-        }} /></HeightSet>
+        }} />
             {this.props.children}
              </ParticleContainer>
         )
