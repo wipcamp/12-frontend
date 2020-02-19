@@ -2,8 +2,7 @@ import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 import { Container } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Header } from '../Core/Text'
-import Link from 'next/link'
+import { Header, SubHeader } from '../Core/Text'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -94,8 +93,8 @@ const Star2 = styled(Star1)`
 const GroupOfStar = () => {
     return (
         <Fragment>
-            <Star1 src="/img/Game/star1.png" data-aos="fade-down-right" />
-            <Star2 src="/img/Game/star2.png" data-aos="fade-down-left" />
+            <Star1 src="/img/Game/star1.png" alt="star" data-aos="fade-down-right" />
+            <Star2 src="/img/Who/star.png" alt="star" data-aos="fade-down-left" />
         </Fragment>
     )
 }
@@ -142,13 +141,14 @@ export default class Game extends Component {
                 }
                 <Container className="text-center">
                     <Header color="#ffffff" headerText="GAME" />
+                    <SubHeader color="white" subHeaderText="เกิดเหตุการณ์บางอย่างขึ้น!!! คลิกเพื่อเล่น" />
                     <Content>
                         <Wrap>
                             <VerticalAlign>
-                                <StyledButton>
-                                    <Link href="/Game">
-                                        <Play src="/img/Game/play.png" />
-                                    </Link>
+                                <StyledButton aria-label="Center Align">
+                                    <a href="https://gamepr.wip.camp/" target="_blank" rel="noopener">
+                                        <Play src="/img/Game/play.png" alt="play button"/>
+                                    </a>
                                 </StyledButton>
                             </VerticalAlign>
                         </Wrap>

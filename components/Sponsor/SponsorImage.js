@@ -33,7 +33,6 @@ const StyledSponsorImg = styled.img`
 
 `
 
-
     export default class SponsorIamge extends Component {
         
         render() {

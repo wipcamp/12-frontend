@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Content } from '../Core/Text'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 const Image = styled.img`
     width: 64px;
@@ -25,7 +25,11 @@ const TextBox = styled.div`
     margin-left: 1rem;
     margin-top:0.5rem;
 @media (min-width: 1024px){
-    width: auto;
+    width: 13rem;
+    
+}
+@media (min-width: 1280px){
+    width: 14em;
     
 }
 @media (min-width: 1440px){

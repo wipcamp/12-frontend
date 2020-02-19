@@ -3,28 +3,13 @@ import styled, { keyframes } from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
-import { ImageInfo, WhoMobile } from './ImgInfo'
-import { Parallax } from 'react-scroll-parallax'
+import { WhoMobile } from './ImgInfo'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const WhoContainer = styled.div`
     position: relative;
-    
-`
-
-const ContentContainer = styled(Container)`
-    /* max-height: 130vh; */
-    padding-bottom:4vh;
-    @media (min-width: 1080px) {
-        padding-bottom:10vh;
-    }
-    @media (min-width: 1280px) {
-        padding-bottom:10vh;
-    }
-    @media (min-width: 1680px) {
-        padding-bottom:20vh;
-    }
+    padding-top: 4em;  
 `
 
 const Float = keyframes`
@@ -39,9 +24,8 @@ const Float = keyframes`
     }`
 
 const Image = styled.img`
-top: -15em;
+top: -12em;
 display: none;
-width: 14vw;
 display: none;
 animation: ${Float} 5s infinite;
 
@@ -52,9 +36,12 @@ margin-left: auto;
 margin-right: auto;
 left: 0;
 right: 0;
+width: 10em;
 }
-@media (min-height: 1280px) {
+@media (min-width: 1280px) {
     top: -15em;
+    width: 12em;
+
 }
 `
 const Image2 = styled.img`
@@ -106,6 +93,15 @@ const Br = styled.br`
 display: ${props => props.break? 'unset':'none'};
 @media (min-width: 1440px) {
     display:unset;
+}
+`
+const Br2 = styled.br`
+    display:none;
+@media (min-width: 1280px) {
+    display:unset;
+}
+@media (min-width: 1440px) {
+    display:none;
 }
 `
 
@@ -166,7 +162,7 @@ export default class Who extends Component {
                         <Fragment></Fragment>
                         : <GroupOfStar />
                 }
-                <ContentContainer fluid={true} >
+                <Container fluid={true} >
                     <Row>
                         <Col>
                             <Header color="white" headerText="WHO" />
@@ -184,17 +180,11 @@ export default class Who extends Component {
                                 src="/img/Who/who1.png" 
                                 alt="interesting in IT"
                                 color="white" 
-                                content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง" 
+                                content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดินของตัวเอง" 
                                 textAlign="left"
                                 textAlignResponsive="left"
                             >
                                 น้อง ๆ ที่มีความสนใจทางด้านไอที<Br/> หรือต้องการตามหาเส้นทางเดิน ของตัวเอง</WhoMobile>
-                                        {/* <ImageInfo 
-                                            src="/img/Who/who1.png" 
-                                            color="white" 
-                                            content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"                                            
-                                            textAlignDeskTop="center"
-                                        /> */}
                         </Col>
                         <Col lg={this.state.midColumn} md="auto"></Col>
                         <Col lg={this.state.contentColumn} md='5'>
@@ -206,13 +196,7 @@ export default class Who extends Component {
                                 textAlign="left"
                                 textAlignResponsive="left"                                            
                             >
-                                น้องระดับชั้นมัธยมศึกษาตอนปลาย<Br break={true} /> “ทุกแผนการเรียน”</WhoMobile>
-                                        {/* <ImageInfo 
-                                            src="/img/Who/who2.png" 
-                                            color="white" 
-                                            content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”" 
-                                            textAlignDeskTop="center"
-                                        /> */}
+                                น้องระดับชั้น<Br2/>มัธยมศึกษาตอนปลาย<Br break={true} /> “ทุกแผนการเรียน”</WhoMobile>
                         </Col>
                         <Col lg="1" md='1'></Col>
                     </WhoRow>
@@ -226,17 +210,11 @@ export default class Who extends Component {
                                 src="/img/Who/who3.png" 
                                 alt="can stay in the camp for 5 days 4 nights"
                                 color="white" 
-                                content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน" 
+                                content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน" 
                                 textAlign="left"
                                 textAlignResponsive="left"
                             >
                                 น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน<Br/> ได้ตลอดระยะเวลา 5 วัน 4 คืน</WhoMobile>
-                                        {/* <ImageInfo 
-                                            src="/img/Who/who3.png" 
-                                            color="white" 
-                                            content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน" 
-                                            textAlignDeskTop="center"
-                                        /> */}
                         </Col>
                         <Col lg={this.state.midColumn} md='auto' ></Col>
                         <Col lg={this.state.contentColumn} md='5' sm="12">
@@ -244,17 +222,11 @@ export default class Who extends Component {
                                 src="/img/Who/who4.png" 
                                 alt="parents agreed to let student come to camp"
                                 color="white" 
-                                content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง" 
+                                content="น้อง ๆ ที่ได้รับการอนุญาตจากผู้ปกครอง โดยมีเอกสารเป็นลายลักษณ์อักษรที่ถูกต้อง" 
                                 textAlign="left"
                                 textAlignResponsive="left"
                             >
                                 น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง<Br/> โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง</WhoMobile>
-                                        {/* <ImageInfo 
-                                            src="/img/Who/who4.png" 
-                                            color="white" 
-                                            content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง"                                             
-                                            textAlignDeskTop="center"
-                                        /> */}
                         </Col>
                         <Col lg="2" md='1' sm="auto"></Col>
                     </Row>
@@ -263,7 +235,7 @@ export default class Who extends Component {
                             <Image2 src="/img/Core/Wippo.png" alt="Wippo" />
                         </Col>
                     </Row>            
-                </ContentContainer>
+                </Container>
             </WhoContainer>
         )
     }

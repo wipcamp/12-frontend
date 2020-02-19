@@ -14,7 +14,6 @@ import Contact from '../Contact'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 import SideBar from "./SideBar"
 import './sidebar.css'
-import { ParallaxProvider } from 'react-scroll-parallax';
 import StarParticle from './Particle'
 
 const Wrap = styled.div`
@@ -25,12 +24,19 @@ const Wrap = styled.div`
 export default class Wrapper extends Component {
     
     componentDidMount(){
-        configureAnchors({offset: -60, scrollDuration: 600}) 
+        this.configScroll()
     }
+
+    configScroll = () => {
+        (window.innerWidth >= 768)?
+        configureAnchors({offset: -80, scrollDuration: 600}) 
+        :  configureAnchors({offset: 0, scrollDuration: 600}) 
+    }
+
     render() {
         return (
             <Fragment>
-            {/* <Wrap id="App">
+            <Wrap id="App">
                 <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
                 <div id="page-wrap" style={{overflow:'hidden'}}>
                 <StarParticle>
@@ -43,11 +49,11 @@ export default class Wrapper extends Component {
                 <ScrollableAnchor id="when"><When /></ScrollableAnchor>
                 <ScrollableAnchor id="faqs"><Faqs /></ScrollableAnchor>
                 <ScrollableAnchor id="game"><Game /></ScrollableAnchor>
-                <ScrollableAnchor id="sponsor"><Sponsor /></ScrollableAnchor>
+                {/* <ScrollableAnchor id="sponsor"><Sponsor /></ScrollableAnchor> */}
                 <ScrollableAnchor id="contact"><Contact /></ScrollableAnchor>
                 </StarParticle>
                 </div>       
-            </Wrap> */}
+            </Wrap>
             </Fragment>
         )
     }

@@ -3,9 +3,6 @@ import styled from 'styled-components'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Wrap = styled.div`
-    overflow: hidden;
-`
 const HomeContainer = styled.div`
     display: table;
     position: relative;
@@ -73,19 +70,22 @@ const WrapLogoCana = styled.div`
     }
 `
 
-const StyledButton = styled.a`
+const StyledButton = styled.button`
     background-color: #F4693D;
+    border-color: transparent;
     text-decoration: none !important;
-    font-family: "Prompt-Regular";
-    font-size: 12px;
+    font-family: 'NotoSans-Medium';
+    font-size: 16px;
     color: white !important;
-    padding: 0.5em 1em;
+    padding: 0.75em 3em;
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    border-radius: 5px;
+    filter: brightness(60%);
 
-    :hover {
+    /* :hover {
         background-color: white;
         color: #F4693D !important;
-    }
+    } */
 
     @media (min-width: 768px) {
         font-size: 24px;
@@ -99,15 +99,16 @@ const StyledButton = styled.a`
 
 const Wippo = styled.img`
     position: absolute;
-    bottom: 5vh;
-    right: 5vw;
-    display:none;
-    width: 15vw;
+    display: none;
     z-index: 3;
     animation: float 5s infinite;
+    
     @media (min-width: 1024px) {
-	  display: block;
-  }
+        display: block;
+        bottom: 5vh;
+        right: 5vw;
+        width: 15vw;
+    }
   @keyframes float {
 	0% {
 		transform: translatey(0px);
@@ -161,6 +162,7 @@ const Zodiac3 = styled(Star1)`
 
 const CloudLeft = styled.img`
     position: absolute;
+    margin-top: -10vh;
     left: -7vw;
     width: 42vw;
     bottom: -2vh;
@@ -191,6 +193,11 @@ const CloudRight3 = styled(CloudRight)`
     bottom: 0vh;
     width: 45vw;
 `
+
+const StyledP = styled.p`
+    color: white;
+    font-family: 'Sarabun-Regular';
+`
 const StarAndCloud = () => {
     return (
         <Fragment>
@@ -200,11 +207,11 @@ const StarAndCloud = () => {
             <Star1 src="/img/Core/star1.png" data-aos="fade-down-right" alt="group of stars"/>
             <Star2 src="/img/Core/star2.png" data-aos="fade-down-left" data-aos-duration="2000" alt="group of stars"/>
             <Star3 src="/img/Core/star3.png" data-aos="fade-down-left" data-aos-duration="2500" alt="group of stars"/>
-            <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" alt="cloud" />
-            <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000" alt="cloud" />
-            <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" alt="cloud" />
-            <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000" alt="cloud" />
-            <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500" alt="cloud" />
+            <CloudLeft src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-offset="-100" alt="cloud" />
+            <CloudLeft2 src="/img/Core/cloudleft.png" data-aos="fade-up-right" data-aos-duration="2000" data-aos-offset="-100" alt="cloud" />
+            <CloudRight src="/img/Core/cloudright1.png" data-aos="fade-up-left" data-aos-offset="-100" alt="cloud" />
+            <CloudRight2 src="/img/Core/cloudright2.png" data-aos="fade-up-left" data-aos-duration="2000" data-aos-offset="-100" alt="cloud" />
+            <CloudRight3 src="/img/Core/cloudright3.png" data-aos="fade-up-left" data-aos-duration="2500" data-aos-offset="-100" alt="cloud" />
         </Fragment>
     )
 }
@@ -254,7 +261,12 @@ export default class Home extends Component {
                     <WrapLogoCana>
                         <LogoCana src="/img/Home/LogoCana.png" alt="kmutt logo, sit logo, wipcamp logo" />
                     </WrapLogoCana>
-                    <StyledButton href="https://itim.wip.camp/login">REGISTER</StyledButton>
+                    
+                        <StyledButton disabled>
+                            REGISTER
+                        </StyledButton>
+                    
+                    <StyledP className="mt-2">เปิดรับสมัครวันที่ 21 กุมภาพันธ์ 2563</StyledP>
                     <Wippo src="/img/Core/Wippo.png" alt="Wippo" />
                 </HomeContent>
             </HomeContainer>
