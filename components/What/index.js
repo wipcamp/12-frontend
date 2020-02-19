@@ -10,7 +10,6 @@ import 'aos/dist/aos.css';
 const WhatBg = styled.div`
     position: relative;
     z-index: 5;
-
 `
 
 const WrapGrid = styled.div`
@@ -39,19 +38,6 @@ const WrapContent = styled.div`
         margin-right: 0px;
     }
 `
-
-const WrapContent2 = styled.div`
-    margin-top: -12px;
-
-    @media (min-width: 768px) {
-        margin-top: -16px;
-    }
-
-    @media (min-width: 1024px) {
-        margin-top: -18px;
-    }
-`
-
 const WrapSideScroll = styled.div`
     margin-top: 1em;
 

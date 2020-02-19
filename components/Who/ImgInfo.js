@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Content } from '../Core/Text'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 const Image = styled.img`
     width: 64px;

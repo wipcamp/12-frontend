@@ -28,10 +28,6 @@ const SIT = styled.div`
     border-radius: 50%;
     display:none ;
 `
-
-const LineHeight = styled.div`
-    line-height: ${props => props.LineHeight};
-`
 const WIPMap = styled(Iframe)`
     width: 80%;
     border: none;

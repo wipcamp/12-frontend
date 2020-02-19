@@ -9,11 +9,7 @@ import 'aos/dist/aos.css';
 
 const WhoContainer = styled.div`
     position: relative;
-    padding-top: 4em;
-
-@media (min-width: 1080px) {
-    
-}    
+    padding-top: 4em;  
 `
 
 const Float = keyframes`
