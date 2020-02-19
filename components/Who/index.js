@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
-import { ImageInfo, WhoMobile } from './ImgInfo'
+import { WhoMobile } from './ImgInfo'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -14,20 +14,6 @@ const WhoContainer = styled.div`
 @media (min-width: 1080px) {
     
 }    
-`
-
-
-const ContentContainer = styled(Container)`
-    /* max-height: 130vh; */
-    @media (min-width: 1080px) {
-        /* padding-bottom:10vh; */
-    }
-    @media (min-width: 1280px) {
-        /* padding-bottom:10vh; */
-    }
-    @media (min-width: 1680px) {
-        /* padding-bottom:20vh; */
-    }
 `
 
 const Float = keyframes`
@@ -180,7 +166,7 @@ export default class Who extends Component {
                         <Fragment></Fragment>
                         : <GroupOfStar />
                 }
-                <ContentContainer fluid={true} >
+                <Container fluid={true} >
                     <Row>
                         <Col>
                             <Header color="white" headerText="WHO" />
@@ -203,12 +189,6 @@ export default class Who extends Component {
                                 textAlignResponsive="left"
                             >
                                 น้อง ๆ ที่มีความสนใจทางด้านไอที<Br/> หรือต้องการตามหาเส้นทางเดิน ของตัวเอง</WhoMobile>
-                                        {/* <ImageInfo 
-                                            src="/img/Who/who1.png" 
-                                            color="white" 
-                                            content="น้อง ๆ ที่มีความสนใจทางด้านไอที หรือต้องการตามหาเส้นทางเดิน ของตัวเอง"                                            
-                                            textAlignDeskTop="center"
-                                        /> */}
                         </Col>
                         <Col lg={this.state.midColumn} md="auto"></Col>
                         <Col lg={this.state.contentColumn} md='5'>
@@ -221,12 +201,6 @@ export default class Who extends Component {
                                 textAlignResponsive="left"                                            
                             >
                                 น้องระดับชั้น<Br2/>มัธยมศึกษาตอนปลาย<Br break={true} /> “ทุกแผนการเรียน”</WhoMobile>
-                                        {/* <ImageInfo 
-                                            src="/img/Who/who2.png" 
-                                            color="white" 
-                                            content="น้องระดับชั้นมัธยมศึกษาตอนปลาย “ทุกแผนการเรียน”" 
-                                            textAlignDeskTop="center"
-                                        /> */}
                         </Col>
                         <Col lg="1" md='1'></Col>
                     </WhoRow>
@@ -245,12 +219,6 @@ export default class Who extends Component {
                                 textAlignResponsive="left"
                             >
                                 น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน<Br/> ได้ตลอดระยะเวลา 5 วัน 4 คืน</WhoMobile>
-                                        {/* <ImageInfo 
-                                            src="/img/Who/who3.png" 
-                                            color="white" 
-                                            content="น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืน ได้ตลอดระยะเวลา 5 วัน 4 คืน" 
-                                            textAlignDeskTop="center"
-                                        /> */}
                         </Col>
                         <Col lg={this.state.midColumn} md='auto' ></Col>
                         <Col lg={this.state.contentColumn} md='5' sm="12">
@@ -263,12 +231,6 @@ export default class Who extends Component {
                                 textAlignResponsive="left"
                             >
                                 น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง<Br/> โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง</WhoMobile>
-                                        {/* <ImageInfo 
-                                            src="/img/Who/who4.png" 
-                                            color="white" 
-                                            content="น้อง ๆ ที่ได้รับการอนุญาตจาก ผู้ปกครอง โดยมีเอกสารเป็น ลายลักษณ์ อักษรที่ถูกต้อง"                                             
-                                            textAlignDeskTop="center"
-                                        /> */}
                         </Col>
                         <Col lg="2" md='1' sm="auto"></Col>
                     </Row>
@@ -277,7 +239,7 @@ export default class Who extends Component {
                             <Image2 src="/img/Core/Wippo.png" alt="Wippo" />
                         </Col>
                     </Row>            
-                </ContentContainer>
+                </Container>
             </WhoContainer>
         )
     }

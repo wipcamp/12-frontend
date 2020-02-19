@@ -3,9 +3,6 @@ import styled from 'styled-components'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Wrap = styled.div`
-    overflow: hidden;
-`
 const HomeContainer = styled.div`
     display: table;
     position: relative;
@@ -102,9 +99,6 @@ const StyledButton = styled.button`
 
 const Wippo = styled.img`
     position: absolute;
-    /* bottom: 2vh;
-    right: 40vw;
-    width: 20vw; */
     display: none;
     z-index: 3;
     animation: float 5s infinite;

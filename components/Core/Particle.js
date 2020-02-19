@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react'
 import Particles from 'react-particles-js';
 import styled from 'styled-components';
 
-
 const ParticleContainer = styled.div`
     background: rgb(9,10,15);
     background: linear-gradient(90deg, rgba(9,10,15,1) 0%, rgba(27,39,53,1) 50%, rgba(9,10,15,1) 100%);
@@ -17,9 +16,8 @@ const ParticleStyleMobile = {
     position:'fixed'
 }
 
-
-
 export default class StarParticle extends Component {
+
     state={
         WindowHeight: '2000px',
         innerHeight: '1000px',
@@ -67,8 +65,7 @@ export default class StarParticle extends Component {
             })  
         }
     }
-
-    
+ 
     getMove = () => {
         return this.state.move
     }
@@ -85,113 +82,117 @@ export default class StarParticle extends Component {
     render() {
         if (this.getMove()){
         return (
-
             <ParticleContainer id="desktop-container">
-            <Particles key="move" height={this.state.WindowHeight} style={ParticleStyle}
-        params={{
-            "particles": {
-                "number": {
-                    "value": 50,
-                    "density": {
-                        "enable": true,
-                        "value_area": 1000
-                    }
-                },
-                "line_linked": {
-                    "enable": false,
-                    "opacity": 0.02
-                },
-                "move": {
-                    "enable": false,
-                    "direction": "right",
-                    "speed": 0
-                },
-                "size": {
-                    "value": 2,
-                    "random": true
-                },
-                "opacity": {
-                    'value': 1,
-                    "anim": {
-                        "enable": true,
-                        "speed": 1,
-                        "opacity_min": 0
-                    }
-                }
-            },
-            "interactivity": {
-                "events": {
-                    "onclick": {
-                        "enable": false,
-                        "mode": "push"
-                    }
-                },
-                "modes": {
-                    "push": {
-                        "particles_nb": 1
-                    }
-                }
-            },
-            "retina_detect": true
-        }} />  
-            {this.props.children}
-             </ParticleContainer>
-        )
-    }else {
-        return (
-
-            <ParticleContainer id="mobile-container">
-            <Particles key="don't move" height={window.clientHeight} style={ParticleStyleMobile}
-        params={{
-            "particles": {
-                "number": {
-                    "value": 120,
-                    "density": {
-                        "enable": true,
-                        "value_area": 1000
-                    }
-                },
-                "line_linked": {
-                    "enable": false,
-                    "opacity": 0.02
-                },
-                "move": {
-                    "enable": true,
-                    "direction": "none",
-                    "speed": 0.125
-                },
-                "size": {
-                    "value": 2,
-                    "random": true
-                },
-                "opacity": {
-                    'value': 0.8,
-                    "anim": {
-                        "enable": true,
-                        "speed": 1,
-                        "opacity_min": 0
-                    }
-                }
-            },
-            "interactivity": {
-                "events": {
-                    "onclick": {
-                        "enable": false,
-                        "mode": "push"
-                    }
-                },
-                "modes": {
-                    "push": {
-                        "particles_nb": 1
-                    }
-                }
-            },
-            "retina_detect": true
-        }} />
-            {this.props.children}
-             </ParticleContainer>
-        )
-    }
+            <Particles 
+                key="move" 
+                height={this.state.WindowHeight} 
+                style={ParticleStyle}
+                params={{
+                    "particles": {
+                        "number": {
+                            "value": 50,
+                            "density": {
+                                "enable": true,
+                                "value_area": 1000
+                            }
+                        },
+                        "line_linked": {
+                            "enable": false,
+                            "opacity": 0.02
+                        },
+                        "move": {
+                            "enable": false,
+                            "direction": "right",
+                            "speed": 0
+                        },
+                        "size": {
+                            "value": 2,
+                            "random": true
+                        },
+                        "opacity": {
+                            'value': 1,
+                            "anim": {
+                                "enable": true,
+                                "speed": 1,
+                                "opacity_min": 0
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "events": {
+                            "onclick": {
+                                "enable": false,
+                                "mode": "push"
+                            }
+                        },
+                        "modes": {
+                            "push": {
+                                "particles_nb": 1
+                            }
+                        }
+                    },
+                    "retina_detect": true
+            }} />  
+                {this.props.children}
+            </ParticleContainer>
+            )
+        }else {
+            return (
+                <ParticleContainer id="mobile-container">
+                <Particles 
+                    key="don't move" 
+                    height={window.clientHeight} 
+                    style={ParticleStyleMobile}
+                    params={{
+                        "particles": {
+                            "number": {
+                                "value": 120,
+                                "density": {
+                                    "enable": true,
+                                    "value_area": 1000
+                                }
+                            },
+                            "line_linked": {
+                                "enable": false,
+                                "opacity": 0.02
+                            },
+                            "move": {
+                                "enable": true,
+                                "direction": "none",
+                                "speed": 0.125
+                            },
+                            "size": {
+                                "value": 2,
+                                "random": true
+                            },
+                            "opacity": {
+                                'value': 0.8,
+                                "anim": {
+                                    "enable": true,
+                                    "speed": 1,
+                                    "opacity_min": 0
+                                }
+                            }
+                        },
+                        "interactivity": {
+                            "events": {
+                                "onclick": {
+                                    "enable": false,
+                                    "mode": "push"
+                                }
+                            },
+                            "modes": {
+                                "push": {
+                                    "particles_nb": 1
+                                }
+                            }
+                        },
+                        "retina_detect": true
+                }} />
+                    {this.props.children}
+                </ParticleContainer>
+            )
+        }
     }
 }
 

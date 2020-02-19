@@ -6,162 +6,105 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const ContactBg = styled.div`
-    display: table;
-    height: 80vh;
-    padding-top: 4rem;
-    position: relative;
-    width: 100%;
-    background-size: cover;
+  display: table;
+  height: 80vh;
+  padding-top: 4rem;
+  position: relative;
+  width: 100%;
+  background-size: cover;
 `
 const ContactImg = styled.img`
-width:2.5em;
-height:2.5em;
-margin-right:1.063em;
-text-align:left;
-border-radius: 0em;
-
-@media (min-width:768px){ 
-margin-right:17px;
-}
-
-@media (min-width: 992px) {
-width:3.75em;
-height:3.75em; 
-margin-right:14px;
-}
-`
-const TextBox = styled.div`
-color: white;
-margin: 25px 0px 25px 0px;
-flex-wrap: wrap;
-width: 100%;
-font-size: 12px;
-line-height: 18px;
-text-align:left;
-text-indent: 0.625em;
-display: flex;
-justify-content: start;
-
-
-@media (min-width: 768px) {
-  display: flex;
-  justify-content: ${props => props.justify || 'unset'};
-  font-size: 20px;
-  width: ${props => props.width || '16em'};
-  margin: 24px 0px 24px 0px;
-  line-height: 28px;
-  text-indent: 10px;
-  
-}
-
-@media (min-width: 992px) {
-  font-size: 20px;
-  line-height: 28px;
-  margin: 25px 0px 25px 0px;
-}
-`
-const StyledLink = styled.a`
-color: white !important;
-text-decoration: none !important;
-font-family: 'Sarabun-Regular', sans-serif;
-font-size: 20px;
-`
-const HeaderStyled = styled.div`
-font-family: 'NotoSans-Regular', sans-serif;
-color:white;
-display:block;
-font-style: normal;
-text-align:center;
-font-weight: 500;
-font-size: 36px;
-line-height: 49px;
-
-@media (min-width: 768px) {
-  font-size: 64px;
-  line-height: 109px;
+  width:2.5em;
+  height:2.5em;
+  margin-right:1.063em;
   text-align:left;
-  line-height: 65px;
-}
+  border-radius: 0em;
 
-@media (min-width: 992px) {
-  font-weight: normal;
-  font-size: 64px;
-  line-height: 65px;
-}
-`
-
-
-const ImgObject = styled.img`
-  display:none;
-
-  @media (min-width: 768px) {
-    width:17.313em;
-    display:inherit;
+  @media (min-width:768px){ 
+    margin-right:17px;
   }
 
   @media (min-width: 992px) {
-    width: 25em;
-    display:inherit;
+    width:3.75em;
+    height:3.75em; 
+    margin-right:14px;
   }
- 
 `
+const TextBox = styled.div`
+  color: white;
+  margin: 25px 0px 25px 0px;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 12px;
+  line-height: 18px;
+  text-align:left;
+  text-indent: 0.625em;
+  display: flex;
+  justify-content: start;
 
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: ${props => props.justify || 'unset'};
+    font-size: 20px;
+    width: ${props => props.width || '16em'};
+    margin: 24px 0px 24px 0px;
+    line-height: 28px;
+    text-indent: 10px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 25px 0px 25px 0px;
+  }
+`
+const StyledLink = styled.a`
+  color: white !important;
+  text-decoration: none !important;
+  font-family: 'Sarabun-Regular', sans-serif;
+  font-size: 20px;
+`
 const Mountain = styled.img`
-  /* position: absolute; */
   bottom: 0;
   width: 100vw;
 `
-const Tower = styled.img`
-  position: absolute;
-  bottom: 20vw;
-  left: 3em;
-  width: 13vw;
-`
-
 const Star = styled.img`
   position: absolute;
   top: 15vh;
   left: 10vw;
   width: 10vw;
 `
-
 const Star2 = styled.img`
   position: absolute;
   top: 70vh;
   right: 8vw;
   width: 10vw;
 `
-
 const Star3 = styled(Star)`
   top: 65vh;
   left: 5vw;
   width: 8vw;
 `
-
 const Star4 = styled(Star2)`
   top: 15vh;
   right: 8vw;
   width: 10vw;
 `
-
 const Star5 = styled(Star)`
   top: 45vh;
   left: 8vw;
   width: 3vw;
 `
-
 const Star6 = styled(Star)`
   top: 85vh;
   left: 5vw;
   width: 4vw;
 `
-
 const Star7 = styled(Star2)`
   top: 83vh;
   right: 10vw;
   width: 4vw;
 `
-
 const GroupOfStar = () => {
   return (
     <Fragment>
@@ -177,6 +120,7 @@ const GroupOfStar = () => {
 }
 
 export default class contact extends Component {
+  
   state = {
     isMobile: true
   };
@@ -222,7 +166,6 @@ export default class contact extends Component {
           <SubHeader subHeaderText="ช่องทางการติดต่อ" color="white" />
           <br />
           <Row>
-            {/* <Col xl="1" lg="1" md="1" sm="12" xs="12"></Col> */}
             <Col className="d-flex justify-content-end" xl="6" lg="6" md="6" sm="12" xs="12">
               <TextBox>
                 <StyledLink href="https://line.me/R/ti/p/%40wipcamp" target="_blank" rel="noopener">
@@ -231,7 +174,6 @@ export default class contact extends Component {
                     </StyledLink>
               </TextBox>
             </Col>
-            {/* <Col xl="1" lg="1" md="1" sm="12" xs="12"></Col> */}
             <Col className="d-flex justify-content-start" xl="6" lg="6" md="6" sm="12" xs="12">
               <TextBox>
                 <StyledLink href="mailto:wippo@wipcamp.com" target="_blank" rel="noopener">
@@ -243,7 +185,6 @@ export default class contact extends Component {
             
           </Row>
           <Row>
-            {/* <Col xl="2" lg="2" md="1" sm="12" xs="12"></Col> */}
             <Col className="d-flex justify-content-end" xl="6" lg="6" md="6" sm="12" xs="12">
               <TextBox>
                 <StyledLink href="https://m.me/wipcamp" target="_blank" rel="noopener">
@@ -252,7 +193,6 @@ export default class contact extends Component {
                     </StyledLink>
               </TextBox>
             </Col>
-            {/* <Col xl="1" lg="1" md="1" sm="12" xs="12"></Col> */}
             <Col className="d-flex justify-content-start" xl="6" lg="6" md="6" sm="12" xs="12">
               <TextBox>
                 <StyledLink href="tel://0922687835" rel="noopener">
@@ -269,7 +209,6 @@ export default class contact extends Component {
           <SubHeader subHeaderText="ช่องทางการติดตาม" color="white" />
           <br />
           <Row>
-            {/* <Col xl="2" lg="2" md="12" sm="12" xs="12"></Col> */}
               <Col xl="4" lg="4" md="4" sm="12" xs="12">
                 <TextBox width="100%" justify="center">
                   <StyledLink href="https://www.facebook.com/wipcamp/" target="_blank" rel="noopener">
@@ -294,7 +233,6 @@ export default class contact extends Component {
                     </StyledLink>
                 </TextBox>
               </Col>
-              {/* <Col xl="1" lg="1" md="12" sm="12" xs="12"></Col> */}
           </Row>
           </Container>
           <Mountain src="/img/Contact/mountain.png" alt="mountain artwork at footer" />

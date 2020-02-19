@@ -73,14 +73,13 @@ export const SubHeader = (props) => {
 export const Content = (props) => {
     return (
         <ContentText color = {props.color}
-         textAlign = {props.textAlign}
-          textIndent = {props.textIndent}
-          textIndentIpad = {props.textIndentIpad}
-          textIndentDesktop = {props.textIndentDesktop}
-          textAlignResponsive = {props.textAlignResponsive}
-           padding = {props.padding}
-           >
-               
+            textAlign = {props.textAlign}
+            textIndent = {props.textIndent}
+            textIndentIpad = {props.textIndentIpad}
+            textIndentDesktop = {props.textIndentDesktop}
+            textAlignResponsive = {props.textAlignResponsive}
+            padding = {props.padding}
+        >
             {props.content}
         </ContentText>
     )

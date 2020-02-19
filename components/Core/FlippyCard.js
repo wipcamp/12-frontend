@@ -76,7 +76,6 @@ const DefaultCardContents = ({ srcFront = props.srcFront , content = props.conte
   <React.Fragment>
     <FrontSide
       style={{
-        // display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
@@ -88,11 +87,9 @@ const DefaultCardContents = ({ srcFront = props.srcFront , content = props.conte
         style={{ maxWidth: '100%', maxHeight: '100%' ,padding: '0px'}}
         alt={alt}
       />
-      
     </FrontSide>
     <BackSide
       style={{
-        // display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
@@ -107,18 +104,6 @@ const DefaultCardContents = ({ srcFront = props.srcFront , content = props.conte
       </BackCard>
     </BackSide>
   </React.Fragment>);
-
-const FlippyOnHover = ({ flipDirection = 'vertical' }) => (
-  <Flippy
-    flipOnHover={true}
-    flipDirection={flipDirection}
-    style={FlippyStyle}
-  >
-    <DefaultCardContents >
-    I flip {flipDirection}ly kb on hover
-    </DefaultCardContents>
-  </Flippy>
-);
 
 const FlippyOnClick = ({ flipDirection = 'vertical', srcFront = props.srcFront , bg = props.bg, content = props.content, header = props.header, alt = props.alt}) => (
   <Flippy
@@ -144,18 +129,6 @@ export const FlippyOnClickInCarousel = ({ flipDirection = 'vertical', srcFront =
   </Flippy>
 );
 
-const ControlledFlippy = ({ isFlipped })  => (
-  <Flippy
-    flipDirection="vertical"
-    isFlipped={isFlipped}
-    style={FlippyStyle}
-  >
-    <DefaultCardContents>
-      I flip vertically for every 3sec. I am controlling by a upper scope.
-    </DefaultCardContents>
-  </Flippy>
-);
-
 class Flippycardnaja extends Component {
   constructor(props) {
     super(props);
@@ -171,7 +144,6 @@ class Flippycardnaja extends Component {
   }
   render() {
     return (
-      
           <FlippyOnClick flipDirection="horizontal" 
             srcFront={this.props.srcFront} 
             content={this.props.content} 
@@ -179,7 +151,6 @@ class Flippycardnaja extends Component {
             header = {this.props.header}
             alt={this.props.alt}
           />
-          
     );
   }
 }
