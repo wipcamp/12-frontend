@@ -105,13 +105,13 @@ const hidePrevButton = () => {
 export default class SideScroll extends Component {
     state = {
         images: [
-            { src: "/img/What/1.png", alt: "wipcamp#11" },
-            { src: "/img/What/2.png", alt: "wipcamp#11" },
-            { src: "/img/What/3.png", alt: "wipcamp#11" },
-            { src: "/img/What/4.png", alt: "wipcamp#11" },
-            { src: "/img/What/5.png", alt: "wipcamp#11" },
+            { src: "/img/What/1.jpg", alt: "wipcamp#11" },
+            { src: "/img/What/2.jpg", alt: "wipcamp#11" },
+            { src: "/img/What/3.jpg", alt: "wipcamp#11" },
+            { src: "/img/What/4.jpg", alt: "wipcamp#11" },
+            { src: "/img/What/5.jpg", alt: "wipcamp#11" },
             { src: "/img/What/8.jpg", alt: "wipcamp#11" },
-            { src: "/img/What/7.png", alt: "wipcamp#11" }
+            { src: "/img/What/7.jpg", alt: "wipcamp#11" }
         ],
         currentIndex: 0,
         translateValue: 0
