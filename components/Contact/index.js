@@ -170,7 +170,7 @@ export default class contact extends Component {
               <TextBox>
                 <StyledLink href="https://line.me/R/ti/p/%40wipcamp" target="_blank" rel="noopener">
                   <ContactImg src="img/Contact/line.png" alt="line icon" />
-                  @wipcamp (มี @)
+                  @wipcamp (มี @ ด้วยนะ)
                     </StyledLink>
               </TextBox>
             </Col>
