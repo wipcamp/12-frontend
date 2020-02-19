@@ -145,7 +145,7 @@ export default class Game extends Component {
                     <Content>
                         <Wrap>
                             <VerticalAlign>
-                                <StyledButton>
+                                <StyledButton aria-label="Center Align">
                                     <a href="https://gamepr.wip.camp/" target="_blank" rel="noopener">
                                         <Play src="/img/Game/play.png" />
                                     </a>
