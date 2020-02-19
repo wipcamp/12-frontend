@@ -185,6 +185,7 @@ export default class SideScroll extends Component {
                             <WhatImage
                                 key={key}
                                 src={data.src}
+                                alt={data.alt}
                             />
                         ))}
                     </div>
