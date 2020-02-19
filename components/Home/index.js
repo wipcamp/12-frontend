@@ -27,6 +27,14 @@ const WipLogoImg = styled.img`
     @media (min-width: 1024px) {
         width: 38.5em;
     }
+
+    @media (min-width: 1366px) {
+        width: 33em;
+    }
+
+    @media (min-width: 1440px) {
+        width: 38.5em;
+    }
 `
 
 const LogoImg = styled.img`
@@ -65,6 +73,16 @@ const WrapLogoCana = styled.div`
     }
 
     @media (min-width: 1024px) {
+        margin-top: 55px;
+        margin-bottom: 70px;
+    }
+
+    @media (min-width: 1366px) {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: 1440px) {
         margin-top: 55px;
         margin-bottom: 70px;
     }
