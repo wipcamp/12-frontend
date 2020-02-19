@@ -8,13 +8,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const WhatBg = styled.div`
-    padding-bottom: 4rem;
     position: relative;
     z-index: 5;
-
-    @media (min-width: 1024px) {
-        padding-bottom: 10vh;
-    }
 `
 
 const WrapGrid = styled.div`
@@ -43,19 +38,6 @@ const WrapContent = styled.div`
         margin-right: 0px;
     }
 `
-
-const WrapContent2 = styled.div`
-    margin-top: -12px;
-
-    @media (min-width: 768px) {
-        margin-top: -16px;
-    }
-
-    @media (min-width: 1024px) {
-        margin-top: -18px;
-    }
-`
-
 const WrapSideScroll = styled.div`
     margin-top: 1em;
 
@@ -156,28 +138,18 @@ export default class What extends Component {
                                     textIndent="24px"
                                     textIndentIpad="50px"
                                     textIndentDesktop="50px"                                
-                                    textAlign="left"
+                                    textAlign="่justify"
                                     color="white"
-                                    content="กลับมาอีกครั้งพร้อมกับภารกิจอันยิ่งใหญ่ ซึ่งเปิดโอกาสให้น้อง ๆ 
-                                        ที่มีความสนใจทางด้านไอที หรือกำลังตามหาเส้นทางของตัวเอง 
-                                        มาร่วมกันเดินทางไปพร้อมกัน โดยน้อง ๆ เปรียบเสมือนนักดูดาว 
-                                        ผู้ถูกเลือกเพื่อออกตามหาแสงสว่างที่หายไปจากดาวราศีต่าง ๆ ที่มีเวลาเพียงแค่ 
-                                        5 วัน 4 คืนเท่านั้น "
+                                    content="กลับมาอีกครั้งกับภารกิจครั้งใหม่ สำหรับน้องที่มีความสนใจทางด้านไอที 
+                                        หรือกำลังตามหาเส้นทางของตัวเอง ซึ่งน้อง ๆ เปรียบเสมือนนักดูดาว 
+                                        ผู้ถูกเลือกเพื่อออกตามหาแสงสว่างที่หายไปจากดาวราศีต่าง ๆ 
+                                        โดยมีผู้พิทักษ์ดวงดาวเป็นผู้ชี้นำทาง หนึ่งภารกิจสำคัญ คือ 
+                                        การเลือกเส้นทางเดินของตัวเอง 2 เส้นทางจากทั้งหมด 
+                                        นั่นคือ Programmer, Website, UX & UI และ Network 
+                                        นอกจากนี้ ยังมีภารกิจอื่น ๆ มากมายที่ยังรอคอยอยู่ 
+                                        เรื่องราวครั้งนี้จะเป็นอย่างไร ภารกิจนี้จะสำเร็จหรือไม่ 
+                                        ติดตามได้ใน ค่ายเส้นทางสู่ฝันนักไอที ครั้งที่ 12 (WIP Camp #12)"
                                 />
-                                <WrapContent2>
-                                    <Content
-                                        textIndent="24px"
-                                        textIndentIpad="50px"
-                                        textIndentDesktop="50px"                                
-                                        textAlign="left"
-                                        color="white"
-                                        content="ในการเดินทางครั้งนี้เหล่านักดูดาว ทั้งหลาย จะมีผู้พิทักษ์ดวงดาวเป็นผู้ชี้นำทาง 
-                                            หนึ่งในภารกิจสำคัญ คือ การตัดสินใจเลือกเส้นทางเดินของตัวเองจากทั้งหมด 4 เส้นทาง ได้แก่ 
-                                            Programming, Web Developer, UX/UI และ Network นอกจากนั้น ยังมีกิจกรรมต่าง ๆ รวมไปถึง 
-                                            IT Management ซึ่งเป็น Workshop พิเศษสำหรับเหล่านักดูดาวทั้งหลาย สุดท้ายแล้ว เรื่องราวครั้งนี้ 
-                                            จะเป็นอย่างไร พวกเขาจะทำภารกิจสำเร็จหรือไม่ ติดตามได้ใน ค่ายเส้นทางสู่ฝันนักไอที ครั้งที่ 12 (WIP Camp #12)"
-                                        />
-                                </WrapContent2>
                             </WrapContent>
                         </Col>
                         <Col xl="6" lg={this.state.contentColumn2} md="12" sm="12" xs="12" className="my-auto">

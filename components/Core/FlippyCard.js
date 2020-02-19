@@ -72,11 +72,10 @@ const Header = (props) => {
 }
 
 
-const DefaultCardContents = ({ srcFront = props.srcFront , content = props.content, bg = props.bg, header = props.header}) => (
+const DefaultCardContents = ({ srcFront = props.srcFront , content = props.content, bg = props.bg, header = props.header, alt = props.alt}) => (
   <React.Fragment>
     <FrontSide
       style={{
-        // display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
@@ -86,12 +85,11 @@ const DefaultCardContents = ({ srcFront = props.srcFront , content = props.conte
       <img
         src={srcFront}
         style={{ maxWidth: '100%', maxHeight: '100%' ,padding: '0px'}}
+        alt={alt}
       />
-      
     </FrontSide>
     <BackSide
       style={{
-        // display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
@@ -107,50 +105,26 @@ const DefaultCardContents = ({ srcFront = props.srcFront , content = props.conte
     </BackSide>
   </React.Fragment>);
 
-const FlippyOnHover = ({ flipDirection = 'vertical' }) => (
-  <Flippy
-    flipOnHover={true}
-    flipDirection={flipDirection}
-    style={FlippyStyle}
-  >
-    <DefaultCardContents >
-    I flip {flipDirection}ly kb on hover
-    </DefaultCardContents>
-  </Flippy>
-);
-
-const FlippyOnClick = ({ flipDirection = 'vertical', srcFront = props.srcFront , bg = props.bg, content = props.content, header = props.header}) => (
+const FlippyOnClick = ({ flipDirection = 'vertical', srcFront = props.srcFront , bg = props.bg, content = props.content, header = props.header, alt = props.alt}) => (
   <Flippy
     flipOnClick={true}
     flipDirection={flipDirection}
     style={FlippyStyle3}
   >
-    <DefaultCardContents srcFront={srcFront} bg={bg} content={content} header={header}>
+    <DefaultCardContents srcFront={srcFront} bg={bg} content={content} header={header} alt={alt}>
     I flip {flipDirection}ly on click {srcFront}
     </DefaultCardContents>
   </Flippy>
 );
 
-export const FlippyOnClickInCarousel = ({ flipDirection = 'vertical', srcFront = props.srcFront , bg = props.bg, content = props.content, header = props.header}) => (
+export const FlippyOnClickInCarousel = ({ flipDirection = 'vertical', srcFront = props.srcFront , bg = props.bg, content = props.content, header = props.header, alt = props.alt}) => (
   <Flippy
     flipOnClick={true}
     flipDirection={flipDirection}
     style={FlippyStyle}
   >
-    <DefaultCardContents srcFront={srcFront} bg={bg} content={content} header={header}>
+    <DefaultCardContents srcFront={srcFront} bg={bg} content={content} header={header} alt={alt}>
     I flip {flipDirection}ly on click {srcFront}
-    </DefaultCardContents>
-  </Flippy>
-);
-
-const ControlledFlippy = ({ isFlipped })  => (
-  <Flippy
-    flipDirection="vertical"
-    isFlipped={isFlipped}
-    style={FlippyStyle}
-  >
-    <DefaultCardContents>
-      I flip vertically for every 3sec. I am controlling by a upper scope.
     </DefaultCardContents>
   </Flippy>
 );
@@ -170,14 +144,13 @@ class Flippycardnaja extends Component {
   }
   render() {
     return (
-      
           <FlippyOnClick flipDirection="horizontal" 
             srcFront={this.props.srcFront} 
             content={this.props.content} 
             bg={this.props.bg} 
             header = {this.props.header}
+            alt={this.props.alt}
           />
-          
     );
   }
 }

@@ -4,12 +4,11 @@ import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Header, SubHeader } from '../Core/Text'
 import { isDayNow, dayAnnouce, dayCloseRegis, dayConfirm, dayNow, dayWip, dayOpenRegis } from './Day'
-import { Parallax } from 'react-scroll-parallax'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const WhenContainer = styled.div`
-    padding: 0rem 0 3rem 0;
+    margin-top: 4em;
     position: relative;
 `
 const WhenImg = styled.img`
@@ -188,6 +187,7 @@ export default class When extends Component {
     }
 
     componentDidMount() {
+        this.dateCheck()
         window.addEventListener('resize', this.updateDimensions)
         this.updateDimensions()
         AOS.init({
@@ -222,31 +222,31 @@ export default class When extends Component {
                         <Col lg='1' md="auto" sm="auto"></Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer>
-                                <WhenImg src='/img/When/openregis.webp' glow={this.state.openRegis} alt="open register" />
-                                <TimerText ><Span>เปิดรับสมัคร</Span><br /> 19 กุมภาพันธ์ 2563</TimerText>
+                                <WhenImg src='/img/When/openregis.png' glow={this.state.openRegis} alt="open register" />
+                                <TimerText ><Span>เปิดรับสมัคร</Span><br /> 21 กุมภาพันธ์ 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer>
-                                <WhenImg src='/img/When/closeregis.webp' glow={this.state.closeRegis} alt="close register" />
+                                <WhenImg src='/img/When/closeregis.png' glow={this.state.closeRegis} alt="close register" />
                                 <TimerText ><Span>ปิดรับสมัคร</Span><br /> 12 มีนาคม 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer>
-                                <WhenImg src='/img/When/announce.webp' glow={this.state.announce} alt="announce" />
+                                <WhenImg src='/img/When/announce.png' glow={this.state.announce} alt="announce" />
                                 <TimerText><Span>ประกาศผล</Span><br />28 มีนาคม 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer>
-                                <WhenImg src='/img/When/confirm.webp' glow={this.state.confirm} alt="confirm" />
-                                <TimerText><Span>ยืนยันสิทธิ์</Span><br />29 เมษายน 2563<br /> ถึง 4 พฤษภาคม 2563</TimerText>
+                                <WhenImg src='/img/When/confirm.png' glow={this.state.confirm} alt="confirm" />
+                                <TimerText><Span>ยืนยันสิทธิ์</Span><br />29 มีนาคม 2563<br /> ถึง 4 เมษายน 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md={this.state.contentColumn} sm="12">
                             <BoxContainer>
-                                <WhenImg src='/img/When/wipday.webp' glow={this.state.dayWIP} alt="wipcamp day" />
+                                <WhenImg src='/img/When/wipday.png' glow={this.state.dayWIP} alt="wipcamp day" />
                                 <TimerText><Span>เปิดค่าย</Span><br />27 พฤษภาคม 2563<br /> ถึง 31 พฤษภาคม 2563</TimerText>
                             </BoxContainer>
                         </Col>

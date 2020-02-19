@@ -2,18 +2,15 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Header, SubHeader, Content } from '../Core/Text'
 import CardInGrid from './CardInGrid'
-import Flippycardnaja from '../Core/FlippyCard'
 import { Container, Row, Col } from 'reactstrap'
 import CarouselTrack from './Carousel'
-import { Parallax } from 'react-scroll-parallax'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const TrackBg = styled.div`
     position: relative;
-    padding-bottom: 4rem;
+    margin-top: 4em;
     @media (min-width: 1024px) {
-        padding-bottom: 10vh;
     }
 `
 
@@ -112,8 +109,8 @@ export default class Track extends Component {
                                     textAlign="left"
                                     color="white"
                                     content="แทร็ก (Track) หมายถึง สายอาชีพไอทีที่เปิดโอกาสให้น้อง ๆ 
-                                        ได้เข้ามาสัมผัสและเรียนรู้ตามความสนใจ น้อง ๆ จะได้เลือก Track ตามที่ตนเองสนใจ     
-                                        2 Track จากทั้งหมด 4 Track โดยเลือก Track ที่น้องสนใจลำดับที่ 1 " />
+                                        ได้เข้ามาสัมผัสและเรียนรู้ตามความสนใจ โดยน้อง ๆ จะได้เลือก Track ตามที่ตนเองสนใจ     
+                                        2 Track จากทั้งหมด 4 Track ซึ่งสามารถเลือก Track ที่สนใจลำดับที่ 1 ได้ตอนสมัคร" />
                             </Trackcontainer>
                         </Col>
                         <Col xl="1" lg="1" md="1" sm="1" xs="1"></Col>

@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
-import Countdown from 'react-countdown'
 import styled from 'styled-components'
-import { SubHeader } from './Text'
 import StarParticle from './Particle'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Link from 'next/link'
 
 const OverFlowHidden = styled.div`
     overflow: hidden;
@@ -159,38 +156,38 @@ const CloudRight3 = styled(CloudRight)`
 `
 
 const Li = styled.li`
-  display: inline-block;
-  font-size: 0.5em;
-  list-style-type: none;
-  margin-left: 0.5em;
-  text-transform: uppercase;
-  letter-spacing: 0px;
-  font-family: 'NotoSansThai-Regular', sans-serif;
+    display: inline-block;
+    font-size: 0.5em;
+    list-style-type: none;
+    margin-left: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-family: 'NotoSansThai-Regular', sans-serif;
     color: #6F7F8D;
-   & span {
-    width: 1.5em;
-    margin-bottom: 0.2em;
-    line-height: 1.4em;
-    background-color: rgb(0,0,0,0.2);
-    display: block;
-    color: #ffffff;
-    font-size: 2.5rem;
-   }
-   @media (min-width: 768px) {
+    & span {
+        width: 1.5em;
+        margin-bottom: 0.2em;
+        line-height: 1.4em;
+        background-color: rgb(0,0,0,0.2);
+        display: block;
+        color: #ffffff;
+        font-size: 2.5rem;
+    }
+    
+    @media (min-width: 768px) {
         font-size: 1em;
         & span {
-    display: block;
-    font-size: 4.5rem;
-   }
+        display: block;
+        font-size: 4.5rem;
+        }
     }
-
-
 `
 
 const Facebook = styled.img`
     width: 30px;
     height: 30px;
     transform: translateY(-0.2em);
+    
     @media (min-width: 768px) {
         width: 50px;
         height: 50px;
@@ -225,12 +222,12 @@ export default class ComingSoon extends Component {
                             <br />
                             <br />
                             <ComingSoonText>C O M I N G &nbsp;&nbsp;S O O N</ComingSoonText>
-                            {/* <ul>
+                            <ul>
                                 <Li><span id="days">{this.props.day}</span>days</Li>
                                 <Li><span id="hours">{this.props.hr}</span>Hours</Li>
                                 <Li><span id="minutes">{this.props.min}</span>Minutes</Li>
                                 <Li><span id="seconds">{this.props.sec}</span>Seconds</Li>
-                            </ul> */}
+                            </ul>
                             <br />
                             <StayTune href="https://www.facebook.com/wipcamp/" target="_blank" rel="noopener">
                                 ติดตามได้ที่&nbsp;&nbsp;

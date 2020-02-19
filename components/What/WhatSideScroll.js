@@ -78,23 +78,6 @@ const RightArrowButton = styled.div`
     }
 `
 
-const prev = {
-    position: 'absolute',
-    fill: 'white',
-    top: '133px',
-    left: '25px',
-    zIndex: '3',
-    transform: 'rotate(180deg)'
-}
-
-const next = {
-    position: 'absolute',
-    fill: 'white',
-    top: '133px',
-    right: '17.95px',
-    zIndex: '3'
-}
-
 const LeftArrow = (props) => {
     return (
         <LeftArrowButton onClick={props.goToPrevSlide} id="prevButton">
@@ -122,13 +105,13 @@ const hidePrevButton = () => {
 export default class SideScroll extends Component {
     state = {
         images: [
-            { src: "/img/What/1.png", alt: "wipcamp#11" },
-            { src: "/img/What/2.png", alt: "wipcamp#11" },
-            { src: "/img/What/3.png", alt: "wipcamp#11" },
-            { src: "/img/What/4.png", alt: "wipcamp#11" },
-            { src: "/img/What/5.png", alt: "wipcamp#11" },
+            { src: "/img/What/1.jpg", alt: "wipcamp#11" },
+            { src: "/img/What/2.jpg", alt: "wipcamp#11" },
+            { src: "/img/What/3.jpg", alt: "wipcamp#11" },
+            { src: "/img/What/4.jpg", alt: "wipcamp#11" },
+            { src: "/img/What/5.jpg", alt: "wipcamp#11" },
             { src: "/img/What/8.jpg", alt: "wipcamp#11" },
-            { src: "/img/What/7.png", alt: "wipcamp#11" }
+            { src: "/img/What/7.jpg", alt: "wipcamp#11" }
         ],
         currentIndex: 0,
         translateValue: 0
@@ -170,7 +153,7 @@ export default class SideScroll extends Component {
     render() {
 
         return (
-            <div style={{ position: 'relative', zIndex: '2' }} id="container" >
+            <div style={{ position: 'relative', zIndex: '2' }}>
                 <Wrap >
                     <div
                         style={{
@@ -185,6 +168,7 @@ export default class SideScroll extends Component {
                             <WhatImage
                                 key={key}
                                 src={data.src}
+                                alt={data.alt}
                             />
                         ))}
                     </div>

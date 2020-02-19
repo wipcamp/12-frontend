@@ -9,25 +9,29 @@ export default class Trackpage extends Component {
                 srcFront: "/img/Track/programming.png", 
                 bg: "/img/Track/programmingb.png", 
                 content: "เส้นทางที่จะพาไปทำความเข้าใจ Concept ของการเขียนโปรแกรม ผ่านการเรียนภาษาจาวา (Java Programming)", 
-                header: "PROGRAMMER"
+                header: "PROGRAMMER",
+                alt: "programmer card"
             },
             { 
                 srcFront: "/img/Track/website.png", 
                 bg: "/img/Track/websiteb.png", 
                 content: "เส้นทางที่จะพาไปรู้จักสายอาชีพด้านเว็บไซต์ เข้าใจเกี่ยวกับเว็บไซต์ด้วยการเขียน HTML และ CSS", 
-                header: "WEBSITE" 
+                header: "WEBSITE",
+                alt: "website card" 
             },
             {   
                 srcFront: "/img/Track/uxui.png", 
                 bg: "/img/Track/uxuib.png", 
                 content: "เส้นทางที่จะพาไปเรียนรู้ Concept ของ UX & UI และการออกแบบแอปพลิเคชันหรือเว็บไซต์ของเราให้ตอบโจทย์กับผู้ใช้งาน", 
-                header: "UX/UI" 
+                header: "UX&UI",
+                alt: "uxui card" 
             },
             { 
                 srcFront: "/img/Track/network.png", 
                 bg: "/img/Track/networkb.png", 
                 content: " เส้นทางที่จะพาไปสัมผัสอุปกรณ์เครือข่ายของจริง รู้จักสายอาชีพด้าน Network และตามติด Internet Trends ในปัจจุบัน", 
-                header: "NETWORK" 
+                header: "NETWORK",
+                alt: "network card" 
             }
         ]
     }
@@ -40,6 +44,7 @@ export default class Trackpage extends Component {
                                 content={data.content}
                                 bg={data.bg} 
                                 header={data.header}
+                                alt={data.alt}
                             /> 
                         </div>
                     </Col>);
