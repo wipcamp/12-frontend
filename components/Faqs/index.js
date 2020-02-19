@@ -560,7 +560,7 @@ export default class Faqs extends Component {
                                             <Row className="">
                                             <Col lg='12'>
                                                 <FaqsImgContainer>
-                                                    <FaqsImg src="/img/Faqs/Book.png" />
+                                                    <FaqsImg src="/img/Faqs/Book.png" alt="book" />
                                                 </FaqsImgContainer>
                                             </Col>
                                         </Row>
