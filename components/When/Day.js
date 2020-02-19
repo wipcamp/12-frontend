@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 
 export const dayNow = dayjs()
-export const dayOpenRegis = dayjs("2020-02-19")
+export const dayOpenRegis = dayjs("2020-02-21")
 export const dayCloseRegis = dayjs("2020-03-12")
 export const dayAnnouce = dayjs("2020-03-28")
 export const dayConfirm = dayjs("2020-03-29")
