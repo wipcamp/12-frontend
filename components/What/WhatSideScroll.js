@@ -78,23 +78,6 @@ const RightArrowButton = styled.div`
     }
 `
 
-const prev = {
-    position: 'absolute',
-    fill: 'white',
-    top: '133px',
-    left: '25px',
-    zIndex: '3',
-    transform: 'rotate(180deg)'
-}
-
-const next = {
-    position: 'absolute',
-    fill: 'white',
-    top: '133px',
-    right: '17.95px',
-    zIndex: '3'
-}
-
 const LeftArrow = (props) => {
     return (
         <LeftArrowButton onClick={props.goToPrevSlide} id="prevButton">
@@ -170,7 +153,7 @@ export default class SideScroll extends Component {
     render() {
 
         return (
-            <div style={{ position: 'relative', zIndex: '2' }} id="container" >
+            <div style={{ position: 'relative', zIndex: '2' }}>
                 <Wrap >
                     <div
                         style={{
