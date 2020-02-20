@@ -193,10 +193,12 @@ export default class When extends Component {
         AOS.init({
             duration: 3000
         })
+        window.addEventListener("deviceorientation",this.updateDimensions)
     }
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
+        window.removeEventListener("deviceorientation",this.updateDimensions);
     }
 
     getType = () => {
