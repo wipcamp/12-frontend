@@ -10,7 +10,6 @@ import 'aos/dist/aos.css';
 const WhatBg = styled.div`
     position: relative;
 `
-
 const WrapContent = styled.div`
     margin-left: 36px;
     margin-right: 36px;
@@ -115,7 +114,7 @@ export default class What extends Component {
                     <Header color="white" headerText="WHAT" />
                 </div>
                 <SubHeader color="white" subHeaderText="ค่ายนี้คืออะไร ?" />  
-                
+                <br />
                     <Row>
                         <Col xl="1" lg="1" md="12" sm="12" xs="12"></Col>
                         <Col xl="5" lg={this.state.contentColumn1} md="12" sm="12" xs="12">
@@ -143,8 +142,7 @@ export default class What extends Component {
                                 <WhatSideScroll />
                             </WrapSideScroll>
                         </Col>
-                    </Row>
-                              
+                    </Row>      
             </WhatBg >
         )
     }
