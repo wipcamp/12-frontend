@@ -9,19 +9,6 @@ import 'aos/dist/aos.css';
 
 const WhatBg = styled.div`
     position: relative;
-    z-index: 5;
-`
-
-const WrapGrid = styled.div`
-    margin-top: 1em;
-    
-    @media (min-width: 768px) {
-        margin-top: 1.5em;
-    }
-
-    @media (min-width: 1024px) {
-        margin-top: 2em;
-    }
 `
 
 const WrapContent = styled.div`
@@ -124,12 +111,11 @@ export default class What extends Component {
                         <Fragment></Fragment>
                         : <GroupOfCloud />
                 }
-                <br />
                 <div className="text-center">
                     <Header color="white" headerText="WHAT" />
                 </div>
                 <SubHeader color="white" subHeaderText="ค่ายนี้คืออะไร ?" />  
-                <WrapGrid>
+                
                     <Row>
                         <Col xl="1" lg="1" md="12" sm="12" xs="12"></Col>
                         <Col xl="5" lg={this.state.contentColumn1} md="12" sm="12" xs="12">
@@ -158,7 +144,7 @@ export default class What extends Component {
                             </WrapSideScroll>
                         </Col>
                     </Row>
-                </WrapGrid>                
+                              
             </WhatBg >
         )
     }
