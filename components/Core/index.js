@@ -25,6 +25,9 @@ export default class Wrapper extends Component {
     
     componentDidMount(){
         this.configScroll();
+        document.oncontextmenu = function() {
+            return false;
+        }
         document.onkeydown = function (e) {
             if (event.keyCode === 123) {
               return false;
