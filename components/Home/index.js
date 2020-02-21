@@ -27,6 +27,14 @@ const WipLogoImg = styled.img`
     @media (min-width: 1024px) {
         width: 38.5em;
     }
+
+    @media (min-width: 1366px) {
+        width: 33em;
+    }
+
+    @media (min-width: 1440px) {
+        width: 38.5em;
+    }
 `
 
 const LogoImg = styled.img`
@@ -68,6 +76,16 @@ const WrapLogoCana = styled.div`
         margin-top: 55px;
         margin-bottom: 70px;
     }
+
+    @media (min-width: 1366px) {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: 1440px) {
+        margin-top: 55px;
+        margin-bottom: 70px;
+    }
 `
 
 const StyledButton = styled.button`
@@ -80,12 +98,11 @@ const StyledButton = styled.button`
     padding: 0.75em 3em;
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
     border-radius: 5px;
-    filter: brightness(60%);
 
-    /* :hover {
+    :hover {
         background-color: white;
         color: #F4693D !important;
-    } */
+    }
 
     @media (min-width: 768px) {
         font-size: 24px;
@@ -261,11 +278,11 @@ export default class Home extends Component {
                     <WrapLogoCana>
                         <LogoCana src="/img/Home/LogoCana.png" alt="kmutt logo, sit logo, wipcamp logo" />
                     </WrapLogoCana>
-                    
-                        <StyledButton disabled>
+                    <a href="https://itim.wip.camp/">
+                        <StyledButton>
                             REGISTER
                         </StyledButton>
-                    
+                    </a>
                     <StyledP className="mt-2">เปิดรับสมัครวันที่ 21 กุมภาพันธ์ 2563</StyledP>
                     <Wippo src="/img/Core/Wippo.png" alt="Wippo" />
                 </HomeContent>
