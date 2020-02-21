@@ -229,7 +229,7 @@ export default class When extends Component {
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer>
                                 <WhenImg src='/img/When/closeregis.png' glow={this.state.closeRegis} alt="close register" />
-                                <TimerText ><Span>ปิดรับสมัคร</Span><br /> 12 มีนาคม 2563</TimerText>
+                                <TimerText ><Span>ปิดรับสมัคร</Span><br /> 17 มีนาคม 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
