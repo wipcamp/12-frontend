@@ -62,6 +62,7 @@ const BoxContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible;
     @media (min-width: 1080px) {
         align-self: center;
         flex-direction:column;
