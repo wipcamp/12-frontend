@@ -24,13 +24,46 @@ const Wrap = styled.div`
 export default class Wrapper extends Component {
     
     componentDidMount(){
-        this.configScroll()
+        this.configScroll();
+        document.oncontextmenu = function() {
+            return false;
+        }
+        document.onkeydown = function (e) {
+            if (event.keyCode === 123) {
+              return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+              return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+              return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+              return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+              return false;
+            }
+            if (e.metaKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+              return false;
+            }
+        }
     }
 
     configScroll = () => {
         (window.innerWidth >= 768)?
         configureAnchors({offset: -80, scrollDuration: 600}) 
         :  configureAnchors({offset: 0, scrollDuration: 600}) 
+    }
+
+    disabledRightClick = () => {
+        if (e.metaKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+            return false;
+        }
+        
     }
 
     render() {

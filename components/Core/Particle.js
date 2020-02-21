@@ -93,7 +93,7 @@ export default class StarParticle extends Component {
                             "value": 50,
                             "density": {
                                 "enable": true,
-                                "value_area": 1000
+                                "value_area": 800
                             }
                         },
                         "line_linked": {
@@ -131,7 +131,7 @@ export default class StarParticle extends Component {
                             }
                         }
                     },
-                    "retina_detect": true
+                    "retina_detect": false
             }} />  
                 {this.props.children}
             </ParticleContainer>
@@ -146,10 +146,10 @@ export default class StarParticle extends Component {
                     params={{
                         "particles": {
                             "number": {
-                                "value": 120,
+                                "value": 80,
                                 "density": {
                                     "enable": true,
-                                    "value_area": 1000
+                                    "value_area": 800
                                 }
                             },
                             "line_linked": {
@@ -187,7 +187,7 @@ export default class StarParticle extends Component {
                                 }
                             }
                         },
-                        "retina_detect": true
+                        "retina_detect": false
                 }} />
                     {this.props.children}
                 </ParticleContainer>

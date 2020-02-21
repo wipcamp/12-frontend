@@ -16,6 +16,7 @@ const WhenImg = styled.img`
     margin: 20px 0 20px 0;
     transition: filter 0.5s ease-in;
     filter: ${ props => props.glow ? 'drop-shadow(0 0 1rem #2C898B)' : 'grayscale(90%)'};
+    -webkit-filter: ${ props => props.glow ? 'drop-shadow(0 0 1rem #2C898B)' : 'grayscale(90%)'};
     @media (min-width: 768px) {
     width: 8em;
     margin: 20px 20px 20px 20px;
@@ -61,6 +62,7 @@ const BoxContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible;
     @media (min-width: 1080px) {
         align-self: center;
         flex-direction:column;
@@ -179,7 +181,7 @@ export default class When extends Component {
                 confirm: true
             })
         }
-        if (dayConfirm.isBefore(dayNow) || dayConfirm.isSame(dayNow)) {
+        if (dayWip.isBefore(dayNow) || dayWip.isSame(dayNow)) {
             this.setState({
                 dayWIP: true
             })
@@ -193,10 +195,12 @@ export default class When extends Component {
         AOS.init({
             duration: 3000
         })
+        window.addEventListener("deviceorientation",this.updateDimensions)
     }
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
+        window.removeEventListener("deviceorientation",this.updateDimensions);
     }
 
     getType = () => {
@@ -229,7 +233,7 @@ export default class When extends Component {
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer>
                                 <WhenImg src='/img/When/closeregis.png' glow={this.state.closeRegis} alt="close register" />
-                                <TimerText ><Span>ปิดรับสมัคร</Span><br /> 12 มีนาคม 2563</TimerText>
+                                <TimerText ><Span>ปิดรับสมัคร</Span><br /> 17 มีนาคม 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
