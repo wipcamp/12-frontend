@@ -210,11 +210,6 @@ const CloudRight3 = styled(CloudRight)`
     bottom: 0vh;
     width: 45vw;
 `
-
-const StyledP = styled.p`
-    color: white;
-    font-family: 'Sarabun-Regular';
-`
 const StarAndCloud = () => {
     return (
         <Fragment>
@@ -283,7 +278,6 @@ export default class Home extends Component {
                             REGISTER
                         </StyledButton>
                     </a>
-                    <StyledP className="mt-2">เปิดรับสมัครวันที่ 21 กุมภาพันธ์ 2563</StyledP>
                     <Wippo src="/img/Core/Wippo.png" alt="Wippo" />
                 </HomeContent>
             </HomeContainer>
