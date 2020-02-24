@@ -33,6 +33,18 @@ const Content = styled.div`
   padding-bottom: 62%;
   text-align: center;
 
+  @media (min-width: 360px) {
+    padding-bottom: 79%;
+  }
+
+  @media (min-width: 375px) {
+    padding-bottom: 82%;
+  }
+
+  @media (min-width: 411px) {
+    padding-bottom: 86%;
+  }
+
   @media (min-width: 768px) {
     font-size: 22px;
     padding-bottom: 63%;
@@ -48,7 +60,7 @@ const Content = styled.div`
   }
 `
 const FlippyStyle = {
-    width: '170px',
+    width: '53.125vw',
     height: 'auto',
     padding: '0px',
     margin: '0px 0px 0px 0px',

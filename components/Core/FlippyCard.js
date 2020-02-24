@@ -48,7 +48,7 @@ const Content = styled.div`
 `
 
 const FlippyStyle = {
-  width: '170px',
+  width: '53.125vw',
   height: 'auto',
   padding: '0px',
   margin: '0px 0px 0px 0px',
