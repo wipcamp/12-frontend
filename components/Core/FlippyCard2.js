@@ -6,12 +6,11 @@ import './FlippyCSS.css';
 const BackCard = styled.div`
   background-image: url(${props => props.bg});
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   width: 100%;
   height: 100%;
   max-width: 100%;
   max-height: 100%;
-  position: relative;
 `
 
 const StyledCardHeader = styled.h4`
@@ -31,11 +30,24 @@ const Content = styled.div`
   padding-top: 15%;
   padding-left: 12%;
   padding-right: 12%;
-
+  padding-bottom: 62%;
   text-align: center;
+
+  @media (min-width: 360px) {
+    padding-bottom: 79%;
+  }
+
+  @media (min-width: 375px) {
+    padding-bottom: 82%;
+  }
+
+  @media (min-width: 411px) {
+    padding-bottom: 86%;
+  }
 
   @media (min-width: 768px) {
     font-size: 22px;
+    padding-bottom: 63%;
   }
 
   @media (min-width: 1024px) {
@@ -44,16 +56,16 @@ const Content = styled.div`
 
   @media (min-width: 1280px) {
     font-size: 18px;
+    padding-bottom: 60%;
   }
 `
-
 const FlippyStyle = {
-  width: '53.125vw',
-  height: 'auto',
-  padding: '0px',
-  margin: '0px 0px 0px 0px',
-
-}
+    width: '53.125vw',
+    height: 'auto',
+    padding: '0px',
+    margin: '0px 0px 0px 0px',
+  
+  }
 
 const FlippyStyle3 = {
   width: '361.55px',
@@ -82,11 +94,13 @@ const DefaultCardContents = ({ srcFront = props.srcFront, content = props.conten
         padding: '0px'
       }}
     >
-      <img
-        src={srcFront}
-        style={{ maxWidth: '100%', maxHeight: '100%', padding: '0px' }}
-        alt={alt}
-      />
+      <BackCard bg={bg} >
+        <Content>
+          <Header header={header} />
+          <br />
+          {content}
+        </Content>
+      </BackCard>
     </FrontSide>
     <BackSide
       style={{
@@ -95,16 +109,15 @@ const DefaultCardContents = ({ srcFront = props.srcFront, content = props.conten
         flexDirection: 'column',
         padding: '0px'
       }}>
-      <BackCard bg={bg}>
-        <Content>
-          <Header header={header} />
-          <br />
-          {content}
-        </Content>
-      </BackCard>
+      
+      <img
+        src={srcFront}
+        style={{ maxWidth: '100%', maxHeight: '100%', padding: '0px' }}
+        alt={alt}
+      />
     </BackSide>
   </React.Fragment>);
-
+  
 const FlippyOnClick = ({ flipDirection = 'vertical', srcFront = props.srcFront, bg = props.bg, content = props.content, header = props.header, alt = props.alt }) => (
   <Flippy
     flipOnClick={true}
@@ -117,23 +130,23 @@ const FlippyOnClick = ({ flipDirection = 'vertical', srcFront = props.srcFront, 
   </Flippy>
 );
 
-export const FlippyOnClickInCarousel = ({ flipDirection = 'vertical', srcFront = props.srcFront, bg = props.bg, content = props.content, header = props.header, alt = props.alt }) => (
-  <Flippy
-    flipOnClick={true}
-    flipDirection={flipDirection}
-    style={FlippyStyle}
-  >
-    <DefaultCardContents srcFront={srcFront} bg={bg} content={content} header={header} alt={alt}>
-      I flip {flipDirection}ly on click {srcFront}
-    </DefaultCardContents>
-  </Flippy>
-);
+export const FlippyOnClickInCarousel2 = ({ flipDirection = 'vertical', srcFront = props.srcFront, bg = props.bg, content = props.content, header = props.header, alt = props.alt }) => (
+    <Flippy
+      flipOnClick={true}
+      flipDirection={flipDirection}
+      style={FlippyStyle}
+    >
+      <DefaultCardContents srcFront={srcFront} bg={bg} content={content} header={header} alt={alt}>
+        I flip {flipDirection}ly on click {srcFront}
+      </DefaultCardContents>
+    </Flippy>
+  );
 
-export default class Flippycardnaja extends Component {
+export default class Flippycardnaja2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isFlipped: false,
+      isFlipped: true,
     };
 
     setInterval(() => {

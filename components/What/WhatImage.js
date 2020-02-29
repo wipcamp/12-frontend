@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Image = styled.img`
     width: auto;
-    height: 116px;
+    height: 20.5vh;
     scroll-snap-align: center;
     padding: 0px 10px 0px 10px;
     

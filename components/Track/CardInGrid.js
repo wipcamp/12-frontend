@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import {Container,Row,Col} from 'reactstrap'
 import Flippycardnaja from '../Core/FlippyCard'
-
+import Flippycardnaja2 from '../Core/FlippyCard2'
 export default class Trackpage extends Component {
     state = {
-        cards: [
+        card: [
             { 
                 srcFront: "/img/Track/programming.png", 
                 bg: "/img/Track/programmingb.png", 
                 content: "เส้นทางที่จะพาไปทำความเข้าใจ Concept ของการเขียนโปรแกรม ผ่านการเรียนภาษาจาวา (Java Programming)", 
                 header: "PROGRAMMER",
                 alt: "programmer card"
-            },
+            }
+        ],
+        cards: [
             { 
                 srcFront: "/img/Track/website.png", 
                 bg: "/img/Track/websiteb.png", 
@@ -36,6 +38,19 @@ export default class Trackpage extends Component {
         ]
     }
     render() {
+        const element = this.state.card.map((data, key) => {
+            return (<Col xl='3' lg='3' xs='6' key={key}> 
+                        <div className=" d-flex justify-content-lg-center justify-content-md-end">
+                            <Flippycardnaja2 
+                                srcFront={data.srcFront} 
+                                content={data.content}
+                                bg={data.bg} 
+                                header={data.header}
+                                alt={data.alt}
+                            /> 
+                        </div>
+                    </Col>);
+        })
         const elements = this.state.cards.map((data, key) => {
             return (<Col xl='3' lg='3' xs='6' key={key}> 
                         <div className=" d-flex justify-content-lg-center justify-content-md-end">
@@ -52,6 +67,7 @@ export default class Trackpage extends Component {
         return (
             <Container>
                 <Row>
+                    {element}
                     {elements}
                 </Row>
             </Container>        

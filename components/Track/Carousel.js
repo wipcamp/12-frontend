@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'reactstrap'
 import { FlippyOnClickInCarousel } from '../Core/FlippyCard'
+import { FlippyOnClickInCarousel2 } from '../Core/FlippyCard2'
 import styled from 'styled-components'
-import { WhatImage } from '../What/WhatImage'
 
 const Wrap = styled.div`
     overflow-x: scroll;
@@ -20,14 +20,16 @@ const Card = styled.div`
 `
 export default class Carousel extends Component {
     state = {
-        cards: [
+        card: [
             { 
                 srcFront: "/img/Track/programming.png", 
                 bg: "/img/Track/programmingb.png", 
                 content: "เส้นทางที่จะพาไปทำความเข้าใจ Concept ของการเขียนโปรแกรม ผ่านการเรียนภาษาจาวา (Java Programming)", 
                 header: "PROGRAMMER",
                 alt: "programmer card"
-            },
+            }
+        ],
+        cards: [
             { 
                 srcFront: "/img/Track/website.png", 
                 bg: "/img/Track/websiteb.png", 
@@ -52,6 +54,9 @@ export default class Carousel extends Component {
         ]
     }
     render() {
+        const element = this.state.card.map((data, key) => {
+            return (<Card key={key}> <FlippyOnClickInCarousel2 flipDirection="horizontal" srcFront={data.srcFront} content={data.content} bg={data.bg} header={data.header} alt={data.alt} /> </Card>);
+        })
         const elements = this.state.cards.map((data, key) => {
             return (<Card key={key}> <FlippyOnClickInCarousel flipDirection="horizontal" srcFront={data.srcFront} content={data.content} bg={data.bg} header={data.header} alt={data.alt} /> </Card>);
         })
@@ -59,6 +64,7 @@ export default class Carousel extends Component {
             <Row>
                 <Col>
                     <Wrap>
+                    {element}
                         {elements}
                     </Wrap>
                 </Col>
