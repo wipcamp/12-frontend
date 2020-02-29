@@ -14,6 +14,7 @@ const WhenContainer = styled.div`
 const WhenImg = styled.img`
     width:20vw;
     margin: 20px 0 20px 0;
+    overflow: visible !important;
     transition: filter 0.5s ease-in;
     filter: ${ props => props.glow ? 'drop-shadow(0 0 1rem #2C898B)' : 'grayscale(90%)'};
     -webkit-filter: ${ props => props.glow ? 'drop-shadow(0 0 1rem #2C898B)' : 'grayscale(90%)'};
@@ -62,7 +63,7 @@ const BoxContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: visible;
+    overflow: visible !important;
     @media (min-width: 1080px) {
         align-self: center;
         flex-direction:column;
@@ -195,6 +196,7 @@ export default class When extends Component {
         AOS.init({
             duration: 3000
         })
+        this.overflowFix()
         window.addEventListener("deviceorientation",this.updateDimensions)
     }
 
@@ -203,6 +205,12 @@ export default class When extends Component {
         window.removeEventListener("deviceorientation",this.updateDimensions);
     }
 
+    overflowFix = () => {
+        let box = document.getElementById("overflow-visible")
+        if (box !== null) {
+            box.style.overflow = 'visible'
+        }
+    }
     getType = () => {
         return this.state.isMobile
     }
@@ -225,31 +233,31 @@ export default class When extends Component {
                     <WhenRow>
                         <Col lg='1' md="auto" sm="auto"></Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
-                            <BoxContainer>
+                            <BoxContainer id="overflow-visible">
                                 <WhenImg src='/img/When/openregis.png' glow={this.state.openRegis} alt="open register" />
                                 <TimerText ><Span>เปิดรับสมัคร</Span><br /> 21 กุมภาพันธ์ 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
-                            <BoxContainer>
+                            <BoxContainer id="overflow-visible">
                                 <WhenImg src='/img/When/closeregis.png' glow={this.state.closeRegis} alt="close register" />
                                 <TimerText ><Span>ปิดรับสมัคร</Span><br /> 17 มีนาคม 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
-                            <BoxContainer>
+                            <BoxContainer id="overflow-visible">
                                 <WhenImg src='/img/When/announce.png' glow={this.state.announce} alt="announce" />
                                 <TimerText><Span>ประกาศผล</Span><br />28 มีนาคม 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
-                            <BoxContainer>
+                            <BoxContainer id="overflow-visible">
                                 <WhenImg src='/img/When/confirm.png' glow={this.state.confirm} alt="confirm" />
                                 <TimerText><Span>ยืนยันสิทธิ์</Span><br />29 มีนาคม 2563<br /> ถึง 4 เมษายน 2563</TimerText>
                             </BoxContainer>
                         </Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md={this.state.contentColumn} sm="12">
-                            <BoxContainer>
+                            <BoxContainer id="overflow-visible">
                                 <WhenImg src='/img/When/wipday.png' glow={this.state.dayWIP} alt="wipcamp day" />
                                 <TimerText><Span>เปิดค่าย</Span><br />27 พฤษภาคม 2563<br /> ถึง 31 พฤษภาคม 2563</TimerText>
                             </BoxContainer>

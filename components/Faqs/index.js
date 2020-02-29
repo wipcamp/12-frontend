@@ -280,13 +280,15 @@ const FaqsImgContainer = styled.div`
 const StyledContainer = styled(Container)`
     min-height: 25em;
     padding-bottom: 0;
+    margin-top: 4em;
 
     @media (min-width: 768px) {
-            padding-bottom: 0;
+            margin-bottom: 0;
     }
 
     @media (min-width: 1080px) {
-        padding-bottom: 10em;
+        margin-bottom: 10em;
+        margin-top: 0em;
     }
 `
 export default class Faqs extends Component {
