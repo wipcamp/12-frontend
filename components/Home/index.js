@@ -273,11 +273,11 @@ export default class Home extends Component {
                     <WrapLogoCana>
                         <LogoCana src="/img/Home/LogoCana.png" alt="kmutt logo, sit logo, wipcamp logo" />
                     </WrapLogoCana>
-                    <a href="https://itim.wip.camp/">
+                    {/* <a href="https://itim.wip.camp/">
                         <StyledButton>
                             REGISTER
                         </StyledButton>
-                    </a>
+                    </a> */}
                     <Wippo src="/img/Core/Wippo.png" alt="Wippo" />
                 </HomeContent>
             </HomeContainer>
