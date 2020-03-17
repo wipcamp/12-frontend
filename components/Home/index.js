@@ -89,19 +89,19 @@ const WrapLogoCana = styled.div`
 `
 
 const StyledButton = styled.button`
-    background-color: #F4693D;
+    background-color: rgb(244,105,61,0.6);
     border-color: transparent;
     text-decoration: none !important;
     font-family: 'NotoSans-Medium';
     font-size: 16px;
-    color: white !important;
+    color: rgb(255,255,255,0.6) !important;
     padding: 0.75em 3em;
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
     border-radius: 5px;
 
     :hover {
-        background-color: white;
-        color: #F4693D !important;
+        background-color: rgb(255,255,255,0.6);
+        color: rgb(244,105,61,0.6) !important;
     }
 
     @media (min-width: 768px) {
@@ -273,8 +273,8 @@ export default class Home extends Component {
                     <WrapLogoCana>
                         <LogoCana src="/img/Home/LogoCana.png" alt="kmutt logo, sit logo, wipcamp logo" />
                     </WrapLogoCana>
-                    <a href="https://itim.wip.camp/">
-                        <StyledButton>
+                    <a href="#">
+                        <StyledButton disabled>
                             REGISTER
                         </StyledButton>
                     </a>

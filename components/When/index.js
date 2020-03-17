@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Header, SubHeader } from '../Core/Text'
+import { Header, SubHeader,Content } from '../Core/Text'
 import { isDayNow, dayAnnouce, dayCloseRegis, dayConfirm, dayNow, dayWip, dayOpenRegis } from './Day'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -120,6 +120,18 @@ const Cloud4 = styled(Zodiac)`
     left: 75vw;
     width: 30vw;
 `
+const TextContainer = styled.div`
+        display:block;
+        margin-top: 20px;
+
+        @media (min-width: 320px) {
+            margin:0px 2em 0em 2em;
+        }
+    
+        @media (min-width: 768px) {
+            margin:0px 6em 0em 6em;
+        }
+`
 
 const StarAndCloud = () => {
     return(
@@ -231,7 +243,7 @@ export default class When extends Component {
                         </Col>
                     </Row>
                     <WhenRow>
-                        <Col lg='1' md="auto" sm="auto"></Col>
+                        {/* <Col lg='1' md="auto" sm="auto"></Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer id="overflow-visible">
                                 <WhenImg src='/img/When/openregis.png' glow={this.state.openRegis} alt="open register" />
@@ -261,8 +273,22 @@ export default class When extends Component {
                                 <WhenImg src='/img/When/wipday.png' glow={this.state.dayWIP} alt="wipcamp day" />
                                 <TimerText><Span>เปิดค่าย</Span><br />27 พฤษภาคม 2563<br /> ถึง 31 พฤษภาคม 2563</TimerText>
                             </BoxContainer>
+                        </Col> */}
+                        <Col className="d-flex" lg="12" md="12" sm="12">
+                           <TextContainer> 
+                            <Content textAlign="left" color="white" padding="3em 0px 0px 0px" 
+                                    textIndent="30px"
+                                    textIndentIpad="68px"
+                                    textIndentDesktop="68px"
+                                    content="เนื่องจากการแพร่ระบาดของไวรัส COVID-19 กำลังอยู่ในช่วงเฝ้าระวังและติดตามสถานการณ์อย่างต่อเนื่อง 
+                                    ทางคณะดำเนินงานได้เล็งเห็นถึงความปลอดภัยของผู้เข้าร่วมโครงการ ฯ จึงขอเลื่อนวันจัดโครงการ ฯ ออกไปอย่างไม่มีกำหนด
+                                    หากทางคณะดำเนินงานได้วันจัดโครงการ ฯ ที่เหมาะสมแล้ว จะทำการเปิดรับสมัครอีกครั้งสำหรับผู้ที่สนใจเข้าร่วมโครงการ ฯ เพิ่มเติม และในกรณีของผู้ที่สมัครเข้ามาแล้ว 
+                                    หากยังมีความสนใจที่จะเข้าร่วมโครงการ จะมีการเปิดให้ยืนยันการสมัครใจ โดยไม่ต้องกรอกข้อมูลใหม่อีกครั้งหนึ่ง
+                                    ทางคณะดำเนินงานต้องขออภัยผู้สมัครโครงการ ฯ ทุกท่านไว้ ณ โอกาสนี้ หากมีข่าวสารเพิ่มเติม จะแจ้งให้ทราบอีกครั้งผ่านช่องทาง Facebook fanpage และ Instagram ของโครงการ ฯ ต่อไป"
+                                    />
+                        </TextContainer>
                         </Col>
-                        <Col lg='1' md="auto" sm="auto"></Col>
+
                     </WhenRow>                             
                 </BigContainer>
             </WhenContainer>
