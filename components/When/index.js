@@ -151,6 +151,11 @@ const DesktopAnnoucer = styled.img`
         @media (min-width: 1080px){
             display: block;
         }
+        @media (min-width: 1500px){
+            display: block;
+            width: 60em;
+            height: 20em;
+        }
         @media (min-width: 1600px){
             width: 70em;
             height: 30em;
@@ -219,8 +224,15 @@ const DesktopAnnoucer = styled.img`
         }
         @media (min-width: 1280px){
             display: block;
-            margin-top: 12em;
+            margin-top: 10em;
             margin-left: 5em;
+        }
+        @media (min-width: 1400px){
+            display: block;
+            width: 20em;
+            height: 20em;
+            margin-top: 10em;
+            margin-left: 4em;
         }
         @media (min-width: 1600px){
             display: block;
@@ -229,6 +241,7 @@ const DesktopAnnoucer = styled.img`
             margin-top: 18em;
             margin-left: 4em;
         }
+
         @media (min-width: 1800px){
             display: block;
             width: 20em;
