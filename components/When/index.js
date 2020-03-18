@@ -50,7 +50,7 @@ const TimerText = styled.h4`
 
 `
 const BigContainer = styled(Container)`
-
+    
 `
 const WhenRow = styled(Row)`
     height: auto;
@@ -122,17 +122,131 @@ const Cloud4 = styled(Zodiac)`
 `
 const TextContainer = styled.div`
         display:block;
-        margin-top: 20px;
-
+ display: flex;
+justify-content:center;
+width: 100%;
         @media (min-width: 320px) {
-            margin:0px 2em 0em 2em;
         }
     
         @media (min-width: 768px) {
-            margin:0px 6em 0em 6em;
         }
 `
+const DesktopAnnoucer = styled.img`
+ src: url(${props => props.src})  ;
+ width: 50em;
+ height: 20em;
+ display: block;
+ @media (min-width: 320px) {
+            display: none;
 
+        }
+        @media (min-width: 768px){
+            display: none;
+           
+        }
+        @media (min-width: 1024px){
+            display: none;
+            
+        }
+        @media (min-width: 1080px){
+            display: block;
+        }
+        @media (min-width: 1600px){
+            width: 70em;
+            height: 30em;
+            display: block;
+        }
+        @media (min-width: 1800px){
+            display: block;
+            width: 80em;
+            height: 30em;
+            
+        }
+        @media (min-width: 1920px){
+            display: block;
+            /* width: 20em;
+            height: 20em; */
+            
+        }
+       
+        
+ `
+ const MobileAnnoucer = styled.img`
+ src: url(${props => props.src})  ;
+ width: 20em;
+ height: 40em;
+ display: none;
+ 
+         @media (min-width: 320px) {
+            display: block;
+
+        }
+        @media (min-width: 768px){
+            display: block;
+            width: 40em;
+            height: 70em;
+        }
+        @media (min-width: 1024px){
+            display: block;
+            width: 50em;
+            height: 100em;
+        }
+        @media (min-width: 1080px){
+            display: none;
+        }
+
+       
+ `
+ const Wippo = styled.img`
+ src: url(${props => props.src}) ;
+ width: 15em;
+ height: 15em;
+ margin-top: 12em;
+ margin-left: 5em;
+ position: absolute;
+        @media (min-width: 320px) {
+            display: none;
+        }
+        @media (min-width: 1080px){
+            display: block;
+            margin-top: 12em;
+            margin-left: 0em;
+        }
+        @media (min-width: 1180px){
+            display: block;
+            margin-top: 12em;
+            margin-left: 3em;
+        }
+        @media (min-width: 1280px){
+            display: block;
+            margin-top: 12em;
+            margin-left: 5em;
+        }
+        @media (min-width: 1600px){
+            display: block;
+            width: 20em;
+            height: 20em;
+            margin-top: 18em;
+            margin-left: 4em;
+        }
+        @media (min-width: 1800px){
+            display: block;
+            width: 20em;
+            height: 20em;
+            margin-top: 18em;
+            margin-left: 6em;
+        }
+        @media (min-width: 1920px){
+            display: block;
+            width: 20em;
+            height: 20em;
+            margin-top: 18em;
+            margin-left: 10em;
+        }
+
+ 
+
+`
 const StarAndCloud = () => {
     return(
         <Fragment>
@@ -276,17 +390,11 @@ export default class When extends Component {
                         </Col> */}
                         <Col className="d-flex" lg="12" md="12" sm="12">
                            <TextContainer> 
-                            <Content textAlign="left" color="white" padding="3em 0px 0px 0px" 
-                                    textIndent="30px"
-                                    textIndentIpad="68px"
-                                    textIndentDesktop="68px"
-                                    content="เนื่องจากการแพร่ระบาดของไวรัส COVID-19 กำลังอยู่ในช่วงเฝ้าระวังและติดตามสถานการณ์อย่างต่อเนื่อง 
-                                    ทางคณะดำเนินงานได้เล็งเห็นถึงความปลอดภัยของผู้เข้าร่วมโครงการ ฯ จึงขอเลื่อนวันจัดโครงการ ฯ ออกไปอย่างไม่มีกำหนด
-                                    หากทางคณะดำเนินงานได้วันจัดโครงการ ฯ ที่เหมาะสมแล้ว จะทำการเปิดรับสมัครอีกครั้งสำหรับผู้ที่สนใจเข้าร่วมโครงการ ฯ เพิ่มเติม และในกรณีของผู้ที่สมัครเข้ามาแล้ว 
-                                    หากยังมีความสนใจที่จะเข้าร่วมโครงการ จะมีการเปิดให้ยืนยันการสมัครใจ โดยไม่ต้องกรอกข้อมูลใหม่อีกครั้งหนึ่ง
-                                    ทางคณะดำเนินงานต้องขออภัยผู้สมัครโครงการ ฯ ทุกท่านไว้ ณ โอกาสนี้ หากมีข่าวสารเพิ่มเติม จะแจ้งให้ทราบอีกครั้งผ่านช่องทาง Facebook fanpage และ Instagram ของโครงการ ฯ ต่อไป"
-                                    />
-                        </TextContainer>
+                               <DesktopAnnoucer src="/img/When/AnnoucerD.png" />
+                               <MobileAnnoucer src="/img/When/AnnoucerM.png" />
+                           </TextContainer>
+                           <Wippo src="/img/When/WipAnnoucer.png" />
+
                         </Col>
 
                     </WhenRow>                             
