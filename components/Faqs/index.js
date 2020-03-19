@@ -14,6 +14,8 @@ import {
 import { goToAnchor } from 'react-scrollable-anchor'
 
 const FaqsContainer = styled.div`
+        margin-top: 10em;
+
     font-family: 'Sarabun-Regular', sans-serif;
 `
 

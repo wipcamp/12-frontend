@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Header, SubHeader } from '../Core/Text'
+import { Header, SubHeader,Content } from '../Core/Text'
 import { isDayNow, dayAnnouce, dayCloseRegis, dayConfirm, dayNow, dayWip, dayOpenRegis } from './Day'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -50,7 +50,7 @@ const TimerText = styled.h4`
 
 `
 const BigContainer = styled(Container)`
-
+    
 `
 const WhenRow = styled(Row)`
     height: auto;
@@ -120,7 +120,146 @@ const Cloud4 = styled(Zodiac)`
     left: 75vw;
     width: 30vw;
 `
+const TextContainer = styled.div`
+        display:block;
+ display: flex;
+justify-content:center;
+width: 100%;
+        @media (min-width: 320px) {
+        }
+    
+        @media (min-width: 768px) {
+        }
+`
+const DesktopAnnoucer = styled.img`
+ src: url(${props => props.src})  ;
+ width: 50em;
+ height: 20em;
+ display: block;
+ @media (min-width: 320px) {
+            display: none;
 
+        }
+        @media (min-width: 768px){
+            display: none;
+           
+        }
+        @media (min-width: 1024px){
+            display: none;
+            
+        }
+        @media (min-width: 1080px){
+            display: block;
+        }
+        @media (min-width: 1500px){
+            display: block;
+            width: 60em;
+            height: 20em;
+        }
+        @media (min-width: 1600px){
+            width: 70em;
+            height: 30em;
+            display: block;
+        }
+        @media (min-width: 1800px){
+            display: block;
+            width: 80em;
+            height: 30em;
+            
+        }
+        @media (min-width: 1920px){
+            display: block;
+            /* width: 20em;
+            height: 20em; */
+            
+        }
+       
+        
+ `
+ const MobileAnnoucer = styled.img`
+ src: url(${props => props.src})  ;
+ width: 20em;
+ height: 40em;
+ display: none;
+ 
+         @media (min-width: 320px) {
+            display: block;
+
+        }
+        @media (min-width: 768px){
+            display: block;
+            width: 40em;
+            height: 70em;
+        }
+        @media (min-width: 1024px){
+            display: block;
+            width: 50em;
+            height: 100em;
+        }
+        @media (min-width: 1080px){
+            display: none;
+        }
+
+       
+ `
+ const Wippo = styled.img`
+ src: url(${props => props.src}) ;
+ width: 15em;
+ height: 15em;
+ margin-top: 12em;
+ margin-left: 5em;
+ position: absolute;
+        @media (min-width: 320px) {
+            display: none;
+        }
+        @media (min-width: 1080px){
+            display: block;
+            margin-top: 12em;
+            margin-left: 0em;
+        }
+        @media (min-width: 1180px){
+            display: block;
+            margin-top: 12em;
+            margin-left: 3em;
+        }
+        @media (min-width: 1280px){
+            display: block;
+            margin-top: 10em;
+            margin-left: 5em;
+        }
+        @media (min-width: 1400px){
+            display: block;
+            width: 20em;
+            height: 20em;
+            margin-top: 10em;
+            margin-left: 4em;
+        }
+        @media (min-width: 1600px){
+            display: block;
+            width: 20em;
+            height: 20em;
+            margin-top: 18em;
+            margin-left: 4em;
+        }
+
+        @media (min-width: 1800px){
+            display: block;
+            width: 20em;
+            height: 20em;
+            margin-top: 18em;
+            margin-left: 6em;
+        }
+        @media (min-width: 1920px){
+            display: block;
+            width: 20em;
+            height: 20em;
+            margin-top: 18em;
+            margin-left: 10em;
+        }
+
+ 
+
+`
 const StarAndCloud = () => {
     return(
         <Fragment>
@@ -231,7 +370,7 @@ export default class When extends Component {
                         </Col>
                     </Row>
                     <WhenRow>
-                        <Col lg='1' md="auto" sm="auto"></Col>
+                        {/* <Col lg='1' md="auto" sm="auto"></Col>
                         <Col className="d-flex" lg={this.state.contentColumn} md="12" sm="12">
                             <BoxContainer id="overflow-visible">
                                 <WhenImg src='/img/When/openregis.png' glow={this.state.openRegis} alt="open register" />
@@ -261,8 +400,16 @@ export default class When extends Component {
                                 <WhenImg src='/img/When/wipday.png' glow={this.state.dayWIP} alt="wipcamp day" />
                                 <TimerText><Span>เปิดค่าย</Span><br />27 พฤษภาคม 2563<br /> ถึง 31 พฤษภาคม 2563</TimerText>
                             </BoxContainer>
+                        </Col> */}
+                        <Col className="d-flex" lg="12" md="12" sm="12">
+                           <TextContainer> 
+                               <DesktopAnnoucer src="/img/When/AnnoucerD.png" />
+                               <MobileAnnoucer src="/img/When/AnnoucerM.png" />
+                           </TextContainer>
+                           <Wippo src="/img/When/WipAnnoucer.png" />
+
                         </Col>
-                        <Col lg='1' md="auto" sm="auto"></Col>
+
                     </WhenRow>                             
                 </BigContainer>
             </WhenContainer>
