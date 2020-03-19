@@ -99,10 +99,10 @@ const StyledButton = styled.button`
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
     border-radius: 5px;
 
-    :hover {
+    /* :hover {
         background-color: rgb(255,255,255,0.6);
         color: rgb(244,105,61,0.6) !important;
-    }
+    } */
 
     @media (min-width: 768px) {
         font-size: 24px;
@@ -273,11 +273,9 @@ export default class Home extends Component {
                     <WrapLogoCana>
                         <LogoCana src="/img/Home/LogoCana.png" alt="kmutt logo, sit logo, wipcamp logo" />
                     </WrapLogoCana>
-                    <a href="#">
                         <StyledButton disabled>
                             REGISTER
                         </StyledButton>
-                    </a>
                     <Wippo src="/img/Core/Wippo.png" alt="Wippo" />
                 </HomeContent>
             </HomeContainer>
