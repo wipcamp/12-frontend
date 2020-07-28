@@ -1,23 +1,45 @@
 import React, { Component, Fragment, useState } from 'react'
 import styled from 'styled-components'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalBody } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const PopupImage = styled.img`
+const DesktopPopupImage = styled.img`
     width: 100%;
+
+    @media (min-width: 320px) {
+        display: none;
+    }
+    
+    @media (min-width: 1024px){
+        display: block;
+    }
    
+`
+
+const MobilePopupImage = styled.img`
+    width: 100%;
+
+    @media (min-width: 320px) {
+        display: block;
+    }
+
+    @media (min-width: 1024px){
+        display: none;
+    }
 `
 
 const StyledModalBody = styled(ModalBody)`
     padding: 0px;
+    border-width: 0 !important;
+    border-radius: 0 !important;
 `
 
 const CloseIcon = styled.a`
     position: absolute;
     right: 32px;
-    top: 32px;
-    width: 32px;
-    height: 32px;
+    top: 15px;
+    width: 16px;
+    height: 16px;
     opacity: 0.3;
     cursor: pointer;
 
@@ -29,7 +51,7 @@ const CloseIcon = styled.a`
         position: absolute;
         left: 15px;
         content: ' ';
-        height: 33px;
+        height: 24px;
         width: 2px;
         background-color: white;
     }
@@ -41,6 +63,15 @@ const CloseIcon = styled.a`
     :after {
         transform: rotate(-45deg);
     }
+
+    @media (min-width: 768px) {
+        top: 24px;
+        
+        :before, :after {
+            height: 30px;
+        }
+    }
+    
 `
 
 const ModalExample = (props) => {
@@ -55,7 +86,8 @@ const ModalExample = (props) => {
 
                 <StyledModalBody>
                     <CloseIcon onClick={toggle} />
-                    <PopupImage src="/img/Core/popupContent.png" />
+                    <DesktopPopupImage src="/img/Core/popupContent.png" />
+                    <MobilePopupImage src="/img/Core/mobileAnnounce.png" />
                 </StyledModalBody>
 
             </Modal>
