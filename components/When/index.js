@@ -133,8 +133,9 @@ width: 100%;
 `
 const DesktopAnnoucer = styled.img`
  src: url(${props => props.src})  ;
- width: 50em;
- height: 20em;
+ width: 60em;
+ height: 23em;
+ margin-top: 2em;
  display: block;
  @media (min-width: 320px) {
             display: none;
@@ -153,18 +154,18 @@ const DesktopAnnoucer = styled.img`
         }
         @media (min-width: 1500px){
             display: block;
-            width: 60em;
-            height: 20em;
+            
+            
         }
         @media (min-width: 1600px){
             width: 70em;
-            height: 30em;
+            
             display: block;
         }
         @media (min-width: 1800px){
             display: block;
-            width: 80em;
-            height: 30em;
+            
+            
             
         }
         @media (min-width: 1920px){
@@ -178,23 +179,23 @@ const DesktopAnnoucer = styled.img`
  `
  const MobileAnnoucer = styled.img`
  src: url(${props => props.src})  ;
- width: 20em;
- height: 40em;
+ width: 18em;
+ margin-top: 2em;
  display: none;
  
          @media (min-width: 320px) {
             display: block;
-
+            width: 18em;
+            margin-top: 2em;
         }
         @media (min-width: 768px){
             display: block;
-            width: 40em;
-            height: 70em;
+            width: 35em;
+            margin-top: 2em;
         }
         @media (min-width: 1024px){
             display: block;
-            width: 50em;
-            height: 100em;
+            width: 38em;
         }
         @media (min-width: 1080px){
             display: none;
@@ -231,7 +232,7 @@ const DesktopAnnoucer = styled.img`
             display: block;
             width: 20em;
             height: 20em;
-            margin-top: 10em;
+            margin-top: 15em;
             margin-left: 4em;
         }
         @media (min-width: 1600px){
@@ -403,8 +404,8 @@ export default class When extends Component {
                         </Col> */}
                         <Col className="d-flex" lg="12" md="12" sm="12">
                            <TextContainer> 
-                               <DesktopAnnoucer src="/img/When/AnnoucerD.png" />
-                               <MobileAnnoucer src="/img/When/AnnoucerM.png" />
+                               <DesktopAnnoucer src="/img/Core/popupContent.png" />
+                               <MobileAnnoucer src="/img/Core/popup-mobile.png" />
                            </TextContainer>
                            <Wippo src="/img/When/WipAnnoucer.png" />
 
