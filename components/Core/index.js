@@ -15,6 +15,7 @@ import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 import SideBar from "./SideBar"
 import './sidebar.css'
 import StarParticle from './Particle'
+import ModalExample from './Popup'
 
 const Wrap = styled.div`
     overflow: hidden;
@@ -74,7 +75,9 @@ export default class Wrapper extends Component {
                 <div id="page-wrap" style={{overflow:'hidden'}}>
                 <StarParticle>
                 <MainNav />
+                <ModalExample />
                 <ScrollableAnchor id="home"><Home/></ScrollableAnchor>
+                
                 <ScrollableAnchor id="what"><What /></ScrollableAnchor>
                 <ScrollableAnchor id="Who"><Who /></ScrollableAnchor>
                 <ScrollableAnchor id="track"><Track /></ScrollableAnchor>
